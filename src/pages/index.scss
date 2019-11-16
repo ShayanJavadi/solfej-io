@@ -114,6 +114,7 @@ $mobile: 755px;
             flex: 1;
             flex-direction: column;
             padding-left: calc(#{$margin-sides} + 1rem);
+            
             @media (max-width: $tablet-large)  {
                 padding-left: calc(#{$margin-sides-tablet} + 1rem);
             }
@@ -131,7 +132,11 @@ $mobile: 755px;
                 }
             }
 
-            margin-top: 8rem;
+            @media (max-width: $mobile) {
+                margin-top: 5rem;
+            }
+
+            margin-top: 4rem;
            
 
             p {
