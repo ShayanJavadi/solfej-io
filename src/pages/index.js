@@ -11,6 +11,9 @@ import MockImageTwo from "../components/MockImageTwo"
 import IllustrationOne from "../components/IllustrationOne";
 import IllustrationThree from "../components/IllustrationThree";
 import IllustrationTwo from "../components/IllustrationTwo"
+import FacebookIcon from "../images/facebook.svg"
+import TwitterIcon from "../images/twitter.svg";
+import InstagramIcon from "../images/instagram.svg";
 
 const typeFormUrl = "https://shayanjavadi.typeform.com/to/wO59zz";
 
@@ -83,9 +86,16 @@ const IndexPage = () => (
             </a>
         </div>
     </div>
-
     <footer>
-
+        <a href="https://www.facebook.com/Solfej-Music-Theory-App-116381003147367/">
+            <img src={FacebookIcon} alt="" />
+        </a>
+        <a href="https://www.instagram.com/solfej.app/">
+            <img src={InstagramIcon} alt="" />
+        </a>
+        <a href="https://twitter.com/solfej_app">
+            <img src={TwitterIcon} alt="" />
+        </a>
     </footer>
   </Layout>
 )
