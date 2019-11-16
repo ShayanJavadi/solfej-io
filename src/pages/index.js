@@ -59,8 +59,7 @@ const IndexPage = () => (
         </div>
         <div className="image-container">
             <div className="mock-container">
-                <MockImageTwo />
-                
+                <MockImageThree />
             </div>
             <div className="illustration-container guitar-guy">
                 <IllustrationTwo />
@@ -73,7 +72,7 @@ const IndexPage = () => (
                 <IllustrationThree />
             </div>
             <div className="mock-container">
-                <MockImageThree />
+                <MockImageTwo />
             </div>
         </div>
         <div className="copy-container small">
