@@ -14,7 +14,7 @@ import IllustrationTwo from "../components/IllustrationTwo"
 import FacebookIcon from "../images/facebook.svg"
 import TwitterIcon from "../images/twitter.svg";
 import InstagramIcon from "../images/instagram.svg";
-
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 const typeFormUrl = "https://shayanjavadi.typeform.com/to/wO59zz";
 
 const IndexPage = () => (
@@ -27,9 +27,9 @@ const IndexPage = () => (
         <div className="copy-container">
             <h1>The Best New Way To Learn Music Theory</h1>
             <p>Learn music theory & train your ears regardless of <br /> your musical experience.</p>
-            <a href={typeFormUrl}>
+            <OutboundLink href={typeFormUrl}>
                 <button className="cta-button primary">Get Early Access</button>
-            </a>
+            </OutboundLink>
         </div>
         <div className="image-container">
             <HeroImage />
@@ -47,18 +47,18 @@ const IndexPage = () => (
         <div className="copy-container small">
             <h2>Your Guide to Music Theory, Ear Training, & Rhythm</h2>
             <p>Practical lesson paths. No more Wikipedia/YouTube rabbit holes. New lessons added every month.</p>
-            <a href={typeFormUrl}>
+            <OutboundLink href={typeFormUrl}>
                 <button className="cta-button green">Get Early Access</button>
-            </a>
+            </OutboundLink>
         </div>
     </div>
     <div className="marketing-content-container reverse">
         <div className="copy-container small">
             <h2>Interactive & Practical Excercises</h2>
             <p>Interactive ear training and rhythm exercises to help you internalize complex topics.</p>
-            <a href={typeFormUrl}>
+            <OutboundLink href={typeFormUrl}>
                 <button className="cta-button yellow">Get Early Access</button>
-            </a>
+            </OutboundLink>
         </div>
         <div className="image-container">
             <div className="mock-container">
@@ -81,9 +81,9 @@ const IndexPage = () => (
         <div className="copy-container small">
             <h2>Simple Language</h2>
             <p>Delightful music theory lessons designed for humans. New lessons added every month.</p>
-            <a href={typeFormUrl}>
+            <OutboundLink href={typeFormUrl}>
                 <button className="cta-button secondary">Get Early Access</button>
-            </a>
+            </OutboundLink>
         </div>
     </div>
     <footer>
