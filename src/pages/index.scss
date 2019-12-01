@@ -1,15 +1,5 @@
-$margin-sides: 6rem;
-$margin-sides-tablet: 2.5rem;
-$header-height: 5rem;
-$blue-gray: #F3F5F9;
-$primary: #FFB5B5;
-$green: #00D9CD;
-$yellow: #FFB902;
-$secondary: #407088;
 
-$tablet-large: 1200px;
-$tablet: 1024px;
-$mobile: 755px;
+@import "../styles/variables.scss";
 
 * {
     outline: none;
@@ -59,24 +49,7 @@ $mobile: 755px;
             box-shadow: 0px 4px 1px rgba(64, 112, 136, 0.25);
         }
     }
-    header {
-        display: flex;
-        flex: 1;
-        justify-content: flex-start;
-        flex-direction: row;
-        align-items: center;
-        width: 100%;
-        height: $header-height;
-        .solfej-logo {
-            width: 9rem;
-            margin-top: 1rem;
-            margin-left: $margin-sides;
-            @media (max-width: $tablet-large)  {
-                margin-left: calc(#{$margin-sides-tablet});
-            }
 
-        }
-    }
 
      button {
         border: none;
@@ -133,7 +106,7 @@ $mobile: 755px;
             }
 
             @media (max-width: $mobile) {
-                margin-top: 4rem;
+                margin-top: 2rem;
             }
 
             margin-top: 8rem;
@@ -298,8 +271,23 @@ $mobile: 755px;
             }
         }
     }
+}
 
-    footer {
+main {
+    min-height: 100vh;
+
+    h1, h2, h3 {
+        color: #132743 !important;
+    }
+
+    p {
+        color: rgba(19, 39, 67, 0.7) !important;
+        font-weight: bold;
+        line-height: 35px;
+    }
+}
+
+  footer {
         height: 10vh;
         display: flex;
         justify-content: center;
@@ -311,18 +299,3 @@ $mobile: 755px;
             padding: 5px 0;
         }
     }
-}
-
-main {
-    height: 100vh;
-
-    h1 {
-        color: #132743 !important;
-    }
-
-    p {
-        color: rgba(19, 39, 67, 0.7) !important;
-        font-weight: bold;
-        line-height: 35px;
-    }
-}

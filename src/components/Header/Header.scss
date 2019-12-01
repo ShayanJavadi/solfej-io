@@ -1,0 +1,79 @@
+@import "../../styles/variables.scss";
+
+.header {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    @media (max-width: $tablet-large)  {
+          margin-bottom: 0;
+    }
+
+    ul {
+        display: flex;
+        margin: 0;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: row;
+        flex: 1;
+        margin-right: $margin-sides;
+        // this is to match the logo
+        padding-bottom: 5px;
+
+        @media (max-width: $tablet-large)  {
+            margin-right: calc(#{$margin-sides-tablet});
+        }
+
+        @media (max-width: $mobile-small)  {
+            margin-right: $margin-sides-mobile-small;
+        }
+
+        li {
+            text-decoration: none;
+            list-style: none;
+            padding-right: 2rem;
+             @media (max-width: $mobile-small)  {
+                padding-right: 1rem;
+            }
+            margin: 0;
+            font-size: .9rem;
+            opacity: 0.7;
+            color: #132743 !important;
+            font-weight: 600;
+            cursor: pointer;
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            &:hover, &:active {
+                opacity: 1;
+            }
+
+          
+             &:last-of-type {
+                 padding: 0;
+             }
+        }
+    }
+   
+    height: $header-height;
+    .solfej-logo {
+        width: 9rem;
+        margin-left: $margin-sides;
+        @media (max-width: $tablet-large)  {
+            width: 8rem;
+            margin-left: calc(#{$margin-sides-tablet});
+        }
+
+        @media (max-width: $mobile-small)  {
+            width: 7rem;
+            margin-left: $margin-sides-mobile-small;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.centered-gray-section {
+ flex-direction: column;
+    h2 {
+            align-self: center;
+            margin: 0;
+            padding-bottom: 1rem;
+    }
+    .image-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+          .gatsby-image-wrapper {
+        width: 100%;
+        max-width: 15rem;
+    }
+    }
+
+    a {
+        align-self: center;
+        margin-top: 1rem;
+    }
+  
+    background: #F3F5F9;
+    display: flex;
+    /* align-items: center; */
+    height: 47vh;
+    flex: 1;
+        justify-content: space-around;
+        padding: 1.5rem 0;
+}

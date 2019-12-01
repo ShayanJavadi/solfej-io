@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import logo from "../images/logo.png"
 import Layout from "../components/layout"
 import HeroImage from "../components/HeroImage"
 import MockImageOne from "../components/MockImageOne"
@@ -11,18 +10,12 @@ import MockImageTwo from "../components/MockImageTwo"
 import IllustrationOne from "../components/IllustrationOne";
 import IllustrationThree from "../components/IllustrationThree";
 import IllustrationTwo from "../components/IllustrationTwo"
-import FacebookIcon from "../images/facebook.svg"
-import TwitterIcon from "../images/twitter.svg";
-import InstagramIcon from "../images/instagram.svg";
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 const typeFormUrl = "https://shayanjavadi.typeform.com/to/wO59zz";
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <header className="header">
-        <img src={logo} alt="solfej-logo-music-theory-app" className="solfej-logo" />
-    </header>
+
     <div className="hero-container">
         <div className="copy-container">
             <h1>The Best New Way To Learn Music Theory</h1>
@@ -86,17 +79,6 @@ const IndexPage = () => (
             </OutboundLink>
         </div>
     </div>
-    <footer>
-        <a href="https://www.facebook.com/Solfej-Music-Theory-App-116381003147367/">
-            <img src={FacebookIcon} alt="" />
-        </a>
-        <a href="https://www.instagram.com/solfej.app/">
-            <img src={InstagramIcon} alt="" />
-        </a>
-        <a href="https://twitter.com/solfej_app">
-            <img src={TwitterIcon} alt="" />
-        </a>
-    </footer>
   </Layout>
 )
 

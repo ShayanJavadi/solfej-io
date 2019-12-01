@@ -1,0 +1,22 @@
+
+
+.photo-hero {
+    .hero-image-container {
+        display: flex;
+        flex: 1.2;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+          .gatsby-image-wrapper {
+        width: 100%;
+        max-width: 25rem;
+    }
+    }
+  
+    background: #F3F5F9;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 41vh;
+    flex: 1;
+}
