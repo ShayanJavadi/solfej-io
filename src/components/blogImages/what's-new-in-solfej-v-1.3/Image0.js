@@ -28,7 +28,6 @@ const Image0 = (alt) => {
 
 
 
-    console.log(data)
     return <Img fluid={data.Image0.childImageSharp.fluid} alt={alt} />
 }
 

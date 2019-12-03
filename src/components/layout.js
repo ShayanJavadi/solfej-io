@@ -15,7 +15,7 @@ import "./layout.scss"
 import SEO from "./seo";
 import Header from "./Header/index";
 
-const Layout = ({ children, title, className }) => {
+const Layout = ({ children, title, className, image, description }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -29,7 +29,7 @@ const Layout = ({ children, title, className }) => {
   return (
     <>
       <div className="solfej">
-        <SEO title={title} />
+        <SEO title={title} {...{ image, description}}/>
         <Header />
         <main className={className}>{children}</main>
         <footer>

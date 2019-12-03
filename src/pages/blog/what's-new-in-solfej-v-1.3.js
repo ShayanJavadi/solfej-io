@@ -15,6 +15,7 @@ export const blogData = {
     date: "Dec 2",
     timeToRead: "4 min",
     route: "what's-new-in-solfej-v-1.3",
+    image: "/images/blog-post-hero-1.png"
 }
 
 export default () => {

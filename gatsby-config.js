@@ -3,6 +3,8 @@ module.exports = {
     title: `Solfej - The Best New App To Learn Music Theory`,
     description: `Music theory and ear training mobile app with interactive lessons`,
     author: `Shayan Javadi`,
+    image: "/images/logo.png",
+    url: "https://www.solfej.io",
   },
   plugins: [
       {
