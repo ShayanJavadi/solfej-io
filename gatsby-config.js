@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Solfej - The Best New App To Learn Music Theory`,
-    description: `With Solfej - a music theory and ear training app,The Best New Way To Learn Music Theory`,
+    description: `Music theory and ear training mobile app with interactive lessons`,
     author: `Shayan Javadi`,
   },
   plugins: [
@@ -14,6 +14,7 @@ module.exports = {
               anonymize: true,
           },
       },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
