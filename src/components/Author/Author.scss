@@ -1,42 +1,4 @@
-.blog-post-thumbnail {
-    display: flex;
-    flex-direction: column;
-    
-    .image-container {
-        height: 12rem;
-        border: 1px solid #f1f1f1;
-        margin-bottom: 1rem;
-        display: flex;
-        justify-content: center;
-
-         .gatsby-image-wrapper {
-            width: 100%;
-            height: auto;
-              max-width: 17rem;
-        }
-    }
-
-  .copy-container {
-      margin-bottom: 1rem;
-
-      h3 {
-        font-weight: bold;
-        font-size: 23px;
-        line-height: 30px;
-        color: #132743;
-        margin-bottom: .5rem;
-      }
-
-      p {
-        font-weight: 500;
-        font-size: 17px;
-        line-height: 28px;
-        color: rgba(19, 39, 67, 0.7);
-        margin-bottom: .5rem;
-      }
-  }
-
-    .author-container {
+.author {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -69,4 +31,3 @@
             }
         }
     }
-}

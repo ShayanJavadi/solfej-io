@@ -15,7 +15,7 @@ import "./layout.scss"
 import SEO from "./seo";
 import Header from "./Header/index";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, title, className }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -29,9 +29,9 @@ const Layout = ({ children }) => {
   return (
     <>
       <div className="solfej">
-        <SEO title="Home" />
+        <SEO title={title} />
         <Header />
-        <main>{children}</main>
+        <main className={className}>{children}</main>
         <footer>
             <a href="https://www.facebook.com/Solfej-Music-Theory-App-116381003147367/">
                 <img src={FacebookIcon} alt="" />

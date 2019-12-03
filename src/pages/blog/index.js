@@ -7,49 +7,55 @@ import BlogPostThumbnail from '../../components/BlogPostThumbnail/index'
 import ShayanJavadi from '../../components/ShayanJavadi'
 import BlogPostHeroOne from '../../components/BlogPostHeroOne'
 import CenteredGraySection from '../../components/CenteredGraySection/index'
-import BlogPostContainer from '../../components/BlogPostContainer/index'
+import BlogPostsContainer from "../../components/BlogPostsContainer";
 import MailingListImage from '../../components/MailingListImage'
 import TempOne from '../../components/Temp1'
 import TempTwo from '../../components/Temp2'
+import TempThree from '../../components/Temp3'
+
+import { blogData } from "../blog/what's-new-in-solfej-v-1.3"
 
 export default function tos() {
     return (
-        <Layout>
+        <Layout title="Blog">
             <PhotoHero>
                 <BlogHero alt="musician girl reading blog posts" />
             </PhotoHero>
             <Section title="Featured Stories">
-                <BlogPostContainer>
+                <BlogPostsContainer>
                     <BlogPostThumbnail
-                        title="How I got 450+ beta users in 3 days"
-                        description="A compensation explanation else. Slept of when the a then one shoulders morning be and of volume."
-                        authorName="Shayan Javadi"
-                        date="Nov 30"
-                        timeToRead="5 min"
+                        {...blogData}
                         authorImage={<ShayanJavadi />}
                         image={<BlogPostHeroOne />}
                     />
                     <BlogPostThumbnail
-                        title="10 amazing tools to help you get your MVP out the door faster"
-                        description="Into but would the subordinates of a quickly a rest someone gone thousand."
+                        title="How I went from 0 to 400+ beta sign ups in 3 days"
+                        description="Coming Soon! Subscribe to the Newsletter to be notified."
                         authorName="Shayan Javadi"
-                        date="Nov 30"
-                        timeToRead="7 min"
+                        timeToRead=""
                         authorImage={<ShayanJavadi />}
-                        image={<TempTwo />}
-
+                        image={<TempThree />}
+                        isUnavailable
                     />
                     <BlogPostThumbnail
-                        title="Does music theory hinder your creativty?"
-                        description="Back aggressively and each the I parents be orthographic and may that he children why written expecting distribution."
+                        title="10 amazing tools to help you get your MVP out the door faster"
+                        description="Coming Soon! Subscribe to the Newsletter to be notified."
                         authorName="Shayan Javadi"
-                        date="Nov 30"
-                        timeToRead="10 min"
+                        timeToRead=""
+                        authorImage={<ShayanJavadi />}
+                        image={<TempTwo />}
+                        isUnavailable
+                    />
+                    <BlogPostThumbnail
+                        title="Does music theory hinder your creativity?"
+                        description="Coming Soon! Subscribe to the Newsletter to be notified."
+                        authorName="Shayan Javadi"
+                        timeToRead=""
                         authorImage={<ShayanJavadi />}
                         image={<TempOne />}
-
+                        isUnavailable
                     />
-                </BlogPostContainer>
+                </BlogPostsContainer>
             </Section>
             <CenteredGraySection>
                 <h2>Get our latest stories</h2>

@@ -14,8 +14,7 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics'
 const typeFormUrl = "https://shayanjavadi.typeform.com/to/wO59zz";
 
 const IndexPage = () => (
-  <Layout>
-
+  <Layout title="Solfej">
     <div className="hero-container">
         <div className="copy-container">
             <h1>The Best New Way To Learn Music Theory</h1>

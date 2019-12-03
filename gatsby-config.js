@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Solfej - The Best New App To Learn Music Theory`,
     description: `With Solfej - a music theory and ear training app,The Best New Way To Learn Music Theory`,
-    author: `@gatsbyjs`,
+    author: `Shayan Javadi`,
   },
   plugins: [
       {

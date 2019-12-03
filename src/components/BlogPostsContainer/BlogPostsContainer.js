@@ -1,8 +1,8 @@
 
 import React from 'react';
-import "./BlogPostContainer.scss";
+import "./BlogPostsContainer.scss";
 
-export default function BlogPostContainer(props) {
+export default function BlogPostsContainer(props) {
   return (
     <div className="blog-post-container">
       {props.children}

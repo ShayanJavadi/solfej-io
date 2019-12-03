@@ -1,0 +1,18 @@
+.image-container-common {
+  display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    min-height: 30vh;
+    margin: 4rem 0;
+
+    &.two {
+    .gatsby-image-wrapper {
+        width: 40%;
+    }
+
+    }
+        .gatsby-image-wrapper {
+        width: 60%;
+    }
+
+}

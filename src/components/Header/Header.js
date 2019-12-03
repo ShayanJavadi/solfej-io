@@ -1,9 +1,11 @@
 
-import React from 'react';
 import { Link } from "gatsby";
-import logo from "../../images/logo.png"
-
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import React from 'react';
+import logo from "../../images/logo.png";
 import "./Header.scss";
+const typeFormUrl = "https://shayanjavadi.typeform.com/to/wO59zz";
+
 
 export default function Header(props) {
   return (
@@ -27,8 +29,17 @@ export default function Header(props) {
            
             <li>
                 <a href="https://solfej.canny.io/solfej-user-forums">
-                    Forum
+                    Contact
                 </a>
+            </li>
+            <li className="cta">
+  
+            <OutboundLink href={typeFormUrl}>
+
+                      <button className="cta-button primary">Get Early Access</button>
+
+                  </OutboundLink>
+
             </li>
         </ul>
     </header>
