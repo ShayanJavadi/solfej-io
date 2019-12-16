@@ -54,7 +54,7 @@ export default () => {
             <h2>The Bottom Line</h2>
             <p>Bottom line is that Betapage helped me get Solfej in front of a lot of eyes for a pretty reasonable price. 120 sign ups may not seem like a lot, but it really is when you put it in the perspective of a newly launched product made by one person (me).</p>
             <p>
-                Obviously there's tons of free ways you can spread the word about your up and coming project, but if you can spare the ~$100 price point I’d definitely recommend it. 
+                Obviously there's tons of free ways you can spread the word about your up and coming project, but if you can spare the ~$100 price point <b>I’d definitely recommend it</b>. 
             </p>
             <p>I also recommend taking a look at Betalist. It’s the same process as Betapage. Check out the blog page on <a href="https://pine.io/">Pine.io’s blog</a> if you want to see an anecdote for Betalist similar to this post.</p>
             <p>👋 <a href="https://shayanjavadi.typeform.com/to/wO59zz">Make sure to  sign up for the Solfej beta</a> if you're interested in learning music theory and training your ears.</p>
