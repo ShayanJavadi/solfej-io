@@ -6,6 +6,7 @@ import Section from '../../components/Section/index'
 import BlogPostThumbnail from '../../components/BlogPostThumbnail/index'
 import ShayanJavadi from '../../components/ShayanJavadi'
 import BlogPostHeroOne from '../../components/BlogPostHeroOne'
+import BlogPostHeroTwo from '../../components/blogImages/is-betapage-worth-it/Thumbnail'
 import CenteredGraySection from '../../components/CenteredGraySection/index'
 import BlogPostsContainer from "../../components/BlogPostsContainer";
 import MailingListImage from '../../components/MailingListImage'
@@ -13,7 +14,8 @@ import TempOne from '../../components/Temp1'
 import TempTwo from '../../components/Temp2'
 import TempThree from '../../components/Temp3'
 
-import { blogData } from "../blog/what's-new-in-solfej-v-1.3"
+import { blogData as blogData1 } from "../blog/what's-new-in-solfej-v-1.3"
+import { blogData as blogData2 } from "../blog/is-betapage-worth-it"
 
 export default function tos() {
     return (
@@ -24,10 +26,16 @@ export default function tos() {
             <Section title="Featured Stories">
                 <BlogPostsContainer>
                     <BlogPostThumbnail
-                        {...blogData}
+                        {...blogData2}
+                        authorImage={<ShayanJavadi />}
+                        image={<BlogPostHeroTwo />}
+                    />
+                    <BlogPostThumbnail
+                        {...blogData1}
                         authorImage={<ShayanJavadi />}
                         image={<BlogPostHeroOne />}
                     />
+                 
                     <BlogPostThumbnail
                         title="How I went from 0 to 400+ beta sign ups in 3 days"
                         description="Coming Soon! Subscribe to the Newsletter to be notified."
