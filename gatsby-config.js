@@ -5,6 +5,7 @@ module.exports = {
     author: `Shayan Javadi`,
     image: "/images/logo.png",
     url: "https://www.solfej.io",
+    siteUrl: "https://www.solfej.io",
   },
   plugins: [
       {
