@@ -39,7 +39,7 @@ export default () => {
             </ImageContainer>
             <p>Coolors is my personal favorite color palette generator out of all the ones listed here. You can have it generate entire color palettes for you from scratch.</p>
             <p>The thing that makes it my favorite is your ability to lock colors and adjust them in the palettes. Only downside for me is that the website is not as mobile friendly as I’d like it to be (they do have an iOS app though).</p>
-            <p>I used Coolors to come up with the three lesson category colors for Solfej (ear training, music theory, rhythm).</p>
+            <p>I used Coolors to come up with the three lesson category colors for Solfej (<b style={{ color: "#FFB5B5" }}>ear training</b>, <b style={{ color: "#407088" }}>music theory</b>, <b style={{ color: "#FFB902" }}>rhythm</b>).</p>
             <h2><a href="https://colorhunt.co/">Color Hunt</a> by <a href="https://twitter.com/thegalshir">@thegalshir</a></h2>
             <ImageContainer>
                 <Two />
