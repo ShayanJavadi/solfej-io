@@ -7,6 +7,7 @@ import BlogPostThumbnail from '../../components/BlogPostThumbnail/index'
 import ShayanJavadi from '../../components/ShayanJavadi'
 import BlogPostHeroOne from '../../components/BlogPostHeroOne'
 import BlogPostHeroTwo from '../../components/blogImages/is-betapage-worth-it/Thumbnail'
+import BlogPostHeroThree from '../../components/blogImages/5-beautiful-color-palette-generators-for-your-next-design-project/Thumbnail'
 import CenteredGraySection from '../../components/CenteredGraySection/index'
 import BlogPostsContainer from "../../components/BlogPostsContainer";
 import MailingListImage from '../../components/MailingListImage'
@@ -16,6 +17,7 @@ import TempThree from '../../components/Temp3'
 
 import { blogData as blogData1 } from "../blog/what's-new-in-solfej-v-1.3"
 import { blogData as blogData2 } from "../blog/is-betapage-worth-it"
+import { blogData as blogData3 } from "../blog/5-beautiful-color-palette-generators-for-your-next-design-project";
 
 export default function tos() {
     return (
@@ -26,6 +28,11 @@ export default function tos() {
             <Section title="Featured Stories">
                 <BlogPostsContainer>
                     <BlogPostThumbnail
+                        {...blogData3}
+                        authorImage={<ShayanJavadi />}
+                        image={<BlogPostHeroThree />}
+                    />
+                    <BlogPostThumbnail
                         {...blogData2}
                         authorImage={<ShayanJavadi />}
                         image={<BlogPostHeroTwo />}
@@ -35,7 +42,6 @@ export default function tos() {
                         authorImage={<ShayanJavadi />}
                         image={<BlogPostHeroOne />}
                     />
-                 
                     <BlogPostThumbnail
                         title="How I went from 0 to 400+ beta sign ups in 3 days"
                         description="Coming Soon! Subscribe to the Newsletter to be notified."

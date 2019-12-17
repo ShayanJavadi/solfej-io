@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Solfej - The Best New App To Learn Music Theory`,
-    description: `Music theory and ear training mobile app with interactive lessons`,
+    title: `Solfej`,
+    description: `The best new way to learn music theory and ear training`,
     author: `Shayan Javadi`,
     image: "/images/logo.png",
     url: "https://www.solfej.io",
