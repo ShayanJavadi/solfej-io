@@ -17,6 +17,12 @@ module.exports = {
               anonymize: true,
           },
       },
+      {
+          resolve: `gatsby-plugin-facebook-pixel`,
+          options: {
+              pixelId: '627048344833116',
+          },
+      },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     {
