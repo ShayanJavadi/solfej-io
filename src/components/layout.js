@@ -5,7 +5,8 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useState } from "react"
+import classNames from "classnames";
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import FacebookIcon from "../images/facebook.svg"
@@ -14,6 +15,7 @@ import InstagramIcon from "../images/instagram.svg";
 import "./layout.scss"
 import SEO from "./seo";
 import Header from "./Header/index";
+import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 
 const Layout = ({ children, title, className, image, description }) => {
   const data = useStaticQuery(graphql`
@@ -26,11 +28,26 @@ const Layout = ({ children, title, className, image, description }) => {
     }
   `)
 
+    const [isDetatched, setIsDetatched] = useState(false);
+    useScrollPosition(({ prevPos, currPos }) => {
+        if (currPos.y < 0 && !isDetatched) {
+            setIsDetatched(true)
+        }
+
+        if (currPos.y === 0 && isDetatched) {
+            setIsDetatched(false)
+        }
+    }, [isDetatched])
+    const classes = classNames(
+        "solfej",
+        isDetatched && "header-detatched"
+    )
+
   return (
     <>
-      <div className="solfej">
+    <div className={classes}>
         <SEO title={title} {...{ image, description}}/>
-        <Header />
+        <Header isDetatched={isDetatched} />
         <main className={className}>{children}</main>
         <footer>
             <a href="https://www.facebook.com/Solfej-Music-Theory-App-116381003147367/">

@@ -1,19 +1,27 @@
 @import "../../styles/variables.scss";
-
-.header {
-    display: flex;
-    flex: 1;
-    justify-content: flex-start;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 1rem;
-    padding-top: 1rem;
-    @media (max-width: $tablet-large)  {
-          margin-bottom: 0;
+header {
+    .logo {
+        display: block;
+        @media (max-width: $mobile)  {
+            display: none;
+        }
     }
-
-    ul {
+    .mobile-logo {
+        display: none;
+        width: 2.5rem !important;
+        padding: 0 !important;
+        opacity: 1 !important;
+        flex: 1 !important;
+        img {
+            width: 2.5rem !important;
+            margin: 0 !important;
+        }
+        @media (max-width: $mobile)  {
+            display: block !important;
+              
+        }
+    }
+      ul {
         display: flex;
         margin: 0;
         justify-content: flex-end;
@@ -32,19 +40,44 @@
         @media (max-width: $mobile-small)  {
             margin-right: $margin-sides-mobile-small;
         }
-
+          @media (max-width: $mobile)  {
+            margin-right:0;
+        }
         li {
-
+            &.menu-button {
+                div {
+                    background: #444;
+                    height: 1rem;
+                }
+            }
             &.cta {
-                opacity: .9;
+                opacity: 1;
+                @media (max-width: $mobile)  {
+                        flex: 1.1;
+                    
+                }
                 button {
+                     @media (max-width: $mobile)  {
+                        font-size: 13px;
+                            height: 2rem;
+                            width: 100%;
+                            margin-right: 1rem;
+                    }
+                    @media (max-width: $mobile-small)  {
+                        font-size: 10px;
+                            height: 2rem;
+                            width: 100%;
+                            margin-right: .5rem;
+                    }
+                        transition: all 0.1s;
+
                         font-size: 16px;
                         height: 2.5rem;
                         width: 225px;
-                }
-
-                  @media (max-width: 900px)  {
-                   display: none;
+                        background: transparent !important;
+                        color: #ff8c8c;
+                        border: 2px solid #ff8c8c;
+                        box-shadow: none !important;
                 }
 
             }
@@ -82,6 +115,109 @@
              }
         }
     }
+}
+
+.mobile-nav {
+    max-height: 0;
+    -webkit-transition: all 0.3s cubic-bezier(0, 0.58, 0.4, 1);
+    transition: all 0.3s cubic-bezier(0, 0.58, 0.4, 1);
+    position: fixed;
+    top: 5rem;
+    background: #fff;
+    display: none;
+    flex: 1;
+    width: 100%;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    @media (max-width: $mobile)  {
+        display: flex !important;
+    }
+    ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex: 1;
+        display: flex;
+        width: 100%;
+        margin: 0;
+        li {
+            padding: 0;
+            text-align: left;
+            flex: 1;
+            width: 100%;
+            margin-bottom: 1.5rem;
+        }
+    }
+    &.visible {
+       padding-top: 2rem;
+        max-height: 70vh;
+    }
+    box-shadow: 0px 1px 1px rgba(19, 39, 67, 0.1);
+}
+.header {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    position: fixed;
+    transition: 'all 200ms ease-in';
+    
+    .menu-button {
+        @media (max-width: $mobile)  {
+            display: flex !important;
+            flex: 1;
+            padding: 0;
+        }
+        display: none;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+
+    ul {
+        li {
+                 @media (max-width: $mobile)  {
+                    display: none;
+                }
+
+                &.cta {
+                                        display: block !important;
+                    padding-right: 0;
+
+                }
+        }
+    }
+        
+
+
+    &.detatched {
+        background: #ffffff;
+        z-index: 99999;
+        box-shadow: 0px 1px 1px rgba(19, 39, 67, .1);
+
+        ul {
+            li {
+           
+
+                &.cta {
+                    button {
+                        background: #ff8c8c !important;
+                        color: #fff;
+                        border: 2px solid #ff8c8c !important;
+                    }
+                }
+            }
+        }
+    }
+
+  
    
     height: $header-height;
     .solfej-logo {

@@ -6,6 +6,8 @@
 }
 
 .solfej {
+
+
      h1 {
             @media (max-width: 1350px)  {
                 font-size: 2rem
@@ -30,7 +32,7 @@
         }
     .cta-button {
         &.primary {
-            background: $primary;
+            background: darken($primary, 8);
             box-shadow: 0px 4px 1px rgba(255, 181, 181, 0.25);
         }
 
@@ -276,6 +278,7 @@
 main {
     min-height: 100vh;
 
+    padding-top: 5rem;
     h1, h2, h3 {
         color: #132743 !important;
     }
