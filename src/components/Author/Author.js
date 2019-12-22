@@ -4,7 +4,6 @@ import "./Author.scss";
 
 export default function Author(props) {
     const { authorImage, authorName, date, timeToRead } = props;
-    
   return (
     <div className="author">
           <div className="author-image-container">

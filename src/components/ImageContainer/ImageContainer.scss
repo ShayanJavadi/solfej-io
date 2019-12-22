@@ -15,4 +15,15 @@
         width: 60%;
     }
 
+    &.bottom-margin {
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+
+    &.full-width {
+          .gatsby-image-wrapper {
+        width: 100%;
+    }
+    }
+
 }
