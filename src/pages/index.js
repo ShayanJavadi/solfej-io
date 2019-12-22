@@ -11,6 +11,23 @@ import IllustrationOne from "../components/IllustrationOne";
 import IllustrationThree from "../components/IllustrationThree";
 import IllustrationTwo from "../components/IllustrationTwo"
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import BlogPostsContainer from "../components/BlogPostsContainer"
+import Section from "../components/Section"
+import BlogPostThumbnail from "../components/BlogPostThumbnail"
+import Alvin from "../components/Alvin"
+import BlogPostHeroOne from "../components/BlogPostHeroOne"
+import BlogPostHeroTwo from "../components/blogImages/is-betapage-worth-it/Thumbnail"
+import BlogPostHeroThree from "../components/blogImages/5-beautiful-color-palette-generators-for-your-next-design-project/Thumbnail"
+import BlogPostHeroFour from "../components/blogImages/5-reasons-why-you-should-learn-music-theory/Thumbnail"
+import { blogData as blogData1 } from "./blog/what's-new-in-solfej-v-1.3"
+import { blogData as blogData2 } from "./blog/is-betapage-worth-it"
+import { blogData as blogData3 } from "./blog/5-beautiful-color-palette-generators-for-your-next-design-project";
+import { blogData as blogData4 } from "./blog/7-reasons-why-you-should-learn-music-theory";
+import ShayanJavadi from "../components/ShayanJavadi"
+import TempTwo from "../components/Temp2"
+import TempThree from "../components/Temp3"
+
+
 const typeFormUrl = "https://shayanjavadi.typeform.com/to/wO59zz";
 
 const IndexPage = () => (
@@ -78,6 +95,27 @@ const IndexPage = () => (
             </OutboundLink>
         </div>
     </div>
+        <Section title="Featured Stories" h1Header>
+            <BlogPostsContainer>
+                <BlogPostThumbnail
+                    {...blogData4}
+                    authorImage={<Alvin />}
+                    image={<BlogPostHeroFour />}
+                />
+                <BlogPostThumbnail
+                    {...blogData3}
+                    authorImage={<ShayanJavadi />}
+                    image={<BlogPostHeroThree />}
+                />
+                <BlogPostThumbnail
+                    {...blogData2}
+                    authorImage={<ShayanJavadi />}
+                    image={<BlogPostHeroTwo />}
+                />
+
+
+            </BlogPostsContainer>
+        </Section>
   </Layout>
 )
 

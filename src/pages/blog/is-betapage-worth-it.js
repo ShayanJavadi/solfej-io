@@ -15,7 +15,8 @@ export const blogData = {
     date: "Dec 15",
     timeToRead: "5 min",
     route: "is-betapage-worth-it",
-    image: "/images/blog-post-hero-2.png"
+    image: "/images/blog-post-hero-2.png",
+    seoTitle: "Is Betapage worth it? Solfej, a music theory app, utilized betapage to get their first customers."
 }
 
 export default () => {

@@ -6,10 +6,10 @@ import CenteredGraySection from '../../components/CenteredGraySection/index';
 import MailingListImage from '../../components/MailingListImage';
 
 export default function BlogPostLayout(props) {
-    const { blogData: { title, description, image }, hero = () => null, } = props;
+    const { blogData: { title, description, image, seoTitle }, hero = () => null, } = props;
 
     return (
-        <Layout {...{ title, description, image }} className="blog-post-layout">
+        <Layout {...{ seoTitle, description, image }} className="blog-post-layout">
            {hero}  
            <div className="content-container">
                <div className="content">

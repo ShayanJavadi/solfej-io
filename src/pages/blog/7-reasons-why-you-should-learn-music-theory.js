@@ -19,7 +19,8 @@ export const blogData = {
     date: "Dec 21",
     timeToRead: "6 min",
     route: "7-reasons-why-you-should-learn-music-theory",
-    image: "/images/blog-post-hero-4.png"
+    image: "/images/blog-post-hero-4.png",
+    seoTitle: "Do you need music theory? Does music theory hinder my creativity? Find out 7 reason why you need theory."
 }
 
 export default () => {

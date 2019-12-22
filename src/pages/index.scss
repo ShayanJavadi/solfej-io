@@ -31,6 +31,28 @@
 
         }
     .cta-button {
+        &.secondary-cta {
+            margin-top: 0 !important;
+            background: transparent !important;
+             @media (min-width: $mobile)  {
+            text-align: left;
+
+            }
+            padding: 0 !important;
+            box-shadow: none !important;
+
+            &.primary {
+                color: #ff8c8c;
+            }
+
+            &.yellow {
+                color: $yellow;
+            }
+
+            &.secondary {
+                color: $secondary;
+            }
+        }
         &.primary {
             background: darken($primary, 8);
             box-shadow: 0px 4px 1px rgba(255, 181, 181, 0.25);

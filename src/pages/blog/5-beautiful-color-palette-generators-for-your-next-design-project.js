@@ -17,7 +17,8 @@ export const blogData = {
     date: "Dec 17",
     timeToRead: "7 min",
     route: "5-beautiful-color-palette-generators-for-your-next-design-project",
-    image: "/images/blog-post-hero-3.png"
+    image: "/images/blog-post-hero-3.png",
+    seoTitle: "5 Beautiful color palette tools for your next design project. Learn how Solfej, a music theory app, used the tools."
 }
 
 export default () => {

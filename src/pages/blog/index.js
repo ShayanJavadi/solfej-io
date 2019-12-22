@@ -24,11 +24,12 @@ import { blogData as blogData4 } from "./7-reasons-why-you-should-learn-music-th
 
 export default function tos() {
     return (
-        <Layout title="Blog">
+        <Layout title="Blog - Solfej" description="Solfej, a music theory and ear training, app's blog">
             <PhotoHero>
                 <BlogHero alt="musician girl reading blog posts" />
             </PhotoHero>
-            <Section title="Featured Stories">
+
+            <Section title="Featured Stories" h1Header>
                 <BlogPostsContainer>
                     <BlogPostThumbnail
                         {...blogData4}

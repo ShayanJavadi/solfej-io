@@ -15,7 +15,8 @@ export const blogData = {
     date: "Dec 2",
     timeToRead: "4 min",
     route: "what's-new-in-solfej-v-1.3",
-    image: "/images/blog-post-hero-1.png"
+    image: "/images/blog-post-hero-1.png",
+    seoTitle: "New version of Solfej, a music theory app, includes interactive music lessons."
 }
 
 export default () => {
