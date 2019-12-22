@@ -5,12 +5,13 @@ import Author from '../../components/Author/index';
 import { Link } from "gatsby";
 
 export default function BlogPostThumbnail(props) {
-    const { image, title, description, authorName, authorImage, date, timeToRead, route, isUnavailable } = props;
+    const { image, title, description, authorName, authorImage, date, timeToRead, route, isUnavailable, hidden } = props;
 
     return (
-    <div className="blog-post-thumbnail">
+        <div className="blog-post-thumbnail" styles={{ visibility: hidden && "none"}}> 
+        
         {
-            isUnavailable ?
+                !hidden && isUnavailable ?
             <a href="https://mailchi.mp/a64190eaf494/solfej-newsletter">
                 <div className="image-container">
                     {props.image}
@@ -31,7 +32,7 @@ export default function BlogPostThumbnail(props) {
             </Link>
         }
         {
-            !isUnavailable &&
+            !isUnavailable && !hidden &&
             <Author
                 {...{ authorName, authorImage, date, timeToRead }}
             /> 

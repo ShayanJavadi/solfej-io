@@ -96,24 +96,23 @@ const IndexPage = () => (
         </div>
     </div>
         <Section title="Featured Stories" h1Header>
-            <BlogPostsContainer>
+            <BlogPostsContainer two>
                 <BlogPostThumbnail
                     {...blogData4}
                     authorImage={<Alvin />}
                     image={<BlogPostHeroFour />}
                 />
-                <BlogPostThumbnail
-                    {...blogData3}
-                    authorImage={<ShayanJavadi />}
-                    image={<BlogPostHeroThree />}
-                />
-                <BlogPostThumbnail
-                    {...blogData2}
-                    authorImage={<ShayanJavadi />}
-                    image={<BlogPostHeroTwo />}
-                />
 
-
+                <BlogPostThumbnail
+                    title="The Definitive Guide To Musical Cadences"
+                    description="Coming Soon! Subscribe to the Newsletter to be notified."
+                    authorName="Shayan Javadi"
+                    timeToRead=""
+                    authorImage={<ShayanJavadi />}
+                    image={<TempThree />}
+                    isUnavailable
+                />
+   
             </BlogPostsContainer>
         </Section>
   </Layout>
