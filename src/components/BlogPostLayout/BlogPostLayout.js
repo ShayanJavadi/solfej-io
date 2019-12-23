@@ -9,7 +9,7 @@ export default function BlogPostLayout(props) {
     const { blogData: { title, description, image, seoTitle }, hero = () => null, } = props;
 
     return (
-        <Layout {...{ seoTitle, description, image }} className="blog-post-layout">
+        <Layout {...{ title: seoTitle, description, image }} className="blog-post-layout">
            {hero}  
            <div className="content-container">
                <div className="content">
