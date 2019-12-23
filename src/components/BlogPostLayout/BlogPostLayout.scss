@@ -6,6 +6,32 @@
         padding-bottom: 5rem;
         
         .content {
+            .author-social-container {
+                margin-bottom: 1rem;
+                display: flex;
+                flex: 1;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                .author {
+                    flex: 1
+                }
+                .social-links {
+                    flex: 1;
+                    display: flex;
+                    justify-content: flex-end;
+                    a {
+                        padding-right: .5rem;
+                    }
+                    img {
+                        width: 1.5rem;
+                        opacity: .8;
+                    }
+                }
+            }
+
+          
+
             max-width: 680px;
             margin-top: 3rem;
             h1 {

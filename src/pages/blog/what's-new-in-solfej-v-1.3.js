@@ -16,7 +16,8 @@ export const blogData = {
     timeToRead: "4 min",
     route: "what's-new-in-solfej-v-1.3",
     image: "/images/blog-post-hero-1.png",
-    seoTitle: "New version of Solfej, a music theory app, includes interactive music lessons."
+    seoTitle: "New version of Solfej, a music theory app, includes interactive music lessons.",
+    authorImage: <ShayanJavadi />
 }
 
 export default () => {
@@ -24,7 +25,6 @@ export default () => {
 
     return (
         <BlogPostLayout blogData={blogData} hero={<Hero />}>
-            <h1>{title}</h1>
             <p>Solfej version 1.3.0 is out today 🎉!</p>
             <p>Version 1.3.0 is changes based on the beta users feedback (Thank you to everyone who tried the app and gave feedback ❤️. Doubly thank you if it was on <a href="https://solfej.canny.io/solfej-user-forums">Canny.io</a> ).</p>
             <p> This version includes interactive lesson examples, revised lessons, 3 brand new lessons, couple of bug fixes, and many general improvements. Read on for the full details!</p>

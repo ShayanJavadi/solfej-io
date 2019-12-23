@@ -11,6 +11,8 @@ import Five from "../../components/blogImages/dont-give-up-on-music-theory/Five"
 // import Seven from "../../components/blogImages/dont-give-up-on-music-theory/Seven";
 
 import ImageContainer from '../../components/ImageContainer/index';
+import Author from '../../components/Author';
+import JP from '../../components/JP';
 
 export const blogData = {
     title: "Don't Give Up On Music Theory",
@@ -20,7 +22,8 @@ export const blogData = {
     timeToRead: "10 min",
     route: "dont-give-up-on-music-theory",
     image: "/images/blog-post-hero-5.png",
-    seoTitle: "Is Learning Music Theory Worth it? Why should you bother learning music theory?"
+    seoTitle: "Is Learning Music Theory Worth it? Why should you bother learning music theory?",
+    authorImage: <JP />
 }
 
 export default () => {
@@ -28,8 +31,6 @@ export default () => {
 
     return (
         <BlogPostLayout blogData={blogData} hero={<Hero />}>
-            <h1>{title}</h1>
-            <p>Guest post by JP Hwang</p>
             <p><i>This is a guest post by JP Hwang - JP is a recently reformed patent attorney who has given up his fancy suits and office in Sydney, Australia for many pairs of shorts, a laptop and a suitcase in SE Asia. He calls himself an online ‘maker’ and would like to mean it himself one day. You can find his blog on <b><a href="https://medium.com/@_jphwang">Medium</a></b> or on twitter <b> <a href="https://twitter.com/_jphwang">@_jphwang</a></b>.</i></p>
             <h2>Not Knowing Music Theory Can Hurt (your feelings)</h2>
             <ImageContainer fullWidth bottomMarginOnly>

@@ -11,6 +11,7 @@ import Six from "../../components/blogImages/5-reasons-why-you-should-learn-musi
 import Seven from "../../components/blogImages/5-reasons-why-you-should-learn-music-theory/Seven";
 
 import ImageContainer from '../../components/ImageContainer/index';
+import Alvin from '../../components/Alvin';
 
 export const blogData = {
     title: "7 Reasons Why You Should Learn Music Theory",
@@ -20,7 +21,8 @@ export const blogData = {
     timeToRead: "6 min",
     route: "7-reasons-why-you-should-learn-music-theory",
     image: "/images/blog-post-hero-4.png",
-    seoTitle: "Do you need music theory? Does music theory hinder my creativity? Find out 7 reason why you need theory."
+    seoTitle: "Do you need music theory? Does music theory hinder my creativity? Find out 7 reason why you need theory.",
+    authorImage: <Alvin />
 }
 
 export default () => {
@@ -28,7 +30,6 @@ export default () => {
 
     return (
         <BlogPostLayout blogData={blogData} hero={<Hero />}>
-            <h1>{title}</h1>
             <p>Believe me, I get it. I didn’t think that being able to build and name complex chords, to find relationships between scales and chords, and to work in weird time signatures would help me as a musician at all.</p>
             <p>But because of Music Theory, my creative abilities have never felt more under my control. Improvisation feels limitless. Songwriting possibilities are endless. Letting loose has never felt as comfortable. I even made a <a href="https://www.solfej.io/">music theory app 🎵</a>!</p>
             <p>I’m afraid that I’ve made the mistake of underestimating music theory in the past, but because of that, I won’t let my fellow musicians in Strats make the same one. Let me help you see theory as the ultimate hack to total creative control.</p>

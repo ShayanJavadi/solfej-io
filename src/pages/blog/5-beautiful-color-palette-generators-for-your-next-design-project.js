@@ -18,7 +18,8 @@ export const blogData = {
     timeToRead: "7 min",
     route: "5-beautiful-color-palette-generators-for-your-next-design-project",
     image: "/images/blog-post-hero-3.png",
-    seoTitle: "5 Beautiful color palette tools for your next design project. Learn how Solfej, a music theory app, used the tools."
+    seoTitle: "5 Beautiful color palette tools for your next design project. Learn how Solfej, a music theory app, used the tools.",
+    authorImage: <ShayanJavadi />
 }
 
 export default () => {
@@ -26,7 +27,6 @@ export default () => {
 
     return (
         <BlogPostLayout blogData={blogData} hero={<Hero />}>
-            <h1>{title}</h1>
             <p>Hi everybody Shayan here. I’m the solo founder/developer of Solfej a music theory and ear training app <a href="https://shayanjavadi.typeform.com/to/wO59zz">(click here to join the 700+ people signed up to try the app 😉)</a>.</p>
             <p>Raise your hand if you’ve spent  an unreasonable amount of time picking a color palette ✋😄</p>
             <p>I'm primarily a visual person, and to no one's surprise color and design are important to me. I can also be a perfectionist when it comes to design. This is especially true if it’s for a project that I’m passionate about like Solfej.</p>
