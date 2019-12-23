@@ -6,10 +6,13 @@ import Section from '../../components/Section/index'
 import BlogPostThumbnail from '../../components/BlogPostThumbnail/index'
 import ShayanJavadi from '../../components/ShayanJavadi'
 import Alvin from '../../components/Alvin'
+import JP from '../../components/JP'
 import BlogPostHeroOne from '../../components/BlogPostHeroOne'
 import BlogPostHeroTwo from '../../components/blogImages/is-betapage-worth-it/Thumbnail'
 import BlogPostHeroThree from '../../components/blogImages/5-beautiful-color-palette-generators-for-your-next-design-project/Thumbnail'
 import BlogPostHeroFour from '../../components/blogImages/5-reasons-why-you-should-learn-music-theory/Thumbnail';
+import BlogPostHeroFive from '../../components/blogImages/dont-give-up-on-music-theory/Thumbnail';
+
 import CenteredGraySection from '../../components/CenteredGraySection/index'
 import BlogPostsContainer from "../../components/BlogPostsContainer";
 import MailingListImage from '../../components/MailingListImage'
@@ -21,6 +24,7 @@ import { blogData as blogData1 } from "../blog/what's-new-in-solfej-v-1.3"
 import { blogData as blogData2 } from "../blog/is-betapage-worth-it"
 import { blogData as blogData3 } from "../blog/5-beautiful-color-palette-generators-for-your-next-design-project";
 import { blogData as blogData4 } from "./7-reasons-why-you-should-learn-music-theory";
+import { blogData as blogData5 } from "./dont-give-up-on-music-theory";
 
 export default function tos() {
     return (
@@ -32,9 +36,14 @@ export default function tos() {
             <Section title="Featured Stories" h1Header>
                 <BlogPostsContainer>
                     <BlogPostThumbnail
+                        {...blogData5}
+                        authorImage={<JP />}
+                        image={<BlogPostHeroFive />}
+                    /> 
+                    <BlogPostThumbnail
                         {...blogData4}
                         authorImage={<Alvin />}
-                        image={<BlogPostHeroFour />} 
+                        image={<BlogPostHeroFour />}
                     />   
                     <BlogPostThumbnail
                         {...blogData3}
