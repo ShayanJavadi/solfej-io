@@ -32,7 +32,7 @@ export default () => {
     return (
         <BlogPostLayout blogData={blogData} hero={<Hero />}>
             <p><i>This is a guest post by JP Hwang - JP is a recently reformed patent attorney who has given up his fancy suits and office in Sydney, Australia for many pairs of shorts, a laptop and a suitcase in SE Asia. He calls himself an online ‘maker’ and would like to mean it himself one day. You can find his blog on <b><a href="https://medium.com/@_jphwang">Medium</a></b> or on twitter <b> <a href="https://twitter.com/_jphwang">@_jphwang</a></b>.</i></p>
-            <h2>Not Knowing Music Theory Can Hurt (your feelings)</h2>
+            <h2>Is Music Theory Hard?</h2>
             <ImageContainer fullWidth bottomMarginOnly>
                 <One />
             </ImageContainer>
