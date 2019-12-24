@@ -12,6 +12,7 @@ import BlogPostHeroTwo from '../../components/blogImages/is-betapage-worth-it/Th
 import BlogPostHeroThree from '../../components/blogImages/5-beautiful-color-palette-generators-for-your-next-design-project/Thumbnail'
 import BlogPostHeroFour from '../../components/blogImages/5-reasons-why-you-should-learn-music-theory/Thumbnail';
 import BlogPostHeroFive from '../../components/blogImages/dont-give-up-on-music-theory/Thumbnail';
+import BlogPostHeroSix from '../../components/blogImages/the-4-best-ear-training-apps-for-2019/Thumbnail';
 
 import CenteredGraySection from '../../components/CenteredGraySection/index'
 import BlogPostsContainer from "../../components/BlogPostsContainer";
@@ -25,6 +26,7 @@ import { blogData as blogData2 } from "../blog/is-betapage-worth-it"
 import { blogData as blogData3 } from "../blog/5-beautiful-color-palette-generators-for-your-next-design-project";
 import { blogData as blogData4 } from "./7-reasons-why-you-should-learn-music-theory";
 import { blogData as blogData5 } from "./dont-give-up-on-music-theory";
+import { blogData as blogData6 } from "./the-4-best-ear-training-apps-for-2019";
 
 export default function tos() {
     return (
@@ -35,6 +37,11 @@ export default function tos() {
 
             <Section title="Featured Stories" h1Header>
                 <BlogPostsContainer>
+                    <BlogPostThumbnail
+                        {...blogData6}
+                        authorImage={<ShayanJavadi />}
+                        image={<BlogPostHeroSix />}
+                    /> 
                     <BlogPostThumbnail
                         {...blogData5}
                         authorImage={<JP />}

@@ -29,7 +29,7 @@ export default () => {
 
     return (
         <BlogPostLayout blogData={blogData} hero={<Hero />}>
-            <p>It’s been a couple of weeks since Solfej has started accepting early access beta users <a href="https://shayanjavadi.typeform.com/to/wO59zz">(click here to join the 700+ people signed up to try the app 😉)</a>.</p>
+            <p>It’s been a couple of weeks since Solfej has started accepting early access beta users <a href="https://shayanjavadi.typeform.com/to/wO59zz">(click here to join the 900+ people signed up to try the app 😉)</a>.</p>
             <p>As a first time founder It’s also been the same amount of time since I’ve started seriously marketing the app. For a music theory app, the distribution channels haven’t exactly been obvious.</p>
             <p>This where <a href="https://betapage.co/">Betapage</a> comes in. Betapage is an aggregator for startups that are in beta/early access. To get your startup featured, you need to submit it to betapage and wait around a month for it to get featured. Alternatively you could also pay a pretty penny and skip the wait.</p>
             
