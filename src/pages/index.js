@@ -109,7 +109,7 @@ const IndexPage = () => (
                 <BlogPostThumbnail
                     {...blogData4}
                     authorImage={<Alvin />}
-                    image={<BlogPostHeroFour />} />}
+                    image={<BlogPostHeroFour />}
                 />
 
                 <BlogPostThumbnail

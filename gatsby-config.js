@@ -23,6 +23,13 @@ module.exports = {
               pixelId: '627048344833116',
           },
       },
+      {
+          resolve: `gatsby-plugin-canonical-urls`,
+          options: {
+              siteUrl: `https://www.solfej.io`,
+              stripQueryString: true,
+          },
+      },
     `gatsby-plugin-sitemap`,
       {
           resolve: 'gatsby-plugin-robots-txt',
