@@ -69,6 +69,10 @@ function SEO({ description, lang, meta, title, image }) {
           content: metaDescription,
         },
         {
+            name: "og:image",
+            content: `${site.siteMetadata.url}${image || site.siteMetadata.image}`
+        },
+        {
             name: `twitter:image`,
             content: `${site.siteMetadata.url}${image || site.siteMetadata.image}`
         }
