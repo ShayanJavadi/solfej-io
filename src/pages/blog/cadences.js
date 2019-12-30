@@ -21,7 +21,7 @@ export const blogData = {
     timeToRead: "8 min",
     route: "cadences",
     image: "/images/blog-post-hero-7.png",
-    seoTitle: "Ultimate Guide To Cadences in Music Theory: The 4 types of Cadences With Examples",
+    seoTitle: "The Ultimate Guide To Cadences in Music Theory: The 4 types of Cadences With Examples",
     authorImage: <Alvin />
 }
 
@@ -58,7 +58,7 @@ export default () => {
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/ekzHIouo8Q4?start=11" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </ImageContainer>
 
-            <h2>2. Plagal Cadence (VI to I)</h2>
+            <h2>2. Plagal Cadence (IV to I)</h2>
 
             <ImageContainer fullWidth bottomMarginOnly>
                 <Two />
