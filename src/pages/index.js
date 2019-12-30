@@ -21,6 +21,7 @@ import BlogPostHeroThree from "../components/blogImages/5-beautiful-color-palett
 import BlogPostHeroFour from "../components/blogImages/5-reasons-why-you-should-learn-music-theory/Thumbnail"
 import BlogPostHeroFive from "../components/blogImages/dont-give-up-on-music-theory/Thumbnail"
 import BlogPostHeroSix from "../components/blogImages/the-4-best-ear-training-apps-for-2019/Thumbnail"
+import BlogPostHeroSeven from "../components/blogImages/cadences/Thumbnail"
 
 import { blogData as blogData1 } from "./blog/what's-new-in-solfej-v-1.3"
 import { blogData as blogData2 } from "./blog/is-betapage-worth-it"
@@ -28,6 +29,7 @@ import { blogData as blogData3 } from "./blog/5-beautiful-color-palette-generato
 import { blogData as blogData4 } from "./blog/7-reasons-why-you-should-learn-music-theory";
 import { blogData as blogData5 } from "./blog/dont-give-up-on-music-theory";
 import { blogData as blogData6 } from "./blog/the-4-best-ear-training-apps-for-2019";
+import { blogData as blogData7 } from "./blog/cadences";
 
 import ShayanJavadi from "../components/ShayanJavadi"
 import TempTwo from "../components/Temp2"
@@ -104,6 +106,12 @@ const IndexPage = () => (
     </div>
         <Section title="Featured Stories">
             <BlogPostsContainer>
+                <BlogPostThumbnail
+                    {...blogData7}
+                    authorImage={<Alvin />}
+                    image={<BlogPostHeroSeven />}
+                /> 
+
                 <BlogPostThumbnail
                     {...blogData6}
                     authorImage={<ShayanJavadi />}
