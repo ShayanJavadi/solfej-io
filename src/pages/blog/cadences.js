@@ -14,14 +14,14 @@ import Alvin from '../../components/Alvin';
 
 
 export const blogData = {
-    title: "The Ultimate Guide To Cadences in Music Theory: The 3 Types of Cadences With Examples",
+    title: "The Ultimate Guide To Cadences in Music Theory: The 4 types of Cadences With Examples",
     description: "Learn the 4 types of music theory cadences",
     authorName: "Alvin",
     date: "Dec 29",
     timeToRead: "8 min",
     route: "cadences",
     image: "/images/blog-post-hero-7.png",
-    seoTitle: "Ultimate Guide To Cadences in Music Theory: The 3 types of cadences",
+    seoTitle: "Ultimate Guide To Cadences in Music Theory: The 4 types of Cadences With Examples",
     authorImage: <Alvin />
 }
 
