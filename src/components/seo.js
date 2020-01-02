@@ -37,6 +37,10 @@ function SEO({ description, lang, meta, title, image }) {
       titleTemplate={`%s`}
       meta={[
         {
+              name: "ahrefs-site-verification",
+              content: "2c2c53403829ce0334f6d7bff037bb7d11cadca5c2666a94ab6e55adb3b96191"
+        },
+        {
           name: `description`,
           content: metaDescription,
         },
