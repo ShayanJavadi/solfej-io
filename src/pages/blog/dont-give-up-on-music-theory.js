@@ -15,7 +15,7 @@ import Author from '../../components/Author';
 import JP from '../../components/JP';
 
 export const blogData = {
-    title: "Don't Give Up On Music Theory",
+    title: "Is Music Theory Hard?",
     description: "Why learning music theory is worth it",
     authorName: "JP Hwang",
     date: "Dec 23",
