@@ -14,10 +14,10 @@
         }
     }
     .marketing-content-container {
-        min-height: 21rem;
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 0 20px;
+        min-height: 21rem !important;
+        max-width: 1000px !important;
+        margin: 0 auto !important;
+        padding: 0 20px !important;
 
         h2 {
             font-weight: bold !important;
@@ -35,35 +35,35 @@
         }
 
         .copy-container {
-            margin-top: 0;
-            justify-content: center;
-            align-items: center;
+            margin-top: 0 !important;
+            justify-content: center !important;
+            align-items: center !important;
             padding-left: 0 !important;
 
 
             @media (max-width: $mobile)  {
-                padding: 0;
-                padding-top: 2rem;
+                padding: 0 !important;
+                padding-top: 2rem !important;
             }
               
         }
 
         .image-container .mock-container {
             @media (max-width: $mobile)  {
-                padding-top: 0;
+                padding-top: 0 !important;
             }
 
             
             .gatsby-image-wrapper {
-                max-width: unset;
-                box-shadow: rgba(16, 16, 17, 0.15) 1px 15px 40px 0px;
+                max-width: unset !important;
+                box-shadow: rgba(16, 16, 17, 0.15) 1px 15px 40px 0px !important;
             }
         }
         
   
 
         .image-container {
-            flex: 4;
+            flex: 4 !important;
         }
     }    
     .hero {
@@ -80,9 +80,8 @@
             margin: 0 auto;
             
             .hero-copy {
-                  h1, p {
+                h1, p {
                     text-align: center;
-                    color: #183256 !important;
                 }
 
                 h1 {

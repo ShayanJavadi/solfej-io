@@ -52,9 +52,7 @@
                     margin-left: .5rem;
                     width: 100%;
 
-                    @media (max-width: 600px) {
-                        font-size: 14px !important;
-                    }
+                   
                 }
 
                 &:hover, &:active {
@@ -87,9 +85,6 @@
                 border: none;
                 font-size: 16px;
             
-                 @media (max-width: 600px) {
-                    font-size: 14px;
-                }
             }
         }
 
