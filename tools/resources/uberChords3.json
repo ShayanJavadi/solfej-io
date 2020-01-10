@@ -1,0 +1,2890 @@
+[
+    {
+        "strings": "X X 0 1 0 1",
+        "fingering": "X X X 1 X 2",
+        "chordName": "D,dim,7,",
+        "enharmonicChordName": "D,dim,7,",
+        "voicingID": "9223372036888364031",
+        "tones": "D,F,Ab,B"
+    },
+    {
+        "strings": "X X 0 1 1 1",
+        "fingering": "X X X 1 1 1",
+        "chordName": "D,m,7b5,",
+        "enharmonicChordName": "D,m,7b5,",
+        "voicingID": "9223372036889412607",
+        "tones": "D,F,Ab,C"
+    },
+    {
+        "strings": "X X 0 1 3 1",
+        "fingering": "X X X 1 3 1",
+        "chordName": "D,dim,,",
+        "enharmonicChordName": "D,dim,,",
+        "voicingID": "9223372036891509759",
+        "tones": "D,F,Ab"
+    },
+    {
+        "strings": "X 5 6 6 6 7",
+        "fingering": "X 2 3 3 3 4",
+        "chordName": "D,dim,7(maj7),",
+        "enharmonicChordName": "D,dim,7(maj7),",
+        "voicingID": "9223372037096151231",
+        "tones": "D,F,Ab,B,C#"
+    },
+    {
+        "strings": "X 5 6 5 6 0",
+        "fingering": "X 1 3 2 4 X",
+        "chordName": "D,m,79(add#11),",
+        "enharmonicChordName": "D,m,79(add#11),",
+        "voicingID": "9223372036861237439",
+        "tones": "D,F,A,C,E,G#"
+    },
+    {
+        "strings": "X X 0 1 2 1",
+        "fingering": "X X X 1 3 2",
+        "chordName": "D,dim,maj7,",
+        "enharmonicChordName": "D,dim,maj7,",
+        "voicingID": "9223372036890461183",
+        "tones": "D,F,Ab,C#"
+    },
+    {
+        "strings": "X 5 6 7 6 0",
+        "fingering": "X 1 2 4 3 X",
+        "chordName": "D,dim,9,",
+        "enharmonicChordName": "D,dim,9,",
+        "voicingID": "9223372036861302975",
+        "tones": "D,F,Ab,E"
+    },
+    {
+        "strings": "X 5 6 5 6 0",
+        "fingering": "X 1 3 2 4 X",
+        "chordName": "D,m,7b59,",
+        "enharmonicChordName": "D,m,7b59,",
+        "voicingID": "9223372036861237439",
+        "tones": "D,F,Ab,C,E"
+    },
+    {
+        "strings": "X 5 6 6 6 0",
+        "fingering": "X 1 2 3 4 X",
+        "chordName": "D,dim,maj79,",
+        "enharmonicChordName": "D,dim,maj79,",
+        "voicingID": "9223372036861270207",
+        "tones": "D,F,Ab,C#,E"
+    },
+    {
+        "strings": "X X 0 1 4 1",
+        "fingering": "X X X 1 4 1",
+        "chordName": "D,dim,(addb9),",
+        "enharmonicChordName": "D,dim,(addb9),",
+        "voicingID": "9223372036892558335",
+        "tones": "D,F,Ab,Eb"
+    },
+    {
+        "strings": "X 5 6 5 6 7",
+        "fingering": "X 1 2 1 3 4",
+        "chordName": "D,m,713(add#11),",
+        "enharmonicChordName": "D,m,713(add#11),",
+        "voicingID": "9223372037096118463",
+        "tones": "D,F,A,B,C,G#"
+    },
+    {
+        "strings": "X 5 6 6 6 7",
+        "fingering": "X 2 3 3 3 4",
+        "chordName": "D,m,maj713(add#11),",
+        "enharmonicChordName": "D,m,maj713(add#11),",
+        "voicingID": "9223372037096151231",
+        "tones": "D,F,A,B,C#,G#"
+    },
+    {
+        "strings": "11 11 12 11 12 13",
+        "fingering": "1 1 2 1 3 4",
+        "chordName": "B,,(add#9#1113),D",
+        "enharmonicChordName": "B,,(add#9#1113),D",
+        "voicingID": "9223372037303939435",
+        "tones": "D,G#,B,D#,F,F#"
+    },
+    {
+        "strings": "X X 0 1 1 1",
+        "fingering": "X X X 1 1 1",
+        "chordName": "D,m,7b5,",
+        "enharmonicChordName": "D,m,7b5,",
+        "voicingID": "9223372036889412607",
+        "tones": "D,F,Ab,C"
+    },
+    {
+        "strings": "X 5 6 5 6 0",
+        "fingering": "X 1 3 2 4 X",
+        "chordName": "D,m,79(add#11),",
+        "enharmonicChordName": "D,m,79(add#11),",
+        "voicingID": "9223372036861237439",
+        "tones": "D,F,A,C,E,G#"
+    },
+    {
+        "strings": "X 5 6 5 6 0",
+        "fingering": "X 1 3 2 4 X",
+        "chordName": "D,m,7b59,",
+        "enharmonicChordName": "D,m,7b59,",
+        "voicingID": "9223372036861237439",
+        "tones": "D,F,Ab,C,E"
+    },
+    {
+        "strings": "10 12 12 13 13 13",
+        "fingering": "1 3 3 4 4 4",
+        "chordName": "D,m,7(add#11),",
+        "enharmonicChordName": "D,m,7(add#11),",
+        "voicingID": "9223372037305053578",
+        "tones": "D,F,A,C,G#"
+    },
+    {
+        "strings": "X 5 4 5 6 4",
+        "fingering": "X 2 1 3 4 1",
+        "chordName": "D,,7#9#11,",
+        "enharmonicChordName": "D,,7#9#11,",
+        "voicingID": "9223372036995453119",
+        "tones": "D,F#,A,C,F,G#"
+    },
+    {
+        "strings": "10 8 10 8 9 X",
+        "fingering": "3 1 4 1 2 X",
+        "chordName": "D,m,7(addb9#11),",
+        "enharmonicChordName": "D,m,7(addb9#11),",
+        "voicingID": "9223372037904673034",
+        "tones": "D,F,A,C,Eb,G#"
+    },
+    {
+        "strings": "X 5 6 5 6 7",
+        "fingering": "X 1 2 1 3 4",
+        "chordName": "D,m,713(add#11),",
+        "enharmonicChordName": "D,m,713(add#11),",
+        "voicingID": "9223372037096118463",
+        "tones": "D,F,A,B,C,G#"
+    },
+    {
+        "strings": "X 5 6 5 6 0",
+        "fingering": "X 1 3 2 4 X",
+        "chordName": "D,m,79(add#11),",
+        "enharmonicChordName": "D,m,79(add#11),",
+        "voicingID": "9223372036861237439",
+        "tones": "D,F,A,C,E,G#"
+    },
+    {
+        "strings": "X 5 6 7 6 0",
+        "fingering": "X 1 2 4 3 X",
+        "chordName": "D,dim,9,",
+        "enharmonicChordName": "D,dim,9,",
+        "voicingID": "9223372036861302975",
+        "tones": "D,F,Ab,E"
+    },
+    {
+        "strings": "X 5 6 5 6 0",
+        "fingering": "X 1 3 2 4 X",
+        "chordName": "D,m,7b59,",
+        "enharmonicChordName": "D,m,7b59,",
+        "voicingID": "9223372036861237439",
+        "tones": "D,F,Ab,C,E"
+    },
+    {
+        "strings": "X 5 6 6 6 0",
+        "fingering": "X 1 2 3 4 X",
+        "chordName": "D,dim,maj79,",
+        "enharmonicChordName": "D,dim,maj79,",
+        "voicingID": "9223372036861270207",
+        "tones": "D,F,Ab,C#,E"
+    },
+    {
+        "strings": "X 5 6 7 6 0",
+        "fingering": "X 1 2 4 3 X",
+        "chordName": "D,m,(add9#11),",
+        "enharmonicChordName": "D,m,(add9#11),",
+        "voicingID": "9223372036861302975",
+        "tones": "D,F,A,E,G#"
+    },
+    {
+        "strings": "X 5 6 6 6 0",
+        "fingering": "X 1 2 3 4 X",
+        "chordName": "D,m,maj79(add#11),",
+        "enharmonicChordName": "D,m,maj79(add#11),",
+        "voicingID": "9223372036861270207",
+        "tones": "D,F,A,C#,E,G#"
+    },
+    {
+        "strings": "X X 0 1 0 1",
+        "fingering": "X X X 1 X 2",
+        "chordName": "D,dim,7,",
+        "enharmonicChordName": "D,dim,7,",
+        "voicingID": "9223372036888364031",
+        "tones": "D,F,Ab,B"
+    },
+    {
+        "strings": "X 5 6 6 6 7",
+        "fingering": "X 2 3 3 3 4",
+        "chordName": "D,dim,7(maj7),",
+        "enharmonicChordName": "D,dim,7(maj7),",
+        "voicingID": "9223372037096151231",
+        "tones": "D,F,Ab,B,C#"
+    },
+    {
+        "strings": "X 5 7 4 6 4",
+        "fingering": "X 2 4 1 3 1",
+        "chordName": "D,m,6(add#11),",
+        "enharmonicChordName": "D,m,6(add#11),",
+        "voicingID": "9223372036995423423",
+        "tones": "D,F,A,B,G#"
+    },
+    {
+        "strings": "X 5 6 5 6 7",
+        "fingering": "X 1 2 1 3 4",
+        "chordName": "D,m,713(add#11),",
+        "enharmonicChordName": "D,m,713(add#11),",
+        "voicingID": "9223372037096118463",
+        "tones": "D,F,A,B,C,G#"
+    },
+    {
+        "strings": "X 5 6 6 6 7",
+        "fingering": "X 2 3 3 3 4",
+        "chordName": "D,m,maj713(add#11),",
+        "enharmonicChordName": "D,m,maj713(add#11),",
+        "voicingID": "9223372037096151231",
+        "tones": "D,F,A,B,C#,G#"
+    },
+    {
+        "strings": "11 11 12 11 12 13",
+        "fingering": "1 1 2 1 3 4",
+        "chordName": "B,,(add#9#1113),D",
+        "enharmonicChordName": "B,,(add#9#1113),D",
+        "voicingID": "9223372037303939435",
+        "tones": "D,G#,B,D#,F,F#"
+    },
+    {
+        "strings": "X 6 5 3 4 3",
+        "fingering": "X 4 3 1 2 1",
+        "chordName": "Eb,,,",
+        "enharmonicChordName": "D#,,,",
+        "voicingID": "9223372036959737055",
+        "tones": "Eb,G,Bb"
+    },
+    {
+        "strings": "X X 1 3 4 2",
+        "fingering": "X X 1 3 4 2",
+        "chordName": "Eb,m,,",
+        "enharmonicChordName": "D#,m,,",
+        "voicingID": "9223372036926179327",
+        "tones": "Eb,Gb,Bb"
+    },
+    {
+        "strings": "X X 1 3 2 3",
+        "fingering": "X X 1 3 2 4",
+        "chordName": "Eb,,7,",
+        "enharmonicChordName": "D#,,7,",
+        "voicingID": "9223372036957636607",
+        "tones": "Eb,G,Bb,Db"
+    },
+    {
+        "strings": "X X 1 3 3 3",
+        "fingering": "X X 1 2 3 4",
+        "chordName": "Eb,maj,7,",
+        "enharmonicChordName": "D#,maj,7,",
+        "voicingID": "9223372036958685183",
+        "tones": "Eb,G,Bb,D"
+    },
+    {
+        "strings": "X X 1 3 2 2",
+        "fingering": "X X 1 4 2 3",
+        "chordName": "Eb,m,7,",
+        "enharmonicChordName": "D#,m,7,",
+        "voicingID": "9223372036924082175",
+        "tones": "Eb,Gb,Bb,Db"
+    },
+    {
+        "strings": "X X 1 3 X X",
+        "fingering": "X X 1 3 X X",
+        "chordName": "Eb,,5,",
+        "enharmonicChordName": "D#,,5,",
+        "voicingID": "9223372037927569407",
+        "tones": "Eb,Bb"
+    },
+    {
+        "strings": "X X 1 2 1 2",
+        "fingering": "X X 1 3 2 4",
+        "chordName": "Eb,dim,7,",
+        "enharmonicChordName": "D#,dim,7,",
+        "voicingID": "9223372036923000831",
+        "tones": "Eb,Gb,A,C"
+    },
+    {
+        "strings": "X X 1 2 2 2",
+        "fingering": "X X 1 2 3 4",
+        "chordName": "Eb,m,7b5,",
+        "enharmonicChordName": "D#,m,7b5,",
+        "voicingID": "9223372036924049407",
+        "tones": "Eb,Gb,A,Db"
+    },
+    {
+        "strings": "X X 1 3 1 3",
+        "fingering": "X X 1 3 1 4",
+        "chordName": "Eb,,6,",
+        "enharmonicChordName": "D#,,6,",
+        "voicingID": "9223372036956588031",
+        "tones": "Eb,G,Bb,C"
+    },
+    {
+        "strings": "X X 1 3 1 2",
+        "fingering": "X X 1 3 1 2",
+        "chordName": "Eb,m,6,",
+        "enharmonicChordName": "D#,m,6,",
+        "voicingID": "9223372036923033599",
+        "tones": "Eb,Gb,Bb,C"
+    },
+    {
+        "strings": "X 6 5 6 5 7",
+        "fingering": "X 2 1 3 1 4",
+        "chordName": "Eb,,7b9b13,",
+        "enharmonicChordName": "D#,,7b9b13,",
+        "voicingID": "9223372037095101663",
+        "tones": "Eb,G,Bb,Db,E,B"
+    },
+    {
+        "strings": "X 6 X 7 8 8",
+        "fingering": "X 1 X 2 3 4",
+        "chordName": "Eb,maj,713,",
+        "enharmonicChordName": "D#,maj,713,",
+        "voicingID": "9223372037131861215",
+        "tones": "Eb,G,Bb,C,D"
+    },
+    {
+        "strings": "11 X 11 12 13 13",
+        "fingering": "1 X 1 2 3 4",
+        "chordName": "Eb,,7913,",
+        "enharmonicChordName": "D#,,7913,",
+        "voicingID": "9223372037305020395",
+        "tones": "Eb,G,Bb,C,Db,F"
+    },
+    {
+        "strings": "11 X 11 11 13 13",
+        "fingering": "1 X 1 1 3 4",
+        "chordName": "Eb,m,7913,",
+        "enharmonicChordName": "D#,m,7913,",
+        "voicingID": "9223372037304987627",
+        "tones": "Eb,Gb,Bb,C,Db,F"
+    },
+    {
+        "strings": "X X 1 4 2 3",
+        "fingering": "X X 1 4 2 3",
+        "chordName": "Eb,,7b13,",
+        "enharmonicChordName": "D#,,7b13,",
+        "voicingID": "9223372036957669375",
+        "tones": "Eb,G,Bb,Db,B"
+    },
+    {
+        "strings": "11 X 11 12 13 12",
+        "fingering": "1 X 1 2 4 3",
+        "chordName": "Eb,,7b913,",
+        "enharmonicChordName": "D#,,7b913,",
+        "voicingID": "9223372037271465963",
+        "tones": "Eb,G,Bb,C,Db,E"
+    },
+    {
+        "strings": "11 X 11 12 13 14",
+        "fingering": "1 X 1 2 3 4",
+        "chordName": "Eb,,7#913,",
+        "enharmonicChordName": "D#,,7#913,",
+        "voicingID": "9223372037338574827",
+        "tones": "Eb,G,Bb,C,Db,Gb"
+    },
+    {
+        "strings": "11 10 10 10 10 10",
+        "fingering": "2 1 1 1 1 1",
+        "chordName": "Eb,,maj79#1113,",
+        "enharmonicChordName": "D#,,maj79#1113,",
+        "voicingID": "9223372037201144139",
+        "tones": "Eb,G,A,C,D,F"
+    },
+    {
+        "strings": "X 6 7 6 8 8",
+        "fingering": "X 1 2 1 3 4",
+        "chordName": "Eb,,7#1113,",
+        "enharmonicChordName": "D#,,7#1113,",
+        "voicingID": "9223372037131803871",
+        "tones": "Eb,G,Bb,C,Db,A"
+    },
+    {
+        "strings": "X X 1 X 2 X",
+        "fingering": "X X 1 X 3 X",
+        "chordName": "Eb,,7(omit3omit5),",
+        "enharmonicChordName": "D#,,7(omit3omit5),",
+        "voicingID": "9223372037898078207",
+        "tones": "Eb,Db"
+    },
+    {
+        "strings": "X X 1 3 2 3",
+        "fingering": "X X 1 3 2 4",
+        "chordName": "Eb,,7,",
+        "enharmonicChordName": "D#,,7,",
+        "voicingID": "9223372036957636607",
+        "tones": "Eb,G,Bb,Db"
+    },
+    {
+        "strings": "X X 1 3 2 2",
+        "fingering": "X X 1 4 2 3",
+        "chordName": "Eb,m,7,",
+        "enharmonicChordName": "D#,m,7,",
+        "voicingID": "9223372036924082175",
+        "tones": "Eb,Gb,Bb,Db"
+    },
+    {
+        "strings": "X X 1 2 2 2",
+        "fingering": "X X 1 2 3 4",
+        "chordName": "Eb,m,7b5,",
+        "enharmonicChordName": "D#,m,7b5,",
+        "voicingID": "9223372036924049407",
+        "tones": "Eb,Gb,A,Db"
+    },
+    {
+        "strings": "X 6 4 6 6 X",
+        "fingering": "X 2 1 3 4 X",
+        "chordName": "Eb,m,79,",
+        "enharmonicChordName": "D#,m,79,",
+        "voicingID": "9223372037901455583",
+        "tones": "Eb,Gb,Bb,Db,F"
+    },
+    {
+        "strings": "X X 1 0 2 1",
+        "fingering": "X X 1 X 4 3",
+        "chordName": "Eb,,79,",
+        "enharmonicChordName": "D#,,79,",
+        "voicingID": "9223372036890429439",
+        "tones": "Eb,G,Bb,Db,F"
+    },
+    {
+        "strings": "X X 1 0 2 0",
+        "fingering": "X X 1 X 3 X",
+        "chordName": "Eb,,7b9,",
+        "enharmonicChordName": "D#,,7b9,",
+        "voicingID": "9223372036856875007",
+        "tones": "Eb,G,Bb,Db,E"
+    },
+    {
+        "strings": "X X 1 0 2 2",
+        "fingering": "X X 1 X 3 4",
+        "chordName": "Eb,,7#9,",
+        "enharmonicChordName": "D#,,7#9,",
+        "voicingID": "9223372036923983871",
+        "tones": "Eb,G,Bb,Db,Gb"
+    },
+    {
+        "strings": "X 6 5 6 7 7",
+        "fingering": "X 2 1 3 4 4",
+        "chordName": "Eb,,7#5#9,",
+        "enharmonicChordName": "D#,,7#5#9,",
+        "voicingID": "9223372037097198815",
+        "tones": "Eb,G,B,Db,Gb"
+    },
+    {
+        "strings": "X 6 5 6 5 7",
+        "fingering": "X 2 1 3 1 4",
+        "chordName": "Eb,,7b9b13,",
+        "enharmonicChordName": "D#,,7b9b13,",
+        "voicingID": "9223372037095101663",
+        "tones": "Eb,G,Bb,Db,E,B"
+    },
+    {
+        "strings": "X X 1 2 2 3",
+        "fingering": "X X 1 2 3 4",
+        "chordName": "Eb,,7b5,",
+        "enharmonicChordName": "D#,,7b5,",
+        "voicingID": "9223372036957603839",
+        "tones": "Eb,G,A,Db"
+    },
+    {
+        "strings": "X X 1 3 4 1",
+        "fingering": "X X 1 3 4 1",
+        "chordName": "Eb,sus2,,",
+        "enharmonicChordName": "D#,sus2,,",
+        "voicingID": "9223372036892624895",
+        "tones": "Eb,F,Bb"
+    },
+    {
+        "strings": "11 X 13 12 11 13",
+        "fingering": "1 X 3 2 1 4",
+        "chordName": "Eb,,(add9),",
+        "enharmonicChordName": "D#,,(add9),",
+        "voicingID": "9223372037302925291",
+        "tones": "Eb,G,Bb,F"
+    },
+    {
+        "strings": "11 X 13 11 11 13",
+        "fingering": "1 X 3 1 1 4",
+        "chordName": "Eb,m,(add9),",
+        "enharmonicChordName": "D#,m,(add9),",
+        "voicingID": "9223372037302892523",
+        "tones": "Eb,Gb,Bb,F"
+    },
+    {
+        "strings": "X X 1 0 3 1",
+        "fingering": "X X 1 X 4 2",
+        "chordName": "Eb,maj,79,",
+        "enharmonicChordName": "D#,maj,79,",
+        "voicingID": "9223372036891478015",
+        "tones": "Eb,G,Bb,D,F"
+    },
+    {
+        "strings": "X 6 4 6 6 X",
+        "fingering": "X 2 1 3 4 X",
+        "chordName": "Eb,m,79,",
+        "enharmonicChordName": "D#,m,79,",
+        "voicingID": "9223372037901455583",
+        "tones": "Eb,Gb,Bb,Db,F"
+    },
+    {
+        "strings": "X X 1 0 2 1",
+        "fingering": "X X 1 X 4 3",
+        "chordName": "Eb,,79,",
+        "enharmonicChordName": "D#,,79,",
+        "voicingID": "9223372036890429439",
+        "tones": "Eb,G,Bb,Db,F"
+    },
+    {
+        "strings": "X X 1 0 1 1",
+        "fingering": "X X 1 X 2 3",
+        "chordName": "Eb,,69,",
+        "enharmonicChordName": "D#,,69,",
+        "voicingID": "9223372036889380863",
+        "tones": "Eb,G,Bb,C,F"
+    },
+    {
+        "strings": "X X 1 3 2 1",
+        "fingering": "X X 1 3 2 1",
+        "chordName": "Eb,sus2,7,",
+        "enharmonicChordName": "D#,sus2,7,",
+        "voicingID": "9223372036890527743",
+        "tones": "Eb,F,Bb,Db"
+    },
+    {
+        "strings": "11 9 12 10 X X",
+        "fingering": "3 1 4 2 X X",
+        "chordName": "Eb,m,maj79,",
+        "enharmonicChordName": "D#,m,maj79,",
+        "voicingID": "9223372037927809323",
+        "tones": "Eb,Gb,Bb,D,F"
+    },
+    {
+        "strings": "11 X 11 12 13 13",
+        "fingering": "1 X 1 2 3 4",
+        "chordName": "Eb,,7913,",
+        "enharmonicChordName": "D#,,7913,",
+        "voicingID": "9223372037305020395",
+        "tones": "Eb,G,Bb,C,Db,F"
+    },
+    {
+        "strings": "X 6 6 8 9 6",
+        "fingering": "X 1 1 3 4 1",
+        "chordName": "Eb,sus4,,",
+        "enharmonicChordName": "D#,sus4,,",
+        "voicingID": "9223372037065808095",
+        "tones": "Eb,Ab,Bb"
+    },
+    {
+        "strings": "X X 1 3 2 4",
+        "fingering": "X X 1 3 2 4",
+        "chordName": "Eb,sus4,7,",
+        "enharmonicChordName": "D#,sus4,7,",
+        "voicingID": "9223372036991191039",
+        "tones": "Eb,Ab,Bb,Db"
+    },
+    {
+        "strings": "X X 1 1 2 3",
+        "fingering": "X X 1 2 3 4",
+        "chordName": "Eb,,7(add11),",
+        "enharmonicChordName": "D#,,7(add11),",
+        "voicingID": "9223372036957571071",
+        "tones": "Eb,G,Bb,Db,Ab"
+    },
+    {
+        "strings": "X X 1 1 2 2",
+        "fingering": "X X 1 2 3 4",
+        "chordName": "Eb,m,711,",
+        "enharmonicChordName": "D#,m,711,",
+        "voicingID": "9223372036924016639",
+        "tones": "Eb,Gb,Bb,Db,Ab"
+    },
+    {
+        "strings": "11 9 12 10 9 X",
+        "fingering": "3 1 4 2 1 X",
+        "chordName": "Eb,m,maj7911,",
+        "enharmonicChordName": "D#,m,maj7911,",
+        "voicingID": "9223372037904740651",
+        "tones": "Eb,Gb,Bb,D,F,Ab"
+    },
+    {
+        "strings": "X X 1 1 2 0",
+        "fingering": "X X 1 2 3 X",
+        "chordName": "Eb,sus4,7b9,",
+        "enharmonicChordName": "D#,sus4,7b9,",
+        "voicingID": "9223372036856907775",
+        "tones": "Eb,Ab,Bb,Db,E"
+    },
+    {
+        "strings": "X 6 6 8 8 6",
+        "fingering": "X 1 1 3 4 1",
+        "chordName": "Eb,,(add11),",
+        "enharmonicChordName": "D#,,(add11),",
+        "voicingID": "9223372037064759519",
+        "tones": "Eb,G,Bb,Ab"
+    },
+    {
+        "strings": "X 6 6 8 7 6",
+        "fingering": "X 1 1 3 2 1",
+        "chordName": "Eb,m,11,",
+        "enharmonicChordName": "D#,m,11,",
+        "voicingID": "9223372037063710943",
+        "tones": "Eb,Gb,Bb,Ab"
+    },
+    {
+        "strings": "X 6 6 7 9 6",
+        "fingering": "X 1 1 2 4 1",
+        "chordName": "Eb,sus4,maj7,",
+        "enharmonicChordName": "D#,sus4,maj7,",
+        "voicingID": "9223372037065775327",
+        "tones": "Eb,Ab,Bb,D"
+    },
+    {
+        "strings": "X 6 6 8 6 6",
+        "fingering": "X 1 1 3 1 1",
+        "chordName": "Eb,sus4,9,",
+        "enharmonicChordName": "D#,sus4,9,",
+        "voicingID": "9223372037062662367",
+        "tones": "Eb,Ab,Bb,F"
+    },
+    {
+        "strings": "X X 1 2 1 2",
+        "fingering": "X X 1 3 2 4",
+        "chordName": "Eb,dim,7,",
+        "enharmonicChordName": "D#,dim,7,",
+        "voicingID": "9223372036923000831",
+        "tones": "Eb,Gb,A,C"
+    },
+    {
+        "strings": "X X 1 3 1 3",
+        "fingering": "X X 1 3 1 4",
+        "chordName": "Eb,,6,",
+        "enharmonicChordName": "D#,,6,",
+        "voicingID": "9223372036956588031",
+        "tones": "Eb,G,Bb,C"
+    },
+    {
+        "strings": "X X 1 3 1 2",
+        "fingering": "X X 1 3 1 2",
+        "chordName": "Eb,m,6,",
+        "enharmonicChordName": "D#,m,6,",
+        "voicingID": "9223372036923033599",
+        "tones": "Eb,Gb,Bb,C"
+    },
+    {
+        "strings": "X 6 X 7 8 8",
+        "fingering": "X 1 X 2 3 4",
+        "chordName": "Eb,maj,713,",
+        "enharmonicChordName": "D#,maj,713,",
+        "voicingID": "9223372037131861215",
+        "tones": "Eb,G,Bb,C,D"
+    },
+    {
+        "strings": "X X 1 0 1 1",
+        "fingering": "X X 1 X 2 3",
+        "chordName": "Eb,,69,",
+        "enharmonicChordName": "D#,,69,",
+        "voicingID": "9223372036889380863",
+        "tones": "Eb,G,Bb,C,F"
+    },
+    {
+        "strings": "11 X 11 12 13 13",
+        "fingering": "1 X 1 2 3 4",
+        "chordName": "Eb,,7913,",
+        "enharmonicChordName": "D#,,7913,",
+        "voicingID": "9223372037305020395",
+        "tones": "Eb,G,Bb,C,Db,F"
+    },
+    {
+        "strings": "11 X 11 11 13 13",
+        "fingering": "1 X 1 1 3 4",
+        "chordName": "Eb,m,7913,",
+        "enharmonicChordName": "D#,m,7913,",
+        "voicingID": "9223372037304987627",
+        "tones": "Eb,Gb,Bb,C,Db,F"
+    },
+    {
+        "strings": "11 10 12 10 13 X",
+        "fingering": "2 1 3 1 4 X",
+        "chordName": "Eb,maj,79(add11),",
+        "enharmonicChordName": "D#,maj,79(add11),",
+        "voicingID": "9223372037908934987",
+        "tones": "Eb,G,Bb,C,D,F"
+    },
+    {
+        "strings": "11 X 11 12 13 12",
+        "fingering": "1 X 1 2 4 3",
+        "chordName": "Eb,,7b913,",
+        "enharmonicChordName": "D#,,7b913,",
+        "voicingID": "9223372037271465963",
+        "tones": "Eb,G,Bb,C,Db,E"
+    },
+    {
+        "strings": "X 6 4 5 6 X",
+        "fingering": "X 3 1 2 4 X",
+        "chordName": "Eb,m,69,",
+        "enharmonicChordName": "D#,m,69,",
+        "voicingID": "9223372037901422815",
+        "tones": "Eb,Gb,Bb,C,F"
+    },
+    {
+        "strings": "X 6 5 3 4 3",
+        "fingering": "X 4 3 1 2 1",
+        "chordName": "Eb,,,",
+        "enharmonicChordName": "D#,,,",
+        "voicingID": "9223372036959737055",
+        "tones": "Eb,G,Bb"
+    },
+    {
+        "strings": "X X 1 3 2 3",
+        "fingering": "X X 1 3 2 4",
+        "chordName": "Eb,,7,",
+        "enharmonicChordName": "D#,,7,",
+        "voicingID": "9223372036957636607",
+        "tones": "Eb,G,Bb,Db"
+    },
+    {
+        "strings": "X X 1 3 3 3",
+        "fingering": "X X 1 2 3 4",
+        "chordName": "Eb,maj,7,",
+        "enharmonicChordName": "D#,maj,7,",
+        "voicingID": "9223372036958685183",
+        "tones": "Eb,G,Bb,D"
+    },
+    {
+        "strings": "X X 1 3 1 3",
+        "fingering": "X X 1 3 1 4",
+        "chordName": "Eb,,6,",
+        "enharmonicChordName": "D#,,6,",
+        "voicingID": "9223372036956588031",
+        "tones": "Eb,G,Bb,C"
+    },
+    {
+        "strings": "11 X 13 12 11 13",
+        "fingering": "1 X 3 2 1 4",
+        "chordName": "Eb,,(add9),",
+        "enharmonicChordName": "D#,,(add9),",
+        "voicingID": "9223372037302925291",
+        "tones": "Eb,G,Bb,F"
+    },
+    {
+        "strings": "X X 1 0 3 1",
+        "fingering": "X X 1 X 4 2",
+        "chordName": "Eb,maj,79,",
+        "enharmonicChordName": "D#,maj,79,",
+        "voicingID": "9223372036891478015",
+        "tones": "Eb,G,Bb,D,F"
+    },
+    {
+        "strings": "X X 1 0 2 1",
+        "fingering": "X X 1 X 4 3",
+        "chordName": "Eb,,79,",
+        "enharmonicChordName": "D#,,79,",
+        "voicingID": "9223372036890429439",
+        "tones": "Eb,G,Bb,Db,F"
+    },
+    {
+        "strings": "X X 1 0 2 0",
+        "fingering": "X X 1 X 3 X",
+        "chordName": "Eb,,7b9,",
+        "enharmonicChordName": "D#,,7b9,",
+        "voicingID": "9223372036856875007",
+        "tones": "Eb,G,Bb,Db,E"
+    },
+    {
+        "strings": "X X 1 0 2 2",
+        "fingering": "X X 1 X 3 4",
+        "chordName": "Eb,,7#9,",
+        "enharmonicChordName": "D#,,7#9,",
+        "voicingID": "9223372036923983871",
+        "tones": "Eb,G,Bb,Db,Gb"
+    },
+    {
+        "strings": "X X 1 0 0 3",
+        "fingering": "X X 1 X X 4",
+        "chordName": "Eb,aug,,",
+        "enharmonicChordName": "D#,aug,,",
+        "voicingID": "9223372036955441151",
+        "tones": "Eb,G,B"
+    },
+    {
+        "strings": "X 6 5 6 5 7",
+        "fingering": "X 2 1 3 1 4",
+        "chordName": "Eb,,7b9b13,",
+        "enharmonicChordName": "D#,,7b9b13,",
+        "voicingID": "9223372037095101663",
+        "tones": "Eb,G,Bb,Db,E,B"
+    },
+    {
+        "strings": "X 6 X 7 8 8",
+        "fingering": "X 1 X 2 3 4",
+        "chordName": "Eb,maj,713,",
+        "enharmonicChordName": "D#,maj,713,",
+        "voicingID": "9223372037131861215",
+        "tones": "Eb,G,Bb,C,D"
+    },
+    {
+        "strings": "11 X 11 12 13 13",
+        "fingering": "1 X 1 2 3 4",
+        "chordName": "Eb,,7913,",
+        "enharmonicChordName": "D#,,7913,",
+        "voicingID": "9223372037305020395",
+        "tones": "Eb,G,Bb,C,Db,F"
+    },
+    {
+        "strings": "X X 1 4 2 3",
+        "fingering": "X X 1 4 2 3",
+        "chordName": "Eb,,7b13,",
+        "enharmonicChordName": "D#,,7b13,",
+        "voicingID": "9223372036957669375",
+        "tones": "Eb,G,Bb,Db,B"
+    },
+    {
+        "strings": "11 X 11 12 13 12",
+        "fingering": "1 X 1 2 4 3",
+        "chordName": "Eb,,7b913,",
+        "enharmonicChordName": "D#,,7b913,",
+        "voicingID": "9223372037271465963",
+        "tones": "Eb,G,Bb,C,Db,E"
+    },
+    {
+        "strings": "11 X 11 12 13 14",
+        "fingering": "1 X 1 2 3 4",
+        "chordName": "Eb,,7#913,",
+        "enharmonicChordName": "D#,,7#913,",
+        "voicingID": "9223372037338574827",
+        "tones": "Eb,G,Bb,C,Db,Gb"
+    },
+    {
+        "strings": "11 10 10 10 10 10",
+        "fingering": "2 1 1 1 1 1",
+        "chordName": "Eb,,maj79#1113,",
+        "enharmonicChordName": "D#,,maj79#1113,",
+        "voicingID": "9223372037201144139",
+        "tones": "Eb,G,A,C,D,F"
+    },
+    {
+        "strings": "X 6 7 6 8 8",
+        "fingering": "X 1 2 1 3 4",
+        "chordName": "Eb,,7#1113,",
+        "enharmonicChordName": "D#,,7#1113,",
+        "voicingID": "9223372037131803871",
+        "tones": "Eb,G,Bb,C,Db,A"
+    },
+    {
+        "strings": "X X 1 0 0 2",
+        "fingering": "X X 1 X X 3",
+        "chordName": "B,,(addb13),D#",
+        "enharmonicChordName": "B,,(addb13),D#",
+        "voicingID": "9223372036921886719",
+        "tones": "D#,F#,G,B"
+    },
+    {
+        "strings": "X 6 X 6 8 8",
+        "fingering": "X 1 X 1 3 4",
+        "chordName": "Eb,,713,",
+        "enharmonicChordName": "D#,,713,",
+        "voicingID": "9223372037131828447",
+        "tones": "Eb,G,Bb,C,Db"
+    },
+    {
+        "strings": "X X 1 3 3 3",
+        "fingering": "X X 1 2 3 4",
+        "chordName": "Eb,maj,7,",
+        "enharmonicChordName": "D#,maj,7,",
+        "voicingID": "9223372036958685183",
+        "tones": "Eb,G,Bb,D"
+    },
+    {
+        "strings": "X X 1 0 3 1",
+        "fingering": "X X 1 X 4 2",
+        "chordName": "Eb,maj,79,",
+        "enharmonicChordName": "D#,maj,79,",
+        "voicingID": "9223372036891478015",
+        "tones": "Eb,G,Bb,D,F"
+    },
+    {
+        "strings": "X 6 X 7 8 8",
+        "fingering": "X 1 X 2 3 4",
+        "chordName": "Eb,maj,713,",
+        "enharmonicChordName": "D#,maj,713,",
+        "voicingID": "9223372037131861215",
+        "tones": "Eb,G,Bb,C,D"
+    },
+    {
+        "strings": "X 6 5 4 3 3",
+        "fingering": "X 4 3 2 1 1",
+        "chordName": "Eb,maj,7#5,",
+        "enharmonicChordName": "D#,maj,7#5,",
+        "voicingID": "9223372036958721247",
+        "tones": "Eb,G,B,D"
+    },
+    {
+        "strings": "X X 1 3 3 2",
+        "fingering": "X X 1 3 4 2",
+        "chordName": "Eb,m,maj7,",
+        "enharmonicChordName": "D#,m,maj7,",
+        "voicingID": "9223372036925130751",
+        "tones": "Eb,Gb,Bb,D"
+    },
+    {
+        "strings": "11 9 12 10 X X",
+        "fingering": "3 1 4 2 X X",
+        "chordName": "Eb,m,maj79,",
+        "enharmonicChordName": "D#,m,maj79,",
+        "voicingID": "9223372037927809323",
+        "tones": "Eb,Gb,Bb,D,F"
+    },
+    {
+        "strings": "11 10 12 10 13 X",
+        "fingering": "2 1 3 1 4 X",
+        "chordName": "Eb,maj,79(add11),",
+        "enharmonicChordName": "D#,maj,79(add11),",
+        "voicingID": "9223372037908934987",
+        "tones": "Eb,G,Bb,C,D,F"
+    },
+    {
+        "strings": "X X 1 2 3 3",
+        "fingering": "X X 1 2 3 4",
+        "chordName": "Eb,maj,7#11,",
+        "enharmonicChordName": "D#,maj,7#11,",
+        "voicingID": "9223372036958652415",
+        "tones": "Eb,G,Bb,D,A"
+    },
+    {
+        "strings": "11 9 12 10 9 X",
+        "fingering": "3 1 4 2 1 X",
+        "chordName": "Eb,m,maj7911,",
+        "enharmonicChordName": "D#,m,maj7911,",
+        "voicingID": "9223372037904740651",
+        "tones": "Eb,Gb,Bb,D,F,Ab"
+    },
+    {
+        "strings": "11 10 10 10 10 10",
+        "fingering": "2 1 1 1 1 1",
+        "chordName": "Eb,,maj79#1113,",
+        "enharmonicChordName": "D#,,maj79#1113,",
+        "voicingID": "9223372037201144139",
+        "tones": "Eb,G,A,C,D,F"
+    },
+    {
+        "strings": "11 X 13 12 11 13",
+        "fingering": "1 X 3 2 1 4",
+        "chordName": "Eb,,(add9),",
+        "enharmonicChordName": "D#,,(add9),",
+        "voicingID": "9223372037302925291",
+        "tones": "Eb,G,Bb,F"
+    },
+    {
+        "strings": "X X 1 0 3 1",
+        "fingering": "X X 1 X 4 2",
+        "chordName": "Eb,maj,79,",
+        "enharmonicChordName": "D#,maj,79,",
+        "voicingID": "9223372036891478015",
+        "tones": "Eb,G,Bb,D,F"
+    },
+    {
+        "strings": "X X 1 0 2 1",
+        "fingering": "X X 1 X 4 3",
+        "chordName": "Eb,,79,",
+        "enharmonicChordName": "D#,,79,",
+        "voicingID": "9223372036890429439",
+        "tones": "Eb,G,Bb,Db,F"
+    },
+    {
+        "strings": "X X 1 0 1 1",
+        "fingering": "X X 1 X 2 3",
+        "chordName": "Eb,,69,",
+        "enharmonicChordName": "D#,,69,",
+        "voicingID": "9223372036889380863",
+        "tones": "Eb,G,Bb,C,F"
+    },
+    {
+        "strings": "11 X 11 12 13 13",
+        "fingering": "1 X 1 2 3 4",
+        "chordName": "Eb,,7913,",
+        "enharmonicChordName": "D#,,7913,",
+        "voicingID": "9223372037305020395",
+        "tones": "Eb,G,Bb,C,Db,F"
+    },
+    {
+        "strings": "11 10 12 10 13 X",
+        "fingering": "2 1 3 1 4 X",
+        "chordName": "Eb,maj,79(add11),",
+        "enharmonicChordName": "D#,maj,79(add11),",
+        "voicingID": "9223372037908934987",
+        "tones": "Eb,G,Bb,C,D,F"
+    },
+    {
+        "strings": "X 6 5 6 6 5",
+        "fingering": "X 2 1 3 4 1",
+        "chordName": "Eb,,79#11,",
+        "enharmonicChordName": "D#,,79#11,",
+        "voicingID": "9223372037029041375",
+        "tones": "Eb,G,Bb,Db,F,A"
+    },
+    {
+        "strings": "11 10 10 10 10 10",
+        "fingering": "2 1 1 1 1 1",
+        "chordName": "Eb,,maj79#1113,",
+        "enharmonicChordName": "D#,,maj79#1113,",
+        "voicingID": "9223372037201144139",
+        "tones": "Eb,G,A,C,D,F"
+    },
+    {
+        "strings": "11 11 11 12 11 13",
+        "fingering": "1 1 1 2 1 4",
+        "chordName": "Eb,,79(add11),",
+        "enharmonicChordName": "D#,,79(add11),",
+        "voicingID": "9223372037302922603",
+        "tones": "Eb,G,Bb,Db,F,Ab"
+    },
+    {
+        "strings": "X X 1 0 0 1",
+        "fingering": "X X 1 X X 3",
+        "chordName": "Eb,aug,(add9),",
+        "enharmonicChordName": "D#,aug,(add9),",
+        "voicingID": "9223372036888332287",
+        "tones": "Eb,G,B,F"
+    },
+    {
+        "strings": "X X 1 1 2 3",
+        "fingering": "X X 1 2 3 4",
+        "chordName": "Eb,,7(add11),",
+        "enharmonicChordName": "D#,,7(add11),",
+        "voicingID": "9223372036957571071",
+        "tones": "Eb,G,Bb,Db,Ab"
+    },
+    {
+        "strings": "X 6 6 8 8 6",
+        "fingering": "X 1 1 3 4 1",
+        "chordName": "Eb,,(add11),",
+        "enharmonicChordName": "D#,,(add11),",
+        "voicingID": "9223372037064759519",
+        "tones": "Eb,G,Bb,Ab"
+    },
+    {
+        "strings": "11 11 11 12 11 13",
+        "fingering": "1 1 1 2 1 4",
+        "chordName": "Eb,,79(add11),",
+        "enharmonicChordName": "D#,,79(add11),",
+        "voicingID": "9223372037302922603",
+        "tones": "Eb,G,Bb,Db,F,Ab"
+    },
+    {
+        "strings": "X X 1 1 4 3",
+        "fingering": "X X 1 1 4 3",
+        "chordName": "Eb,,11,",
+        "enharmonicChordName": "D#,,11,",
+        "voicingID": "9223372036959668223",
+        "tones": "Eb,G,Ab"
+    },
+    {
+        "strings": "X X 1 1 3 3",
+        "fingering": "X X 1 1 3 4",
+        "chordName": "Eb,maj,7(add11),",
+        "enharmonicChordName": "D#,maj,7(add11),",
+        "voicingID": "9223372036958619647",
+        "tones": "Eb,G,Bb,D,Ab"
+    },
+    {
+        "strings": "11 11 13 12 11 13",
+        "fingering": "1 1 3 2 1 4",
+        "chordName": "Eb,,(add911),",
+        "enharmonicChordName": "D#,,(add911),",
+        "voicingID": "9223372037302924651",
+        "tones": "Eb,G,Bb,F,Ab"
+    },
+    {
+        "strings": "X 6 6 9 8 X",
+        "fingering": "X 1 1 4 3 X",
+        "chordName": "Eb,,(addb911),",
+        "enharmonicChordName": "D#,,(addb911),",
+        "voicingID": "9223372037903653087",
+        "tones": "Eb,G,Bb,E,Ab"
+    },
+    {
+        "strings": "11 11 11 12 11 12",
+        "fingering": "1 1 1 2 1 3",
+        "chordName": "Eb,,7b9(add11),",
+        "enharmonicChordName": "D#,,7b9(add11),",
+        "voicingID": "9223372037269368171",
+        "tones": "Eb,G,Bb,Db,E,Ab"
+    },
+    {
+        "strings": "X X 1 3 1 3",
+        "fingering": "X X 1 3 1 4",
+        "chordName": "Eb,,6,",
+        "enharmonicChordName": "D#,,6,",
+        "voicingID": "9223372036956588031",
+        "tones": "Eb,G,Bb,C"
+    },
+    {
+        "strings": "X 6 X 7 8 8",
+        "fingering": "X 1 X 2 3 4",
+        "chordName": "Eb,maj,713,",
+        "enharmonicChordName": "D#,maj,713,",
+        "voicingID": "9223372037131861215",
+        "tones": "Eb,G,Bb,C,D"
+    },
+    {
+        "strings": "X X 1 0 1 1",
+        "fingering": "X X 1 X 2 3",
+        "chordName": "Eb,,69,",
+        "enharmonicChordName": "D#,,69,",
+        "voicingID": "9223372036889380863",
+        "tones": "Eb,G,Bb,C,F"
+    },
+    {
+        "strings": "11 X 11 12 13 13",
+        "fingering": "1 X 1 2 3 4",
+        "chordName": "Eb,,7913,",
+        "enharmonicChordName": "D#,,7913,",
+        "voicingID": "9223372037305020395",
+        "tones": "Eb,G,Bb,C,Db,F"
+    },
+    {
+        "strings": "11 10 12 10 13 X",
+        "fingering": "2 1 3 1 4 X",
+        "chordName": "Eb,maj,79(add11),",
+        "enharmonicChordName": "D#,maj,79(add11),",
+        "voicingID": "9223372037908934987",
+        "tones": "Eb,G,Bb,C,D,F"
+    },
+    {
+        "strings": "11 X 11 12 13 12",
+        "fingering": "1 X 1 2 4 3",
+        "chordName": "Eb,,7b913,",
+        "enharmonicChordName": "D#,,7b913,",
+        "voicingID": "9223372037271465963",
+        "tones": "Eb,G,Bb,C,Db,E"
+    },
+    {
+        "strings": "11 X 11 12 13 14",
+        "fingering": "1 X 1 2 3 4",
+        "chordName": "Eb,,7#913,",
+        "enharmonicChordName": "D#,,7#913,",
+        "voicingID": "9223372037338574827",
+        "tones": "Eb,G,Bb,C,Db,Gb"
+    },
+    {
+        "strings": "11 10 10 10 10 10",
+        "fingering": "2 1 1 1 1 1",
+        "chordName": "Eb,,maj79#1113,",
+        "enharmonicChordName": "D#,,maj79#1113,",
+        "voicingID": "9223372037201144139",
+        "tones": "Eb,G,A,C,D,F"
+    },
+    {
+        "strings": "X 6 7 6 8 8",
+        "fingering": "X 1 2 1 3 4",
+        "chordName": "Eb,,7#1113,",
+        "enharmonicChordName": "D#,,7#1113,",
+        "voicingID": "9223372037131803871",
+        "tones": "Eb,G,Bb,C,Db,A"
+    },
+    {
+        "strings": "X 6 X 6 8 8",
+        "fingering": "X 1 X 1 3 4",
+        "chordName": "Eb,,713,",
+        "enharmonicChordName": "D#,,713,",
+        "voicingID": "9223372037131828447",
+        "tones": "Eb,G,Bb,C,Db"
+    },
+    {
+        "strings": "X X 1 3 4 2",
+        "fingering": "X X 1 3 4 2",
+        "chordName": "Eb,m,,",
+        "enharmonicChordName": "D#,m,,",
+        "voicingID": "9223372036926179327",
+        "tones": "Eb,Gb,Bb"
+    },
+    {
+        "strings": "X X 1 3 2 2",
+        "fingering": "X X 1 4 2 3",
+        "chordName": "Eb,m,7,",
+        "enharmonicChordName": "D#,m,7,",
+        "voicingID": "9223372036924082175",
+        "tones": "Eb,Gb,Bb,Db"
+    },
+    {
+        "strings": "X X 1 2 1 2",
+        "fingering": "X X 1 3 2 4",
+        "chordName": "Eb,dim,7,",
+        "enharmonicChordName": "D#,dim,7,",
+        "voicingID": "9223372036923000831",
+        "tones": "Eb,Gb,A,C"
+    },
+    {
+        "strings": "X X 1 2 2 2",
+        "fingering": "X X 1 2 3 4",
+        "chordName": "Eb,m,7b5,",
+        "enharmonicChordName": "D#,m,7b5,",
+        "voicingID": "9223372036924049407",
+        "tones": "Eb,Gb,A,Db"
+    },
+    {
+        "strings": "X X 1 3 1 2",
+        "fingering": "X X 1 3 1 2",
+        "chordName": "Eb,m,6,",
+        "enharmonicChordName": "D#,m,6,",
+        "voicingID": "9223372036923033599",
+        "tones": "Eb,Gb,Bb,C"
+    },
+    {
+        "strings": "11 X 13 11 11 13",
+        "fingering": "1 X 3 1 1 4",
+        "chordName": "Eb,m,(add9),",
+        "enharmonicChordName": "D#,m,(add9),",
+        "voicingID": "9223372037302892523",
+        "tones": "Eb,Gb,Bb,F"
+    },
+    {
+        "strings": "X 6 4 6 6 X",
+        "fingering": "X 2 1 3 4 X",
+        "chordName": "Eb,m,79,",
+        "enharmonicChordName": "D#,m,79,",
+        "voicingID": "9223372037901455583",
+        "tones": "Eb,Gb,Bb,Db,F"
+    },
+    {
+        "strings": "X X 1 0 2 2",
+        "fingering": "X X 1 X 3 4",
+        "chordName": "Eb,,7#9,",
+        "enharmonicChordName": "D#,,7#9,",
+        "voicingID": "9223372036923983871",
+        "tones": "Eb,G,Bb,Db,Gb"
+    },
+    {
+        "strings": "X 6 5 6 7 7",
+        "fingering": "X 2 1 3 4 4",
+        "chordName": "Eb,,7#5#9,",
+        "enharmonicChordName": "D#,,7#5#9,",
+        "voicingID": "9223372037097198815",
+        "tones": "Eb,G,B,Db,Gb"
+    },
+    {
+        "strings": "X X 1 3 3 2",
+        "fingering": "X X 1 3 4 2",
+        "chordName": "Eb,m,maj7,",
+        "enharmonicChordName": "D#,m,maj7,",
+        "voicingID": "9223372036925130751",
+        "tones": "Eb,Gb,Bb,D"
+    },
+    {
+        "strings": "11 X 11 11 13 13",
+        "fingering": "1 X 1 1 3 4",
+        "chordName": "Eb,m,7913,",
+        "enharmonicChordName": "D#,m,7913,",
+        "voicingID": "9223372037304987627",
+        "tones": "Eb,Gb,Bb,C,Db,F"
+    },
+    {
+        "strings": "11 X 11 12 13 14",
+        "fingering": "1 X 1 2 3 4",
+        "chordName": "Eb,,7#913,",
+        "enharmonicChordName": "D#,,7#913,",
+        "voicingID": "9223372037338574827",
+        "tones": "Eb,G,Bb,C,Db,Gb"
+    },
+    {
+        "strings": "X 6 X 8 7 8",
+        "fingering": "X 1 X 3 2 4",
+        "chordName": "Eb,m,6(omit3),",
+        "enharmonicChordName": "D#,m,6(omit3),",
+        "voicingID": "9223372037130845407",
+        "tones": "Eb,Gb,C"
+    },
+    {
+        "strings": "X X 1 0 0 2",
+        "fingering": "X X 1 X X 3",
+        "chordName": "B,,(addb13),D#",
+        "enharmonicChordName": "B,,(addb13),D#",
+        "voicingID": "9223372036921886719",
+        "tones": "D#,F#,G,B"
+    },
+    {
+        "strings": "X 6 X 6 7 8",
+        "fingering": "X 1 X 2 3 4",
+        "chordName": "Eb,m,713,",
+        "enharmonicChordName": "D#,m,713,",
+        "voicingID": "9223372037130779871",
+        "tones": "Eb,Gb,Bb,C,Db"
+    },
+    {
+        "strings": "X 6 X 7 7 8",
+        "fingering": "X 1 X 2 3 4",
+        "chordName": "Eb,m,maj713,",
+        "enharmonicChordName": "D#,m,maj713,",
+        "voicingID": "9223372037130812639",
+        "tones": "Eb,Gb,Bb,C,D"
+    },
+    {
+        "strings": "11 X 11 11 12 13",
+        "fingering": "1 X 1 1 2 3",
+        "chordName": "Eb,m,79b13,",
+        "enharmonicChordName": "D#,m,79b13,",
+        "voicingID": "9223372037303939051",
+        "tones": "Eb,Gb,Bb,Db,F,B"
+    },
+    {
+        "strings": "11 X 12 11 12 13",
+        "fingering": "1 X 2 1 3 4",
+        "chordName": "Eb,m,maj79b13,",
+        "enharmonicChordName": "D#,m,maj79b13,",
+        "voicingID": "9223372037303940075",
+        "tones": "Eb,Gb,Bb,D,F,B"
+    },
+    {
+        "strings": "11 X 12 11 13 13",
+        "fingering": "1 X 2 1 3 4",
+        "chordName": "Eb,m,maj7913,",
+        "enharmonicChordName": "D#,m,maj7913,",
+        "voicingID": "9223372037304988651",
+        "tones": "Eb,Gb,Bb,C,D,F"
+    },
+    {
+        "strings": "X X 1 0 1 2",
+        "fingering": "X X 1 X 2 3",
+        "chordName": "Eb,,(add#913),",
+        "enharmonicChordName": "D#,,(add#913),",
+        "voicingID": "9223372036922935295",
+        "tones": "Eb,G,Bb,C,Gb"
+    },
+    {
+        "strings": "X X 1 3 2 2",
+        "fingering": "X X 1 4 2 3",
+        "chordName": "Eb,m,7,",
+        "enharmonicChordName": "D#,m,7,",
+        "voicingID": "9223372036924082175",
+        "tones": "Eb,Gb,Bb,Db"
+    },
+    {
+        "strings": "X X 1 2 2 2",
+        "fingering": "X X 1 2 3 4",
+        "chordName": "Eb,m,7b5,",
+        "enharmonicChordName": "D#,m,7b5,",
+        "voicingID": "9223372036924049407",
+        "tones": "Eb,Gb,A,Db"
+    },
+    {
+        "strings": "X 6 4 6 6 X",
+        "fingering": "X 2 1 3 4 X",
+        "chordName": "Eb,m,79,",
+        "enharmonicChordName": "D#,m,79,",
+        "voicingID": "9223372037901455583",
+        "tones": "Eb,Gb,Bb,Db,F"
+    },
+    {
+        "strings": "X X 1 0 2 2",
+        "fingering": "X X 1 X 3 4",
+        "chordName": "Eb,,7#9,",
+        "enharmonicChordName": "D#,,7#9,",
+        "voicingID": "9223372036923983871",
+        "tones": "Eb,G,Bb,Db,Gb"
+    },
+    {
+        "strings": "X 6 5 6 7 7",
+        "fingering": "X 2 1 3 4 4",
+        "chordName": "Eb,,7#5#9,",
+        "enharmonicChordName": "D#,,7#5#9,",
+        "voicingID": "9223372037097198815",
+        "tones": "Eb,G,B,Db,Gb"
+    },
+    {
+        "strings": "11 X 11 11 13 13",
+        "fingering": "1 X 1 1 3 4",
+        "chordName": "Eb,m,7913,",
+        "enharmonicChordName": "D#,m,7913,",
+        "voicingID": "9223372037304987627",
+        "tones": "Eb,Gb,Bb,C,Db,F"
+    },
+    {
+        "strings": "X X 1 1 2 2",
+        "fingering": "X X 1 2 3 4",
+        "chordName": "Eb,m,711,",
+        "enharmonicChordName": "D#,m,711,",
+        "voicingID": "9223372036924016639",
+        "tones": "Eb,Gb,Bb,Db,Ab"
+    },
+    {
+        "strings": "11 X 11 12 13 14",
+        "fingering": "1 X 1 2 3 4",
+        "chordName": "Eb,,7#913,",
+        "enharmonicChordName": "D#,,7#913,",
+        "voicingID": "9223372037338574827",
+        "tones": "Eb,G,Bb,C,Db,Gb"
+    },
+    {
+        "strings": "X 6 4 6 5 X",
+        "fingering": "X 3 1 4 2 X",
+        "chordName": "Eb,m,7b9,",
+        "enharmonicChordName": "D#,m,7b9,",
+        "voicingID": "9223372037900407007",
+        "tones": "Eb,Gb,Db,E"
+    },
+    {
+        "strings": "11 13 13 14 14 14",
+        "fingering": "1 3 3 4 4 4",
+        "chordName": "Eb,m,7(add#11),",
+        "enharmonicChordName": "D#,m,7(add#11),",
+        "voicingID": "9223372037339690411",
+        "tones": "Eb,Gb,Bb,Db,A"
+    },
+    {
+        "strings": "11 X 13 11 11 13",
+        "fingering": "1 X 3 1 1 4",
+        "chordName": "Eb,m,(add9),",
+        "enharmonicChordName": "D#,m,(add9),",
+        "voicingID": "9223372037302892523",
+        "tones": "Eb,Gb,Bb,F"
+    },
+    {
+        "strings": "X 6 4 6 6 X",
+        "fingering": "X 2 1 3 4 X",
+        "chordName": "Eb,m,79,",
+        "enharmonicChordName": "D#,m,79,",
+        "voicingID": "9223372037901455583",
+        "tones": "Eb,Gb,Bb,Db,F"
+    },
+    {
+        "strings": "11 9 12 10 X X",
+        "fingering": "3 1 4 2 X X",
+        "chordName": "Eb,m,maj79,",
+        "enharmonicChordName": "D#,m,maj79,",
+        "voicingID": "9223372037927809323",
+        "tones": "Eb,Gb,Bb,D,F"
+    },
+    {
+        "strings": "11 X 11 11 13 13",
+        "fingering": "1 X 1 1 3 4",
+        "chordName": "Eb,m,7913,",
+        "enharmonicChordName": "D#,m,7913,",
+        "voicingID": "9223372037304987627",
+        "tones": "Eb,Gb,Bb,C,Db,F"
+    },
+    {
+        "strings": "11 9 12 10 9 X",
+        "fingering": "3 1 4 2 1 X",
+        "chordName": "Eb,m,maj7911,",
+        "enharmonicChordName": "D#,m,maj7911,",
+        "voicingID": "9223372037904740651",
+        "tones": "Eb,Gb,Bb,D,F,Ab"
+    },
+    {
+        "strings": "X 6 4 5 6 X",
+        "fingering": "X 3 1 2 4 X",
+        "chordName": "Eb,m,69,",
+        "enharmonicChordName": "D#,m,69,",
+        "voicingID": "9223372037901422815",
+        "tones": "Eb,Gb,Bb,C,F"
+    },
+    {
+        "strings": "11 11 13 11 11 13",
+        "fingering": "1 1 3 1 1 4",
+        "chordName": "Eb,m,911,",
+        "enharmonicChordName": "D#,m,911,",
+        "voicingID": "9223372037302891883",
+        "tones": "Eb,Gb,Bb,F,Ab"
+    },
+    {
+        "strings": "X 6 4 6 6 4",
+        "fingering": "X 2 1 3 4 1",
+        "chordName": "Eb,m,7911,",
+        "enharmonicChordName": "D#,m,7911,",
+        "voicingID": "9223372036995485919",
+        "tones": "Eb,Gb,Bb,Db,F,Ab"
+    },
+    {
+        "strings": "X 6 4 4 6 X",
+        "fingering": "X 3 1 1 4 X",
+        "chordName": "Eb,m,9b6,",
+        "enharmonicChordName": "D#,m,9b6,",
+        "voicingID": "9223372037901390047",
+        "tones": "Eb,Gb,B,F"
+    },
+    {
+        "strings": "X 6 4 4 6 X",
+        "fingering": "X 3 1 1 4 X",
+        "chordName": "Eb,m,b69,",
+        "enharmonicChordName": "D#,m,b69,",
+        "voicingID": "9223372037901390047",
+        "tones": "Eb,Gb,Bb,F,B"
+    },
+    {
+        "strings": "X X 1 1 2 2",
+        "fingering": "X X 1 2 3 4",
+        "chordName": "Eb,m,711,",
+        "enharmonicChordName": "D#,m,711,",
+        "voicingID": "9223372036924016639",
+        "tones": "Eb,Gb,Bb,Db,Ab"
+    },
+    {
+        "strings": "11 9 12 10 9 X",
+        "fingering": "3 1 4 2 1 X",
+        "chordName": "Eb,m,maj7911,",
+        "enharmonicChordName": "D#,m,maj7911,",
+        "voicingID": "9223372037904740651",
+        "tones": "Eb,Gb,Bb,D,F,Ab"
+    },
+    {
+        "strings": "X 6 6 8 7 6",
+        "fingering": "X 1 1 3 2 1",
+        "chordName": "Eb,m,11,",
+        "enharmonicChordName": "D#,m,11,",
+        "voicingID": "9223372037063710943",
+        "tones": "Eb,Gb,Bb,Ab"
+    },
+    {
+        "strings": "X 6 6 5 7 7",
+        "fingering": "X 2 3 1 4 4",
+        "chordName": "B,,6b9,D#",
+        "enharmonicChordName": "B,,6b9,D#",
+        "voicingID": "9223372037097167071",
+        "tones": "Eb,Gb,B,Ab,C"
+    },
+    {
+        "strings": "X X 1 1 3 2",
+        "fingering": "X X 1 1 3 2",
+        "chordName": "Eb,m,maj711,",
+        "enharmonicChordName": "D#,m,maj711,",
+        "voicingID": "9223372036925065215",
+        "tones": "Eb,Gb,Bb,D,Ab"
+    },
+    {
+        "strings": "11 11 13 11 11 13",
+        "fingering": "1 1 3 1 1 4",
+        "chordName": "Eb,m,911,",
+        "enharmonicChordName": "D#,m,911,",
+        "voicingID": "9223372037302891883",
+        "tones": "Eb,Gb,Bb,F,Ab"
+    },
+    {
+        "strings": "X 6 4 6 6 4",
+        "fingering": "X 2 1 3 4 1",
+        "chordName": "Eb,m,7911,",
+        "enharmonicChordName": "D#,m,7911,",
+        "voicingID": "9223372036995485919",
+        "tones": "Eb,Gb,Bb,Db,F,Ab"
+    },
+    {
+        "strings": "X 6 6 9 7 X",
+        "fingering": "X 1 1 4 2 X",
+        "chordName": "Eb,m,(addb911),",
+        "enharmonicChordName": "D#,m,(addb911),",
+        "voicingID": "9223372037902604511",
+        "tones": "Eb,Gb,Bb,E,Ab"
+    },
+    {
+        "strings": "X X 1 1 1 2",
+        "fingering": "X X 1 2 3 4",
+        "chordName": "Eb,m,1113,",
+        "enharmonicChordName": "D#,m,1113,",
+        "voicingID": "9223372036922968063",
+        "tones": "Eb,Gb,Bb,C,Ab"
+    },
+    {
+        "strings": "X 6 6 6 7 8",
+        "fingering": "X 1 1 1 2 3",
+        "chordName": "Eb,m,71113,",
+        "enharmonicChordName": "D#,m,71113,",
+        "voicingID": "9223372037130754271",
+        "tones": "Eb,Gb,Bb,C,Db,Ab"
+    },
+    {
+        "strings": "X X 1 2 1 2",
+        "fingering": "X X 1 3 2 4",
+        "chordName": "Eb,dim,7,",
+        "enharmonicChordName": "D#,dim,7,",
+        "voicingID": "9223372036923000831",
+        "tones": "Eb,Gb,A,C"
+    },
+    {
+        "strings": "X X 1 3 1 2",
+        "fingering": "X X 1 3 1 2",
+        "chordName": "Eb,m,6,",
+        "enharmonicChordName": "D#,m,6,",
+        "voicingID": "9223372036923033599",
+        "tones": "Eb,Gb,Bb,C"
+    },
+    {
+        "strings": "11 X 11 11 13 13",
+        "fingering": "1 X 1 1 3 4",
+        "chordName": "Eb,m,7913,",
+        "enharmonicChordName": "D#,m,7913,",
+        "voicingID": "9223372037304987627",
+        "tones": "Eb,Gb,Bb,C,Db,F"
+    },
+    {
+        "strings": "X 6 4 5 6 X",
+        "fingering": "X 3 1 2 4 X",
+        "chordName": "Eb,m,69,",
+        "enharmonicChordName": "D#,m,69,",
+        "voicingID": "9223372037901422815",
+        "tones": "Eb,Gb,Bb,C,F"
+    },
+    {
+        "strings": "11 X 11 12 13 14",
+        "fingering": "1 X 1 2 3 4",
+        "chordName": "Eb,,7#913,",
+        "enharmonicChordName": "D#,,7#913,",
+        "voicingID": "9223372037338574827",
+        "tones": "Eb,G,Bb,C,Db,Gb"
+    },
+    {
+        "strings": "X 6 7 7 7 8",
+        "fingering": "X 2 3 3 3 4",
+        "chordName": "Eb,dim,7(maj7),",
+        "enharmonicChordName": "D#,dim,7(maj7),",
+        "voicingID": "9223372037130788063",
+        "tones": "Eb,Gb,A,C,D"
+    },
+    {
+        "strings": "X 6 X 8 7 8",
+        "fingering": "X 1 X 3 2 4",
+        "chordName": "Eb,m,6(omit3),",
+        "enharmonicChordName": "D#,m,6(omit3),",
+        "voicingID": "9223372037130845407",
+        "tones": "Eb,Gb,C"
+    },
+    {
+        "strings": "X 6 6 5 7 7",
+        "fingering": "X 2 3 1 4 4",
+        "chordName": "B,,6b9,D#",
+        "enharmonicChordName": "B,,6b9,D#",
+        "voicingID": "9223372037097167071",
+        "tones": "Eb,Gb,B,Ab,C"
+    },
+    {
+        "strings": "X 6 X 6 7 8",
+        "fingering": "X 1 X 2 3 4",
+        "chordName": "Eb,m,713,",
+        "enharmonicChordName": "D#,m,713,",
+        "voicingID": "9223372037130779871",
+        "tones": "Eb,Gb,Bb,C,Db"
+    },
+    {
+        "strings": "X 6 8 5 7 5",
+        "fingering": "X 2 4 1 3 1",
+        "chordName": "Eb,m,6(add#11),",
+        "enharmonicChordName": "D#,m,6(add#11),",
+        "voicingID": "9223372037030060255",
+        "tones": "Eb,Gb,Bb,C,A"
+    },
+    {
+        "strings": "X 6 6 8 9 6",
+        "fingering": "X 1 1 3 4 1",
+        "chordName": "Eb,sus4,,",
+        "enharmonicChordName": "D#,sus4,,",
+        "voicingID": "9223372037065808095",
+        "tones": "Eb,Ab,Bb"
+    },
+    {
+        "strings": "X X 1 3 4 1",
+        "fingering": "X X 1 3 4 1",
+        "chordName": "Eb,sus2,,",
+        "enharmonicChordName": "D#,sus2,,",
+        "voicingID": "9223372036892624895",
+        "tones": "Eb,F,Bb"
+    },
+    {
+        "strings": "X X 1 3 2 1",
+        "fingering": "X X 1 3 2 1",
+        "chordName": "Eb,sus2,7,",
+        "enharmonicChordName": "D#,sus2,7,",
+        "voicingID": "9223372036890527743",
+        "tones": "Eb,F,Bb,Db"
+    },
+    {
+        "strings": "X X 1 3 2 4",
+        "fingering": "X X 1 3 2 4",
+        "chordName": "Eb,sus4,7,",
+        "enharmonicChordName": "D#,sus4,7,",
+        "voicingID": "9223372036991191039",
+        "tones": "Eb,Ab,Bb,Db"
+    },
+    {
+        "strings": "X X 1 1 2 0",
+        "fingering": "X X 1 2 3 X",
+        "chordName": "Eb,sus4,7b9,",
+        "enharmonicChordName": "D#,sus4,7b9,",
+        "voicingID": "9223372036856907775",
+        "tones": "Eb,Ab,Bb,Db,E"
+    },
+    {
+        "strings": "X 6 6 7 9 6",
+        "fingering": "X 1 1 2 4 1",
+        "chordName": "Eb,sus4,maj7,",
+        "enharmonicChordName": "D#,sus4,maj7,",
+        "voicingID": "9223372037065775327",
+        "tones": "Eb,Ab,Bb,D"
+    },
+    {
+        "strings": "X 6 6 8 6 6",
+        "fingering": "X 1 1 3 1 1",
+        "chordName": "Eb,sus4,9,",
+        "enharmonicChordName": "D#,sus4,9,",
+        "voicingID": "9223372037062662367",
+        "tones": "Eb,Ab,Bb,F"
+    },
+    {
+        "strings": "X X 1 1 X X",
+        "fingering": "X X 1 1 X X",
+        "chordName": "Eb,sus4,(omit5),",
+        "enharmonicChordName": "D#,sus4,(omit5),",
+        "voicingID": "9223372037927503871",
+        "tones": "Eb,Ab"
+    },
+    {
+        "strings": "X X 1 3 3 1",
+        "fingering": "X X 1 3 4 1",
+        "chordName": "Eb,sus2,maj7,",
+        "enharmonicChordName": "D#,sus2,maj7,",
+        "voicingID": "9223372036891576319",
+        "tones": "Eb,F,Bb,D"
+    },
+    {
+        "strings": "X 6 X 8 6 X",
+        "fingering": "X 1 X 3 1 X",
+        "chordName": "Eb,sus2,(omit5),",
+        "enharmonicChordName": "D#,sus2,(omit5),",
+        "voicingID": "9223372037901548767",
+        "tones": "Eb,F"
+    },
+    {
+        "strings": "X X 1 3 2 1",
+        "fingering": "X X 1 3 2 1",
+        "chordName": "Eb,sus2,7,",
+        "enharmonicChordName": "D#,sus2,7,",
+        "voicingID": "9223372036890527743",
+        "tones": "Eb,F,Bb,Db"
+    },
+    {
+        "strings": "X X 1 3 2 4",
+        "fingering": "X X 1 3 2 4",
+        "chordName": "Eb,sus4,7,",
+        "enharmonicChordName": "D#,sus4,7,",
+        "voicingID": "9223372036991191039",
+        "tones": "Eb,Ab,Bb,Db"
+    },
+    {
+        "strings": "X X 1 1 2 0",
+        "fingering": "X X 1 2 3 X",
+        "chordName": "Eb,sus4,7b9,",
+        "enharmonicChordName": "D#,sus4,7b9,",
+        "voicingID": "9223372036856907775",
+        "tones": "Eb,Ab,Bb,Db,E"
+    },
+    {
+        "strings": "X X 1 1 2 1",
+        "fingering": "X X 1 2 4 3",
+        "chordName": "Eb,sus4,79,",
+        "enharmonicChordName": "D#,sus4,79,",
+        "voicingID": "9223372036890462207",
+        "tones": "Eb,Ab,Bb,Db,F"
+    },
+    {
+        "strings": "X 6 X 6 6 8",
+        "fingering": "X 1 X 1 1 3",
+        "chordName": "Eb,sus2,713,",
+        "enharmonicChordName": "D#,sus2,713,",
+        "voicingID": "9223372037129731295",
+        "tones": "Eb,F,C,Db"
+    },
+    {
+        "strings": "X 6 6 6 6 8",
+        "fingering": "X 1 1 1 1 3",
+        "chordName": "Eb,sus4,7913,",
+        "enharmonicChordName": "D#,sus4,7913,",
+        "voicingID": "9223372037129705695",
+        "tones": "Eb,Ab,Bb,C,Db,F"
+    },
+    {
+        "strings": "X 6 9 9 9 9",
+        "fingering": "X 1 4 4 4 4",
+        "chordName": "Eb,sus4,7b9b13,",
+        "enharmonicChordName": "D#,sus4,7b9b13,",
+        "voicingID": "9223372037166507231",
+        "tones": "Eb,Ab,B,Db,E"
+    },
+    {
+        "strings": "X X 1 3 4 1",
+        "fingering": "X X 1 3 4 1",
+        "chordName": "Eb,sus2,,",
+        "enharmonicChordName": "D#,sus2,,",
+        "voicingID": "9223372036892624895",
+        "tones": "Eb,F,Bb"
+    },
+    {
+        "strings": "X X 1 3 2 1",
+        "fingering": "X X 1 3 2 1",
+        "chordName": "Eb,sus2,7,",
+        "enharmonicChordName": "D#,sus2,7,",
+        "voicingID": "9223372036890527743",
+        "tones": "Eb,F,Bb,Db"
+    },
+    {
+        "strings": "X 6 6 8 6 6",
+        "fingering": "X 1 1 3 1 1",
+        "chordName": "Eb,sus4,9,",
+        "enharmonicChordName": "D#,sus4,9,",
+        "voicingID": "9223372037062662367",
+        "tones": "Eb,Ab,Bb,F"
+    },
+    {
+        "strings": "X X 1 3 3 1",
+        "fingering": "X X 1 3 4 1",
+        "chordName": "Eb,sus2,maj7,",
+        "enharmonicChordName": "D#,sus2,maj7,",
+        "voicingID": "9223372036891576319",
+        "tones": "Eb,F,Bb,D"
+    },
+    {
+        "strings": "X 6 X 8 6 X",
+        "fingering": "X 1 X 3 1 X",
+        "chordName": "Eb,sus2,(omit5),",
+        "enharmonicChordName": "D#,sus2,(omit5),",
+        "voicingID": "9223372037901548767",
+        "tones": "Eb,F"
+    },
+    {
+        "strings": "X X 1 1 2 1",
+        "fingering": "X X 1 2 4 3",
+        "chordName": "Eb,sus4,79,",
+        "enharmonicChordName": "D#,sus4,79,",
+        "voicingID": "9223372036890462207",
+        "tones": "Eb,Ab,Bb,Db,F"
+    },
+    {
+        "strings": "X X 1 3 1 1",
+        "fingering": "X X 1 3 1 1",
+        "chordName": "Eb,sus2,6,",
+        "enharmonicChordName": "D#,sus2,6,",
+        "voicingID": "9223372036889479167",
+        "tones": "Eb,F,Bb,C"
+    },
+    {
+        "strings": "X X 1 3 0 1",
+        "fingering": "X X 1 4 X 2",
+        "chordName": "Eb,sus2,(addb13),",
+        "enharmonicChordName": "D#,sus2,(addb13),",
+        "voicingID": "9223372036888430591",
+        "tones": "Eb,F,Bb,B"
+    },
+    {
+        "strings": "X 6 X 6 6 8",
+        "fingering": "X 1 X 1 1 3",
+        "chordName": "Eb,sus2,713,",
+        "enharmonicChordName": "D#,sus2,713,",
+        "voicingID": "9223372037129731295",
+        "tones": "Eb,F,C,Db"
+    },
+    {
+        "strings": "X 6 6 6 6 8",
+        "fingering": "X 1 1 1 1 3",
+        "chordName": "Eb,sus4,7913,",
+        "enharmonicChordName": "D#,sus4,7913,",
+        "voicingID": "9223372037129705695",
+        "tones": "Eb,Ab,Bb,C,Db,F"
+    },
+    {
+        "strings": "X 6 6 8 9 6",
+        "fingering": "X 1 1 3 4 1",
+        "chordName": "Eb,sus4,,",
+        "enharmonicChordName": "D#,sus4,,",
+        "voicingID": "9223372037065808095",
+        "tones": "Eb,Ab,Bb"
+    },
+    {
+        "strings": "X X 1 3 2 4",
+        "fingering": "X X 1 3 2 4",
+        "chordName": "Eb,sus4,7,",
+        "enharmonicChordName": "D#,sus4,7,",
+        "voicingID": "9223372036991191039",
+        "tones": "Eb,Ab,Bb,Db"
+    },
+    {
+        "strings": "X X 1 1 2 0",
+        "fingering": "X X 1 2 3 X",
+        "chordName": "Eb,sus4,7b9,",
+        "enharmonicChordName": "D#,sus4,7b9,",
+        "voicingID": "9223372036856907775",
+        "tones": "Eb,Ab,Bb,Db,E"
+    },
+    {
+        "strings": "X 6 6 7 9 6",
+        "fingering": "X 1 1 2 4 1",
+        "chordName": "Eb,sus4,maj7,",
+        "enharmonicChordName": "D#,sus4,maj7,",
+        "voicingID": "9223372037065775327",
+        "tones": "Eb,Ab,Bb,D"
+    },
+    {
+        "strings": "X 6 6 8 6 6",
+        "fingering": "X 1 1 3 1 1",
+        "chordName": "Eb,sus4,9,",
+        "enharmonicChordName": "D#,sus4,9,",
+        "voicingID": "9223372037062662367",
+        "tones": "Eb,Ab,Bb,F"
+    },
+    {
+        "strings": "X X 1 1 X X",
+        "fingering": "X X 1 1 X X",
+        "chordName": "Eb,sus4,(omit5),",
+        "enharmonicChordName": "D#,sus4,(omit5),",
+        "voicingID": "9223372037927503871",
+        "tones": "Eb,Ab"
+    },
+    {
+        "strings": "X X 1 1 2 1",
+        "fingering": "X X 1 2 4 3",
+        "chordName": "Eb,sus4,79,",
+        "enharmonicChordName": "D#,sus4,79,",
+        "voicingID": "9223372036890462207",
+        "tones": "Eb,Ab,Bb,Db,F"
+    },
+    {
+        "strings": "X 6 6 6 6 8",
+        "fingering": "X 1 1 1 1 3",
+        "chordName": "Eb,sus4,7913,",
+        "enharmonicChordName": "D#,sus4,7913,",
+        "voicingID": "9223372037129705695",
+        "tones": "Eb,Ab,Bb,C,Db,F"
+    },
+    {
+        "strings": "X 6 9 9 9 9",
+        "fingering": "X 1 4 4 4 4",
+        "chordName": "Eb,sus4,7b9b13,",
+        "enharmonicChordName": "D#,sus4,7b9b13,",
+        "voicingID": "9223372037166507231",
+        "tones": "Eb,Ab,B,Db,E"
+    },
+    {
+        "strings": "X X 1 3 1 1",
+        "fingering": "X X 1 3 1 1",
+        "chordName": "Eb,sus2,6,",
+        "enharmonicChordName": "D#,sus2,6,",
+        "voicingID": "9223372036889479167",
+        "tones": "Eb,F,Bb,C"
+    },
+    {
+        "strings": "X 6 X 6 6 8",
+        "fingering": "X 1 X 1 1 3",
+        "chordName": "Eb,sus2,713,",
+        "enharmonicChordName": "D#,sus2,713,",
+        "voicingID": "9223372037129731295",
+        "tones": "Eb,F,C,Db"
+    },
+    {
+        "strings": "X 6 6 6 6 8",
+        "fingering": "X 1 1 1 1 3",
+        "chordName": "Eb,sus4,7913,",
+        "enharmonicChordName": "D#,sus4,7913,",
+        "voicingID": "9223372037129705695",
+        "tones": "Eb,Ab,Bb,C,Db,F"
+    },
+    {
+        "strings": "X X 1 0 0 3",
+        "fingering": "X X 1 X X 4",
+        "chordName": "Eb,aug,,",
+        "enharmonicChordName": "D#,aug,,",
+        "voicingID": "9223372036955441151",
+        "tones": "Eb,G,B"
+    },
+    {
+        "strings": "X 6 5 6 7 7",
+        "fingering": "X 2 1 3 4 4",
+        "chordName": "Eb,,7#5#9,",
+        "enharmonicChordName": "D#,,7#5#9,",
+        "voicingID": "9223372037097198815",
+        "tones": "Eb,G,B,Db,Gb"
+    },
+    {
+        "strings": "X 6 5 6 5 7",
+        "fingering": "X 2 1 3 1 4",
+        "chordName": "Eb,,7b9b13,",
+        "enharmonicChordName": "D#,,7b9b13,",
+        "voicingID": "9223372037095101663",
+        "tones": "Eb,G,Bb,Db,E,B"
+    },
+    {
+        "strings": "X 6 5 4 3 3",
+        "fingering": "X 4 3 2 1 1",
+        "chordName": "Eb,maj,7#5,",
+        "enharmonicChordName": "D#,maj,7#5,",
+        "voicingID": "9223372036958721247",
+        "tones": "Eb,G,B,D"
+    },
+    {
+        "strings": "X X 1 4 2 3",
+        "fingering": "X X 1 4 2 3",
+        "chordName": "Eb,,7b13,",
+        "enharmonicChordName": "D#,,7b13,",
+        "voicingID": "9223372036957669375",
+        "tones": "Eb,G,Bb,Db,B"
+    },
+    {
+        "strings": "X X 1 4 2 3",
+        "fingering": "X X 1 4 2 3",
+        "chordName": "Eb,,7#5,",
+        "enharmonicChordName": "D#,,7#5,",
+        "voicingID": "9223372036957669375",
+        "tones": "Eb,G,B,Db"
+    },
+    {
+        "strings": "X X 1 0 0 1",
+        "fingering": "X X 1 X X 3",
+        "chordName": "Eb,aug,(add9),",
+        "enharmonicChordName": "D#,aug,(add9),",
+        "voicingID": "9223372036888332287",
+        "tones": "Eb,G,B,F"
+    },
+    {
+        "strings": "11 10 12 10 12 X",
+        "fingering": "2 1 3 1 4 X",
+        "chordName": "Eb,maj,7#59,",
+        "enharmonicChordName": "D#,maj,7#59,",
+        "voicingID": "9223372037907886411",
+        "tones": "Eb,G,B,D,F"
+    },
+    {
+        "strings": "X X 1 3 0 3",
+        "fingering": "X X 1 3 X 4",
+        "chordName": "Eb,,(addb6),",
+        "enharmonicChordName": "D#,,(addb6),",
+        "voicingID": "9223372036955539455",
+        "tones": "Eb,G,Bb,B"
+    },
+    {
+        "strings": "X X 1 0 0 2",
+        "fingering": "X X 1 X X 3",
+        "chordName": "B,,(addb13),D#",
+        "enharmonicChordName": "B,,(addb13),D#",
+        "voicingID": "9223372036921886719",
+        "tones": "D#,F#,G,B"
+    },
+    {
+        "strings": "X 6 5 6 5 7",
+        "fingering": "X 2 1 3 1 4",
+        "chordName": "Eb,,7b9b13,",
+        "enharmonicChordName": "D#,,7b9b13,",
+        "voicingID": "9223372037095101663",
+        "tones": "Eb,G,Bb,Db,E,B"
+    },
+    {
+        "strings": "X X 1 4 2 3",
+        "fingering": "X X 1 4 2 3",
+        "chordName": "Eb,,7b13,",
+        "enharmonicChordName": "D#,,7b13,",
+        "voicingID": "9223372036957669375",
+        "tones": "Eb,G,Bb,Db,B"
+    },
+    {
+        "strings": "X X 1 0 0 2",
+        "fingering": "X X 1 X X 3",
+        "chordName": "B,,(addb13),D#",
+        "enharmonicChordName": "B,,(addb13),D#",
+        "voicingID": "9223372036921886719",
+        "tones": "D#,F#,G,B"
+    },
+    {
+        "strings": "X 6 5 4 3 X",
+        "fingering": "X 4 3 2 1 X",
+        "chordName": "Eb,maj,7(addb13),",
+        "enharmonicChordName": "D#,maj,7(addb13),",
+        "voicingID": "9223372037898245343",
+        "tones": "Eb,G,Bb,D,B"
+    },
+    {
+        "strings": "X 6 5 6 6 7",
+        "fingering": "X 2 1 3 3 4",
+        "chordName": "Eb,,79b13,",
+        "enharmonicChordName": "D#,,79b13,",
+        "voicingID": "9223372037096150239",
+        "tones": "Eb,G,Bb,Db,F,B"
+    },
+    {
+        "strings": "11 10 12 10 12 X",
+        "fingering": "2 1 3 1 4 X",
+        "chordName": "Eb,maj,79(addb13),",
+        "enharmonicChordName": "D#,maj,79(addb13),",
+        "voicingID": "9223372037907886411",
+        "tones": "Eb,G,Bb,D,F,B"
+    },
+    {
+        "strings": "11 13 13 0 0 0",
+        "fingering": "1 3 4 X X X",
+        "chordName": "Eb,,(addb9b13),",
+        "enharmonicChordName": "D#,,(addb9b13),",
+        "voicingID": "9223372036854789547",
+        "tones": "Eb,G,Bb,E,B"
+    },
+    {
+        "strings": "X 6 5 6 7 7",
+        "fingering": "X 2 1 3 4 4",
+        "chordName": "Eb,,7#9b13,",
+        "enharmonicChordName": "D#,,7#9b13,",
+        "voicingID": "9223372037097198815",
+        "tones": "Eb,G,Bb,Db,Gb,B"
+    },
+    {
+        "strings": "X 6 5 7 7 7",
+        "fingering": "X 2 1 4 4 4",
+        "chordName": "Eb,maj,7(add#9b13),",
+        "enharmonicChordName": "D#,maj,7(add#9b13),",
+        "voicingID": "9223372037097231583",
+        "tones": "Eb,G,Bb,D,Gb,B"
+    },
+    {
+        "strings": "X 6 5 6 7 7",
+        "fingering": "X 2 1 3 4 4",
+        "chordName": "Eb,,7#5#9,",
+        "enharmonicChordName": "D#,,7#5#9,",
+        "voicingID": "9223372037097198815",
+        "tones": "Eb,G,B,Db,Gb"
+    },
+    {
+        "strings": "X 6 5 6 5 7",
+        "fingering": "X 2 1 3 1 4",
+        "chordName": "Eb,,7b9b13,",
+        "enharmonicChordName": "D#,,7b9b13,",
+        "voicingID": "9223372037095101663",
+        "tones": "Eb,G,Bb,Db,E,B"
+    },
+    {
+        "strings": "X X 1 4 2 3",
+        "fingering": "X X 1 4 2 3",
+        "chordName": "Eb,,7b13,",
+        "enharmonicChordName": "D#,,7b13,",
+        "voicingID": "9223372036957669375",
+        "tones": "Eb,G,Bb,Db,B"
+    },
+    {
+        "strings": "X X 1 4 2 3",
+        "fingering": "X X 1 4 2 3",
+        "chordName": "Eb,,7#5,",
+        "enharmonicChordName": "D#,,7#5,",
+        "voicingID": "9223372036957669375",
+        "tones": "Eb,G,B,Db"
+    },
+    {
+        "strings": "X 6 5 6 6 7",
+        "fingering": "X 2 1 3 3 4",
+        "chordName": "Eb,,79b13,",
+        "enharmonicChordName": "D#,,79b13,",
+        "voicingID": "9223372037096150239",
+        "tones": "Eb,G,Bb,Db,F,B"
+    },
+    {
+        "strings": "11 10 11 11 12 12",
+        "fingering": "2 1 3 3 4 4",
+        "chordName": "Eb,,7#5b9#9,",
+        "enharmonicChordName": "D#,,7#5b9#9,",
+        "voicingID": "9223372037270383947",
+        "tones": "Eb,G,B,Db,E,Gb"
+    },
+    {
+        "strings": "X 6 5 6 7 7",
+        "fingering": "X 2 1 3 4 4",
+        "chordName": "Eb,,7#9b13,",
+        "enharmonicChordName": "D#,,7#9b13,",
+        "voicingID": "9223372037097198815",
+        "tones": "Eb,G,Bb,Db,Gb,B"
+    },
+    {
+        "strings": "X X 1 0 0 1",
+        "fingering": "X X 1 X X 3",
+        "chordName": "Eb,aug,(add9),",
+        "enharmonicChordName": "D#,aug,(add9),",
+        "voicingID": "9223372036888332287",
+        "tones": "Eb,G,B,F"
+    },
+    {
+        "strings": "11 10 12 10 12 X",
+        "fingering": "2 1 3 1 4 X",
+        "chordName": "Eb,maj,7#59,",
+        "enharmonicChordName": "D#,maj,7#59,",
+        "voicingID": "9223372037907886411",
+        "tones": "Eb,G,B,D,F"
+    },
+    {
+        "strings": "X X 1 0 0 1",
+        "fingering": "X X 1 X X 3",
+        "chordName": "Eb,,(addb69),",
+        "enharmonicChordName": "D#,,(addb69),",
+        "voicingID": "9223372036888332287",
+        "tones": "Eb,G,Bb,F,B"
+    },
+    {
+        "strings": "X 6 5 6 6 7",
+        "fingering": "X 2 1 3 3 4",
+        "chordName": "Eb,,79b13,",
+        "enharmonicChordName": "D#,,79b13,",
+        "voicingID": "9223372037096150239",
+        "tones": "Eb,G,Bb,Db,F,B"
+    },
+    {
+        "strings": "11 10 12 10 12 X",
+        "fingering": "2 1 3 1 4 X",
+        "chordName": "Eb,maj,79(addb13),",
+        "enharmonicChordName": "D#,maj,79(addb13),",
+        "voicingID": "9223372037907886411",
+        "tones": "Eb,G,Bb,D,F,B"
+    },
+    {
+        "strings": "X X 1 2 1 2",
+        "fingering": "X X 1 3 2 4",
+        "chordName": "Eb,dim,7,",
+        "enharmonicChordName": "D#,dim,7,",
+        "voicingID": "9223372036923000831",
+        "tones": "Eb,Gb,A,C"
+    },
+    {
+        "strings": "X X 1 2 2 2",
+        "fingering": "X X 1 2 3 4",
+        "chordName": "Eb,m,7b5,",
+        "enharmonicChordName": "D#,m,7b5,",
+        "voicingID": "9223372036924049407",
+        "tones": "Eb,Gb,A,Db"
+    },
+    {
+        "strings": "X 6 7 8 7 X",
+        "fingering": "X 1 2 4 3 X",
+        "chordName": "Eb,dim,,",
+        "enharmonicChordName": "D#,dim,,",
+        "voicingID": "9223372037902572767",
+        "tones": "Eb,Gb,A"
+    },
+    {
+        "strings": "X 6 7 7 7 8",
+        "fingering": "X 2 3 3 3 4",
+        "chordName": "Eb,dim,7(maj7),",
+        "enharmonicChordName": "D#,dim,7(maj7),",
+        "voicingID": "9223372037130788063",
+        "tones": "Eb,Gb,A,C,D"
+    },
+    {
+        "strings": "X X 1 2 3 2",
+        "fingering": "X X 1 2 4 3",
+        "chordName": "Eb,dim,maj7,",
+        "enharmonicChordName": "D#,dim,maj7,",
+        "voicingID": "9223372036925097983",
+        "tones": "Eb,Gb,A,D"
+    },
+    {
+        "strings": "11 13 13 14 14 14",
+        "fingering": "1 3 3 4 4 4",
+        "chordName": "Eb,m,7(add#11),",
+        "enharmonicChordName": "D#,m,7(add#11),",
+        "voicingID": "9223372037339690411",
+        "tones": "Eb,Gb,Bb,Db,A"
+    },
+    {
+        "strings": "X X 1 2 3 2",
+        "fingering": "X X 1 2 4 3",
+        "chordName": "Eb,m,maj7(add#11),",
+        "enharmonicChordName": "D#,m,maj7(add#11),",
+        "voicingID": "9223372036925097983",
+        "tones": "Eb,Gb,Bb,D,A"
+    },
+    {
+        "strings": "X 6 8 5 7 5",
+        "fingering": "X 2 4 1 3 1",
+        "chordName": "Eb,m,6(add#11),",
+        "enharmonicChordName": "D#,m,6(add#11),",
+        "voicingID": "9223372037030060255",
+        "tones": "Eb,Gb,Bb,C,A"
+    },
+    {
+        "strings": "X 6 5 6 7 5",
+        "fingering": "X 2 1 3 4 1",
+        "chordName": "Eb,,7#9#11,",
+        "enharmonicChordName": "D#,,7#9#11,",
+        "voicingID": "9223372037030089951",
+        "tones": "Eb,G,Bb,Db,Gb,A"
+    },
+    {
+        "strings": "11 13 14 14 14 14",
+        "fingering": "1 3 4 4 4 4",
+        "chordName": "Eb,m,7(addb9#11),",
+        "enharmonicChordName": "D#,m,7(addb9#11),",
+        "voicingID": "9223372037339691435",
+        "tones": "Eb,Gb,Bb,Db,E,A"
+    },
+    {
+        "strings": "X 6 7 7 7 8",
+        "fingering": "X 2 3 3 3 4",
+        "chordName": "Eb,m,maj713(add#11),",
+        "enharmonicChordName": "D#,m,maj713(add#11),",
+        "voicingID": "9223372037130788063",
+        "tones": "Eb,Gb,Bb,C,D,A"
+    },
+    {
+        "strings": "0 0 1 0 1 2",
+        "fingering": "X X 1 X 2 3",
+        "chordName": "C,,(add#9#1113),Eb",
+        "enharmonicChordName": "C,,(add#9#1113),Eb",
+        "voicingID": "9223372036922934272",
+        "tones": "Eb,A,C,E,F#,G"
+    },
+    {
+        "strings": "X X 1 2 2 2",
+        "fingering": "X X 1 2 3 4",
+        "chordName": "Eb,m,7b5,",
+        "enharmonicChordName": "D#,m,7b5,",
+        "voicingID": "9223372036924049407",
+        "tones": "Eb,Gb,A,Db"
+    },
+    {
+        "strings": "11 13 13 14 14 14",
+        "fingering": "1 3 3 4 4 4",
+        "chordName": "Eb,m,7(add#11),",
+        "enharmonicChordName": "D#,m,7(add#11),",
+        "voicingID": "9223372037339690411",
+        "tones": "Eb,Gb,Bb,Db,A"
+    },
+    {
+        "strings": "X 6 5 6 7 5",
+        "fingering": "X 2 1 3 4 1",
+        "chordName": "Eb,,7#9#11,",
+        "enharmonicChordName": "D#,,7#9#11,",
+        "voicingID": "9223372037030089951",
+        "tones": "Eb,G,Bb,Db,Gb,A"
+    },
+    {
+        "strings": "11 13 14 14 14 14",
+        "fingering": "1 3 4 4 4 4",
+        "chordName": "Eb,m,7(addb9#11),",
+        "enharmonicChordName": "D#,m,7(addb9#11),",
+        "voicingID": "9223372037339691435",
+        "tones": "Eb,Gb,Bb,Db,E,A"
+    },
+    {
+        "strings": "X X 1 2 1 2",
+        "fingering": "X X 1 3 2 4",
+        "chordName": "Eb,dim,7,",
+        "enharmonicChordName": "D#,dim,7,",
+        "voicingID": "9223372036923000831",
+        "tones": "Eb,Gb,A,C"
+    },
+    {
+        "strings": "X 6 7 7 7 8",
+        "fingering": "X 2 3 3 3 4",
+        "chordName": "Eb,dim,7(maj7),",
+        "enharmonicChordName": "D#,dim,7(maj7),",
+        "voicingID": "9223372037130788063",
+        "tones": "Eb,Gb,A,C,D"
+    },
+    {
+        "strings": "X 6 8 5 7 5",
+        "fingering": "X 2 4 1 3 1",
+        "chordName": "Eb,m,6(add#11),",
+        "enharmonicChordName": "D#,m,6(add#11),",
+        "voicingID": "9223372037030060255",
+        "tones": "Eb,Gb,Bb,C,A"
+    },
+    {
+        "strings": "X 6 7 7 7 8",
+        "fingering": "X 2 3 3 3 4",
+        "chordName": "Eb,m,maj713(add#11),",
+        "enharmonicChordName": "D#,m,maj713(add#11),",
+        "voicingID": "9223372037130788063",
+        "tones": "Eb,Gb,Bb,C,D,A"
+    },
+    {
+        "strings": "0 0 1 0 1 2",
+        "fingering": "X X 1 X 2 3",
+        "chordName": "C,,(add#9#1113),Eb",
+        "enharmonicChordName": "C,,(add#9#1113),Eb",
+        "voicingID": "9223372036922934272",
+        "tones": "Eb,A,C,E,F#,G"
+    },
+    {
+        "strings": "0 2 2 1 0 0",
+        "fingering": "X 2 3 1 X X",
+        "chordName": "E,,,",
+        "enharmonicChordName": "E,,,",
+        "voicingID": "9223372036854810688",
+        "tones": "E,G#,B"
+    },
+    {
+        "strings": "0 2 2 0 0 0",
+        "fingering": "X 2 3 X X X",
+        "chordName": "E,m,,",
+        "enharmonicChordName": "E,m,,",
+        "voicingID": "9223372036854777920",
+        "tones": "E,G,B"
+    },
+    {
+        "strings": "0 2 0 1 0 0",
+        "fingering": "X 2 X 1 X X",
+        "chordName": "E,,7,",
+        "enharmonicChordName": "E,,7,",
+        "voicingID": "9223372036854808640",
+        "tones": "E,G#,B,D"
+    },
+    {
+        "strings": "0 X 2 4 4 4",
+        "fingering": "X X 1 2 3 4",
+        "chordName": "E,maj,7,",
+        "enharmonicChordName": "E,maj,7,",
+        "voicingID": "9223372036993321952",
+        "tones": "E,G#,B,D#"
+    },
+    {
+        "strings": "0 2 0 0 0 0",
+        "fingering": "X 2 X X X X",
+        "chordName": "E,m,7,",
+        "enharmonicChordName": "E,m,7,",
+        "voicingID": "9223372036854775872",
+        "tones": "E,G,B,D"
+    },
+    {
+        "strings": "0 2 X X X X",
+        "fingering": "X 2 X X X X",
+        "chordName": "E,,5,",
+        "enharmonicChordName": "E,,5,",
+        "voicingID": "9223372037928516672",
+        "tones": "E,B"
+    },
+    {
+        "strings": "0 X 2 3 2 3",
+        "fingering": "X X 1 3 2 4",
+        "chordName": "E,dim,7,",
+        "enharmonicChordName": "E,dim,7,",
+        "voicingID": "9223372036957637600",
+        "tones": "E,G,Bb,C#"
+    },
+    {
+        "strings": "0 X 0 3 3 3",
+        "fingering": "X X X 2 3 4",
+        "chordName": "E,m,7b5,",
+        "enharmonicChordName": "E,m,7b5,",
+        "voicingID": "9223372036958684128",
+        "tones": "E,G,Bb,D"
+    },
+    {
+        "strings": "0 X 2 4 2 4",
+        "fingering": "X X 1 3 1 4",
+        "chordName": "E,,6,",
+        "enharmonicChordName": "E,,6,",
+        "voicingID": "9223372036991224800",
+        "tones": "E,G#,B,C#"
+    },
+    {
+        "strings": "0 2 2 0 2 X",
+        "fingering": "X 2 3 X 4 X",
+        "chordName": "E,m,6,",
+        "enharmonicChordName": "E,m,6,",
+        "voicingID": "9223372037897062464",
+        "tones": "E,G,B,C#"
+    },
+    {
+        "strings": "0 X 0 1 1 1",
+        "fingering": "X X X 1 1 1",
+        "chordName": "E,,7b9b13,",
+        "enharmonicChordName": "E,,7b9b13,",
+        "voicingID": "9223372036889412576",
+        "tones": "E,G#,B,D,F,C"
+    },
+    {
+        "strings": "0 X 1 1 2 X",
+        "fingering": "X X 1 2 3 X",
+        "chordName": "E,maj,713,",
+        "enharmonicChordName": "E,maj,713,",
+        "voicingID": "9223372037897095136",
+        "tones": "E,G#,B,C#,D#"
+    },
+    {
+        "strings": "0 X 0 1 2 2",
+        "fingering": "X X X 1 2 3",
+        "chordName": "E,,7913,",
+        "enharmonicChordName": "E,,7913,",
+        "voicingID": "9223372036924015584",
+        "tones": "E,G#,B,C#,D,F#"
+    },
+    {
+        "strings": "0 X 0 0 2 2",
+        "fingering": "X X X X 2 3",
+        "chordName": "E,m,7913,",
+        "enharmonicChordName": "E,m,7913,",
+        "voicingID": "9223372036923982816",
+        "tones": "E,G,B,C#,D,F#"
+    },
+    {
+        "strings": "0 X 0 1 1 X",
+        "fingering": "X X X 1 1 X",
+        "chordName": "E,,7b13,",
+        "enharmonicChordName": "E,,7b13,",
+        "voicingID": "9223372037896045536",
+        "tones": "E,G#,B,D,C"
+    },
+    {
+        "strings": "0 X 0 1 2 1",
+        "fingering": "X X X 1 3 2",
+        "chordName": "E,,7b913,",
+        "enharmonicChordName": "E,,7b913,",
+        "voicingID": "9223372036890461152",
+        "tones": "E,G#,B,C#,D,F"
+    },
+    {
+        "strings": "0 X 0 1 2 3",
+        "fingering": "X X X 1 2 3",
+        "chordName": "E,,7#913,",
+        "enharmonicChordName": "E,,7#913,",
+        "voicingID": "9223372036957570016",
+        "tones": "E,G#,B,C#,D,G"
+    },
+    {
+        "strings": "0 4 4 3 4 4",
+        "fingering": "X 2 3 1 4 4",
+        "chordName": "E,,maj79#1113,",
+        "enharmonicChordName": "E,,maj79#1113,",
+        "voicingID": "9223372036993290368",
+        "tones": "E,G#,Bb,C#,D#,F#"
+    },
+    {
+        "strings": "0 X 0 3 2 4",
+        "fingering": "X X X 2 1 4",
+        "chordName": "E,,7#1113,",
+        "enharmonicChordName": "E,,7#1113,",
+        "voicingID": "9223372036991189984",
+        "tones": "E,G#,B,C#,D,A#"
+    },
+    {
+        "strings": "0 X 0 X X X",
+        "fingering": "X X X X X X",
+        "chordName": "E,,7(omit3omit5),",
+        "enharmonicChordName": "E,,7(omit3omit5),",
+        "voicingID": "9223372037928485856",
+        "tones": "E,D"
+    },
+    {
+        "strings": "0 2 0 1 0 0",
+        "fingering": "X 2 X 1 X X",
+        "chordName": "E,,7,",
+        "enharmonicChordName": "E,,7,",
+        "voicingID": "9223372036854808640",
+        "tones": "E,G#,B,D"
+    },
+    {
+        "strings": "0 2 0 0 0 0",
+        "fingering": "X 2 X X X X",
+        "chordName": "E,m,7,",
+        "enharmonicChordName": "E,m,7,",
+        "voicingID": "9223372036854775872",
+        "tones": "E,G,B,D"
+    },
+    {
+        "strings": "0 X 0 3 3 3",
+        "fingering": "X X X 2 3 4",
+        "chordName": "E,m,7b5,",
+        "enharmonicChordName": "E,m,7b5,",
+        "voicingID": "9223372036958684128",
+        "tones": "E,G,Bb,D"
+    },
+    {
+        "strings": "0 5 4 0 X X",
+        "fingering": "X 2 1 X X X",
+        "chordName": "E,m,79,",
+        "enharmonicChordName": "E,m,79,",
+        "voicingID": "9223372037927473312",
+        "tones": "E,G,B,D,F#"
+    },
+    {
+        "strings": "0 X 0 1 0 2",
+        "fingering": "X X X 1 X 3",
+        "chordName": "E,,79,",
+        "enharmonicChordName": "E,,79,",
+        "voicingID": "9223372036921918432",
+        "tones": "E,G#,B,D,F#"
+    },
+    {
+        "strings": "0 X 0 1 0 1",
+        "fingering": "X X X 1 X 2",
+        "chordName": "E,,7b9,",
+        "enharmonicChordName": "E,,7b9,",
+        "voicingID": "9223372036888364000",
+        "tones": "E,G#,B,D,F"
+    },
+    {
+        "strings": "0 X 0 1 0 3",
+        "fingering": "X X X 1 X 3",
+        "chordName": "E,,7#9,",
+        "enharmonicChordName": "E,,7#9,",
+        "voicingID": "9223372036955472864",
+        "tones": "E,G#,B,D,G"
+    },
+    {
+        "strings": "0 X 0 1 1 3",
+        "fingering": "X X X 1 2 4",
+        "chordName": "E,,7#5#9,",
+        "enharmonicChordName": "E,,7#5#9,",
+        "voicingID": "9223372036956521440",
+        "tones": "E,G#,C,D,G"
+    },
+    {
+        "strings": "0 X 0 1 1 1",
+        "fingering": "X X X 1 1 1",
+        "chordName": "E,,7b9b13,",
+        "enharmonicChordName": "E,,7b9b13,",
+        "voicingID": "9223372036889412576",
+        "tones": "E,G#,B,D,F,C"
+    },
+    {
+        "strings": "0 X 0 3 3 4",
+        "fingering": "X X X 2 3 4",
+        "chordName": "E,,7b5,",
+        "enharmonicChordName": "E,,7b5,",
+        "voicingID": "9223372036992238560",
+        "tones": "E,G#,Bb,D"
+    },
+    {
+        "strings": "0 2 2 4 5 2",
+        "fingering": "X 1 1 3 4 1",
+        "chordName": "E,sus2,,",
+        "enharmonicChordName": "E,sus2,,",
+        "voicingID": "9223372036927260736",
+        "tones": "E,F#,B"
+    },
+    {
+        "strings": "0 2 4 1 0 0",
+        "fingering": "X 2 4 1 X X",
+        "chordName": "E,,(add9),",
+        "enharmonicChordName": "E,,(add9),",
+        "voicingID": "9223372036854812736",
+        "tones": "E,G#,B,F#"
+    },
+    {
+        "strings": "0 2 4 0 0 0",
+        "fingering": "X 2 4 X X X",
+        "chordName": "E,m,(add9),",
+        "enharmonicChordName": "E,m,(add9),",
+        "voicingID": "9223372036854779968",
+        "tones": "E,G,B,F#"
+    },
+    {
+        "strings": "0 2 4 4 4 4",
+        "fingering": "X 2 4 4 4 4",
+        "chordName": "E,maj,79,",
+        "enharmonicChordName": "E,maj,79,",
+        "voicingID": "9223372036993323072",
+        "tones": "E,G#,B,D#,F#"
+    },
+    {
+        "strings": "0 5 4 0 X X",
+        "fingering": "X 2 1 X X X",
+        "chordName": "E,m,79,",
+        "enharmonicChordName": "E,m,79,",
+        "voicingID": "9223372037927473312",
+        "tones": "E,G,B,D,F#"
+    },
+    {
+        "strings": "0 X 0 1 0 2",
+        "fingering": "X X X 1 X 3",
+        "chordName": "E,,79,",
+        "enharmonicChordName": "E,,79,",
+        "voicingID": "9223372036921918432",
+        "tones": "E,G#,B,D,F#"
+    },
+    {
+        "strings": "0 4 4 1 X X",
+        "fingering": "X 3 4 1 X X",
+        "chordName": "E,,69,",
+        "enharmonicChordName": "E,,69,",
+        "voicingID": "9223372037927506048",
+        "tones": "E,G#,B,C#,F#"
+    },
+    {
+        "strings": "0 2 4 4 3 0",
+        "fingering": "X 1 3 4 2 X",
+        "chordName": "E,sus2,7,",
+        "enharmonicChordName": "E,sus2,7,",
+        "voicingID": "9223372036858056768",
+        "tones": "E,F#,B,D"
+    },
+    {
+        "strings": "0 6 4 0 X X",
+        "fingering": "X 3 1 X X X",
+        "chordName": "E,m,maj79,",
+        "enharmonicChordName": "E,m,maj79,",
+        "voicingID": "9223372037927473344",
+        "tones": "E,G,B,D#,F#"
+    },
+    {
+        "strings": "0 X 0 1 2 2",
+        "fingering": "X X X 1 2 3",
+        "chordName": "E,,7913,",
+        "enharmonicChordName": "E,,7913,",
+        "voicingID": "9223372036924015584",
+        "tones": "E,G#,B,C#,D,F#"
+    },
+    {
+        "strings": "0 0 2 2 0 0",
+        "fingering": "X X 2 3 X X",
+        "chordName": "E,sus4,,",
+        "enharmonicChordName": "E,sus4,,",
+        "voicingID": "9223372036854843392",
+        "tones": "E,A,B"
+    },
+    {
+        "strings": "0 0 0 2 0 0",
+        "fingering": "X X X 2 X X",
+        "chordName": "E,sus4,7,",
+        "enharmonicChordName": "E,sus4,7,",
+        "voicingID": "9223372036854841344",
+        "tones": "E,A,B,D"
+    },
+    {
+        "strings": "0 0 0 1 X X",
+        "fingering": "X X X 1 X X",
+        "chordName": "E,,7(add11),",
+        "enharmonicChordName": "E,,7(add11),",
+        "voicingID": "9223372037927501824",
+        "tones": "E,G#,B,D,A"
+    },
+    {
+        "strings": "0 0 0 0 X X",
+        "fingering": "X X X X X X",
+        "chordName": "E,m,711,",
+        "enharmonicChordName": "E,m,711,",
+        "voicingID": "9223372037927469056",
+        "tones": "E,G,B,D,A"
+    },
+    {
+        "strings": "0 0 4 0 4 X",
+        "fingering": "X X 3 X 4 X",
+        "chordName": "E,m,maj7911,",
+        "enharmonicChordName": "E,m,maj7911,",
+        "voicingID": "9223372037899161600",
+        "tones": "E,G,B,D#,F#,A"
+    },
+    {
+        "strings": "0 5 3 2 X X",
+        "fingering": "X 4 2 1 X X",
+        "chordName": "E,sus4,7b9,",
+        "enharmonicChordName": "E,sus4,7b9,",
+        "voicingID": "9223372037927537824",
+        "tones": "E,A,B,D,F"
+    },
+    {
+        "strings": "0 X 2 2 0 4",
+        "fingering": "X X 1 2 X 4",
+        "chordName": "E,,(add11),",
+        "enharmonicChordName": "E,,(add11),",
+        "voicingID": "9223372036989062112",
+        "tones": "E,G#,B,A"
+    },
+    {
+        "strings": "0 0 2 0 0 X",
+        "fingering": "X X 2 X X X",
+        "chordName": "E,m,11,",
+        "enharmonicChordName": "E,m,11,",
+        "voicingID": "9223372037894965248",
+        "tones": "E,G,B,A"
+    },
+    {
+        "strings": "0 2 2 2 4 5",
+        "fingering": "X 1 1 1 3 4",
+        "chordName": "E,sus4,maj7,",
+        "enharmonicChordName": "E,sus4,maj7,",
+        "voicingID": "9223372037026809920",
+        "tones": "E,A,B,D#"
+    },
+    {
+        "strings": "0 0 2 2 0 2",
+        "fingering": "X X 2 3 X 4",
+        "chordName": "E,sus4,9,",
+        "enharmonicChordName": "E,sus4,9,",
+        "voicingID": "9223372036921952256",
+        "tones": "E,A,B,F#"
+    },
+    {
+        "strings": "0 X 2 3 2 3",
+        "fingering": "X X 1 3 2 4",
+        "chordName": "E,dim,7,",
+        "enharmonicChordName": "E,dim,7,",
+        "voicingID": "9223372036957637600",
+        "tones": "E,G,Bb,C#"
+    },
+    {
+        "strings": "0 X 2 4 2 4",
+        "fingering": "X X 1 3 1 4",
+        "chordName": "E,,6,",
+        "enharmonicChordName": "E,,6,",
+        "voicingID": "9223372036991224800",
+        "tones": "E,G#,B,C#"
+    },
+    {
+        "strings": "0 2 2 0 2 X",
+        "fingering": "X 2 3 X 4 X",
+        "chordName": "E,m,6,",
+        "enharmonicChordName": "E,m,6,",
+        "voicingID": "9223372037897062464",
+        "tones": "E,G,B,C#"
+    },
+    {
+        "strings": "0 X 1 1 2 X",
+        "fingering": "X X 1 2 3 X",
+        "chordName": "E,maj,713,",
+        "enharmonicChordName": "E,maj,713,",
+        "voicingID": "9223372037897095136",
+        "tones": "E,G#,B,C#,D#"
+    },
+    {
+        "strings": "0 4 4 1 X X",
+        "fingering": "X 3 4 1 X X",
+        "chordName": "E,,69,",
+        "enharmonicChordName": "E,,69,",
+        "voicingID": "9223372037927506048",
+        "tones": "E,G#,B,C#,F#"
+    },
+    {
+        "strings": "0 X 0 1 2 2",
+        "fingering": "X X X 1 2 3",
+        "chordName": "E,,7913,",
+        "enharmonicChordName": "E,,7913,",
+        "voicingID": "9223372036924015584",
+        "tones": "E,G#,B,C#,D,F#"
+    },
+    {
+        "strings": "0 X 0 0 2 2",
+        "fingering": "X X X X 2 3",
+        "chordName": "E,m,7913,",
+        "enharmonicChordName": "E,m,7913,",
+        "voicingID": "9223372036923982816",
+        "tones": "E,G,B,C#,D,F#"
+    },
+    {
+        "strings": "0 X 1 1 2 2",
+        "fingering": "X X 1 2 3 4",
+        "chordName": "E,maj,79(add11),",
+        "enharmonicChordName": "E,maj,79(add11),",
+        "voicingID": "9223372036924016608",
+        "tones": "E,G#,B,C#,D#,F#"
+    },
+    {
+        "strings": "0 X 0 1 2 1",
+        "fingering": "X X X 1 3 2",
+        "chordName": "E,,7b913,",
+        "enharmonicChordName": "E,,7b913,",
+        "voicingID": "9223372036890461152",
+        "tones": "E,G#,B,C#,D,F"
+    },
+    {
+        "strings": "0 4 4 0 X X",
+        "fingering": "X 3 4 X X X",
+        "chordName": "E,m,69,",
+        "enharmonicChordName": "E,m,69,",
+        "voicingID": "9223372037927473280",
+        "tones": "E,G,B,C#,F#"
+    }
+]

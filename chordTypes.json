@@ -1,0 +1,2052 @@
+[
+    {
+        "empty": false,
+        "name": "fifth",
+        "setNum": 2064,
+        "chroma": "100000010000",
+        "normalized": "100000010000",
+        "intervals": [
+            "1P",
+            "5P"
+        ],
+        "quality": "Unknown",
+        "aliases": [
+            "5"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "power chord",
+        "setNum": 2064,
+        "chroma": "100000010000",
+        "normalized": "100000010000",
+        "intervals": [
+            "1P",
+            "5P"
+        ],
+        "quality": "Unknown",
+        "aliases": [
+            "5",
+            "fifth"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "M7#5sus4",
+        "setNum": 2121,
+        "chroma": "100001001001",
+        "normalized": "100001001001",
+        "intervals": [
+            "1P",
+            "4P",
+            "5A",
+            "7M"
+        ],
+        "quality": "Augmented",
+        "aliases": [
+            "M7#5sus4"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "7#5sus4",
+        "setNum": 2122,
+        "chroma": "100001001010",
+        "normalized": "100001001010",
+        "intervals": [
+            "1P",
+            "4P",
+            "5A",
+            "7m"
+        ],
+        "quality": "Augmented",
+        "aliases": [
+            "7#5sus4"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "suspended 4th",
+        "setNum": 2128,
+        "chroma": "100001010000",
+        "normalized": "100001000010",
+        "intervals": [
+            "1P",
+            "4P",
+            "5P"
+        ],
+        "quality": "Unknown",
+        "aliases": [
+            "sus4"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "M7sus4",
+        "setNum": 2129,
+        "chroma": "100001010001",
+        "normalized": "100001010001",
+        "intervals": [
+            "1P",
+            "4P",
+            "5P",
+            "7M"
+        ],
+        "quality": "Unknown",
+        "aliases": [
+            "M7sus4"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "suspended 4th 7th",
+        "setNum": 2130,
+        "chroma": "100001010010",
+        "normalized": "100001010010",
+        "intervals": [
+            "1P",
+            "4P",
+            "5P",
+            "7m"
+        ],
+        "quality": "Unknown",
+        "aliases": [
+            "7sus4"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "7no5",
+        "setNum": 2178,
+        "chroma": "100010000010",
+        "normalized": "100000101000",
+        "intervals": [
+            "1P",
+            "3M",
+            "7m"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "7no5"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "augmented",
+        "setNum": 2184,
+        "chroma": "100010001000",
+        "normalized": "100010001000",
+        "intervals": [
+            "1P",
+            "3M",
+            "5A"
+        ],
+        "quality": "Augmented",
+        "aliases": [
+            "aug",
+            "+",
+            "+5"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "Mb6",
+        "setNum": 2184,
+        "chroma": "100010001000",
+        "normalized": "100010001000",
+        "intervals": [
+            "1P",
+            "3M",
+            "13m"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "Mb6"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "major 7th b6",
+        "setNum": 2185,
+        "chroma": "100010001001",
+        "normalized": "100010001001",
+        "intervals": [
+            "1P",
+            "3M",
+            "6m",
+            "7M"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "M7b6"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "augmented 7th",
+        "setNum": 2185,
+        "chroma": "100010001001",
+        "normalized": "100010001001",
+        "intervals": [
+            "1P",
+            "3M",
+            "5A",
+            "7M"
+        ],
+        "quality": "Augmented",
+        "aliases": [
+            "maj7#5",
+            "maj7+5"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "7b13",
+        "setNum": 2186,
+        "chroma": "100010001010",
+        "normalized": "100010001010",
+        "intervals": [
+            "1P",
+            "3M",
+            "7m",
+            "13m"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "7b13"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "7#5",
+        "setNum": 2186,
+        "chroma": "100010001010",
+        "normalized": "100010001010",
+        "intervals": [
+            "1P",
+            "3M",
+            "5A",
+            "7m"
+        ],
+        "quality": "Augmented",
+        "aliases": [
+            "7#5",
+            "+7",
+            "7aug",
+            "aug7"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "major",
+        "setNum": 2192,
+        "chroma": "100010010000",
+        "normalized": "100001000100",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "M",
+            ""
+        ]
+    },
+    {
+        "empty": false,
+        "name": "major 7th",
+        "setNum": 2193,
+        "chroma": "100010010001",
+        "normalized": "100010010001",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "7M"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "maj7",
+            "Δ",
+            "ma7",
+            "M7",
+            "Maj7"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "dominant 7th",
+        "setNum": 2194,
+        "chroma": "100010010010",
+        "normalized": "100010010010",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "7m"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "7",
+            "dom"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "6th",
+        "setNum": 2196,
+        "chroma": "100010010100",
+        "normalized": "100010010100",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "6M"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "6",
+            "add6",
+            "add13",
+            "M6"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "7add6",
+        "setNum": 2198,
+        "chroma": "100010010110",
+        "normalized": "100010010110",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "7m",
+            "13M"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "7add6",
+            "67",
+            "7add13"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "7b6",
+        "setNum": 2202,
+        "chroma": "100010011010",
+        "normalized": "100010011010",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "6m",
+            "7m"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "7b6"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "Mb5",
+        "setNum": 2208,
+        "chroma": "100010100000",
+        "normalized": "100000100010",
+        "intervals": [
+            "1P",
+            "3M",
+            "5d"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "Mb5"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "M7b5",
+        "setNum": 2209,
+        "chroma": "100010100001",
+        "normalized": "100001100010",
+        "intervals": [
+            "1P",
+            "3M",
+            "5d",
+            "7M"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "M7b5"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "7b5",
+        "setNum": 2210,
+        "chroma": "100010100010",
+        "normalized": "100010100010",
+        "intervals": [
+            "1P",
+            "3M",
+            "5d",
+            "7m"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "7b5"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "lydian",
+        "setNum": 2225,
+        "chroma": "100010110001",
+        "normalized": "100010110001",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "7M",
+            "11A"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "maj#4",
+            "Δ#4",
+            "Δ#11"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "lydian dominant 7th",
+        "setNum": 2226,
+        "chroma": "100010110010",
+        "normalized": "100010110010",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "7m",
+            "11A"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "7#11",
+            "7#4"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "M6#11",
+        "setNum": 2228,
+        "chroma": "100010110100",
+        "normalized": "100010110100",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "6M",
+            "11A"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "M6#11",
+            "M6b5",
+            "6#11",
+            "6b5"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "7#11b13",
+        "setNum": 2234,
+        "chroma": "100010111010",
+        "normalized": "100010111010",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "7m",
+            "11A",
+            "13m"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "7#11b13",
+            "7b5b13"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "m#5",
+        "setNum": 2312,
+        "chroma": "100100001000",
+        "normalized": "100001000100",
+        "intervals": [
+            "1P",
+            "3m",
+            "5A"
+        ],
+        "quality": "Augmented",
+        "aliases": [
+            "m#5",
+            "m+",
+            "mb6"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "mb6M7",
+        "setNum": 2313,
+        "chroma": "100100001001",
+        "normalized": "100001001100",
+        "intervals": [
+            "1P",
+            "3m",
+            "6m",
+            "7M"
+        ],
+        "quality": "Minor",
+        "aliases": [
+            "mb6M7"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "m7#5",
+        "setNum": 2314,
+        "chroma": "100100001010",
+        "normalized": "100001010100",
+        "intervals": [
+            "1P",
+            "3m",
+            "6m",
+            "7m"
+        ],
+        "quality": "Minor",
+        "aliases": [
+            "m7#5"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "minor",
+        "setNum": 2320,
+        "chroma": "100100010000",
+        "normalized": "100001001000",
+        "intervals": [
+            "1P",
+            "3m",
+            "5P"
+        ],
+        "quality": "Minor",
+        "aliases": [
+            "m",
+            "min",
+            "-"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "minor/major 7th",
+        "setNum": 2321,
+        "chroma": "100100010001",
+        "normalized": "100010001100",
+        "intervals": [
+            "1P",
+            "3m",
+            "5P",
+            "7M"
+        ],
+        "quality": "Minor",
+        "aliases": [
+            "m/ma7",
+            "m/maj7",
+            "mM7",
+            "m/M7",
+            "-Δ7",
+            "mΔ"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "minor 7th",
+        "setNum": 2322,
+        "chroma": "100100010010",
+        "normalized": "100010010100",
+        "intervals": [
+            "1P",
+            "3m",
+            "5P",
+            "7m"
+        ],
+        "quality": "Minor",
+        "aliases": [
+            "m7",
+            "min7",
+            "mi7",
+            "-7"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "minor 6th",
+        "setNum": 2324,
+        "chroma": "100100010100",
+        "normalized": "100010100100",
+        "intervals": [
+            "1P",
+            "3m",
+            "5P",
+            "6M"
+        ],
+        "quality": "Minor",
+        "aliases": [
+            "m6"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "mMaj7b6",
+        "setNum": 2329,
+        "chroma": "100100011001",
+        "normalized": "100011001100",
+        "intervals": [
+            "1P",
+            "3m",
+            "5P",
+            "6m",
+            "7M"
+        ],
+        "quality": "Minor",
+        "aliases": [
+            "mMaj7b6"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "diminished",
+        "setNum": 2336,
+        "chroma": "100100100000",
+        "normalized": "100000100100",
+        "intervals": [
+            "1P",
+            "3m",
+            "5d"
+        ],
+        "quality": "Diminished",
+        "aliases": [
+            "dim",
+            "°",
+            "o"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "oM7",
+        "setNum": 2337,
+        "chroma": "100100100001",
+        "normalized": "100001100100",
+        "intervals": [
+            "1P",
+            "3m",
+            "5d",
+            "7M"
+        ],
+        "quality": "Diminished",
+        "aliases": [
+            "oM7"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "half-diminished",
+        "setNum": 2338,
+        "chroma": "100100100010",
+        "normalized": "100010100100",
+        "intervals": [
+            "1P",
+            "3m",
+            "5d",
+            "7m"
+        ],
+        "quality": "Diminished",
+        "aliases": [
+            "m7b5",
+            "ø"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "m7b5",
+        "setNum": 2338,
+        "chroma": "100100100010",
+        "normalized": "100010100100",
+        "intervals": [
+            "1P",
+            "3m",
+            "5d",
+            "7m"
+        ],
+        "quality": "Diminished",
+        "aliases": [
+            "m7b5",
+            "half-diminished",
+            "h7",
+            "_7b5"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "diminished 7th",
+        "setNum": 2340,
+        "chroma": "100100100100",
+        "normalized": "100100100100",
+        "intervals": [
+            "1P",
+            "3m",
+            "5d",
+            "7d"
+        ],
+        "quality": "Diminished",
+        "aliases": [
+            "dim7",
+            "°7",
+            "o7"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "o7M7",
+        "setNum": 2341,
+        "chroma": "100100100101",
+        "normalized": "100100100101",
+        "intervals": [
+            "1P",
+            "3m",
+            "5d",
+            "6M",
+            "7M"
+        ],
+        "quality": "Diminished",
+        "aliases": [
+            "o7M7"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "4",
+        "setNum": 2370,
+        "chroma": "100101000010",
+        "normalized": "100001010010",
+        "intervals": [
+            "1P",
+            "4P",
+            "7m",
+            "10m"
+        ],
+        "quality": "Unknown",
+        "aliases": [
+            "4",
+            "quartal"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "madd4",
+        "setNum": 2384,
+        "chroma": "100101010000",
+        "normalized": "100001001010",
+        "intervals": [
+            "1P",
+            "3m",
+            "4P",
+            "5P"
+        ],
+        "quality": "Minor",
+        "aliases": [
+            "madd4"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "m7add11",
+        "setNum": 2386,
+        "chroma": "100101010010",
+        "normalized": "100101001010",
+        "intervals": [
+            "1P",
+            "3m",
+            "5P",
+            "7m",
+            "11P"
+        ],
+        "quality": "Minor",
+        "aliases": [
+            "m7add11",
+            "m7add4"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "+add#9",
+        "setNum": 2440,
+        "chroma": "100110001000",
+        "normalized": "100010001001",
+        "intervals": [
+            "1P",
+            "3M",
+            "5A",
+            "9A"
+        ],
+        "quality": "Augmented",
+        "aliases": [
+            "+add#9"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "7#5#9",
+        "setNum": 2442,
+        "chroma": "100110001010",
+        "normalized": "100010101001",
+        "intervals": [
+            "1P",
+            "3M",
+            "5A",
+            "7m",
+            "9A"
+        ],
+        "quality": "Augmented",
+        "aliases": [
+            "7#5#9",
+            "7alt",
+            "7#5#9_",
+            "7#9b13_"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "dominant #9",
+        "setNum": 2450,
+        "chroma": "100110010010",
+        "normalized": "100100101001",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "7m",
+            "9A"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "7#9"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "13#9",
+        "setNum": 2454,
+        "chroma": "100110010110",
+        "normalized": "100101101001",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "7m",
+            "9A",
+            "13M"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "13#9",
+            "13#9_"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "7#9b13",
+        "setNum": 2458,
+        "chroma": "100110011010",
+        "normalized": "100110011010",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "7m",
+            "9A",
+            "13m"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "7#9b13"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "maj7#9#11",
+        "setNum": 2481,
+        "chroma": "100110110001",
+        "normalized": "100011001101",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "7M",
+            "9A",
+            "11A"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "maj7#9#11"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "7#9#11",
+        "setNum": 2482,
+        "chroma": "100110110010",
+        "normalized": "100101001101",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "7m",
+            "9A",
+            "11A"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "7#9#11",
+            "7b5#9"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "13#9#11",
+        "setNum": 2486,
+        "chroma": "100110110110",
+        "normalized": "100110110110",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "7m",
+            "9A",
+            "11A",
+            "13M"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "13#9#11"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "7#9#11b13",
+        "setNum": 2490,
+        "chroma": "100110111010",
+        "normalized": "100110111010",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "7m",
+            "9A",
+            "11A",
+            "13m"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "7#9#11b13"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "suspended 2nd",
+        "setNum": 2576,
+        "chroma": "101000010000",
+        "normalized": "100001000010",
+        "intervals": [
+            "1P",
+            "2M",
+            "5P"
+        ],
+        "quality": "Unknown",
+        "aliases": [
+            "sus2"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "M9#5sus4",
+        "setNum": 2633,
+        "chroma": "101001001001",
+        "normalized": "100100100110",
+        "intervals": [
+            "1P",
+            "4P",
+            "5A",
+            "7M",
+            "9M"
+        ],
+        "quality": "Augmented",
+        "aliases": [
+            "M9#5sus4"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "sus24",
+        "setNum": 2640,
+        "chroma": "101001010000",
+        "normalized": "100001010010",
+        "intervals": [
+            "1P",
+            "2M",
+            "4P",
+            "5P"
+        ],
+        "quality": "Unknown",
+        "aliases": [
+            "sus24",
+            "sus4add9"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "M9sus4",
+        "setNum": 2641,
+        "chroma": "101001010001",
+        "normalized": "100011010010",
+        "intervals": [
+            "1P",
+            "4P",
+            "5P",
+            "7M",
+            "9M"
+        ],
+        "quality": "Unknown",
+        "aliases": [
+            "M9sus4"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "11th",
+        "setNum": 2642,
+        "chroma": "101001010010",
+        "normalized": "100101001010",
+        "intervals": [
+            "1P",
+            "5P",
+            "7m",
+            "9M",
+            "11P"
+        ],
+        "quality": "Unknown",
+        "aliases": [
+            "11",
+            "sus",
+            "Bb/C",
+            "for",
+            "C11"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "9sus4",
+        "setNum": 2642,
+        "chroma": "101001010010",
+        "normalized": "100101001010",
+        "intervals": [
+            "1P",
+            "4P",
+            "5P",
+            "7m",
+            "9M"
+        ],
+        "quality": "Unknown",
+        "aliases": [
+            "9sus4",
+            "9sus"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "13sus4",
+        "setNum": 2646,
+        "chroma": "101001010110",
+        "normalized": "100101011010",
+        "intervals": [
+            "1P",
+            "4P",
+            "5P",
+            "7m",
+            "9M",
+            "13M"
+        ],
+        "quality": "Unknown",
+        "aliases": [
+            "13sus4",
+            "13sus"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "9no5",
+        "setNum": 2690,
+        "chroma": "101010000010",
+        "normalized": "100000101010",
+        "intervals": [
+            "1P",
+            "3M",
+            "7m",
+            "9M"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "9no5"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "13no5",
+        "setNum": 2694,
+        "chroma": "101010000110",
+        "normalized": "100001101010",
+        "intervals": [
+            "1P",
+            "3M",
+            "7m",
+            "9M",
+            "13M"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "13no5"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "M#5add9",
+        "setNum": 2696,
+        "chroma": "101010001000",
+        "normalized": "100010001010",
+        "intervals": [
+            "1P",
+            "3M",
+            "5A",
+            "9M"
+        ],
+        "quality": "Augmented",
+        "aliases": [
+            "M#5add9",
+            "+add9"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "maj9#5",
+        "setNum": 2697,
+        "chroma": "101010001001",
+        "normalized": "100010011010",
+        "intervals": [
+            "1P",
+            "3M",
+            "5A",
+            "7M",
+            "9M"
+        ],
+        "quality": "Augmented",
+        "aliases": [
+            "maj9#5",
+            "Maj9#5"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "9#5",
+        "setNum": 2698,
+        "chroma": "101010001010",
+        "normalized": "100010101010",
+        "intervals": [
+            "1P",
+            "3M",
+            "5A",
+            "7m",
+            "9M"
+        ],
+        "quality": "Augmented",
+        "aliases": [
+            "9#5",
+            "9+"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "9b13",
+        "setNum": 2698,
+        "chroma": "101010001010",
+        "normalized": "100010101010",
+        "intervals": [
+            "1P",
+            "3M",
+            "7m",
+            "9M",
+            "13m"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "9b13"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "Madd9",
+        "setNum": 2704,
+        "chroma": "101010010000",
+        "normalized": "100001010100",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "9M"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "Madd9",
+            "2",
+            "add9",
+            "add2"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "major 9th",
+        "setNum": 2705,
+        "chroma": "101010010001",
+        "normalized": "100011010100",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "7M",
+            "9M"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "maj9",
+            "Δ9"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "dominant 9th",
+        "setNum": 2706,
+        "chroma": "101010010010",
+        "normalized": "100100101010",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "7m",
+            "9M"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "9"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "6th/9th",
+        "setNum": 2708,
+        "chroma": "101010010100",
+        "normalized": "100101001010",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "6M",
+            "9M"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "6/9",
+            "69"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "M7add13",
+        "setNum": 2709,
+        "chroma": "101010010101",
+        "normalized": "100101011010",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "6M",
+            "7M",
+            "9M"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "M7add13"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "major 13th",
+        "setNum": 2709,
+        "chroma": "101010010101",
+        "normalized": "100101011010",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "7M",
+            "9M",
+            "13M"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "maj13",
+            "Maj13"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "dominant 13th",
+        "setNum": 2710,
+        "chroma": "101010010110",
+        "normalized": "100101101010",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "7m",
+            "9M",
+            "13M"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "13"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "M9b5",
+        "setNum": 2721,
+        "chroma": "101010100001",
+        "normalized": "100001101010",
+        "intervals": [
+            "1P",
+            "3M",
+            "5d",
+            "7M",
+            "9M"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "M9b5"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "9b5",
+        "setNum": 2722,
+        "chroma": "101010100010",
+        "normalized": "100010101010",
+        "intervals": [
+            "1P",
+            "3M",
+            "5d",
+            "7m",
+            "9M"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "9b5"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "13b5",
+        "setNum": 2726,
+        "chroma": "101010100110",
+        "normalized": "100110101010",
+        "intervals": [
+            "1P",
+            "3M",
+            "5d",
+            "6M",
+            "7m",
+            "9M"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "13b5"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "9#5#11",
+        "setNum": 2730,
+        "chroma": "101010101010",
+        "normalized": "101010101010",
+        "intervals": [
+            "1P",
+            "3M",
+            "5A",
+            "7m",
+            "9M",
+            "11A"
+        ],
+        "quality": "Augmented",
+        "aliases": [
+            "9#5#11"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "major #11 (lydian)",
+        "setNum": 2737,
+        "chroma": "101010110001",
+        "normalized": "100011010101",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "7M",
+            "9M",
+            "11A"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "maj9#11",
+            "Δ9#11"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "9#11",
+        "setNum": 2738,
+        "chroma": "101010110010",
+        "normalized": "100101010101",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "7m",
+            "9M",
+            "11A"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "9#11",
+            "9+4",
+            "9#4",
+            "9#11_",
+            "9#4_"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "69#11",
+        "setNum": 2740,
+        "chroma": "101010110100",
+        "normalized": "100101010110",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "6M",
+            "9M",
+            "11A"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "69#11"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "M13#11",
+        "setNum": 2741,
+        "chroma": "101010110101",
+        "normalized": "101010110101",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "7M",
+            "9M",
+            "11A",
+            "13M"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "M13#11",
+            "maj13#11",
+            "M13+4",
+            "M13#4"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "13#11",
+        "setNum": 2742,
+        "chroma": "101010110110",
+        "normalized": "101010101101",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "7m",
+            "9M",
+            "11A",
+            "13M"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "13#11",
+            "13+4",
+            "13#4"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "9#11b13",
+        "setNum": 2746,
+        "chroma": "101010111010",
+        "normalized": "101010101011",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "7m",
+            "9M",
+            "11A",
+            "13m"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "9#11b13",
+            "9b5b13"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "m9#5",
+        "setNum": 2826,
+        "chroma": "101100001010",
+        "normalized": "100001010101",
+        "intervals": [
+            "1P",
+            "3m",
+            "6m",
+            "7m",
+            "9M"
+        ],
+        "quality": "Minor",
+        "aliases": [
+            "m9#5"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "madd9",
+        "setNum": 2832,
+        "chroma": "101100010000",
+        "normalized": "100001011000",
+        "intervals": [
+            "1P",
+            "3m",
+            "5P",
+            "9M"
+        ],
+        "quality": "Minor",
+        "aliases": [
+            "madd9"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "mMaj9",
+        "setNum": 2833,
+        "chroma": "101100010001",
+        "normalized": "100010001101",
+        "intervals": [
+            "1P",
+            "3m",
+            "5P",
+            "7M",
+            "9M"
+        ],
+        "quality": "Minor",
+        "aliases": [
+            "mMaj9",
+            "-Maj9"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "minor 9th",
+        "setNum": 2834,
+        "chroma": "101100010010",
+        "normalized": "100010010101",
+        "intervals": [
+            "1P",
+            "3m",
+            "5P",
+            "7m",
+            "9M"
+        ],
+        "quality": "Minor",
+        "aliases": [
+            "m9"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "m69",
+        "setNum": 2836,
+        "chroma": "101100010100",
+        "normalized": "100010100101",
+        "intervals": [
+            "1P",
+            "3m",
+            "5P",
+            "6M",
+            "9M"
+        ],
+        "quality": "Minor",
+        "aliases": [
+            "m69",
+            "_69"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "minor 13th",
+        "setNum": 2838,
+        "chroma": "101100010110",
+        "normalized": "100010110101",
+        "intervals": [
+            "1P",
+            "3m",
+            "5P",
+            "7m",
+            "9M",
+            "13M"
+        ],
+        "quality": "Minor",
+        "aliases": [
+            "m13"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "mMaj9b6",
+        "setNum": 2841,
+        "chroma": "101100011001",
+        "normalized": "100011001101",
+        "intervals": [
+            "1P",
+            "3m",
+            "5P",
+            "6m",
+            "7M",
+            "9M"
+        ],
+        "quality": "Minor",
+        "aliases": [
+            "mMaj9b6"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "m9b5",
+        "setNum": 2850,
+        "chroma": "101100100010",
+        "normalized": "100010101100",
+        "intervals": [
+            "1P",
+            "3m",
+            "7m",
+            "12d",
+            "2M"
+        ],
+        "quality": "Minor",
+        "aliases": [
+            "m9b5",
+            "h9",
+            "-9b5"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "m11A",
+        "setNum": 2890,
+        "chroma": "101101001010",
+        "normalized": "100101010110",
+        "intervals": [
+            "1P",
+            "3m",
+            "6m",
+            "7m",
+            "9M",
+            "11P"
+        ],
+        "quality": "Minor",
+        "aliases": [
+            "m11A"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "minor 11th",
+        "setNum": 2898,
+        "chroma": "101101010010",
+        "normalized": "100101011010",
+        "intervals": [
+            "1P",
+            "3m",
+            "5P",
+            "7m",
+            "9M",
+            "11P"
+        ],
+        "quality": "Minor",
+        "aliases": [
+            "m11"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "m11b5",
+        "setNum": 2914,
+        "chroma": "101101100010",
+        "normalized": "100010101101",
+        "intervals": [
+            "1P",
+            "3m",
+            "7m",
+            "12d",
+            "2M",
+            "4P"
+        ],
+        "quality": "Minor",
+        "aliases": [
+            "m11b5",
+            "h11",
+            "_11b5"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "11b9",
+        "setNum": 3154,
+        "chroma": "110001010010",
+        "normalized": "100010100101",
+        "intervals": [
+            "1P",
+            "5P",
+            "7m",
+            "9m",
+            "11P"
+        ],
+        "quality": "Unknown",
+        "aliases": [
+            "11b9"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "suspended 4th b9",
+        "setNum": 3154,
+        "chroma": "110001010010",
+        "normalized": "100010100101",
+        "intervals": [
+            "1P",
+            "4P",
+            "5P",
+            "7m",
+            "9m"
+        ],
+        "quality": "Unknown",
+        "aliases": [
+            "b9sus",
+            "phryg"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "7sus4b9b13",
+        "setNum": 3162,
+        "chroma": "110001011010",
+        "normalized": "100010110101",
+        "intervals": [
+            "1P",
+            "4P",
+            "5P",
+            "7m",
+            "9m",
+            "13m"
+        ],
+        "quality": "Unknown",
+        "aliases": [
+            "7sus4b9b13",
+            "7b9b13sus4"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "altered",
+        "setNum": 3202,
+        "chroma": "110010000010",
+        "normalized": "100000101100",
+        "intervals": [
+            "1P",
+            "3M",
+            "7m",
+            "9m"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "alt7"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "7#5b9",
+        "setNum": 3210,
+        "chroma": "110010001010",
+        "normalized": "100010101100",
+        "intervals": [
+            "1P",
+            "3M",
+            "5A",
+            "7m",
+            "9m"
+        ],
+        "quality": "Augmented",
+        "aliases": [
+            "7#5b9"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "Maddb9",
+        "setNum": 3216,
+        "chroma": "110010010000",
+        "normalized": "100001100100",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "9m"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "Maddb9"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "M7b9",
+        "setNum": 3217,
+        "chroma": "110010010001",
+        "normalized": "100011100100",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "7M",
+            "9m"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "M7b9"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "dominant b9",
+        "setNum": 3218,
+        "chroma": "110010010010",
+        "normalized": "100100100101",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "7m",
+            "9m"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "7b9"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "13b9",
+        "setNum": 3222,
+        "chroma": "110010010110",
+        "normalized": "100100101101",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "7m",
+            "9m",
+            "13M"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "13b9"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "7b9b13",
+        "setNum": 3226,
+        "chroma": "110010011010",
+        "normalized": "100100110101",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "7m",
+            "9m",
+            "13m"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "7b9b13"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "7#5b9#11",
+        "setNum": 3242,
+        "chroma": "110010101010",
+        "normalized": "100101010101",
+        "intervals": [
+            "1P",
+            "3M",
+            "5A",
+            "7m",
+            "9m",
+            "11A"
+        ],
+        "quality": "Augmented",
+        "aliases": [
+            "7#5b9#11"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "7b9#11",
+        "setNum": 3250,
+        "chroma": "110010110010",
+        "normalized": "100101100101",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "7m",
+            "9m",
+            "11A"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "7b9#11",
+            "7b5b9"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "13b9#11",
+        "setNum": 3254,
+        "chroma": "110010110110",
+        "normalized": "100101101101",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "7m",
+            "9m",
+            "11A",
+            "13M"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "13b9#11"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "7b9b13#11",
+        "setNum": 3258,
+        "chroma": "110010111010",
+        "normalized": "100101110101",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "7m",
+            "9m",
+            "11A",
+            "13m"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "7b9b13#11",
+            "7b9#11b13",
+            "7b5b9b13"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "mb6b9",
+        "setNum": 3336,
+        "chroma": "110100001000",
+        "normalized": "100001000110",
+        "intervals": [
+            "1P",
+            "3m",
+            "6m",
+            "9m"
+        ],
+        "quality": "Minor",
+        "aliases": [
+            "mb6b9"
+        ]
+    },
+    {
+        "empty": false,
+        "name": "7b9#9",
+        "setNum": 3474,
+        "chroma": "110110010010",
+        "normalized": "100100101101",
+        "intervals": [
+            "1P",
+            "3M",
+            "5P",
+            "7m",
+            "9m",
+            "9A"
+        ],
+        "quality": "Major",
+        "aliases": [
+            "7b9#9"
+        ]
+    }
+]

@@ -28,7 +28,7 @@ const HeroImage = (alt) => {
 
 
 
-
+    
     return <Img fluid={data.heroImage.childImageSharp.fluid} alt={alt} />
 }
 

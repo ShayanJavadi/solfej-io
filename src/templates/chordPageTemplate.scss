@@ -1,0 +1,158 @@
+.chord-page-template {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+    .container {
+        margin-bottom: 1rem;
+    }
+    @media (max-width: 800px) {
+        width: 90%;
+    }
+
+    h2 {
+        margin-bottom: 0;
+        margin-top: 1rem;
+        width: 80%;
+        font-size: 24px !important;
+        color: #040517 !important;
+        font-weight: normal !important;
+        line-height: 19px;
+        letter-spacing: .15px;
+    }
+
+     h3 {
+        margin-top: .8rem;
+        font-size: 16px !important;
+        margin-bottom: 0;
+        opacity: .5;
+        font-weight: normal;
+        color: #040517 !important;
+        margin-bottom: 2rem;
+        line-height: 25px;
+    }
+
+    p {
+        font-weight: normal;
+        font-size: 32px !important;
+        color: #040517
+
+    }
+    
+    .header-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 1.3rem;
+
+        h1 {
+            font-size: 3rem !important;
+            text-align: left;
+            margin-bottom: 0;
+            font-weight: normal;
+            color: #040517 !important;
+            text-transform: capitalize;
+            letter-spacing: -1.5px;
+            position: relative;
+            right: 5px;
+            margin-top: 1rem;
+
+             @media (max-width: 800px) {
+                font-size: 2.7rem !important;
+                margin-top: .5rem;
+            }
+        }
+
+        h3 {
+            margin-bottom: 1rem;
+        }
+
+        .chord-aliases-container {
+            display: flex;
+            
+            p {
+                font-size: 15px !important;
+                margin-bottom: 0;
+                color: rgba(4, 5, 23, 0.6);
+            }
+
+            a {
+                font-size: 15px;
+                color: rgba(4, 5, 23, 0.6);
+
+                margin-left: .3rem;
+                text-decoration: underline;
+                height: 3rem;
+                &:first-of-type {
+                    margin-left: 0;
+                }
+            }
+            
+             .social-links {
+                flex: 1;
+                display: flex;
+                justify-content: flex-end;
+                a {
+                    padding-right: .5rem;
+                }
+                img {
+                    width: 1.5rem;
+                    opacity: .8;
+                }
+            }
+        }
+    }
+    
+    .chord-diagrams-container {
+
+        .piano-diagram-container {
+            margin-bottom: 2rem;
+
+            .piano-roll-container {
+                @media (max-width: 800px) {
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        display: flex;
+
+        flex-direction: column;
+
+        p, h2 {
+            text-align: left;
+        }
+        & > div {
+            flex: 1;
+        }
+    }
+
+    .chord-information-container {
+        display: flex;
+        flex-direction: column;
+        p, h2 {
+            text-align: left;
+        }
+
+        & > div {
+            flex: 1;
+        }
+    }
+
+    .guitar-diagram-container {
+        h3 {
+            margin-bottom: 0;
+        }
+        #guitar-diagram {
+            @media (max-width: 800px) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                right: 15px;
+            }
+        }
+        
+    }
+}

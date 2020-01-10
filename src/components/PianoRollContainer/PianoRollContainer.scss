@@ -1,0 +1,10 @@
+.piano-roll-container {
+    display: flex;
+    height: 13rem;
+    padding: 1rem 0;
+    max-width: 475px;
+    .piano-roll {
+      display: flex;
+      flex: 1;
+    }
+}

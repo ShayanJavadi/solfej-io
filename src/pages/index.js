@@ -4,7 +4,6 @@ import Layout from "../components/layout"
 import HeroImage from "../components/HeroImage"
 import MockImageOne from "../components/MockImageOne"
 import SEO from "../components/seo"
-import "./index.scss";
 import MockImageThree from "../components/MockImageThree"
 import MockImageTwo from "../components/MockImageTwo"
 import IllustrationOne from "../components/IllustrationOne";

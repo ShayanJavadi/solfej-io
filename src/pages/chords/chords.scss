@@ -1,0 +1,135 @@
+@import "../../styles/variables.scss";
+
+.chords-page-index {
+
+    .divider {
+        background: #dedede;
+        height: 1.5px;
+        width: 90%;
+        margin: 0 auto;
+        margin: 3rem auto;
+         @media (max-width: $mobile)  {
+            margin: 0 auto;
+            margin-top: 3rem;
+        }
+    }
+    .marketing-content-container {
+        min-height: 21rem;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 20px;
+
+        h2 {
+            font-weight: bold !important;
+            font-size: 1.7rem !important;
+        }
+
+        p {
+            font-size: 16px !important;
+        }
+
+         @media (max-width: $mobile)  {
+            p, h2 {
+                width: 100% !important;
+            }
+        }
+
+        .copy-container {
+            margin-top: 0;
+            justify-content: center;
+            align-items: center;
+            padding-left: 0 !important;
+
+
+            @media (max-width: $mobile)  {
+                padding: 0;
+                padding-top: 2rem;
+            }
+              
+        }
+
+        .image-container .mock-container {
+            @media (max-width: $mobile)  {
+                padding-top: 0;
+            }
+
+            
+            .gatsby-image-wrapper {
+                max-width: unset;
+                box-shadow: rgba(16, 16, 17, 0.15) 1px 15px 40px 0px;
+            }
+        }
+        
+  
+
+        .image-container {
+            flex: 4;
+        }
+    }    
+    .hero {
+        display: flex;
+        min-height: 46vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+        background: #ff8c8c !important;
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            
+            .hero-copy {
+                  h1, p {
+                    text-align: center;
+                    color: #183256 !important;
+                }
+
+                h1 {
+                    margin-bottom: 1.5rem;
+                }
+
+                p {
+                    max-width: 800px;
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+        .search-bar-container {
+            background: #fff;
+            max-width: 630px;
+            margin: 0 auto;
+            border: solid 1px #fff;
+
+            &.focused {
+                border: solid 1px #ccc;
+            }
+
+            .search-results-container {
+                width: calc(100% + 1px);
+            }
+        }
+    }
+
+    h1 {
+        font-size: 4rem;
+        color: #040517 !important;
+
+         @media (max-width: 800px)  {
+            font-size: 2.3rem !important;
+        }
+    }
+
+    h2 {
+
+    }
+    
+    p {
+        font-size: 20px !important;
+
+        @media (max-width: 800px)  {
+            font-size: 16px !important
+        }
+    }
+}

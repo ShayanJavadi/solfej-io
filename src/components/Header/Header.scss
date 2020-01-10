@@ -168,7 +168,7 @@ header {
     padding-top: 1rem;
     position: fixed;
     transition: 'all 200ms ease-in';
-    
+    z-index: 99999999999999;
     .menu-button {
         @media (max-width: $mobile)  {
             display: flex !important;

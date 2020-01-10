@@ -5,3 +5,17 @@
  */
 
 // You can delete this file if you're not using it
+const chords = require("./chords");
+const path = require(`path`)
+exports.createPages = async ({ actions }) => {
+    const { createPage } = actions
+    const chordTemplate = path.resolve(`src/templates/chordPageTemplate.js`)
+
+    chords.forEach(chord => {
+        createPage({
+            path: chord.path,
+            component: chordTemplate,
+            context: { chord }, // additional data can be passed via context
+        })
+    })
+}

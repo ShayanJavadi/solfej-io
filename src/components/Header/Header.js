@@ -36,17 +36,17 @@ export default function Header(props) {
                 </nav>
      
                 <ul>
-                    <li>
-                        <Link to="/">
-                            Home
-                </Link>
-                    </li>
+    
                     <li>
                         <Link to="/blog">
                             Blog
                 </Link>
                     </li>
-
+                    <li>
+                        <Link to="/chords">
+                            Chord Search
+                </Link>
+                    </li>
                     <li>
                         <a href="mailto:shayanjavadi1375@gmail.com">
                             Contact
@@ -79,6 +79,11 @@ export default function Header(props) {
                     <li>
                         <Link to="/">
                             Home
+                </Link>
+                    </li>
+                    <li>
+                        <Link to="/chords">
+                            Chord Search
                 </Link>
                     </li>
                     <li>
