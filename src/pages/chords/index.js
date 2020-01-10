@@ -73,7 +73,7 @@ export default function index() {
             <div className="marketing-content-container copy-on-right">
                 <div className="copy-container small">
                     <h2>Notes, Intervals, And More!</h2>
-                    <p>Go deep on each chord's building blocks. Learn each chord's notes, intervals, and more.</p>
+                    <p>Go deep on each chord's building blocks. Learn each chord's notes, intervals, scales, and more.</p>
 
                 </div>
                 <div className="image-container">
