@@ -19,7 +19,7 @@ const Image0 = (alt) => {
       Image0: file(relativePath: { eq: "blog-image-0.png" }) {
         childImageSharp {
           fluid(maxWidth: 700) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }

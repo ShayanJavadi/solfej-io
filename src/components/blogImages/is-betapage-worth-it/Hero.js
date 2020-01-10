@@ -20,7 +20,7 @@ const BetapageBlogHero = (alt) => {
       BetapageBlogHero: file(relativePath: { eq: "blog-post-hero-2.png" }) {
         childImageSharp {
           fluid(maxWidth: 700) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }

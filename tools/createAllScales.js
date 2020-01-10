@@ -10,14 +10,21 @@ const uuidv5 = require('uuid/v5');
 const uuidv4 = require('uuid/v4');
 const chords = require("../chords.json")
 
-const NOTES = ["C", "C#", "Db", "D", "D#", "Eb", "E", "F", "F#", "Gb", "G", "G#", "Ab", "A", "A#", "Bb", "B"];
+const NOTES = ["Cb", "C", "C#", "Db", "D", "D#", "Eb", "E", "F", "F#", "Gb", "G", "G#", "Ab", "A", "A#", "Bb", "B"];
 const CHORDS_NAMESPACE = '1b671a64-40d5-491e-99b0-da01ff1f3341';
-
+const musicalSymbolExtensions = {
+    "°": " diminish ",
+    "Δ": " delta ",
+    "#": " sharp ",
+    "ø": " half-dim ",
+    "/": " slash ",
+    "+": " augmented five ",
+}
+slugify.extend(musicalSymbolExtensions)
 
 const scaleTypes = entries()
     .filter(s => !isEmpty(s.name))
 
-console.log(scaleTypes.length)
 
 // create scale objects for alias scales
 scaleTypes.map(scaleType => {
@@ -53,7 +60,7 @@ scaleTypes.forEach(scale => {
 })
 
 const createScale = (intervals, note) => intervals.map(transposeFrom(note))
-    .map(note => simplify(note))
+    .map(note => note === "Cb" ? "Cb" : simplify(note))
 
 const getScaleUrl = string => "/scales/" + slugify(string).toLowerCase()
 

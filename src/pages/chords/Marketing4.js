@@ -19,7 +19,7 @@ const MarketingFour = (alt) => {
       mockOne: file(relativePath: { eq: "chords-marketing-4.png" }) {
         childImageSharp {
           fluid(maxWidth: 320) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }

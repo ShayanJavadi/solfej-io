@@ -153,6 +153,32 @@
                 right: 15px;
             }
         }
-        
+    }
+
+    .scales-container {
+        h3 {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .scale-names-container {
+        .root-note-with-scales-container {
+            margin-bottom: 2rem;
+            .root-note {
+                font-size: 1.5rem !important;
+                margin-bottom: .5rem;
+            }
+            .scales {
+                p {
+                    display: inline;
+                    font-size: 1rem !important;
+                    margin-bottom: 0;
+                    a {
+                        color: inherit;
+                        
+                    }
+                }
+            }
+        }
     }
 }

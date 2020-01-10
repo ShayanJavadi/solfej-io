@@ -19,7 +19,7 @@ const MockImageOne = (alt) => {
       mockOne: file(relativePath: { eq: "mock-1.png" }) {
         childImageSharp {
           fluid(maxWidth: 320) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }

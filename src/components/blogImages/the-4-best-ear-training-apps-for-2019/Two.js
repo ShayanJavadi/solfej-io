@@ -19,7 +19,7 @@ const Image3 = (alt) => {
       Image3: file(relativePath: { eq: "best-ear-2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 700) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }

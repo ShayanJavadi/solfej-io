@@ -19,7 +19,7 @@ const ShayanJavadi = (alt) => {
       shayanImage: file(relativePath: { eq: "shayan-javadi.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 700) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }

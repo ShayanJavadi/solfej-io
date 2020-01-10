@@ -73,7 +73,7 @@ const chords = NOTES.map(note => {
             aliases: chord.aliases.map(alias => note + alias),
             rootNote: note,
             id: uuidv4(),
-            parentScales: [],
+            parentScales: {},
         }
     })
 })
@@ -195,10 +195,20 @@ chordDataWithSlugs.forEach(chord => {
     scales.forEach(scale => {
         const chordNotesInScale = chord.notes.every(note => scale.notes.includes(note))
         if (chordNotesInScale && !scale.isAlias && allowedScales.includes(scale.name)) {
-            chord.parentScales.push({ name: scale.displayName, path: scale.path })
+            const rootNote = scale.rootNote.replace("#", "sharp")
+            console.log(rootNote)
+            if (!chord.parentScales[rootNote]) {
+                chord.parentScales[rootNote] = []
+            }
+
+            if (!chord.parentScales[rootNote].some(addedScale => addedScale.path === scale.path)) {
+                chord.parentScales[rootNote].push({ name: scale.displayName, path: scale.path, rootNote: scale.rootNote })
+            }   
         }
     })
 })
+
+
 
 
 

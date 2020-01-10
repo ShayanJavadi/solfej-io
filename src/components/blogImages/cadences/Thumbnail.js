@@ -20,7 +20,7 @@ const ColorPaletteBlogHero = (alt) => {
       ColorPaletteBlogHero: file(relativePath: { eq: "blog-post-hero-7.png" }) {
         childImageSharp {
           fluid(maxWidth: 700) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }

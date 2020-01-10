@@ -20,7 +20,7 @@ const VOneDotTwoBlog = (alt) => {
       vOneDotTwoBlog: file(relativePath: { eq: "blog-post-hero-1.png" }) {
         childImageSharp {
           fluid(maxWidth: 700) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }

@@ -15,6 +15,7 @@ import chords from "../../chordsMinified.json"
 import FacebookIcon from "../images/facebook.svg"
 import TwitterIcon from "../images/twitter.svg";
 import SearchBar from "../components/SearchBar/SearchBar";
+import { objectOf } from "prop-types";
 
 const flatten = arr => arr.reduce((a, v) => {
     v instanceof Array ? a.push(...flatten(v)) : a.push(v);
@@ -64,6 +65,49 @@ const renderChordInformation = ({ chord }) => {
                 <h3>What intervals are in a {chordName} chord?</h3>
                 {intervalNames.map(interval => <p>{interval}</p>)}
             </div>
+            {
+                !isEmpty(chord.parentScales) &&
+                <div className="scales-container">
+                    <h2>Scales</h2>
+                    <h3>What scales does a {chordName} chord fit in?</h3>
+                    <div className="scale-names-container">
+                    {
+                        Object.entries(chord.parentScales)
+                            .filter(([rootNote]) => rootNote.replace("sharp", "#") === chord.rootNote)
+                            .map(([rootNote, scales]) => (
+                                scales &&
+                                <div className="root-note-with-scales-container">
+                                    <p className="root-note">
+                                        {rootNote.replace("sharp", "#")}
+                                    </p>
+                                    <div className="scales">
+                                        {
+                                            scales.map((scale, index) => <p>{index !== 0 ? " - " : ""}<a href="#">{scale.name}</a></p>)
+                                        }
+                                    </div>
+                                </div>
+                            ))
+                    }
+                        {
+                            Object.entries(chord.parentScales)
+                                .filter(([rootNote]) => rootNote.replace("sharp", "#") !== chord.rootNote)
+                                .map(([rootNote, scales]) => (
+                                    scales &&
+                                    <div className="root-note-with-scales-container">
+                                        <p className="root-note">
+                                            {rootNote.replace("sharp", "#")}
+                                        </p>
+                                        <div className="scales">
+                                            {
+                                                scales.map((scale, index) => <p>{index !== 0 ? " - " : ""}<a href="#"> {scale.name} </a></p>)
+                                            }
+                                        </div>
+                                    </div>
+                                ))
+                        }
+                    </div>
+                </div>
+            }
         </div>
     )
 }
@@ -115,6 +159,7 @@ const chordDiagramsContainer = ({ chord }) => {
                     <div id="guitar-diagram" />
                 </div>
             }
+          
         </div>
     )
 }
@@ -221,6 +266,94 @@ export const pageQuery = graphql`
                     intervals,
                     name,
                     rootNote,
+                    parentScales {
+                  
+                        C {
+                            name,
+                            path,
+                            rootNote,
+                        },
+                        Csharp {
+                            name,
+                            path,
+                            rootNote,
+                        },
+                        Db {
+                            name,
+                            path,
+                            rootNote
+                        },
+                        D {
+                            name,
+                            path,
+                            rootNote
+                        },
+                        Dsharp {
+                            name,
+                            path,
+                            rootNote
+                        },
+                        Eb {
+                            name,
+                            path,
+                            rootNote
+                        },
+                        E {
+                            name,
+                            path,
+                            rootNote
+                        },
+                        F {
+                            name,
+                            path,
+                            rootNote
+                        },
+                        Fsharp {
+                            name,
+                            path,
+                            rootNote
+                        },
+                        Gb {
+                            name,
+                            path,
+                            rootNote
+                        },
+                        G {
+                            name,
+                            path,
+                            rootNote
+                        },
+                        Gsharp {
+                            name,
+                            path,
+                            rootNote
+                        },
+                        Ab {
+                            name,
+                            path,
+                            rootNote
+                        },
+                        A {
+                            name,
+                            path,
+                            rootNote
+                        },
+                        Asharp {
+                            name,
+                            path,
+                            rootNote
+                        },
+                        Bb {
+                            name,
+                            path,
+                            rootNote
+                        },
+                        B {
+                            name,
+                            path,
+                            rootNote
+                        },
+                    },
                     aliases {
                         name,
                         url

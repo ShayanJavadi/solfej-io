@@ -19,7 +19,7 @@ const MailingListImage = (alt) => {
       mockOne: file(relativePath: { eq: "mailing-list.png" }) {
         childImageSharp {
           fluid(maxWidth: 380) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
