@@ -42,8 +42,8 @@ const IndexPage = () => (
   <Layout title="Solfej">
     <div className="hero-container">
         <div className="copy-container">
-            <h1>The Best New Way To Learn Music Theory</h1>
-            <p>Learn music theory & train your ears regardless of <br /> your musical experience.</p>
+            <h1>The Best New App To Learn Music Theory</h1>
+            <p>Want to become a better musician? With Solfej you can hit your musical goals and train your ears.</p>
             <OutboundLink href={typeFormUrl}>
                 <button className="cta-button primary">Get Early Access</button>
             </OutboundLink>
@@ -62,8 +62,8 @@ const IndexPage = () => (
             </div>
         </div>    
         <div className="copy-container small">
-            <h2>Your Guide to Music Theory, Ear Training, & Rhythm</h2>
-            <p>Practical lesson paths. No more Wikipedia/YouTube rabbit holes. New lessons added every month.</p>
+            <h2>Guided Music Theory, Ear Training, & Rhythm Lessons</h2>
+            <p>Practical lesson paths. No more Wikipedia/YouTube rabbit holes. New music theory lessons added every month to the app.</p>
             <OutboundLink href={typeFormUrl}>
                 <button className="cta-button green">Get Early Access</button>
             </OutboundLink>
@@ -71,8 +71,8 @@ const IndexPage = () => (
     </div>
     <div className="marketing-content-container reverse">
         <div className="copy-container small">
-            <h2>Interactive & Practical Excercises</h2>
-            <p>Interactive ear training and rhythm exercises to help you internalize complex topics.</p>
+            <h2>Interactive Ear Training, Music Theory, & Rhythm Excercises</h2>
+            <p>Do you want to recognize intervals? Learn how to play polyrhythms? Know what note is a major 7th above another?</p>
             <OutboundLink href={typeFormUrl}>
                 <button className="cta-button yellow">Get Early Access</button>
             </OutboundLink>
@@ -97,7 +97,7 @@ const IndexPage = () => (
         </div>
         <div className="copy-container small">
             <h2>Simple Language</h2>
-            <p>Delightful music theory lessons designed for humans. New lessons added every month.</p>
+            <p>Tired of dry music theory lessons? Solfej's music theory lessons are designed for humans.</p>
             <OutboundLink href={typeFormUrl}>
                 <button className="cta-button secondary">Get Early Access</button>
             </OutboundLink>
