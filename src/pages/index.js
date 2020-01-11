@@ -42,7 +42,7 @@ const IndexPage = () => (
   <Layout title="Solfej">
     <div className="hero-container">
         <div className="copy-container">
-            <h1>The Best New App To Learn Music Theory</h1>
+            <h1>The Best New Music Theory & Ear Training App</h1>
             <p>Want to become a better musician? With Solfej you can hit your musical goals and train your ears.</p>
             <OutboundLink href={typeFormUrl}>
                 <button className="cta-button primary">Get Early Access</button>
