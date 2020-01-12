@@ -63,7 +63,7 @@ const IndexPage = () => (
         </div>    
         <div className="copy-container small">
             <h2>Guided Music Theory, Ear Training, & Rhythm Lessons</h2>
-            <p>Practical lesson paths. No more Wikipedia/YouTube rabbit holes. New music theory lessons added every month to the app.</p>
+            <p>Practical lesson paths to help you learn music theory. No more Wikipedia/YouTube rabbit holes. </p>
             <OutboundLink href={typeFormUrl}>
                 <button className="cta-button green">Get Early Access</button>
             </OutboundLink>

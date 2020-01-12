@@ -166,6 +166,7 @@ chordDataWithSlugs.forEach(chord => {
 chordDataWithSlugs.forEach(chord => {
     chord.aliases = uniqBy(chord.aliases, alias => alias.name)
         .filter(alias => alias.name !== chord.displayName)
+        .filter(alias => chordDataWithSlugs.some(chord => chord.path === alias.url))
 })
 
 const allowedScales = [
@@ -196,7 +197,6 @@ chordDataWithSlugs.forEach(chord => {
         const chordNotesInScale = chord.notes.every(note => scale.notes.includes(note))
         if (chordNotesInScale && !scale.isAlias && allowedScales.includes(scale.name)) {
             const rootNote = scale.rootNote.replace("#", "sharp")
-            console.log(rootNote)
             if (!chord.parentScales[rootNote]) {
                 chord.parentScales[rootNote] = []
             }
@@ -207,11 +207,6 @@ chordDataWithSlugs.forEach(chord => {
         }
     })
 })
-
-
-
-
-
 
 
 // write to file 
