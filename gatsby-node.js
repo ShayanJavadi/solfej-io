@@ -7,9 +7,13 @@
 // You can delete this file if you're not using it
 const chords = require("./chords");
 const path = require(`path`)
+
+
+
 exports.createPages = async ({ actions }) => {
     const { createPage } = actions
     const chordTemplate = path.resolve(`src/templates/chordPageTemplate.js`)
+    const allTemplate = path.resolve(`src/templates/all.js`)
 
     chords.forEach(chord => {
         createPage({
@@ -17,5 +21,11 @@ exports.createPages = async ({ actions }) => {
             component: chordTemplate,
             context: { chord }, // additional data can be passed via context
         })
+    })
+
+    createPage({
+        path: "/chords/all",
+        component: allTemplate,
+        context: { chords }, // additional data can be passed via context
     })
 }

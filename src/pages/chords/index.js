@@ -4,10 +4,10 @@ import "./chords.scss"
 import chords from "../../../chordsMinified.json"
 import Layout from '../../components/layout'
 import SearchBar from '../../components/SearchBar/SearchBar'
-import MarketingOne from './Marketing1'
-import MarketingTwo from './Marketing2'
-import MarketingThree from './Marketing3'
-import MarketingFour from './Marketing4'
+import MarketingOne from '../../components/Marketing1'
+import MarketingTwo from '../../components/Marketing2'
+import MarketingThree from '../../components/Marketing3'
+import MarketingFour from '../../components/Marketing4'
 
 export default function index() {
     return (

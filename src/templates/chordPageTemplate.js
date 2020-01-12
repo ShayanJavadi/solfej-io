@@ -241,8 +241,8 @@ export default function Template({ data }) {
 
     return (
         <Layout 
-            title={displayName} 
-            description={`How to play ${displayName} chord on piano and guitar? What notes and intervals are in ${displayName}? Find out how and search through 1000s of chords.`}
+            title={`How to play ${displayName} on guitar and piano? What notes are in ${displayName}`} 
+            description={`How to play a ${displayName} chord on piano and guitar? What notes and intervals are in ${displayName}? Find out how and search through 1000s of chords.`}
             image="/images/chords.png"
         >
             <div className="chord-page-template md-styles">

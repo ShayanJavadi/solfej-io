@@ -72,6 +72,11 @@ const Layout = ({ children, title, className, image, description }) => {
                                       Blog
                 </Link>
                               </li> |
+                                <li>
+                                  <Link to="/chords/all">
+                                      All Chords
+                </Link>
+                              </li> |
 
                               <li>
                                   <a href="mailto:shayanjavadi1375@gmail.com">
