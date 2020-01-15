@@ -21,9 +21,14 @@ const renderHeader = (scale) => {
 
 export default function ScalePage({ data }) {
     const { scale } = data.allSitePage.edges[0].node.context;
-    
+    const { displayName } = scale;
+
     return (
-        <Layout>
+        <Layout
+            title={`How to play ${displayName} scale on guitar and piano? What notes are in ${displayName}`}
+            description={`How to play a ${displayName} scale on piano and guitar? What notes and intervals are in ${displayName}? Find out how and search through 1000s of scales.`}
+            image="/images/chords.png"
+        >
             <Page className="scale-page md-styles">
                 {renderHeader(scale)}
                 <ScaleInstrumentDiagrams scale={scale} />
