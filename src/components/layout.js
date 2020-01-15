@@ -67,6 +67,11 @@ const Layout = ({ children, title, className, image, description }) => {
                                       Chord Search
                 </Link>
                               </li> | 
+                               <li>
+                                  <Link to="/scales/all">
+                                      Homeless Scales
+                </Link>
+                              </li> | 
                               <li>
                                   <Link to="/blog">
                                       Blog

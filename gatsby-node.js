@@ -8,14 +8,14 @@
 const chords = require("./chords");
 const scales = require("./scales")
 const path = require(`path`)
-
-
+const { isEmpty } = require('lodash')
 
 exports.createPages = async ({ actions }) => {
     const { createPage } = actions
     const chordTemplate = path.resolve(`src/templates/ChordPage/ChordPage.js`)
     const scaleTemplate = path.resolve(`src/templates/ScalePage/ScalePage.js`)
-    const allTemplate = path.resolve(`src/templates/ChordPage/AllChordsPage.js`)
+    const allChordsPage = path.resolve(`src/templates/ChordPage/AllChordsPage.js`)
+    const allScalesPage = path.resolve(`src/templates/ScalePage/AllScalesPage.js`)
 
     scales.forEach(scale => {
         createPage({
@@ -35,7 +35,14 @@ exports.createPages = async ({ actions }) => {
 
     createPage({
         path: "/chords/all",
-        component: allTemplate,
+        component: allChordsPage,
         context: { chords },
+    })
+    const emptyScales = scales.filter(scale => isEmpty(scale.chords))
+    console.log(emptyScales)
+    createPage({
+        path: "/scales/all",
+        component: allScalesPage,
+        context: { scales: emptyScales },
     })
 }
