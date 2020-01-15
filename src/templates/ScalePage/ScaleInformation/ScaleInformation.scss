@@ -1,0 +1,32 @@
+.scale-information {
+  .chords-in-scale {
+      .scale-degree {
+        width: 2.5rem;
+        display: inline-flex;
+      }
+
+      .divider {
+          width: 1.6rem;
+          display: inline-flex;
+      }
+
+      p {
+          display: inline;
+
+         @media (max-width: 800px) {
+             font-size: 25px !important;
+         }
+      }
+      a {
+          text-decoration: underline;
+          color: inherit;
+      }
+      div {
+          margin-bottom: 1rem;
+      }
+  }
+
+  .chords-sub-header {
+      margin-top: 4rem;
+  }
+}

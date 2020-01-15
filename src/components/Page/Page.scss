@@ -1,0 +1,18 @@
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+
+    @media (max-width: 800px) {
+        width: 90%;
+    }
+
+
+    p {
+        font-weight: normal;
+        font-size: 32px !important;
+        color: #040517
+    }
+}

@@ -7,7 +7,7 @@ import "./SearchBar.scss";
 
 export default function SearchBar(props) {
     const { searchData, searchResultPostFix } = props;
-    const [searchQuery, setSearchQuery] = useState(undefined);
+    const [searchQuery, setSearchQuery] = useState("");
     const [isInputFocused, setIsInputFocused] = useState(false);
     const [searchResults, setSearchResults] = useState(undefined);
     const searchResultsNotEmpty = !isEmpty(searchResults);
@@ -43,7 +43,10 @@ export default function SearchBar(props) {
     }
 
     useEffect(() => {
-        const topTenSearchResults = fuse.search(searchQuery).slice(0, 10);
+        const topTenSearchResults = fuse.search(
+            searchQuery.replace(" chord", "")
+                .replace("chord", "")
+        ).slice(0, 10);
         setSearchResults(topTenSearchResults)
 
 

@@ -99,7 +99,8 @@ allScales.forEach(scale => {
             if (isEqual(chord.notes, chordNotes) && !chord.isAlias) {
                 scale.chords.push({
                     name: chord.displayName,
-                    path: chord.path
+                    path: chord.path,
+                    rootNote: chord.rootNote
                 })
             }
         })

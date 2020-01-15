@@ -12,6 +12,27 @@ p {
     }
 }
 
+.flex {
+    display: flex;
+}
+
+.flex-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-column-center {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .solfej {
 
 
@@ -324,7 +345,7 @@ main {
 }
 
   footer {
-        height: 12vh;
+        min-height: 12vh;
         display: flex;
         justify-content: center;
         align-items: center;

@@ -1,10 +1,10 @@
 import { graphql } from "gatsby";
 import React from "react";
-import Layout from "../components/layout";
-import SearchBar from "../components/SearchBar/SearchBar";
-import "./chordPageTemplate.scss";
+import Layout from "../../components/layout";
+import SearchBar from "../../components/SearchBar/SearchBar";
+import "./ChordPage.scss";
 
-export default function Template({ data }) {
+export default function AllChordsPage({ data }) {
     const { chords } = data.allSitePage.edges[0].node.context;
 
     return (
