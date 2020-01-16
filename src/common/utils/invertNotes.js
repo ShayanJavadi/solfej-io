@@ -1,0 +1,1 @@
+export default (notes, inversion) => [...notes, ...notes].slice(inversion, notes.length);

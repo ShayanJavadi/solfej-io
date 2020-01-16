@@ -16,6 +16,17 @@ const ROMAN_NUMERALS = [
     "VIII"
 ];
 
+const INVERSION_TEXT = [
+    "1st Inversion",
+    "2nd Inversion",
+    "3rd Inversion",
+    "4th Inversion",
+    "5th Inversion",
+    "6th Inversion",
+    "7th Inversion",
+    "8th Inversion"
+]
+
 export default function ScaleInformation(props) {
     const { scale } = props;
     const { displayName, notes, chords } = scale;
@@ -41,6 +52,7 @@ export default function ScaleInformation(props) {
             </p>
             {
                 !isEmpty(chordScaleDegrees) &&
+                chordScaleDegrees.some(chordScaleDegree => chordScaleDegree.chord) &&
                 <>
                     <MdSubHeader
                         subText={`What chords (diatonic) are in a ${displayName} scale`}
@@ -59,7 +71,13 @@ export default function ScaleInformation(props) {
                                     {
                                         chord ?
                                         <Link to={chord && chord.path}>
-                                            <p>{chord.name} chord</p> :
+                                            <p>
+                                                {chord.name} chord 
+                                                {
+                                                    ![undefined, null].includes(chord.inversion) && 
+                                                    `(${INVERSION_TEXT[chord.inversion]})`
+                                                }
+                                            </p>
                                         </Link>:
                                         <p>?</p>
                                     }

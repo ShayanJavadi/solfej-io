@@ -1,9 +1,12 @@
 const chords = require("../chords.json")
 
-let i = { notes: []};
 
-chords.forEach(c => {
-    i = c.notes.length > i.notes.length ? c : i
-})
+const c = chords.filter(chord => 
+    chord.notes.includes("C") && 
+    chord.notes.includes("E") && 
+    chord.notes.includes("A") &&
+    chord.notes.length <= 3
+)
+console.log(c)
 
-console.log(i)
+console.log(c.length)

@@ -2,7 +2,7 @@ const {
     ChordDictionary: { chordType, entries },
     Note: { enharmonic, transposeFrom, simplify },
 } = require("@tonaljs/modules")
-const { uniqBy, isEqual } = require("lodash");
+const { uniqBy, isEqual, isEmpty } = require("lodash");
 const slugify = require("slugify");
 const chordsWithFingerings = require("../chordsWithFingers3.json")
 const scales = require("../scales.json")
@@ -10,6 +10,7 @@ const fs = require('fs');
 const uuidv5 = require('uuid/v5');
 const uuidv4 = require('uuid/v4');
 const chordTypes = require("../chordTypes.json")
+const invertNotes = (notes, inversion) => [...notes, ...notes].slice(inversion, inversion + notes.length);
 const musicalSymbolExtensions = {
     "°": " diminish ",
     "Δ": " delta ",
@@ -74,6 +75,7 @@ const chords = NOTES.map(note => {
             rootNote: note,
             id: uuidv4(),
             parentScales: {},
+            inversions: []
         }
     })
 })
@@ -208,6 +210,28 @@ chordDataWithSlugs.forEach(chord => {
     })
 })
 
+// add inversions to chords
+chordDataWithSlugs.forEach(chord => {
+    Array(chord.notes.length - 1).fill(0).forEach((_, index) => {
+        const invertedNotes = invertNotes(chord.notes, index + 1);
+
+        chordDataWithSlugs.forEach(chordData => {
+            if (
+                isEqual(chordData.notes, invertedNotes) && 
+                !chordData.isAlias &&
+                !chord.inversions.find(inversionChord => inversionChord.inversion === index) &&
+            ) {
+                chord.inversions.push({
+                    name: chordData.displayName,
+                    path: chordData.path,
+                    rootNote: chordData.rootNote,
+                    notes: chordData.notes,
+                    inversion: index,
+                })
+            }
+        })
+    })
+})
 
 // write to file 
 const data = JSON.stringify(chordDataWithSlugs, null, 4)

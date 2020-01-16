@@ -55,6 +55,11 @@ export const pageQuery = graphql`
                     intervals,
                     name,
                     rootNote,
+                    inversions {
+                        name,
+                        path,
+                        inversion
+                    },
                     parentScales {
                   
                         C {

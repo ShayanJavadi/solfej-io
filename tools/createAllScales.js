@@ -95,13 +95,31 @@ allScales.forEach(scale => {
             scale.notes[(index + 2) % scale.notes.length],
             scale.notes[(index + 4) % scale.notes.length]
         ]
+        let foundChord = false;
+
         chords.forEach(chord => {
-            if (isEqual(chord.notes, chordNotes) && !chord.isAlias) {
-                scale.chords.push({
-                    name: chord.displayName,
-                    path: chord.path,
-                    rootNote: chord.rootNote
-                })
+            if (!foundChord) {
+                if (isEqual(chord.notes, chordNotes) && !chord.isAlias) {
+                    scale.chords.push({
+                        name: chord.displayName,
+                        path: chord.path,
+                        rootNote: chord.rootNote
+                    })
+                    foundChord = true
+                } else {
+
+                    chord.inversions.forEach(invertedChord => {
+                        if (isEqual(invertedChord.notes, chordNotes)) {
+                            scale.chords.push({
+                                name: invertedChord.name,
+                                path: invertedChord.path,
+                                rootNote: invertedChord.rootNote,
+                                inversion: invertedChord.inversion
+                            })
+                            foundChord = true
+                        }
+                    })
+                }
             }
         })
     })

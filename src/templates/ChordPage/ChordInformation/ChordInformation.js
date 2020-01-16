@@ -7,6 +7,17 @@ import { MAPPED_INTERVALS_TO_DISPLAY_NAMES } from '../../../common/consts/twelve
 import MdSubHeader from '../../../components/MdSubHeader/MdSubHeader';
 import { Link } from 'gatsby';
 
+const INVERSION_TEXT = [
+    "1st",
+    "2nd",
+    "3rd",
+    "4th",
+    "5th",
+    "6th",
+    "7th",
+    "8th"
+]
+
 const renderScaleRow = (rootNote, scales) => {
     const rootNoteText = rootNote.replace("sharp", "#");
 
@@ -34,6 +45,7 @@ export default function ChordInformation(props) {
     const { chord } = props
     const chordName = getChordDisplayName(chord)
     const intervalNames = chord.intervals.map(interval => MAPPED_INTERVALS_TO_DISPLAY_NAMES[interval])
+    const highestInversion = Math.max(...chord.inversions.map(inversion => inversion.inversion));
 
     return (
         <div className="chord-information-container">
@@ -53,6 +65,37 @@ export default function ChordInformation(props) {
                 </MdSubHeader>
                 {intervalNames.map(interval => <p>{interval}</p>)}
             </div>
+            {
+                !isEmpty(chord.inversions) &&
+                <div className="chord-intervals-container container">
+                    <MdSubHeader
+                        subText={`What are ${chordName} chord's inversions?`}
+                    >
+                        Inversions
+                    </MdSubHeader>
+                    {
+                        Array(highestInversion + 1).fill(0).map((_, index) => {
+                            const chordsInversion = chord.inversions.find(inversion => inversion.inversion === index)
+                            
+                            return (
+                                <div>
+                                    <p>
+                                        {`${INVERSION_TEXT[index]}: `}
+                                        {
+                                            chordsInversion ?
+                                                <Link to={chordsInversion.path}>
+                                                    {`${chordsInversion ? chordsInversion.name : "?"}`}
+                                                </Link> :
+                                                "?"
+                                        }
+                                        
+                                    </p>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+            }
             {
                 !isEmpty(chord.parentScales) &&
                 <div className="scales-container">

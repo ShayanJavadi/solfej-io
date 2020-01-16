@@ -39,7 +39,7 @@ exports.createPages = async ({ actions }) => {
         context: { chords },
     })
     const emptyScales = scales.filter(scale => isEmpty(scale.chords))
-    console.log(emptyScales)
+
     createPage({
         path: "/scales/all",
         component: allScalesPage,
