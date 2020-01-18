@@ -1,0 +1,46 @@
+.fret-board {
+    height: 190px;
+
+    .neck {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+
+        .fret-column {
+            display: flex;
+            height: 100%;
+            flex-flow: column;
+
+            .fret-row {
+                display: flex;
+                -webkit-box-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+
+                .fret-dot {
+                
+                    display: none;
+                    -webkit-box-pack: center;
+                    justify-content: center;
+                    -webkit-box-align: center;
+                    align-items: center;
+                    width: 25px;
+                    height: 25px;
+                    background-color: #FFB902;
+                    border: none;
+                    font-weight: bold;
+                    font-size: 14px;
+                    border-radius: 50%;
+
+                    &.active {
+                        display: flex;
+                    }
+                }
+            }   
+        }
+    }
+}

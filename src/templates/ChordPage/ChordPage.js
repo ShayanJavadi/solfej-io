@@ -16,7 +16,7 @@ const renderHeader = ({ chord }) => {
     return (
         <div className="header-container">
             <AliasOverline aliases={chord.aliases} />
-            <MdHeader subText="Below you can find chord diagrams, piano fingerings, guitar fingering, notes, intervals">
+            <MdHeader subText="Below you can find chord diagrams, piano fingerings, guitar fingering, notes, intervals, and scales.">
                 {chordName} Chord
             </MdHeader>
         </div>

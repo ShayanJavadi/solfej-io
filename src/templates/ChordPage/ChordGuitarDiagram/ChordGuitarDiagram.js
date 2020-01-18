@@ -10,6 +10,8 @@ import "./ChordGuitarDiagram.scss";
 import flattenArray from "../../../common/utils/flattenArray";
 import pianoContainerNotesAdapter from "../../../common/utils/pianoContainerNotesAdapter";
 import MdSubHeader from "../../../components/MdSubHeader/MdSubHeader";
+import FretBoard from "../../../components/FretBoard/FretBoard";
+import { red } from "../../../common/consts/colors";
 
 const drawChordDiagram = (chord) => {
     if (!isEmpty(chord.fingering)) {
@@ -78,9 +80,16 @@ const drawChordDiagram = (chord) => {
 }
 
 export default function ChordGuitarDiagram({ chord }) {
-    const { notes, rootNote } = chord;
+    const { notes, rootNote, displayName } = chord;
     const chordName = getChordDisplayName(chord);
     const pianoNotes = pianoContainerNotesAdapter(notes, rootNote);
+    const noteOptions = {
+        [rootNote]: {
+            style: {
+                backgroundColor: red
+            },
+        }
+    }
 
     useEffect(() => {
         !isEmpty(chord) && drawChordDiagram(chord)
@@ -101,17 +110,31 @@ export default function ChordGuitarDiagram({ chord }) {
                     highlightedNotes={chord.notes}
                 />
             </div>
-            {
-                !isEmpty(chord.fingering) &&
-                <div className="guitar-diagram-container">
-                    <MdSubHeader
-                        subText={`How do you play a ${chordName} chord on the guitar?`}
-                    >
-                       Guitar Fingering
-                    </MdSubHeader>
-                    <div id="guitar-diagram" />
+            <div className="guitar-diagram-container">
+                <MdSubHeader
+                    subText={`How do you play a ${chordName} chord on the guitar?`}
+                >
+                    Guitar Fingering
+                </MdSubHeader>
+                {
+                    !isEmpty(chord.fingering) && <div id="guitar-diagram" />
+                }
+                <h3>Other fingerings/arpeggio</h3>
+
+                <div class="guitar-fretboard-diagram-container">
+
+                    <FretBoard
+                        notes={notes}
+                        whiteList={notes}
+                        noteOptions={noteOptions}
+                        tuning={["E", "A", "D", "G", "B", "E"]}
+                    />
                 </div>
-            }
+                
+                <div className="fretboard-hint-container flex-centered">
+                    <sub>Tip: swipe to see more</sub>
+                </div>
+            </div>
         </div>
     )
 }

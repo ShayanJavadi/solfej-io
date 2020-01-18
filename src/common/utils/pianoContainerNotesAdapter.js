@@ -1,20 +1,17 @@
 import { Note as tonalNote } from "@tonaljs/modules";
 import { TWELVE_TONE_NOTES } from "../consts/twelveToneConsts";
 import isBlackKey from "./isBlackKey";
+import matchAccidentals from "./matchAccidentals";
 
 // pads and cleans up notes
 export default (notes, rootNote) => {
     if (!notes || !rootNote) {
         return []
     }
-    
-    const allNotes = [...TWELVE_TONE_NOTES];
 
-   notes.forEach(note => {
-        if (!allNotes.includes(note)) {
-            allNotes[allNotes.indexOf(tonalNote.enharmonic(note))] = note
-        }
-    })
+    const allNotes = [...TWELVE_TONE_NOTES];
+    // mutates all notes
+    matchAccidentals(allNotes, notes)
 
     const tempNotes = [...allNotes, ...allNotes, ...allNotes]
     // make the root the first note    

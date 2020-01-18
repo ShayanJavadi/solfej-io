@@ -1,3 +1,28 @@
-.chord-guitar-diagram {
-  
+.chord-diagrams-container {
+
+    .guitar-fretboard-diagram-container {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        margin: 1rem 0;
+        
+     
+        
+        .fret-board {
+            min-width: 800px;
+        }
+    }
+   .fretboard-hint-container {
+        display: none;
+        @media (max-width: 800px) {
+            display: flex;
+        }
+        
+        margin-top: 2rem;
+        margin-bottom: 2.5rem;
+        
+        sub {
+            opacity: .8;
+        }
+    }
 }

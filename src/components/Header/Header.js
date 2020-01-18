@@ -1,5 +1,6 @@
 
 import { Link } from "gatsby";
+import { ReactTypeformEmbed } from 'react-typeform-embed';
 import classNames from "classnames";
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import React, { useState } from 'react';
@@ -14,8 +15,15 @@ const typeFormUrl = "https://shayanjavadi.typeform.com/to/wO59zz";
 
 export default function Header(props) {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isTypeformOpen, setIsTypeformOpen] = useState(false);
     const { isDetatched } = props;
-   
+    let typeForm = React.createRef();
+  
+
+    function handleClick() {
+        typeForm.current.typeform.open();
+    }
+
     const classes = classNames(
         "header",
         isDetatched && "detatched"
@@ -28,6 +36,18 @@ export default function Header(props) {
 
     return (
         <header> 
+            <ReactTypeformEmbed
+                url="https://shayanjavadi.typeform.com/to/wO59zz"
+                ref={typeForm}
+                popup
+                onSubmit={() => setTimeout(() => typeForm.current.typeform.close(), 1000)}
+                ref={tf => {
+                    typeForm.current = tf;
+                }}
+                style={{
+                    visibility: isTypeformOpen ? "visible" : "hidden"
+                }}
+            />
             <div className={classes}>
                 <nav className="logo">
                     <Link to="/">
@@ -66,11 +86,12 @@ export default function Header(props) {
                         </Link>
                     </li>
                     <li className="cta">
-
-                        <OutboundLink href={typeFormUrl}>
-                            <button className="cta-button primary">Get Early Access</button>
-                        </OutboundLink>
-
+                        <button 
+                            className="cta-button primary"
+                            onClick={handleClick}
+                        >
+                            Get Early Access
+                        </button>
                     </li>
                 </ul>
             </div>

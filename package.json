@@ -34,6 +34,7 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
+    "react-typeform-embed": "^0.2.1",
     "vexchords": "^1.2.0"
   },
   "devDependencies": {

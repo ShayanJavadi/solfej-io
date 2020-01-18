@@ -1,3 +1,25 @@
 .scale-instrument-diagrams {
   
+    .guitar-fretboard-diagram-container {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        
+        .fret-board {
+            min-width: 800px;
+        }
+    }
+
+    .fretboard-hint-container {
+        display: none;
+        @media (max-width: 800px) {
+            display: flex;
+        }
+
+        margin-top: 2rem;
+        
+        sub {
+            opacity: .8;
+        }
+    }
 }

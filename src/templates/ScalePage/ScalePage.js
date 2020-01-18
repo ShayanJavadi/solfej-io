@@ -22,7 +22,7 @@ const renderHeader = (scale) => {
 export default function ScalePage({ data }) {
     const { scale } = data.allSitePage.edges[0].node.context;
     const { displayName } = scale;
-    console.log(scale)
+
     return (
         <Layout
             title={`How to play ${displayName} scale on guitar and piano? What notes are in ${displayName}`}
