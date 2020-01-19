@@ -12,7 +12,7 @@ export default function TonePolySynthProvider(props) {
             onEnd();
             return;
         }
-        
+
         Tone.Transport.stop();
         Tone.Transport.cancel(0);
         onStart();
@@ -49,7 +49,7 @@ export default function TonePolySynthProvider(props) {
     }, [])
 
     const childrenWithProps = React.Children.map(props.children, child =>
-        React.cloneElement(child, { instrument, sequencePlayer, isLoading, ...props })
+        React.cloneElement(child, { instrument, sequencePlayer, toneState: Tone.context.state, isLoading, ...props })
     );
 
     return childrenWithProps

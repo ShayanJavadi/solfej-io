@@ -30,14 +30,17 @@ export default function PlayerBlock(props) {
         playNotesSequentially = false,
         instrument,
         shouldAutoPlaySound,
-        sequencePlayer
+        sequencePlayer,
+        toneState
     } = props;
     const [autoPlayedOnce, setAutoPlayedOnce] = useState(false);
     const [isPlaying, setIsPlaying] = useState(false);
+    const [blockMessage, setBlockMessage] = useState(undefined);
 
     const wasLoading = usePrevious(isLoading)
 
     const playBlock = () => {
+        setBlockMessage(undefined)
         if (instrument && sequencePlayer && !isLoading) {
             if (playNotesSequentially) {
                 const partToPlay = notesToPlay.map((note, index) => ({
@@ -54,7 +57,6 @@ export default function PlayerBlock(props) {
                     duration: "4n",
                     end: true
                 })
-
                 sequencePlayer(
                     partToPlay,
                     () => setIsPlaying(true),
@@ -78,6 +80,11 @@ export default function PlayerBlock(props) {
 
     useEffect(() => {
         if (!isLoading && wasLoading && shouldAutoPlaySound && !autoPlayedOnce) {
+            if (toneState === "suspended") {
+                setBlockMessage("Tap to unmute")
+                return;
+            }
+
             playBlock()
             setAutoPlayedOnce(true)
        }
@@ -92,7 +99,7 @@ export default function PlayerBlock(props) {
               <MdPauseCircleFilled size={55} color={yellow} /> :
               <MdPlayCircleFilled size={55} color={yellow} />
           }
-            {isLoading ? "loading..." : text}
+                  {isLoading ? "loading..." : blockMessage || text}
         </Paragraph>
       </Block>
     </div>
