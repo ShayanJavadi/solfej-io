@@ -83,7 +83,7 @@ const drawChordDiagram = (chord) => {
 export default function ChordGuitarDiagram({ chord }) {
     const { notes, rootNote, displayName } = chord;
   
-    const [showTone, setShowTone] = useState(!!window.TONE_AUDIO_CONTEXT);
+    const [showTone, setShowTone] = useState(window && !!window.TONE_AUDIO_CONTEXT);
     const [shouldAutoPlaySound, setShouldAutoPlaySound] = useState(false)
     const chordName = getChordDisplayName(chord);
     const pianoNotes = pianoContainerNotesAdapter(notes, rootNote);

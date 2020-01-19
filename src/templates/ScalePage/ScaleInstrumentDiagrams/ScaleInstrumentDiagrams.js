@@ -13,7 +13,7 @@ import "./ScaleInstrumentDiagrams.scss";
 const TonePolySynthProvider = loadable(() => import('../../../components/TonePolySynthProvider'))
 
 export default function ScaleInstrumentDiagrams(props) {
-    const [showTone, setShowTone] = useState(!!window.TONE_AUDIO_CONTEXT);
+    const [showTone, setShowTone] = useState(window && !!window.TONE_AUDIO_CONTEXT);
     const [shouldAutoPlaySound, setShouldAutoPlaySound] = useState(false)
     const { scale } = props;
     const { displayName, notes, rootNote, intervals } = scale;
