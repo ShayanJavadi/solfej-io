@@ -33,7 +33,7 @@ export default function ScalePage({ data }) {
             image="/images/chords.png"
         >
             <Page className="scale-page md-styles">
-                <div className="suggestion flex" style={{ marginTop: "2rem" }}>
+                <div className="suggestion flex" style={{ marginTop: "2rem", marginBottom: "1rem" }}>
                     <sub><b>Looking For a Chord? Try: <Link to="/chords">Chord Search</Link></b></sub>
                 </div>
                 
