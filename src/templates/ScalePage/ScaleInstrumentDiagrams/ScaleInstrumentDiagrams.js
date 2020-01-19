@@ -8,12 +8,13 @@ import MdSubHeader from '../../../components/MdSubHeader/MdSubHeader';
 import PianoRollContainer from '../../../components/PianoRollContainer/PianoRollContainer';
 import PlayerBlock from '../../../components/PlayerBlock/PlayerBlock';
 import "./ScaleInstrumentDiagrams.scss";
+import isServer from '../../../common/utils/isServer';
 
 
 const TonePolySynthProvider = loadable(() => import('../../../components/TonePolySynthProvider'))
 
 export default function ScaleInstrumentDiagrams(props) {
-    const [showTone, setShowTone] = useState(window && !!window.TONE_AUDIO_CONTEXT);
+    const [showTone, setShowTone] = useState(!isServer() && !!window.TONE_AUDIO_CONTEXT);
     const [shouldAutoPlaySound, setShouldAutoPlaySound] = useState(false)
     const { scale } = props;
     const { displayName, notes, rootNote, intervals } = scale;
@@ -40,7 +41,7 @@ export default function ScaleInstrumentDiagrams(props) {
         <div className="scale-instrument-diagrams">
             <div className="chord-notes-container container" style={{ marginBottom: "2.5rem" }}>
                 <MdSubHeader
-                    subText={`What does a ${displayName} chord sound like?`}
+                    subText={`What does a ${displayName} scale sound like?`}
                 >
                     Audible Example
                     </MdSubHeader>
