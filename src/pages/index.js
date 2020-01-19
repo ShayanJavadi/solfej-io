@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import loadable from '@loadable/component'
 import Layout from "../components/layout"
 import HeroImage from "../components/HeroImage"
 import MockImageOne from "../components/MockImageOne"
@@ -43,7 +44,7 @@ const IndexPage = () => (
     <div className="hero-container">
         <div className="copy-container">
             <h1>The Best New Ear Training And Music Theory App</h1>
-            <p>Want to become a better musician? Get Solfej now to train your ears and learn music theory.</p>
+            <p>Want to become a better musician? Get Solfej now to train your ears and learn music theory. </p>
             <OutboundLink href={typeFormUrl}>
                 <button className="cta-button primary">Get Early Access</button>
             </OutboundLink>

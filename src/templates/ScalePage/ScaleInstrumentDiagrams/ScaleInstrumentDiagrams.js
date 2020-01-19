@@ -1,13 +1,20 @@
 
-import React from 'react';
-import "./ScaleInstrumentDiagrams.scss";
-import PianoRollContainer from '../../../components/PianoRollContainer/PianoRollContainer';
-import MdSubHeader from '../../../components/MdSubHeader/MdSubHeader';
+import loadable from '@loadable/component';
+import React, { useState } from 'react';
+import { red } from '../../../common/consts/colors';
 import pianoContainerNotesAdapter from '../../../common/utils/pianoContainerNotesAdapter';
 import FretBoard from '../../../components/FretBoard/FretBoard';
-import { red, secondaryLight, primary } from '../../../common/consts/colors';
+import MdSubHeader from '../../../components/MdSubHeader/MdSubHeader';
+import PianoRollContainer from '../../../components/PianoRollContainer/PianoRollContainer';
+import PlayerBlock from '../../../components/PlayerBlock/PlayerBlock';
+import "./ScaleInstrumentDiagrams.scss";
+
+
+const TonePolySynthProvider = loadable(() => import('../../../components/TonePolySynthProvider'))
 
 export default function ScaleInstrumentDiagrams(props) {
+    const [showTone, setShowTone] = useState(!!window.TONE_AUDIO_CONTEXT);
+    const [shouldAutoPlaySound, setShouldAutoPlaySound] = useState(false)
     const { scale } = props;
     const { displayName, notes, rootNote, intervals } = scale;
     const pianoNotes = pianoContainerNotesAdapter(notes, rootNote);
@@ -31,6 +38,31 @@ export default function ScaleInstrumentDiagrams(props) {
 
     return (
         <div className="scale-instrument-diagrams">
+            <div className="chord-notes-container container" style={{ marginBottom: "2.5rem" }}>
+                <MdSubHeader
+                    subText={`What does a ${displayName} chord sound like?`}
+                >
+                    Audible Example
+                    </MdSubHeader>
+                {
+                    !showTone ?
+                        <PlayerBlock
+                            onClick={() => {
+                                setShowTone(true);
+                                setShouldAutoPlaySound(true)
+                            }}
+                            text={displayName + " scale"}
+                        /> :
+                        <TonePolySynthProvider>
+                            <PlayerBlock
+                                text={displayName + " scale"}
+                                notesToPlay={notes}
+                                shouldAutoPlaySound={shouldAutoPlaySound}
+                                playNotesSequentially
+                            />
+                        </TonePolySynthProvider>
+                }
+            </div>
             <MdSubHeader
                 subText={`How do you play the ${displayName} scale on the piano?`}
             >

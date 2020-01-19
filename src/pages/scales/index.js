@@ -10,6 +10,7 @@ import MarketingThree from '../../components/scales3'
 import MarketingFour from '../../components/scales4'
 import MarketingFive from '../../components/scales5'
 import MarketingSix from '../../components/scales6'
+import MarketingSeven from '../../components/scales7'
 import { Link } from 'gatsby'
 
 export default function index() {
@@ -26,7 +27,7 @@ export default function index() {
 
                             <h1>🔍 Scale Search 🎼</h1>
 
-                            <p>Want to learn about a scale? Scale Search shows you notes, intervals, chords, formula, and guitar/piano fingerings that go along with each scale. Just type in a scale name or notes to get started.</p>
+                            <p>Want to learn about a scale? Scale Search shows you audible examples, notes, intervals, chords, formula, and guitar/piano fingerings that go along with each scale. Just type in a scale name or notes to get started.</p>
 
                         </div>
 
@@ -53,21 +54,21 @@ export default function index() {
             </div>
             <div className="divider" />
             <div className="marketing-content-container copy-on-left">
+              
                 <div className="copy-container small">
-                    <h2>Piano Scale Fingerings</h2>
-                    <p>Learn how to play each scale on the piano through simple fingering diagrams.</p>
+                        <h2>Hear Examples Of Each Scale</h2>
+                        <p>Hear what each scale sounds like through interactive examples</p>
 
                 </div>
-                <div className="image-container">
-                    <div className="mock-container">
-                        <MarketingSix />
+                    <div className="image-container">
+                        <div className="mock-container">
+                            <MarketingSeven />
+                        </div>
                     </div>
-                </div>
-               
             </div>
             <div className="divider" />
             <div className="marketing-content-container reverse copy-on-right">
-               
+
                 <div className="image-container">
                     <div className="mock-container">
                         <MarketingOne />
@@ -80,17 +81,34 @@ export default function index() {
                 </div>
             </div>
             <div className="divider" />
-            <div className="marketing-content-container copy-on-right">
+
+            <div className="marketing-content-container copy-on-left">
+                <div className="copy-container small">
+                    <h2>Piano Scale Fingerings</h2>
+                    <p>Learn how to play each scale on the piano through simple fingering diagrams.</p>
+
+                </div>
+                <div className="image-container">
+                    <div className="mock-container">
+                        <MarketingSix />
+                    </div>
+                </div>
+               
+            </div>
+           
+            <div className="divider" />
+            <div className="marketing-content-container reverse copy-on-right">
+                    <div className="image-container">
+                        <div className="mock-container">
+                            <MarketingThree />
+                        </div>
+                    </div>
                 <div className="copy-container small">
                     <h2>Notes, Intervals, And More!</h2>
                     <p>Go deep on each scale's building blocks. Learn each scale's notes, intervals, chords, and more.</p>
 
                 </div>
-                <div className="image-container">
-                    <div className="mock-container">
-                        <MarketingThree />
-                    </div>
-                </div>
+               
             </div>
             </div>
 

@@ -1,17 +1,18 @@
-import { Note as tonalNote } from "@tonaljs/modules";
+import loadable from '@loadable/component';
 import { isEmpty } from "lodash";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { ChordBox } from 'vexchords';
-import { TWELVE_TONE_NOTES } from "../../../common/consts/twelveToneConsts";
+import { red } from "../../../common/consts/colors";
 import getChordDisplayName from "../../../common/utils/chords/getChordDisplayName";
-import isBlackKey from "../../../common/utils/isBlackKey";
-import PianoRollContainer from "../../../components/PianoRollContainer/PianoRollContainer";
-import "./ChordGuitarDiagram.scss";
 import flattenArray from "../../../common/utils/flattenArray";
 import pianoContainerNotesAdapter from "../../../common/utils/pianoContainerNotesAdapter";
-import MdSubHeader from "../../../components/MdSubHeader/MdSubHeader";
 import FretBoard from "../../../components/FretBoard/FretBoard";
-import { red } from "../../../common/consts/colors";
+import MdSubHeader from "../../../components/MdSubHeader/MdSubHeader";
+import PianoRollContainer from "../../../components/PianoRollContainer/PianoRollContainer";
+import "./ChordGuitarDiagram.scss";
+import PlayerBlock from '../../../components/PlayerBlock/PlayerBlock';
+
+const TonePolySynthProvider = loadable(() => import('../../../components/TonePolySynthProvider'))
 
 const drawChordDiagram = (chord) => {
     if (!isEmpty(chord.fingering)) {
@@ -81,6 +82,9 @@ const drawChordDiagram = (chord) => {
 
 export default function ChordGuitarDiagram({ chord }) {
     const { notes, rootNote, displayName } = chord;
+  
+    const [showTone, setShowTone] = useState(!!window.TONE_AUDIO_CONTEXT);
+    const [shouldAutoPlaySound, setShouldAutoPlaySound] = useState(false)
     const chordName = getChordDisplayName(chord);
     const pianoNotes = pianoContainerNotesAdapter(notes, rootNote);
     const noteOptions = {
@@ -97,7 +101,34 @@ export default function ChordGuitarDiagram({ chord }) {
 
     return (
         <div className="chord-diagrams-container">
+            <div className="chord-notes-container container" style={{ marginBottom: "2.5rem"}}>
+                <MdSubHeader
+                    subText={`What does a ${chordName} chord sound like?`}
+                >
+                    Audible Example
+                    </MdSubHeader>
+                {
+                    !showTone ?
+                        <PlayerBlock
+                            onClick={() => {
+                                setShowTone(true);
+                                setShouldAutoPlaySound(true)
+                            }}
+                            text={displayName + " chord"}
+                        /> :
+                        <TonePolySynthProvider>
+                            <PlayerBlock
+                                text={displayName + " chord"}
+                                notesToPlay={notes}
+                                shouldAutoPlaySound={shouldAutoPlaySound}
+                            />
+                        </TonePolySynthProvider>
+
+                }
+
+            </div>
             <div className="piano-diagram-container container">
+               
                 <MdSubHeader
                     subText={`How do you play a ${chordName} chord on the piano?`}
                 >

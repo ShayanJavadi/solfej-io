@@ -48,6 +48,7 @@ const Layout = ({ children, title, className, image, description }) => {
 
   return (
     <>
+
     <div className={classes}>
         <SEO title={title} {...{ image, description}}/>
         <Header isDetatched={isDetatched} />
@@ -61,27 +62,27 @@ const Layout = ({ children, title, className, image, description }) => {
                                   <Link to="/">
                                       Home
                 </Link>
-                              </li> | 
+                              </li>  
                               <li>
                                   <Link to="/chords">
                                       Chord Search
                 </Link>
-                              </li> | 
+                              </li> 
                                <li>
                                   <Link to="/scales/all">
                                       Homeless Scales
                 </Link>
-                              </li> | 
+                              </li>  
                               <li>
                                   <Link to="/blog">
                                       Blog
                 </Link>
-                              </li> |
+                              </li> 
                                 <li>
                                   <Link to="/chords/all">
                                       All Chords
                 </Link>
-                              </li> |
+                              </li> 
 
                               <li>
                                   <a href="mailto:shayanjavadi1375@gmail.com">
