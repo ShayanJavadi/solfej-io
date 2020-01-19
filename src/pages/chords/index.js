@@ -32,9 +32,9 @@ export default function index() {
                             <sub><b>💡Tip: You can find a chord by typing in its notes seperated by commas e.g. (C, E, G)</b></sub>
                         </div>
                         <SearchBar searchData={chords} searchResultPostFix={"chord"} />
-                        <div className="suggestion flex-centered">
+                        {/* <div className="suggestion flex-centered">
                             <sub><b>Looking For a Scale? Try: <Link to="scales">Scale Search</Link></b></sub>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             <div className="marketing-content-container reverse copy-on-left">
