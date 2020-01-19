@@ -68,6 +68,11 @@ export default function Header(props) {
                 </Link>
                     </li>
                     <li>
+                        <Link to="/scales">
+                            Scale Search
+                </Link>
+                    </li>
+                    <li>
                         <a href="mailto:shayanjavadi1375@gmail.com">
                             Contact
                 </a>
@@ -105,6 +110,11 @@ export default function Header(props) {
                     <li>
                         <Link to="/chords">
                             Chord Search
+                </Link>
+                    </li>
+                    <li>
+                        <Link to="/scales">
+                            Scale Search
                 </Link>
                     </li>
                     <li>

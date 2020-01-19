@@ -32,7 +32,7 @@ export default function ScaleInstrumentDiagrams(props) {
     return (
         <div className="scale-instrument-diagrams">
             <MdSubHeader
-                subText={`How do you play the ${displayName} scale on the piano? (Yellow keys are IN the scale)`}
+                subText={`How do you play the ${displayName} scale on the piano?`}
             >
                 Piano Fingering
             </MdSubHeader>

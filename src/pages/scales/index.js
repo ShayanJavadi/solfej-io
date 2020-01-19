@@ -1,64 +1,66 @@
 import React from 'react'
 import "../../styles/mdStyles.scss"
-import "./chords.scss"
-import chords from "../../../chordsMinified.json"
+import "./scales.scss"
+import scales from "../../../scalesMinified.json"
 import Layout from '../../components/layout'
 import SearchBar from '../../components/SearchBar/SearchBar'
-import MarketingOne from '../../components/Marketing1'
-import MarketingTwo from '../../components/Marketing2'
-import MarketingThree from '../../components/Marketing3'
-import MarketingFour from '../../components/Marketing4'
+import MarketingOne from '../../components/scales1'
+import MarketingTwo from '../../components/scales2'
+import MarketingThree from '../../components/scales3'
+import MarketingFour from '../../components/scales4'
+import MarketingFive from '../../components/scales5'
+import MarketingSix from '../../components/scales6'
 import { Link } from 'gatsby'
 
 export default function index() {
     return (
         <Layout
-            title="Free chord search. Search through 1000s of chords."
-            image="/images/chords.png"
-            description="Solfej's free chord search tool helps you search through 1000s of chords. With Solfej's free chord search tool you can find guitar chord diagrams, piano fingering diagrams, and notes and intervals for chords."
+            title="Free scale search. Search through 1000s of scales."
+            image="/images/scales.png"
+            description="Solfej's free scale search tool helps you search through 1000s of scales. With Solfej's free scale search tool you can find guitar scale diagrams, piano fingering diagrams, and notes and intervals for scales."
         >
-            <div className="chords-page-index md-styles">
+            <div className="scales-page-index md-styles">
                 <div className="hero">
                     <div className="hero-content">
                         <div className="hero-copy">
 
-                            <h1>🔍 Chord Search 🎹</h1>
+                            <h1>🔍 Scale Search 🎼</h1>
 
-                            <p>Want to learn about a chord? Chord Search shows you notes, intervals, guitar and piano fingerings that go along with each chord. Just type in a chord name to get started.</p>
+                            <p>Want to learn about a scale? Scale Search shows you notes, intervals, chords, formula, and guitar/piano fingerings that go along with each scale. Just type in a scale name or notes to get started.</p>
 
                         </div>
 
                         <div className="hint flex-centered">
-                            <sub><b>💡Tip: You can find a chord by typing in its notes seperated by commas e.g. (C, E, G)</b></sub>
+                            <sub><b>💡Tip: You can find a scale by typing in its notes seperated by commas e.g. (C, E, G)</b></sub>
                         </div>
-                        <SearchBar searchData={chords} searchResultPostFix={"chord"} />
+                        <SearchBar searchData={scales} searchResultPostFix={"scale"} />
                         <div className="suggestion flex-centered">
-                            <sub><b>Looking For a Scale? Try: <Link to="/scales">Scale Search</Link></b></sub>
+                            <sub><b>Looking For a Chord? Try: <Link to="/chords">Chord Search</Link></b></sub>
                         </div>
                     </div>
                 </div>
             <div className="marketing-content-container reverse copy-on-left">
                 <div className="image-container">
                     <div className="mock-container">
-                        <MarketingOne />
+                        <MarketingFive />
                     </div>
                 </div>
                 <div className="copy-container small">
-                    <h2>Master Every Chord Imaginable</h2>
-                    <p>Search through 1000s of chords. Learn each chord's fingerings (guitar and piano), notes, intervals, and aliases. </p>
+                    <h2>Master Every Scale Imaginable</h2>
+                    <p>Search through 1000s of scales. Learn each scale's fingerings (guitar and piano), notes, intervals, formula, and chords that go along with it. </p>
                   
                 </div>
             </div>
             <div className="divider" />
             <div className="marketing-content-container copy-on-left">
                 <div className="copy-container small">
-                    <h2>Piano Chord Diagrams</h2>
-                    <p>Learn how to play each chord on the piano through simple fingering diagrams.</p>
+                    <h2>Piano Scale Fingerings</h2>
+                    <p>Learn how to play each scale on the piano through simple fingering diagrams.</p>
 
                 </div>
                 <div className="image-container">
                     <div className="mock-container">
-                        <MarketingTwo />
+                        <MarketingSix />
                     </div>
                 </div>
                
@@ -68,12 +70,12 @@ export default function index() {
                
                 <div className="image-container">
                     <div className="mock-container">
-                        <MarketingThree />
+                        <MarketingOne />
                     </div>
                 </div>
                 <div className="copy-container small">
-                    <h2>Guitar Chord Diagrams</h2>
-                    <p>Learn how to play each chord on the guitar through simple fingering diagrams.</p>
+                    <h2>Guitar Scale Diagrams</h2>
+                    <p>Learn how to play each scale on the guitar through simple fingering diagrams.</p>
 
                 </div>
             </div>
@@ -81,12 +83,12 @@ export default function index() {
             <div className="marketing-content-container copy-on-right">
                 <div className="copy-container small">
                     <h2>Notes, Intervals, And More!</h2>
-                    <p>Go deep on each chord's building blocks. Learn each chord's notes, intervals, scales, and more.</p>
+                    <p>Go deep on each scale's building blocks. Learn each scale's notes, intervals, chords, and more.</p>
 
                 </div>
                 <div className="image-container">
                     <div className="mock-container">
-                        <MarketingFour />
+                        <MarketingThree />
                     </div>
                 </div>
             </div>

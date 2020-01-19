@@ -4,6 +4,13 @@
     flex-direction: column;
     max-width: 800px;
     margin: 0 auto;
+    .suggestion {
+        position: relative;
+        a {
+            color:#444;
+            text-decoration: underline;
+        }
+    }
     .container {
         margin-bottom: 1rem;
     }

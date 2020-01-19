@@ -1,4 +1,11 @@
 .scale-page {
+     .suggestion {
+        position: relative;
+        a {
+            color:#444;
+            text-decoration: underline;
+        }
+    }
   .header-container {
         padding-bottom: 1.3rem;
         margin-top: 1rem;

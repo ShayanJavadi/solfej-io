@@ -9,6 +9,7 @@ import ScaleInformation from './ScaleInformation/ScaleInformation';
 import ScaleInstrumentDiagrams from './ScaleInstrumentDiagrams/ScaleInstrumentDiagrams';
 import "./ScalePage.scss";
 import SearchBar from '../../components/SearchBar/SearchBar';
+import { Link } from 'gatsby';
 
 const renderHeader = (scale) => {
     return (
@@ -32,11 +33,14 @@ export default function ScalePage({ data }) {
             image="/images/chords.png"
         >
             <Page className="scale-page md-styles">
-                <div className="hint" style={{ marginTop: "2rem" }}>
+                <div className="suggestion flex" style={{ marginTop: "2rem" }}>
+                    <sub><b>Looking For a Chord? Try: <Link to="/chords">Chord Search</Link></b></sub>
+                </div>
+                
+                <SearchBar searchData={scales} searchResultPostFix={"scale"} />
+                <div className="hint" >
                     <sub style={{ textAlign: "left" }}><b>💡Tip: You can find a scale by typing in its notes seperated by commas e.g. (C, E, G)</b></sub>
                 </div>
-                <SearchBar searchData={scales} searchResultPostFix={"scale"} />
-
                 {renderHeader(scale)}
                 <ScaleInstrumentDiagrams scale={scale} />
                 <ScaleInformation scale={scale} />

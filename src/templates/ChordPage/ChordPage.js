@@ -1,4 +1,4 @@
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import React from "react";
 import chords from "../../../chordsMinified.json";
 import getChordDisplayName from "../../common/utils/chords/getChordDisplayName";
@@ -34,10 +34,15 @@ export default function ChordPage({ data }) {
             image="/images/chords.png"
         >
             <div className="chord-page-template md-styles">
-                <div className="hint" style={{ marginTop: "2rem" }}>
+                <div className="suggestion flex" style={{ marginTop: "2rem", marginBottom: "1rem" }}>
+                    <sub><b>Looking For a Scale? Try: <Link to="/scales">Scale Search</Link></b></sub>
+                </div>
+                
+                <SearchBar searchData={chords} searchResultPostFix={"chord"} />
+                
+                <div className="hint" >
                     <sub style={{ textAlign: "left" }}><b>💡Tip: You can find a chord by typing in its notes seperated by commas e.g. (C, E, G)</b></sub>
                 </div>
-                <SearchBar searchData={chords} searchResultPostFix={"chord"} />
                 {renderHeader({ chord })}
                 <ChordGuitarDiagram chord={chord} />
                 <ChordInformation chord={chord} />

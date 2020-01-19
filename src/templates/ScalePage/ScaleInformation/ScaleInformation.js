@@ -41,10 +41,10 @@ export default function ScaleInformation(props) {
     const intervalNames = intervals.map(interval => MAPPED_INTERVALS_TO_DISPLAY_NAMES[interval])
     const scaleFormula = notes.map((note, index) => {
         if (notes[index + 1]) {
-            return SCALE_FORMULA_INTERVALS[distance(note, notes[index + 1])];
+            return distance(note, notes[index + 1]);
         }
 
-        return SCALE_FORMULA_INTERVALS[distance(note, notes[0])];
+        return distance(note, notes[0]);
     })
 
     const chordScaleDegrees = notes.map((note, index) => {
