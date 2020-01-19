@@ -219,7 +219,7 @@ chordDataWithSlugs.forEach(chord => {
             if (
                 isEqual(chordData.notes, invertedNotes) && 
                 !chordData.isAlias &&
-                !chord.inversions.find(inversionChord => inversionChord.inversion === index) &&
+                !chord.inversions.find(inversionChord => inversionChord.inversion === index)
             ) {
                 chord.inversions.push({
                     name: chordData.displayName,
@@ -235,6 +235,6 @@ chordDataWithSlugs.forEach(chord => {
 
 // write to file 
 const data = JSON.stringify(chordDataWithSlugs, null, 4)
-const minifiedData = JSON.stringify(chordDataWithSlugs.map(({ displayName, path }) => ({ a: displayName, b: path })))
+const minifiedData = JSON.stringify(chordDataWithSlugs.map(({ displayName, path, notes, isAlias }) => ({ a: displayName, b: path, c: notes.join(", "), d: isAlias })))
 fs.writeFileSync("chords.json", data)
 fs.writeFileSync("chordsMinified.json", minifiedData)

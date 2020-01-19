@@ -131,7 +131,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
+    z-index: 999;
     @media (max-width: $mobile)  {
         display: flex !important;
     }
@@ -168,7 +168,7 @@ header {
     padding-top: 1rem;
     position: fixed;
     transition: 'all 200ms ease-in';
-    z-index: 9999;
+    z-index: 999;
     .menu-button {
         @media (max-width: $mobile)  {
             display: flex !important;
@@ -200,7 +200,7 @@ header {
 
     &.detatched {
         background: #ffffff;
-        z-index: 9999;
+        z-index: 999;
         box-shadow: 0px 1px 1px rgba(19, 39, 67, .1);
 
         ul {

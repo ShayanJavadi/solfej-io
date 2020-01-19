@@ -15,7 +15,7 @@ export default function AliasOverline(props) {
                         Aliases: {
                             aliases.map(alias => {
                                 return (
-                                    <Link to={alias.url}>{alias.name}</Link>
+                                    <Link to={alias.url} key={alias.url}>{alias.name}</Link>
                                 )
                             })
                         }

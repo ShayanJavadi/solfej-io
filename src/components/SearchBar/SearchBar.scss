@@ -27,7 +27,7 @@
             position: absolute;
             width: calc(100% + 2px);
             background: #fff;
-            z-index: 999;
+            z-index: 99;
             top: 42px;
             border: 1px solid #ccc;
             border-top-color: transparent;
@@ -40,10 +40,13 @@
            .search-result {
                 display: flex;
                 flex-direction: row;
-                height: 2.2rem;
+                min-height: 2.2rem;
+   
                 svg {
                     width: 20px;
                     margin-left: .5rem;
+                                 align-self: flex-start;
+                         padding-top: .4rem;
                 }
 
                 p {

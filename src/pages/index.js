@@ -43,7 +43,7 @@ const IndexPage = () => (
     <div className="hero-container">
         <div className="copy-container">
             <h1>The Best New Ear Training And Music Theory App</h1>
-            <p>Want to become a better musician? With Solfej you can hit your musical goals and train your ears on iOS.</p>
+            <p>Want to become a better musician? Get Solfej now to train your ears and learn music theory.</p>
             <OutboundLink href={typeFormUrl}>
                 <button className="cta-button primary">Get Early Access</button>
             </OutboundLink>

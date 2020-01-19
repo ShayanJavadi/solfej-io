@@ -124,9 +124,9 @@
     padding: 10px;
     outline: none;
     box-sizing: border-box;
-    color: #444;
     justify-content: center;
-
+    color: #222;
+    font-weight: bold;
     &:first-of-type {
       margin-left: 0;
     }
@@ -161,6 +161,8 @@
       padding: 5px;
       outline: none;
       color: #fafafa;
+      color: #222;
+        font-weight: bold;
     }
   }
 

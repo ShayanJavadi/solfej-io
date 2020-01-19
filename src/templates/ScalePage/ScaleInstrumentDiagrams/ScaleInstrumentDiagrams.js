@@ -9,7 +9,7 @@ import { red, secondaryLight, primary } from '../../../common/consts/colors';
 
 export default function ScaleInstrumentDiagrams(props) {
     const { scale } = props;
-    const { displayName, notes, rootNote } = scale;
+    const { displayName, notes, rootNote, intervals } = scale;
     const pianoNotes = pianoContainerNotesAdapter(notes, rootNote);
     const noteOptions = {
         [rootNote]: {
@@ -19,6 +19,16 @@ export default function ScaleInstrumentDiagrams(props) {
         }
     }
 
+    const intervalsViewNoteOptions = scale.notes.reduce((options, note, index) => {
+        return { 
+            ...options,
+            ...{ [note]: { text: intervals[index], style: {} } }
+        }
+    }, {});
+
+    intervalsViewNoteOptions[rootNote].style.backgroundColor = red;
+
+
     return (
         <div className="scale-instrument-diagrams">
             <MdSubHeader
@@ -26,12 +36,25 @@ export default function ScaleInstrumentDiagrams(props) {
             >
                 Piano Fingering
             </MdSubHeader>
-            <div class="piano-diagram-container">
+            <div className="piano-diagram-container">
+                <h3 className="sub-sub-header">Notes:</h3>
+
                 <PianoRollContainer
                     notes={pianoNotes}
                     isPresentational
                     whiteList={notes}
                     highlightedNotes={notes}
+                    noteOptions={noteOptions}
+                />
+
+                <h3 className="sub-sub-header">Intervals:</h3>
+
+                <PianoRollContainer
+                    notes={pianoNotes}
+                    isPresentational
+                    whiteList={notes}
+                    highlightedNotes={notes}
+                    noteOptions={intervalsViewNoteOptions}
                 />
             </div>
             <MdSubHeader
@@ -39,15 +62,25 @@ export default function ScaleInstrumentDiagrams(props) {
             >
                 Guitar Fingering
             </MdSubHeader>
-            <div class="guitar-fretboard-diagram-container">
+            <h3 className="sub-sub-header">Notes:</h3>
+            <div className="guitar-fretboard-diagram-container">
                 <FretBoard 
                     notes={notes}
                     whiteList={notes}
                     noteOptions={noteOptions}
                     tuning={["E", "A", "D", "G", "B", "E"]}
-
                 />
             </div>
+            <h3 className="sub-sub-header">Intervals:</h3>
+            <div className="guitar-fretboard-diagram-container">
+                <FretBoard
+                    notes={notes}
+                    whiteList={notes}
+                    noteOptions={intervalsViewNoteOptions}
+                    tuning={["E", "A", "D", "G", "B", "E"]}
+                />
+            </div>
+           
             <div className="fretboard-hint-container flex-centered">
                 <sub>Tip: swipe to see more</sub>
             </div>

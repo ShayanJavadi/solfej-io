@@ -44,10 +44,10 @@ const renderOpenStrings = (props) => {
             <div className="fret-column" style={{ width: "5%" }}>
                 {
                     [...tuning].reverse().map((note) => {
-                        const { style: { backgroundColor } } = noteOptions[note] || { style: {} };
+                        const { style: { backgroundColor }, text } = noteOptions[note] || { style: {} };
 
                         return (
-                            <div className="fret-row">
+                            <div className="fret-row" key={Math.random()}>
                                 <div
                                     className="fret-dot active"
                                     style={{ 
@@ -56,7 +56,7 @@ const renderOpenStrings = (props) => {
                                         backgroundColor
                                     }}
                                 >
-                                    {note}
+                                    {text || note}
                                 </div>
                             </div>
                         )
@@ -92,24 +92,24 @@ const renderNeck = (props) => {
         <div className="neck">
             {
                 Array(numberOfFrets).fill(0).map((_, fretIndex) => (
-                    <div className="fret-column" style={{ width: `${calculateFretWidth(numberOfFrets, fretIndex)}%` }}>
+                    <div className="fret-column" style={{ width: `${calculateFretWidth(numberOfFrets, fretIndex)}%` }} key={Math.random()}>
                         {
                             Array(numberOfStrings).fill(0).map((_, stringIndex) => {
                                 const note = fretboardNotes[stringIndex][fretIndex];
                                 const shouldShow = whiteList.includes(note);
-                                const { style: { backgroundColor } } = noteOptions[note] || { style: {} };
+                                const { style: { backgroundColor }, text } = noteOptions[note] || { style: {} };
                                 const dotClasses = classNames(
                                     "fret-dot",
                                     shouldShow && "active"
                                 );
                                 
                                 return (
-                                    <div className="fret-row">
+                                    <div className="fret-row" key={Math.random()}>
                                         <div 
                                             className={dotClasses}
                                             style={{ backgroundColor }}
                                         >
-                                            {shouldShow && note}
+                                            {shouldShow && (text || note)}
                                         </div>
                                     </div>
                                 )
@@ -166,7 +166,7 @@ export default function FretBoard(props) {
 
     return (
         <div className="fret-board">
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" stroke="black" stroke-width="1" fill="white" shape-rendering="geometricPrecision" styles={{ overflow: "visible" }}>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" stroke="black" strokeWidth="1" fill="white" shapeRendering="geometricPrecision" styles={{ overflow: "visible" }}>
                 <svg width="100%" height="100%" x="0" y="0">
                     <foreignObject width="100%" height="100%">
                         {renderOpenStrings(props)}

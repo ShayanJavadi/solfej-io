@@ -23,14 +23,14 @@ const renderScaleRow = (rootNote, scales) => {
 
     return (
         scales &&
-        <div className="root-note-with-scales-container">
+        <div className="root-note-with-scales-container" key={Math.random()}>
             <MdSubHeader>
                 {rootNoteText}
             </MdSubHeader>
             <div className="scales">
                 {
                     scales.map((scale, index) => (
-                        <p>
+                        <p key={index}>
                             {index !== 0 ? " - " : ""}
                             <Link to={scale.path}>{scale.name}</Link>
                         </p>
@@ -63,7 +63,7 @@ export default function ChordInformation(props) {
                 >
                     Intervals
                 </MdSubHeader>
-                {intervalNames.map(interval => <p>{interval}</p>)}
+                {intervalNames.map(interval => <p key={Math.random()}>{interval}</p>)}
             </div>
             {
                 !isEmpty(chord.inversions) &&
@@ -78,7 +78,7 @@ export default function ChordInformation(props) {
                             const chordsInversion = chord.inversions.find(inversion => inversion.inversion === index)
                             
                             return (
-                                <div>
+                                <div key={index}>
                                     <p>
                                         {`${INVERSION_TEXT[index]}: `}
                                         {

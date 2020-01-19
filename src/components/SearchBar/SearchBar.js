@@ -12,13 +12,13 @@ export default function SearchBar(props) {
     const [searchResults, setSearchResults] = useState(undefined);
     const searchResultsNotEmpty = !isEmpty(searchResults);
     const searchWrapperRef = useRef(null);
-    
+
     const classes = classNames(
         "search-bar-container",
         isInputFocused && "focused",
         searchResultsNotEmpty && isInputFocused && "has-results",
     )
-    var options = {
+    const options = {
         shouldSort: true,
         caseSensitive: false,
         threshold: 0.05,
@@ -29,12 +29,29 @@ export default function SearchBar(props) {
         keys: [
             {
                 name: "a",
-                weight: 1
+                weight: 1,
             },
         ]
     };
-    const fuse = new Fuse(searchData, options); // "list" is the item array
 
+    const optionsReverse = {
+        shouldSort: true,
+        caseSensitive: false,
+        threshold: 0.5,
+        location: 0,
+        distance: 100,
+        maxPatternLength: 32,
+        minMatchCharLength: 1,
+        keys: [
+            {
+                name: "c",
+                weight: 1,
+            },
+        ]
+    }
+
+    const fuse = new Fuse(searchData, options); // "list" is the item array
+    const fuseReverseSearch = new Fuse(searchData, optionsReverse)
 
     const handleClickOutside = event => {
         if (searchWrapperRef.current && !searchWrapperRef.current.contains(event.target)) {
@@ -43,10 +60,17 @@ export default function SearchBar(props) {
     }
 
     useEffect(() => {
-        const topTenSearchResults = fuse.search(
+        const isReverseSearch = searchQuery.includes(",");
+        const fuseObject = isReverseSearch ? fuseReverseSearch : fuse;
+        const allResults = fuseObject.search(
             searchQuery.replace(" chord", "")
                 .replace("chord", "")
-        ).slice(0, 10);
+        )
+
+        const topTenSearchResults = isReverseSearch ?
+            allResults.filter(chord => !chord.d)
+                .slice(0, 10) :
+            allResults.slice(0, 10);
         setSearchResults(topTenSearchResults)
 
 
@@ -68,7 +92,7 @@ export default function SearchBar(props) {
                 <input
                     type="text"
                     onChange={event => setSearchQuery(event.target.value)}
-                    placeholder="Type here to search for chords..."
+                    placeholder={`Type here to search for ${searchResultPostFix}s...`}
                     onFocus={() => setIsInputFocused(true)}
                     onKeyDown={e => {
                         if (searchResultsNotEmpty && e.keyCode === 13) {
@@ -83,18 +107,27 @@ export default function SearchBar(props) {
                     <div className="line-break" />
                     <div className="search-results">
                         {
-                            searchResults.map(chord => (
-                                <Link to={chord.b} key={chord.b}>
+                            searchResults.map(chord => {
+                                const reverseSearchString = searchQuery.includes(",") &&
+                                    chord.c.split(", ")
+                                        .map((note, index) => (
+                                            searchQuery.toLowerCase().includes(note.toLowerCase()) ?
+                                            <b>{`${index > 0 ? ", " : ""}${note}`}</b>  :
+                                            <span>{`${index > 0 ? ", " : ""}${note}`}</span>
+                                        ));
+                                return (
+                                    <Link to={chord.b} key={chord.b}>
 
-                                    <div className="search-result">
-                                        <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                            <path style={{ fill: "#666" }} d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
-                                        </svg>
-                                        <p>{chord.a.trim()} {!chord.a.includes(searchResultPostFix) && searchResultPostFix || ""}</p>
-                                    </div>
-                                </Link>
+                                        <div className="search-result">
+                                            <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                <path style={{ fill: "#666" }} d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                                            </svg>
+                                            <p>{chord.a.trim()} {!chord.a.includes(searchResultPostFix) && searchResultPostFix || ""} {reverseSearchString && "("}{reverseSearchString && reverseSearchString}{reverseSearchString && ")"}</p>
+                                        </div>
+                                    </Link>
 
-                            ))
+                                )  
+                            })
                         }
                     </div>
                 </div>

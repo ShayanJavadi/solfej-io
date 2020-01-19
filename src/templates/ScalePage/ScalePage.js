@@ -1,5 +1,6 @@
 
 import React from 'react';
+import scales from "../../../scalesMinified.json"
 import Layout from '../../components/layout';
 import MdHeader from '../../components/MdHeader/MdHeader';
 import Page from '../../components/Page/Page';
@@ -7,12 +8,13 @@ import AliasOverline from '../partials/AliasOverline';
 import ScaleInformation from './ScaleInformation/ScaleInformation';
 import ScaleInstrumentDiagrams from './ScaleInstrumentDiagrams/ScaleInstrumentDiagrams';
 import "./ScalePage.scss";
+import SearchBar from '../../components/SearchBar/SearchBar';
 
 const renderHeader = (scale) => {
     return (
         <div className="header-container flex-column-center">
             <AliasOverline aliases={scale.aliases} />
-            <MdHeader subText="Below you can find guitar and piano scale diagrams, notes, intervals, chords, and aliases">
+            <MdHeader subText="Below you can find guitar and piano scale diagrams, notes, intervals, formulas, and chords">
                 {scale.displayName} Scale
             </MdHeader>
         </div>
@@ -30,6 +32,11 @@ export default function ScalePage({ data }) {
             image="/images/chords.png"
         >
             <Page className="scale-page md-styles">
+                <div className="hint" style={{ marginTop: "2rem" }}>
+                    <sub style={{ textAlign: "left" }}><b>💡Tip: You can find a scale by typing in its notes seperated by commas e.g. (C, E, G)</b></sub>
+                </div>
+                <SearchBar searchData={scales} searchResultPostFix={"scale"} />
+
                 {renderHeader(scale)}
                 <ScaleInstrumentDiagrams scale={scale} />
                 <ScaleInformation scale={scale} />

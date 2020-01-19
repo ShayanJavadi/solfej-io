@@ -30,6 +30,7 @@ const renderKeys = (note, {
   highlightedNotes,
   wrongPressedNotes,
   correctPressedNotes,
+  noteOptions = {}
 }) => {
   let noteName;
   let octave;
@@ -42,10 +43,17 @@ const renderKeys = (note, {
   } else {
     noteName = note;
   }
+  
   const isBlackKey = getIsBlackKey(noteName);
   const isCorrectNote = noteName === noteToGuess.noteName;
   const isWrongAndPressed = wrongPressedNotes && wrongPressedNotes.includes(noteName);
   const isCorrectAndPressed = correctPressedNotes && correctPressedNotes.includes(noteName);
+
+    const noteNameDisplay = whiteList ?
+        whiteList.includes(whiteListHasOctaves ? note : noteName) ? noteName : "" :
+        noteName;
+    const { style: { backgroundColor }, text } = noteOptions[noteNameDisplay] || { style: {} };
+
 
   const keyClasses = classNames(
     isCorrectNote && !isDisabled && !isPresentational && CORRECT_NOTE_CLASSNAME,
@@ -53,28 +61,26 @@ const renderKeys = (note, {
     isBlackKey ? "key black-key" : "key white-key",
     isWrongAndPressed && "highlight-red",
     isCorrectAndPressed && "highlight-green",
-    highlightedNotes.includes(note) && "highlighted"
+    highlightedNotes.includes(note) && !backgroundColor && "highlighted"
   );
   const containerClasses = classNames(
     isBlackKey ? "black-key-container" : keyClasses,
   );
 
-  const noteNameDisplay = whiteList ?
-    whiteList.includes(whiteListHasOctaves ? note : noteName) ? noteName : "" :
-    noteName;
 
   return (
     <div 
-      className={containerClasses} 
+      className={containerClasses}
+      style={!isBlackKey ? { backgroundColor: backgroundColor } : {}}
       onClick={() => !isDisabled && !isWrongAndPressed && onKeyClick(notesHaveOctaves ? { noteName, octave } : noteName)} 
       key={Math.random()}
     >
       {
         isBlackKey ?
-          <div className={keyClasses}>
-            <span className={classNames("note-text")}>{hideBlackKeyNames ? "" : noteNameDisplay}</span>
+          <div className={keyClasses} style={isBlackKey ? { backgroundColor } : {}}>
+            <span className={classNames("note-text")}>{hideBlackKeyNames ? "" : text || noteNameDisplay}</span>
           </div>:
-          <span className={classNames("note-text")}>{noteNameDisplay}</span>
+        <span className={classNames("note-text")}>{text || noteNameDisplay}</span>
       }
     </div>
   );

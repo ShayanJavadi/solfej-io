@@ -1,7 +1,10 @@
 @import "../../styles/variables.scss";
 
 .chords-page-index {
-
+    .hint {
+        position: relative;
+        bottom: 1.1rem
+    }
     .divider {
         background: #dedede;
         height: 1.5px;
@@ -68,7 +71,7 @@
     }    
     .hero {
         display: flex;
-        min-height: 46vh;
+        min-height: 50vh;
         flex-direction: column;
         justify-content: center;
         align-items: center;

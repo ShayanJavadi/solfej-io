@@ -126,5 +126,8 @@ allScales.forEach(scale => {
 })
 
 const data = JSON.stringify(allScales, null, 4)
+const minifiedData = JSON.stringify(allScales.map(({ displayName, path, notes, isAlias }) => ({ a: displayName, b: path, c: notes.join(", "), d: isAlias })))
+
 
 fs.writeFileSync("scales.json", data)
+fs.writeFileSync("scalesMinified.json", minifiedData)

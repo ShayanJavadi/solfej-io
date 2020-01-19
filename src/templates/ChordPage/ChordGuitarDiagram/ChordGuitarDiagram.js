@@ -119,9 +119,7 @@ export default function ChordGuitarDiagram({ chord }) {
                 {
                     !isEmpty(chord.fingering) && <div id="guitar-diagram" />
                 }
-                <h3>Other fingerings/arpeggio</h3>
-
-                <div class="guitar-fretboard-diagram-container">
+                <div className="guitar-fretboard-diagram-container">
 
                     <FretBoard
                         notes={notes}

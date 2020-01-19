@@ -16,7 +16,7 @@ const renderHeader = ({ chord }) => {
     return (
         <div className="header-container">
             <AliasOverline aliases={chord.aliases} />
-            <MdHeader subText="Below you can find chord diagrams, piano fingerings, guitar fingering, notes, intervals, and scales.">
+            <MdHeader subText="Below you can find chord diagrams, piano fingerings, guitar fingering, notes, intervals, scales, and arpeggios.">
                 {chordName} Chord
             </MdHeader>
         </div>
@@ -34,6 +34,9 @@ export default function ChordPage({ data }) {
             image="/images/chords.png"
         >
             <div className="chord-page-template md-styles">
+                <div className="hint" style={{ marginTop: "2rem" }}>
+                    <sub style={{ textAlign: "left" }}><b>💡Tip: You can find a chord by typing in its notes seperated by commas e.g. (C, E, G)</b></sub>
+                </div>
                 <SearchBar searchData={chords} searchResultPostFix={"chord"} />
                 {renderHeader({ chord })}
                 <ChordGuitarDiagram chord={chord} />

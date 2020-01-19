@@ -8,6 +8,7 @@ import MarketingOne from '../../components/Marketing1'
 import MarketingTwo from '../../components/Marketing2'
 import MarketingThree from '../../components/Marketing3'
 import MarketingFour from '../../components/Marketing4'
+import { Link } from 'gatsby'
 
 export default function index() {
     return (
@@ -26,7 +27,14 @@ export default function index() {
                             <p>Want to learn about a chord? Chord Search shows you notes, intervals, guitar and piano fingerings that go along with each chord. Just type in a chord name to get started.</p>
 
                         </div>
+
+                        <div className="hint flex-centered">
+                            <sub><b>💡Tip: You can find a chord by typing in its notes seperated by commas e.g. (C, E, G)</b></sub>
+                        </div>
                         <SearchBar searchData={chords} searchResultPostFix={"chord"} />
+                        <div className="suggestion flex-centered">
+                            <sub><b>Looking For a Scale? Try: <Link to="scales">Scale Search</Link></b></sub>
+                        </div>
                     </div>
                 </div>
             <div className="marketing-content-container reverse copy-on-left">
