@@ -1,6 +1,7 @@
 
 import loadable from '@loadable/component';
 import React, { useState } from 'react';
+import { Note } from "@tonaljs/modules"
 import { red } from '../../../common/consts/colors';
 import pianoContainerNotesAdapter from '../../../common/utils/pianoContainerNotesAdapter';
 import FretBoard from '../../../components/FretBoard/FretBoard';
@@ -36,7 +37,6 @@ export default function ScaleInstrumentDiagrams(props) {
 
     intervalsViewNoteOptions[rootNote].style.backgroundColor = red;
 
-
     return (
         <div className="scale-instrument-diagrams">
             <div className="chord-notes-container container" style={{ marginBottom: "2.5rem" }}>
@@ -57,7 +57,7 @@ export default function ScaleInstrumentDiagrams(props) {
                         <TonePolySynthProvider>
                             <PlayerBlock
                                 text={displayName + " scale"}
-                                notesToPlay={notes}
+                                notesToPlay={intervals.map(Note.transposeFrom(rootNote + "3"))}
                                 shouldAutoPlaySound={shouldAutoPlaySound}
                                 playNotesSequentially
                             />

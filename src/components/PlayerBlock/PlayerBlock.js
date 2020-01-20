@@ -45,7 +45,7 @@ export default function PlayerBlock(props) {
             if (playNotesSequentially) {
                 const partToPlay = notesToPlay.map((note, index) => ({
                     time: 0 + (.5 * index),
-                    note: note + "4",
+                    note: note,
                     velocity: .5 + .04 * index,
                     duration: "4n",
                 }))
