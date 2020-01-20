@@ -7,6 +7,8 @@ import BlogPostThumbnail from '../../components/BlogPostThumbnail/index'
 import ShayanJavadi from '../../components/ShayanJavadi'
 import Alvin from '../../components/Alvin'
 import JP from '../../components/JP'
+import Henry from '../../components/Henry'
+
 import BlogPostHeroOne from '../../components/BlogPostHeroOne'
 import BlogPostHeroTwo from '../../components/blogImages/is-betapage-worth-it/Thumbnail'
 import BlogPostHeroThree from '../../components/blogImages/5-beautiful-color-palette-generators-for-your-next-design-project/Thumbnail'
@@ -14,6 +16,7 @@ import BlogPostHeroFour from '../../components/blogImages/5-reasons-why-you-shou
 import BlogPostHeroFive from '../../components/blogImages/dont-give-up-on-music-theory/Thumbnail';
 import BlogPostHeroSix from '../../components/blogImages/the-4-best-ear-training-apps-for-2019/Thumbnail';
 import BlogPostHeroSeven from '../../components/blogImages/cadences/Thumbnail';
+import BlogPostHeroEight from '../../components/blogImages/how-to-find-new-music/Thumbnail';
 
 import CenteredGraySection from '../../components/CenteredGraySection/index'
 import BlogPostsContainer from "../../components/BlogPostsContainer";
@@ -29,6 +32,7 @@ import { blogData as blogData4 } from "./7-reasons-why-you-should-learn-music-th
 import { blogData as blogData5 } from "./dont-give-up-on-music-theory";
 import { blogData as blogData6 } from "./the-4-best-ear-training-apps-for-2019";
 import { blogData as blogData7 } from "./cadences";
+import { blogData as blogData8 } from "./how-to-find-new-music";
 
 export default function tos() {
     return (
@@ -39,6 +43,12 @@ export default function tos() {
 
             <Section title="Featured Stories" h1Header>
                 <BlogPostsContainer>
+                    
+                    <BlogPostThumbnail
+                        {...blogData8}
+                        authorImage={<Henry />}
+                        image={<BlogPostHeroEight />}
+                    /> 
                     <BlogPostThumbnail
                         {...blogData7}
                         authorImage={<Alvin />}

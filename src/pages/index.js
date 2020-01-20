@@ -30,11 +30,14 @@ import { blogData as blogData4 } from "./blog/7-reasons-why-you-should-learn-mus
 import { blogData as blogData5 } from "./blog/dont-give-up-on-music-theory";
 import { blogData as blogData6 } from "./blog/the-4-best-ear-training-apps-for-2019";
 import { blogData as blogData7 } from "./blog/cadences";
+import BlogPostHeroEight from '../components/blogImages/how-to-find-new-music/Thumbnail';
+import { blogData as blogData8 } from "./blog/how-to-find-new-music";
 
 import ShayanJavadi from "../components/ShayanJavadi"
 import TempTwo from "../components/Temp2"
 import TempThree from "../components/Temp3"
 import JP from "../components/JP"
+import Henry from "../components/Henry"
 
 
 const typeFormUrl = "https://shayanjavadi.typeform.com/to/wO59zz";
@@ -106,6 +109,11 @@ const IndexPage = () => (
     </div>
         <Section title="Featured Stories">
             <BlogPostsContainer>
+                <BlogPostThumbnail
+                    {...blogData8}
+                    authorImage={<Henry />}
+                    image={<BlogPostHeroEight />}
+                /> 
                 <BlogPostThumbnail
                     {...blogData7}
                     authorImage={<Alvin />}
