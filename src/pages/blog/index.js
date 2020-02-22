@@ -17,6 +17,7 @@ import BlogPostHeroFive from '../../components/blogImages/dont-give-up-on-music-
 import BlogPostHeroSix from '../../components/blogImages/the-4-best-ear-training-apps-for-2019/Thumbnail';
 import BlogPostHeroSeven from '../../components/blogImages/cadences/Thumbnail';
 import BlogPostHeroEight from '../../components/blogImages/how-to-find-new-music/Thumbnail';
+import BlogPostHeroNine from '../../components/blogImages/how-to-learn-music-theory/Thumbnail';
 
 import CenteredGraySection from '../../components/CenteredGraySection/index'
 import BlogPostsContainer from "../../components/BlogPostsContainer";
@@ -33,6 +34,7 @@ import { blogData as blogData5 } from "./dont-give-up-on-music-theory";
 import { blogData as blogData6 } from "./the-4-best-ear-training-apps-for-2019";
 import { blogData as blogData7 } from "./cadences";
 import { blogData as blogData8 } from "./how-to-find-new-music";
+import { blogData as blogData9 } from "./how-to-learn-music-theory";
 
 export default function tos() {
     return (
@@ -43,7 +45,11 @@ export default function tos() {
 
             <Section title="Featured Stories" h1Header>
                 <BlogPostsContainer>
-                    
+                    <BlogPostThumbnail
+                        {...blogData9}
+                        authorImage={<ShayanJavadi />}
+                        image={<BlogPostHeroNine />}
+                    /> 
                     <BlogPostThumbnail
                         {...blogData8}
                         authorImage={<Henry />}

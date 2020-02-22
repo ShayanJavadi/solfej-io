@@ -22,7 +22,7 @@ import BlogPostHeroFour from "../components/blogImages/5-reasons-why-you-should-
 import BlogPostHeroFive from "../components/blogImages/dont-give-up-on-music-theory/Thumbnail"
 import BlogPostHeroSix from "../components/blogImages/the-4-best-ear-training-apps-for-2019/Thumbnail"
 import BlogPostHeroSeven from "../components/blogImages/cadences/Thumbnail"
-
+import BlogPostHeroNine from "../components/blogImages/how-to-learn-music-theory/Thumbnail"
 import { blogData as blogData1 } from "./blog/what's-new-in-solfej-v-1.3"
 import { blogData as blogData2 } from "./blog/is-betapage-worth-it"
 import { blogData as blogData3 } from "./blog/5-beautiful-color-palette-generators-for-your-next-design-project";
@@ -32,6 +32,7 @@ import { blogData as blogData6 } from "./blog/the-4-best-ear-training-apps-for-2
 import { blogData as blogData7 } from "./blog/cadences";
 import BlogPostHeroEight from '../components/blogImages/how-to-find-new-music/Thumbnail';
 import { blogData as blogData8 } from "./blog/how-to-find-new-music";
+import { blogData as blogData9 } from "./blog/how-to-learn-music-theory";
 
 import ShayanJavadi from "../components/ShayanJavadi"
 import TempTwo from "../components/Temp2"
@@ -46,8 +47,8 @@ const IndexPage = () => (
   <Layout title="Solfej">
     <div className="hero-container">
         <div className="copy-container">
-            <h1>The Best New Ear Training And Music Theory App</h1>
-            <p>Want to become a better musician? Get Solfej now to train your ears and learn music theory. </p>
+            <h1>Master Music Theory & Train Your Ears</h1>
+            <p>Want to become a better musician? Solfej is the best new app to train your ears and learn music theory. </p>
             <OutboundLink href={typeFormUrl}>
                 <button className="cta-button primary">Get Early Access</button>
             </OutboundLink>
@@ -66,7 +67,7 @@ const IndexPage = () => (
             </div>
         </div>    
         <div className="copy-container small">
-            <h2>Guided Music Theory, Ear Training, & Rhythm Lessons</h2>
+            <h2>Learn through Music Theory, Ear Training, & Rhythm Lessons</h2>
             <p>Practical lesson paths to help you learn music theory. No more Wikipedia/YouTube rabbit holes. </p>
             <OutboundLink href={typeFormUrl}>
                 <button className="cta-button green">Get Early Access</button>
@@ -110,10 +111,16 @@ const IndexPage = () => (
         <Section title="Featured Stories">
             <BlogPostsContainer>
                 <BlogPostThumbnail
+                    {...blogData9}
+                    authorImage={<ShayanJavadi />}
+                    image={<BlogPostHeroNine />}
+                /> 
+                <BlogPostThumbnail
                     {...blogData8}
                     authorImage={<Henry />}
                     image={<BlogPostHeroEight />}
                 /> 
+              
                 <BlogPostThumbnail
                     {...blogData7}
                     authorImage={<Alvin />}
@@ -135,18 +142,7 @@ const IndexPage = () => (
                     {...blogData4}
                     authorImage={<Alvin />}
                     image={<BlogPostHeroFour />}
-                />
-
-                <BlogPostThumbnail
-                    title="The Definitive Guide To Musical Cadences"
-                    description="Coming Soon! Subscribe to the Newsletter to be notified."
-                    authorName="Shayan Javadi"
-                    timeToRead=""
-                    authorImage={<ShayanJavadi />}
-                    image={<TempThree />}
-                    isUnavailable
-                />
-   
+                />   
             </BlogPostsContainer>
         </Section>
   </Layout>
