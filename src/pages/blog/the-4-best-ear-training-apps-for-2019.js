@@ -12,7 +12,7 @@ import MockImageOne from '../../components/MockImageOne';
 import MockImageThree from '../../components/MockImageThree';
 
 export const blogData = {
-    title: "Ear Training: The 4 Best Ear Training Apps For 2019",
+    title: "Ear Training: The 4 Best Ear Training Apps For 2020",
     description: "The best apps to help train your ears",
     authorName: "Shayan Javadi",
     date: "Dec 24",
@@ -32,7 +32,7 @@ export default () => {
             <p>A musicians ears are their most important tool. Some are lucky to be born with perfect pitch. The other 99% of us have to work hard to train our ears.</p>
             <p>Guitarists, pianists, producers, DJs, violinists, singers and rappers can all find ear training useful. Anyone writing songs, improvising, or even composing poems can benefit from training their ears.</p>
             <p>The only problem is that ear training is hard! Luckily for us we live in the age of technology.</p>
-            <p>In this post we’ll go over the top 4 ways to learn ear training in 2019.</p>
+            <p>In this post we’ll go over the top 4 ways to learn ear training in 2020.</p>
             <h2>What Is Ear Training</h2>
             <p>Ear training is the process of identifying musical concepts (notes, chords, scales, etc) solely by our ear. Ear training is the bridge that connects our brain to the mystical world of music theory.</p>
             <p>With enough practice ear training can become second nature. Think of how easy it is for you recognize words in your language.</p>
@@ -41,7 +41,7 @@ export default () => {
             <p>Ear training can also help you sing in tune, and improvise better.</p>
             <p>Ear training may also help you communicate easier with other musicians.</p>
             <p>The easiest way to learn ear training is through technology.</p>
-            <p>Here are the 4 best ear training apps for 2019 👇</p>
+            <p>Here are the 4 best ear training apps for 2020 👇</p>
             <h2>1. <a href="https://www.solfej.io/">Solfej</a></h2>
             <ImageContainer fullWidth bottomMarginOnly>
                 <MockImageOne />   
