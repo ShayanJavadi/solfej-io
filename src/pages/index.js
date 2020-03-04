@@ -94,7 +94,7 @@ const IndexPage = () => (
   <Layout title="Solfej">
     <div className="hero-container">
         <div className="copy-container">
-            <h1>Want To Become A Better Musician?</h1>
+            <h1>Become A Better Musician</h1>
             <p>Solfej is the best ear training & music theory app. Learn music theory and train your ears with confidence.</p>
             <div className={classNames("app-store-links", browser === SAFARI && "add-bottom-padding")} onClick={() => appStoreLinkClicked(1)}>
                 {renderAppStoreButtons()}

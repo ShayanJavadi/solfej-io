@@ -1,8 +1,15 @@
+import isServer from "../utils/isServer";
+
+
 export const ANDROID = "Android";
 export const IOS = "iOS";
 export const DESKTOP = "desktop"
 
 export default () => {
+    if (isServer()) {
+        return;
+    }
+
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
     // Windows Phone must come first because its UA also contains "Android"

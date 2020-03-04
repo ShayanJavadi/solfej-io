@@ -1,6 +1,12 @@
+import isServer from "../utils/isServer";
+
 export const SAFARI = "Apple Safari";
 
 export default () => {
+    if (isServer()) {
+        return;
+    }
+    
     var sBrowser, sUsrAg = navigator.userAgent;
 
     // The order matters here, and this may report false positives for unlisted browsers.
