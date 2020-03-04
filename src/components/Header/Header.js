@@ -8,17 +8,35 @@ import MenuImg from "./menu.svg";
 import CloseMenuImg from "./close-menu.svg";
 import logo from "../../images/logo.png";
 import logoNoText from "../../images/logo-no-text.png";
+import getPlatform, { IOS, ANDROID, DESKTOP } from "../../common/utils/getPlatform";
+import { APP_STORE_URL, PLAY_STORE_URL } from "../../common/consts/outBoundLinks";
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
+import appStoreLinkClicked from "../../common/utils/analytics/appStoreLinkClicked";
 
 import "./Header.scss";
 const typeFormUrl = "https://shayanjavadi.typeform.com/to/wO59zz";
 
+const getGetTheAppLink = () => {
+    const platform = getPlatform()
+    if (platform === DESKTOP) {
+        return "/";
+    }
+
+    if (platform === IOS) {
+        return APP_STORE_URL;
+    }
+
+    if (platform === ANDROID) {
+        return PLAY_STORE_URL;
+    }
+}
 
 export default function Header(props) {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isTypeformOpen, setIsTypeformOpen] = useState(false);
     const { isDetatched } = props;
     let typeForm = React.createRef();
-  
+    const getTheAppLink = getGetTheAppLink();
 
     function handleClick() {
         typeForm.current.typeform.open();
@@ -90,13 +108,24 @@ export default function Header(props) {
                             <img src={logoNoText} alt="solfej-logo-music-theory-app" className="solfej-logo" />
                         </Link>
                     </li>
-                    <li className="cta">
-                        <button 
-                            className="cta-button primary"
-                            onClick={handleClick}
-                        >
-                            Get Early Access
-                        </button>
+                    <li className="cta" onClick={getTheAppLink !== "/" && appStoreLinkClicked(0)}>
+                        {
+                            getTheAppLink === "/" ?
+                                <Link to={getTheAppLink}>
+                                    <button
+                                        className="cta-button primary"
+                                    >
+                                        GET THE APP
+                                    </button>
+                                </Link> :
+                                <a href={getTheAppLink}>
+                                    <button
+                                        className="cta-button primary"
+                                    >
+                                        GET THE APP
+                                    </button>
+                                </a>
+                        }
                     </li>
                 </ul>
             </div>

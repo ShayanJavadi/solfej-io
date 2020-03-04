@@ -36,6 +36,8 @@
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
     "react-icons": "^3.8.0",
+    "react-mobile-store-button": "^0.0.6",
+    "react-smartbanner": "^5.1.4",
     "react-typeform-embed": "^0.2.1",
     "tone": "^13.8.25",
     "vexchords": "^1.2.0"

@@ -39,19 +39,66 @@ import TempTwo from "../components/Temp2"
 import TempThree from "../components/Temp3"
 import JP from "../components/JP"
 import Henry from "../components/Henry"
-
+import MobileStoreButton from 'react-mobile-store-button';
+import { APP_STORE_URL, PLAY_STORE_URL } from "../common/consts/outBoundLinks";
+import getPlatform, { DESKTOP, IOS, ANDROID } from "../common/utils/getPlatform";
+import getBrowser, { SAFARI } from "../common/utils/getBrowser";
+import classNames from "classnames";
+import appStoreLinkClicked from "../common/utils/analytics/appStoreLinkClicked";
 
 const typeFormUrl = "https://shayanjavadi.typeform.com/to/wO59zz";
+const platform = getPlatform();
+const browser = getBrowser();
+const renderAppStoreButtons = () => {
+    if (platform === DESKTOP) {
+        return (
+            <>
+                <MobileStoreButton
+                    store="ios"
+                    url={APP_STORE_URL}
+                    width={200}
+                />
+                <MobileStoreButton
+                    store="android"
+                    url={PLAY_STORE_URL}
+                    height={90}
+                    width={230}
+                />
+            </> 
+        )
+    }
+
+    if (platform === IOS) {
+        return (
+            <MobileStoreButton
+                store="ios"
+                url={APP_STORE_URL}
+                width={200}
+            />
+        )
+    }
+
+    if (platform === ANDROID) {
+        return (
+            <MobileStoreButton
+                store="android"
+                url={PLAY_STORE_URL}
+                height={90}
+                width={230}
+            />
+        )
+    }
+}
 
 const IndexPage = () => (
   <Layout title="Solfej">
     <div className="hero-container">
         <div className="copy-container">
-            <h1>Master Music Theory & Train Your Ears</h1>
-            <p>Want to become a better musician? Solfej is the best new app to train your ears and learn music theory. </p>
-            <OutboundLink href={typeFormUrl}>
-                <button className="cta-button primary">Get Early Access</button>
-            </OutboundLink>
+            <h1>Want To Become A Better Musician?</h1>
+            <p>Solfej is the best ear training & music theory app. Learn music theory and train your ears with confidence.</p>
+            <div className={classNames("app-store-links", browser === SAFARI && "add-bottom-padding")} onClick={() => appStoreLinkClicked(1)}>
+                {renderAppStoreButtons()}
+            </div>
         </div>
         <div className="image-container">
             <HeroImage />
@@ -67,20 +114,14 @@ const IndexPage = () => (
             </div>
         </div>    
         <div className="copy-container small">
-            <h2>Learn through Music Theory, Ear Training, & Rhythm Lessons</h2>
-            <p>Practical lesson paths to help you learn music theory. No more Wikipedia/YouTube rabbit holes. </p>
-            <OutboundLink href={typeFormUrl}>
-                <button className="cta-button green">Get Early Access</button>
-            </OutboundLink>
+            <h2>Master Music Theory, Ear Training, & Rhythm</h2>
+            <p>Practical lesson paths to help you reach your musical goals. No more Wikipedia/YouTube rabbit holes. </p>
         </div>
     </div>
     <div className="marketing-content-container reverse">
         <div className="copy-container small">
-            <h2>Interactive Ear Training, Music Theory, & Rhythm Excercises</h2>
+            <h2>Interactive Excercises</h2>
             <p>Do you want to recognize intervals? Learn how to play polyrhythms? Know what note is a major 7th above another?</p>
-            <OutboundLink href={typeFormUrl}>
-                <button className="cta-button yellow">Get Early Access</button>
-            </OutboundLink>
         </div>
         <div className="image-container">
             <div className="mock-container">
@@ -103,9 +144,6 @@ const IndexPage = () => (
         <div className="copy-container small">
             <h2>Simple Language</h2>
             <p>Tired of dry music theory lessons? Solfej's music theory lessons are designed for humans.</p>
-            <OutboundLink href={typeFormUrl}>
-                <button className="cta-button secondary">Get Early Access</button>
-            </OutboundLink>
         </div>
     </div>
         <Section title="Featured Stories">
