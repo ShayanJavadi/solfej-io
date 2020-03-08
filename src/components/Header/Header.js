@@ -29,6 +29,8 @@ const getGetTheAppLink = () => {
     if (platform === ANDROID) {
         return PLAY_STORE_URL;
     }
+
+    return APP_STORE_URL
 }
 
 export default function Header(props) {
