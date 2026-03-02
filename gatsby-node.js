@@ -10,6 +10,20 @@ const scales = require("./scales")
 const path = require(`path`)
 const { isEmpty } = require('lodash')
 
+exports.onCreateWebpackConfig = ({ actions, loaders }) => {
+    actions.setWebpackConfig({
+        module: {
+            rules: [
+                {
+                    test: /\.js$/,
+                    include: /node_modules\/@svgdotjs/,
+                    use: [loaders.js()],
+                },
+            ],
+        },
+    })
+}
+
 exports.createPages = async ({ actions }) => {
     const { createPage } = actions
     const chordTemplate = path.resolve(`src/templates/ChordPage/ChordPage.js`)
