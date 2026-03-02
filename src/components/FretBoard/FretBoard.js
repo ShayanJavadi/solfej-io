@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 // get rid of ramda. currently being used for legacy fucntion reaons.
 import { times, sum, range } from 'ramda'
 import { isEmpty } from "lodash";
@@ -29,6 +29,15 @@ const stringOffset = nrOfStrings => str =>
 const stringCenter = nrOfStrings => str =>
     stringOffset(nrOfStrings)(str) + (stringHeight(nrOfStrings) / 2)
 
+const CHROMATIC_NOTES = ["C", "C#", "D", "Eb", "E", "F", "F#", "G", "Ab", "A", "Bb", "B"];
+const DEFAULT_TUNING_OCTAVES = [2, 2, 3, 3, 3, 4]; // E2 A2 D3 G3 B3 E4
+
+const getNoteOctave = (allNotes, noteIndex, baseOctave, fret) => {
+    const chromaticIndex = CHROMATIC_NOTES.indexOf(allNotes[noteIndex]);
+    const semitones = baseOctave * 12 + chromaticIndex + fret;
+    return Math.floor(semitones / 12);
+};
+
 const renderOpenStrings = (props) => {
     const {
         numberOfFrets = 12,
@@ -37,23 +46,36 @@ const renderOpenStrings = (props) => {
         whiteList = [],
         noteOptions = [],
         tuning,
+        tuningOctaves = DEFAULT_TUNING_OCTAVES,
+        onNoteClick,
+        pressedKey,
+        onPress,
     } = props;
 
     return (
         <div className="neck">
             <div className="fret-column" style={{ width: "5%" }}>
                 {
-                    [...tuning].reverse().map((note) => {
+                    [...tuning].reverse().map((note, reversedIndex) => {
                         const { style: { backgroundColor }, text } = noteOptions[note] || { style: {} };
+                        const stringIndex = tuning.length - 1 - reversedIndex;
+                        const octave = tuningOctaves[stringIndex];
+                        const dotKey = `open-${stringIndex}`;
 
                         return (
                             <div className="fret-row" key={Math.random()}>
                                 <div
-                                    className="fret-dot active"
-                                    style={{ 
+                                    className={classNames("fret-dot", "active", pressedKey === dotKey && "pressed")}
+                                    style={{
                                         backgroundColor: !whiteList.includes(note) ?
                                         "transparent" :
-                                        backgroundColor
+                                        backgroundColor,
+                                        cursor: whiteList.includes(note) && onNoteClick ? "pointer" : undefined,
+                                    }}
+                                    onClick={() => {
+                                        if (!whiteList.includes(note) || !onNoteClick) return;
+                                        onPress(dotKey);
+                                        onNoteClick(`${note}${octave}`);
                                     }}
                                 >
                                     {text || note}
@@ -68,24 +90,32 @@ const renderOpenStrings = (props) => {
 }
 
 const renderNeck = (props) => {
-    const { 
+    const {
         numberOfFrets = 12,
         numberOfStrings = 6,
         notes,
         whiteList = [],
         noteOptions = [],
         tuning,
+        tuningOctaves = DEFAULT_TUNING_OCTAVES,
+        onNoteClick,
+        pressedKey,
+        onPress,
     } = props;
     const allNotes = [...TWELVE_TONE_NOTES];
 
     matchAccidentals(allNotes, notes);
 
-    const fretboardNotes = tuning.map((stringNote, index) => {
+    const fretboardNotes = tuning.map((stringNote, stringIdx) => {
         const noteIndex = allNotes.indexOf(stringNote);
 
-        return Array(numberOfFrets).fill(0).map((_, index) => {
-            return allNotes[(noteIndex + index + 1) % allNotes.length]
-        }) 
+        return Array(numberOfFrets).fill(0).map((_, fretIdx) => {
+            const fret = fretIdx + 1; // fretIdx 0 = fret 1
+            return {
+                note: allNotes[(noteIndex + fret) % allNotes.length],
+                octave: getNoteOctave(allNotes, noteIndex, tuningOctaves[stringIdx], fret),
+            };
+        })
     }).reverse()
 
     return (
@@ -95,19 +125,29 @@ const renderNeck = (props) => {
                     <div className="fret-column" style={{ width: `${calculateFretWidth(numberOfFrets, fretIndex)}%` }} key={Math.random()}>
                         {
                             Array(numberOfStrings).fill(0).map((_, stringIndex) => {
-                                const note = fretboardNotes[stringIndex][fretIndex];
+                                const { note, octave } = fretboardNotes[stringIndex][fretIndex];
                                 const shouldShow = whiteList.includes(note);
                                 const { style: { backgroundColor }, text } = noteOptions[note] || { style: {} };
                                 const dotClasses = classNames(
                                     "fret-dot",
                                     shouldShow && "active"
                                 );
-                                
+
+                                const dotKey = `${stringIndex}-${fretIndex}`;
+
                                 return (
                                     <div className="fret-row" key={Math.random()}>
-                                        <div 
-                                            className={dotClasses}
-                                            style={{ backgroundColor }}
+                                        <div
+                                            className={classNames(dotClasses, pressedKey === dotKey && "pressed")}
+                                            style={{
+                                                backgroundColor,
+                                                cursor: shouldShow && onNoteClick ? "pointer" : undefined,
+                                            }}
+                                            onClick={() => {
+                                                if (!shouldShow || !onNoteClick) return;
+                                                onPress(dotKey);
+                                                onNoteClick(`${note}${octave}`);
+                                            }}
                                         >
                                             {shouldShow && (text || note)}
                                         </div>
@@ -163,24 +203,32 @@ const boardGraphicStrings = (numberOfStrings, numberOfFrets) =>
 
 export default function FretBoard(props) {
     const { numberOfFrets = 12, numberOfStrings = 6 } = props;
+    const [pressedKey, setPressedKey] = useState(null);
+
+    const onPress = useCallback((key) => {
+        setPressedKey(key);
+        setTimeout(() => setPressedKey(null), 200);
+    }, []);
+
+    const extendedProps = { ...props, pressedKey, onPress };
 
     return (
         <div className="fret-board">
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" stroke="black" strokeWidth="1" fill="white" shapeRendering="geometricPrecision" styles={{ overflow: "visible" }}>
                 <svg width="100%" height="100%" x="0" y="0">
                     <foreignObject width="100%" height="100%">
-                        {renderOpenStrings(props)}
+                        {renderOpenStrings(extendedProps)}
                     </foreignObject>
                 </svg>
                 <svg width="0.75%" height="100%" x="6%" y="0"><rect x="0" y="8.333333333333334%" width="100%" height="83.33333333333334%" fill="black"></rect></svg>
                 <svg width="95.25%" height="100%" x="6%" y="0">
                     {boardGraphicStrings(numberOfStrings, numberOfFrets)}
                     <foreignObject width="100%" height="100%">
-                        {renderNeck(props)}
+                        {renderNeck(extendedProps)}
                     </foreignObject>
                 </svg>
             </svg>
-             
+
         </div>
     )
 }

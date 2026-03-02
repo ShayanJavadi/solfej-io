@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import { map } from "lodash";
-import React from "react";
+import React, { useState, useCallback } from "react";
 import "./PianoRoll.scss";
 
 const getIsBlackKey = note => ["C#", "Db", "D#", "Eb", "F#", "Gb", "G#", "Ab", "A#", "Bb"].includes(note);
@@ -30,7 +30,9 @@ const renderKeys = (note, {
   highlightedNotes,
   wrongPressedNotes,
   correctPressedNotes,
-  noteOptions = {}
+  noteOptions = {},
+  pressedNotes,
+  onPressKey,
 }) => {
   let noteName;
   let octave;
@@ -39,15 +41,16 @@ const renderKeys = (note, {
     const noteAndOctave = splitNoteAndOctave(note);
     noteName = noteAndOctave.noteName;
     octave = noteAndOctave.octave;
-    
+
   } else {
     noteName = note;
   }
-  
+
   const isBlackKey = getIsBlackKey(noteName);
   const isCorrectNote = noteName === noteToGuess.noteName;
   const isWrongAndPressed = wrongPressedNotes && wrongPressedNotes.includes(noteName);
   const isCorrectAndPressed = correctPressedNotes && correctPressedNotes.includes(noteName);
+  const isPressed = pressedNotes && pressedNotes.has(note);
 
     const noteNameDisplay = whiteList ?
         whiteList.includes(whiteListHasOctaves ? note : noteName) ? noteName : "" :
@@ -61,18 +64,24 @@ const renderKeys = (note, {
     isBlackKey ? "key black-key" : "key white-key",
     isWrongAndPressed && "highlight-red",
     isCorrectAndPressed && "highlight-green",
-    highlightedNotes.includes(note) && !backgroundColor && "highlighted"
+    highlightedNotes.includes(note) && !backgroundColor && "highlighted",
+    isPressed && "pressed"
   );
   const containerClasses = classNames(
     isBlackKey ? "black-key-container" : keyClasses,
   );
 
+  const handleClick = () => {
+    if (isDisabled || isWrongAndPressed) return;
+    onPressKey(note);
+    onKeyClick(notesHaveOctaves ? { noteName, octave } : noteName);
+  };
 
   return (
-    <div 
+    <div
       className={containerClasses}
       style={!isBlackKey ? { backgroundColor: backgroundColor } : {}}
-      onClick={() => !isDisabled && !isWrongAndPressed && onKeyClick(notesHaveOctaves ? { noteName, octave } : noteName)} 
+      onClick={handleClick}
       key={Math.random()}
     >
       {
@@ -87,11 +96,23 @@ const renderKeys = (note, {
 };
 
 export default function PianoRoll(props) {
+  const [pressedNotes, setPressedNotes] = useState(new Set());
   const classes = classNames("piano-roll", props.isPresentational && "presentational");
+
+  const onPressKey = useCallback((note) => {
+    setPressedNotes(prev => new Set(prev).add(note));
+    setTimeout(() => {
+      setPressedNotes(prev => {
+        const next = new Set(prev);
+        next.delete(note);
+        return next;
+      });
+    }, 200);
+  }, []);
 
   return (
     <div className={classes}>
-      {map(props.notes, note => renderKeys(note, props))}
+      {map(props.notes, note => renderKeys(note, { ...props, pressedNotes, onPressKey }))}
     </div>
   );
 }

@@ -6,6 +6,8 @@ import { red } from "../../../common/consts/colors";
 import getChordDisplayName from "../../../common/utils/chords/getChordDisplayName";
 import flattenArray from "../../../common/utils/flattenArray";
 import pianoContainerNotesAdapter from "../../../common/utils/pianoContainerNotesAdapter";
+import usePianoSound from "../../../common/hooks/usePianoSound";
+import useGuitarSound from "../../../common/hooks/useGuitarSound";
 import FretBoard from "../../../components/FretBoard/FretBoard";
 import MdSubHeader from "../../../components/MdSubHeader/MdSubHeader";
 import PianoRollContainer from "../../../components/PianoRollContainer/PianoRollContainer";
@@ -83,10 +85,12 @@ const drawChordDiagram = (chord) => {
 
 export default function ChordGuitarDiagram({ chord }) {
     const { notes, rootNote, displayName } = chord;
-  
+
     const [showTone, setShowTone] = useState(!isServer() && !!window.TONE_AUDIO_CONTEXT);
     const [shouldAutoPlaySound, setShouldAutoPlaySound] = useState(false)
     const chordName = getChordDisplayName(chord);
+    const onPianoKeyClick = usePianoSound(rootNote);
+    const onGuitarNoteClick = useGuitarSound();
     const pianoNotes = pianoContainerNotesAdapter(notes, rootNote);
     const noteOptions = {
         [rootNote]: {
@@ -137,9 +141,9 @@ export default function ChordGuitarDiagram({ chord }) {
                 </MdSubHeader>
                 <PianoRollContainer
                     notes={pianoNotes}
-                    isPresentational
                     whiteList={chord.notes}
                     highlightedNotes={chord.notes}
+                    onKeyClick={onPianoKeyClick}
                 />
             </div>
             <div className="guitar-diagram-container">
@@ -158,11 +162,12 @@ export default function ChordGuitarDiagram({ chord }) {
                         whiteList={notes}
                         noteOptions={noteOptions}
                         tuning={["E", "A", "D", "G", "B", "E"]}
+                        onNoteClick={onGuitarNoteClick}
                     />
                 </div>
                 
                 <div className="fretboard-hint-container flex-centered">
-                    <sub>Tip: swipe to see more</sub>
+                    <sub>💡 Tap the notes to hear each note</sub>
                 </div>
             </div>
         </div>

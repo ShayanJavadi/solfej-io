@@ -3,6 +3,8 @@ import loadable from '@loadable/component';
 import React, { useState } from 'react';
 import { Note } from "@tonaljs/modules"
 import { red } from '../../../common/consts/colors';
+import usePianoSound from '../../../common/hooks/usePianoSound';
+import useGuitarSound from '../../../common/hooks/useGuitarSound';
 import pianoContainerNotesAdapter from '../../../common/utils/pianoContainerNotesAdapter';
 import FretBoard from '../../../components/FretBoard/FretBoard';
 import MdSubHeader from '../../../components/MdSubHeader/MdSubHeader';
@@ -19,6 +21,8 @@ export default function ScaleInstrumentDiagrams(props) {
     const [shouldAutoPlaySound, setShouldAutoPlaySound] = useState(false)
     const { scale } = props;
     const { displayName, notes, rootNote, intervals } = scale;
+    const onPianoKeyClick = usePianoSound(rootNote);
+    const onGuitarNoteClick = useGuitarSound();
     const pianoNotes = pianoContainerNotesAdapter(notes, rootNote);
     const noteOptions = {
         [rootNote]: {
@@ -74,20 +78,20 @@ export default function ScaleInstrumentDiagrams(props) {
 
                 <PianoRollContainer
                     notes={pianoNotes}
-                    isPresentational
                     whiteList={notes}
                     highlightedNotes={notes}
                     noteOptions={noteOptions}
+                    onKeyClick={onPianoKeyClick}
                 />
 
                 <h3 className="sub-sub-header">Intervals:</h3>
 
                 <PianoRollContainer
                     notes={pianoNotes}
-                    isPresentational
                     whiteList={notes}
                     highlightedNotes={notes}
                     noteOptions={intervalsViewNoteOptions}
+                    onKeyClick={onPianoKeyClick}
                 />
             </div>
             <MdSubHeader
@@ -97,11 +101,12 @@ export default function ScaleInstrumentDiagrams(props) {
             </MdSubHeader>
             <h3 className="sub-sub-header">Notes:</h3>
             <div className="guitar-fretboard-diagram-container">
-                <FretBoard 
+                <FretBoard
                     notes={notes}
                     whiteList={notes}
                     noteOptions={noteOptions}
                     tuning={["E", "A", "D", "G", "B", "E"]}
+                    onNoteClick={onGuitarNoteClick}
                 />
             </div>
             <h3 className="sub-sub-header">Intervals:</h3>
@@ -111,11 +116,12 @@ export default function ScaleInstrumentDiagrams(props) {
                     whiteList={notes}
                     noteOptions={intervalsViewNoteOptions}
                     tuning={["E", "A", "D", "G", "B", "E"]}
+                    onNoteClick={onGuitarNoteClick}
                 />
             </div>
            
             <div className="fretboard-hint-container flex-centered">
-                <sub>Tip: swipe to see more</sub>
+                <sub>💡 Tap the notes to hear each note</sub>
             </div>
 
         </div>

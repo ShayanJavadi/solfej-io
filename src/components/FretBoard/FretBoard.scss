@@ -21,7 +21,7 @@
                 height: 100%;
 
                 .fret-dot {
-                
+
                     display: none;
                     -webkit-box-pack: center;
                     justify-content: center;
@@ -34,9 +34,17 @@
                     font-weight: bold;
                     font-size: 14px;
                     border-radius: 50%;
+                    opacity: 1;
+                    transition: opacity 0.15s ease-out, transform 0.15s ease-out;
 
                     &.active {
                         display: flex;
+                    }
+
+                    &.pressed {
+                        opacity: 0.5;
+                        transform: scale(1.25);
+                        transition: opacity 0.02s ease-in, transform 0.02s ease-in;
                     }
                 }
             }   

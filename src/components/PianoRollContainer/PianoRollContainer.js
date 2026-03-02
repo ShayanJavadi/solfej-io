@@ -9,6 +9,9 @@ export default function PianoRollContainer(props) {
       <PianoRoll
         {...props}
       />
+      {props.onKeyClick && (
+        <sub className="piano-roll-hint">💡 Tap the keys to hear each note</sub>
+      )}
     </div>
   );
 }

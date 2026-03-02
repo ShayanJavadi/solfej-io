@@ -1,10 +1,15 @@
 .piano-roll-container {
     display: flex;
+    flex-direction: column;
     height: 13rem;
     padding: 1rem 0;
     max-width: 475px;
     .piano-roll {
       display: flex;
       flex: 1;
+    }
+    .piano-roll-hint {
+      color: #999;
+      margin-top: 1rem;
     }
 }
