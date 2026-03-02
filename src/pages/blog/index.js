@@ -18,6 +18,10 @@ import BlogPostHeroSix from '../../components/blogImages/the-4-best-ear-training
 import BlogPostHeroSeven from '../../components/blogImages/cadences/Thumbnail';
 import BlogPostHeroEight from '../../components/blogImages/how-to-find-new-music/Thumbnail';
 import BlogPostHeroNine from '../../components/blogImages/how-to-learn-music-theory/Thumbnail';
+import BlogPostHeroSunoChords from '../../components/blogImages/suno-ai-chord-progressions/Thumbnail';
+import BlogPostHeroSunoPrompts from '../../components/blogImages/suno-ai-prompt-guide/Thumbnail';
+import BlogPostHeroSunoVsUdio from '../../components/blogImages/suno-vs-udio/Thumbnail';
+import BlogPostHeroSunoTips from '../../components/blogImages/suno-ai-tips/Thumbnail';
 
 import CenteredGraySection from '../../components/CenteredGraySection/index'
 import BlogPostsContainer from "../../components/BlogPostsContainer";
@@ -35,6 +39,10 @@ import { blogData as blogData6 } from "./the-4-best-ear-training-apps-for-2019";
 import { blogData as blogData7 } from "./cadences";
 import { blogData as blogData8 } from "./how-to-find-new-music";
 import { blogData as blogData9 } from "./how-to-learn-music-theory";
+import { blogData as blogData10 } from "./suno-ai-chord-progressions";
+import { blogData as blogData11 } from "./suno-ai-prompt-guide";
+import { blogData as blogData12 } from "./suno-vs-udio";
+import { blogData as blogData13 } from "./suno-ai-tips";
 
 export default function tos() {
     return (
@@ -45,6 +53,26 @@ export default function tos() {
 
             <Section title="Featured Stories" h1Header>
                 <BlogPostsContainer>
+                    <BlogPostThumbnail
+                        {...blogData10}
+                        authorImage={<ShayanJavadi />}
+                        image={<BlogPostHeroSunoChords />}
+                    />
+                    <BlogPostThumbnail
+                        {...blogData11}
+                        authorImage={<ShayanJavadi />}
+                        image={<BlogPostHeroSunoPrompts />}
+                    />
+                    <BlogPostThumbnail
+                        {...blogData12}
+                        authorImage={<ShayanJavadi />}
+                        image={<BlogPostHeroSunoVsUdio />}
+                    />
+                    <BlogPostThumbnail
+                        {...blogData13}
+                        authorImage={<ShayanJavadi />}
+                        image={<BlogPostHeroSunoTips />}
+                    />
                     <BlogPostThumbnail
                         {...blogData9}
                         authorImage={<ShayanJavadi />}
