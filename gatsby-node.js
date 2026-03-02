@@ -9,6 +9,7 @@ const chords = require("./chords");
 const scales = require("./scales")
 const path = require(`path`)
 const { isEmpty } = require('lodash')
+const { LOCALES, SUNO_SLUGS, getTranslation } = require('./src/i18n')
 
 exports.onCreateWebpackConfig = ({ actions, loaders }) => {
     actions.setWebpackConfig({
@@ -58,5 +59,21 @@ exports.createPages = async ({ actions }) => {
         path: "/scales/all",
         component: allScalesPage,
         context: { scales: emptyScales },
+    })
+
+    // Create translated Suno blog pages
+    const sunoBlogTemplate = path.resolve(`src/templates/SunoBlogPost.js`)
+
+    Object.keys(LOCALES).forEach(locale => {
+        SUNO_SLUGS.forEach(slug => {
+            const translation = getTranslation(locale, slug)
+            if (translation) {
+                createPage({
+                    path: `/${locale}/blog/${slug}`,
+                    component: sunoBlogTemplate,
+                    context: { locale, slug, translation },
+                })
+            }
+        })
     })
 }
