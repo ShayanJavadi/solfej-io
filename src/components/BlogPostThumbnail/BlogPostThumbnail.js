@@ -21,7 +21,7 @@ export default function BlogPostThumbnail(props) {
                     <p>{description}</p>
                 </div>
             </a> :
-            <Link to={`blog/${route}`}>
+            <Link to={`/blog/${route}`}>
                 <div className="image-container">
                     {props.image}
                 </div>
