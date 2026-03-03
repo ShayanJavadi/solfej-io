@@ -1,4 +1,287 @@
 module.exports = {
+  ui: {
+    home: "Home",
+    blog: "Blog",
+    chordSearch: "Akkoorden zoeken",
+    scaleSearch: "Toonladders zoeken",
+    contact: "Contact",
+    getTheApp: "DOWNLOAD DE APP",
+    allChords: "Alle akkoorden",
+    allScales: "Alle toonladders",
+    searchChordPlaceholder: "Typ hier om akkoorden te zoeken...",
+    searchScalePlaceholder: "Typ hier om toonladders te zoeken...",
+    chordSuffix: "akkoord",
+    chordSeoTitle: "%s - Noten, intervallen en vingerzettingen | Solfej",
+    chordSeoDescription: "Leer het %s-akkoord. Vind vingerzettingsdiagrammen voor piano en gitaar, noten, intervallen en meer.",
+    lookingForScale: "Op zoek naar een toonladder?",
+    tryScaleSearch: "Probeer: Toonladders zoeken",
+    chordTip: "💡Tip: Je kunt een akkoord vinden door de noten gescheiden door komma's in te typen (bijv. C, E, G)",
+    notes: "Noten",
+    whatNotesInChord: "Welke noten zitten in het %s-akkoord?",
+    intervals: "Intervallen",
+    whatIntervalsInChord: "Welke intervallen zitten in het %s-akkoord?",
+    inversions: "Omkeringen",
+    whatInversionsOfChord: "Wat zijn de omkeringen van het %s-akkoord?",
+    scales: "Toonladders",
+    whatScalesFitChord: "In welke toonladders past het %s-akkoord?",
+    ordinals: ["1e", "2e", "3e", "4e", "5e", "6e", "7e", "8e"],
+    scaleSuffix: "toonladder",
+    scaleSeoTitle: "%s - Noten, intervallen en formule | Solfej",
+    scaleSeoDescription: "Leer de %s-toonladder. Vind diagrammen voor gitaar en piano, noten, intervallen en meer.",
+    lookingForChord: "Op zoek naar een akkoord?",
+    tryChordSearch: "Probeer: Akkoorden zoeken",
+    scaleTip: "💡Tip: Je kunt een toonladder vinden door de noten gescheiden door komma's in te typen (bijv. C, E, G)",
+    formula: "Formule",
+    whatFormulaOfScale: "Wat is de formule van de %s-toonladder?",
+    whatNotesInScale: "Welke noten zitten in de %s-toonladder?",
+    whatIntervalsInScale: "Welke intervallen zitten in de %s-toonladder?",
+    chords: "Akkoorden",
+    whatChordsInScale: "Welke (diatonische) akkoorden zitten in de %s-toonladder?",
+    chord: "akkoord",
+    getLatestStories: "Ontvang onze nieuwste verhalen",
+    joinNewsletter: "Schrijf je in voor de nieuwsbrief",
+    chordPageSubText: "Hieronder vindt u akkoorddiagrammen, pianovingerzettingen, gitaarvingerzettingen, noten, intervallen, toonladders en arpeggio's.",
+    scalePageSubText: "Hieronder vindt u gitaar- en pianotoonladderdiagrammen, noten, intervallen, formules en akkoorden",
+    audibleExample: "Luistervoorbeeld",
+    pianoFingering: "Pianovingerzetting",
+    guitarFingering: "Gitaarvingerzetting",
+    whatDoesChordSoundLike: "Hoe klinkt een %s-akkoord?",
+    howPlayChordPiano: "Hoe speel je een %s-akkoord op de piano?",
+    howPlayChordGuitar: "Hoe speel je een %s-akkoord op de gitaar?",
+    whatDoesScaleSoundLike: "Hoe klinkt de %s-toonladder?",
+    howPlayScalePiano: "Hoe speel je de %s-toonladder op de piano?",
+    howPlayScaleGuitar: "Hoe speel je de %s-toonladder op de gitaar?",
+    tapNotesHint: "💡 Tik op de noten om elke noot te horen",
+    notesLabel: "Noten:",
+    intervalsLabel: "Intervallen:",
+    inversionLabels: ["1e omkering", "2e omkering", "3e omkering", "4e omkering", "5e omkering", "6e omkering", "7e omkering", "8e omkering"],
+    aliases: "Aliassen: ",
+    chordWord: "akkoord",
+    scaleWord: "toonladder",
+    chordNames: {
+      "major": "majeur",
+      "minor": "mineur",
+      "augmented": "overmatig",
+      "augmented 7th": "overmatig septiem",
+      "diminished": "verminderd",
+      "diminished 7th": "verminderd septiem",
+      "dominant #9": "dominant #9",
+      "dominant 13th": "dominant dertiende",
+      "dominant 7th": "dominant septiem",
+      "dominant 9th": "dominant none",
+      "dominant b9": "dominant b9",
+      "fifth": "kwint",
+      "half-diminished": "halfverminderd",
+      "lydian": "lydisch",
+      "lydian dominant 7th": "lydisch dominant septiem",
+      "major #11 (lydian)": "majeur #11 (lydisch)",
+      "major 13th": "majeur dertiende",
+      "major 7th": "majeur septiem",
+      "major 7th b6": "majeur septiem b6",
+      "major 9th": "majeur none",
+      "minor 11th": "mineur elfde",
+      "minor 13th": "mineur dertiende",
+      "minor 6th": "mineur sext",
+      "minor 7th": "mineur septiem",
+      "minor 9th": "mineur none",
+      "minor/major 7th": "mineur/majeur septiem",
+      "power chord": "powerakkoord",
+      "quartal": "kwartakkoord",
+      "suspended 2nd": "sus seconde",
+      "suspended 4th": "sus kwart",
+      "suspended 4th 7th": "sus kwart septiem",
+      "suspended 4th b9": "sus kwart b9",
+      "altered": "alteratie",
+      "11th": "elfde",
+      "6th": "sext",
+      "6th/9th": "sext/none",
+    },
+    scaleNames: {
+      "aeolian": "aeolisch",
+      "altered": "alteratie",
+      "arabian": "Arabisch",
+      "augmented": "overmatig",
+      "augmented heptatonic": "overmatig heptatonisch",
+      "balinese": "Balinees",
+      "bebop": "bebop",
+      "bebop locrian": "bebop locrisch",
+      "bebop major": "bebop majeur",
+      "bebop minor": "bebop mineur",
+      "blues": "blues",
+      "chinese": "Chinees",
+      "chromatic": "chromatisch",
+      "composite blues": "samengestelde blues",
+      "diminished": "verminderd",
+      "diminished whole tone": "verminderd heeltoon",
+      "dominant": "dominant",
+      "dominant diminished": "dominant verminderd",
+      "dorian": "dorisch",
+      "dorian #4": "dorisch #4",
+      "dorian b2": "dorisch b2",
+      "double harmonic lydian": "dubbel harmonisch lydisch",
+      "double harmonic major": "dubbel harmonisch majeur",
+      "egyptian": "Egyptisch",
+      "enigmatic": "enigmatisch",
+      "flamenco": "flamenco",
+      "flat six pentatonic": "pentatonisch verlaagde sext",
+      "flat three pentatonic": "pentatonisch verlaagde terts",
+      "gypsy": "zigeuner",
+      "half-diminished": "halfverminderd",
+      "half-whole diminished": "halve-hele toon verminderd",
+      "harmonic major": "harmonisch majeur",
+      "harmonic minor": "harmonisch mineur",
+      "hindu": "hindoe",
+      "hirajoshi": "hirajoshi",
+      "hungarian major": "Hongaars majeur",
+      "hungarian minor": "Hongaars mineur",
+      "ichikosucho": "ichikosucho",
+      "in-sen": "in-sen",
+      "indian": "Indisch",
+      "ionian": "ionisch",
+      "ionian #5": "ionisch #5",
+      "ionian augmented": "ionisch overmatig",
+      "ionian pentatonic": "ionisch pentatonisch",
+      "iwato": "iwato",
+      "kafi raga": "raga kafi",
+      "kumoi": "kumoi",
+      "kumoijoshi": "kumoijoshi",
+      "leading whole tone": "leidtoon heeltoon",
+      "locrian": "locrisch",
+      "locrian #2": "locrisch #2",
+      "locrian 6": "locrisch 6",
+      "locrian major": "locrisch majeur",
+      "locrian natural 6": "locrisch natuurlijk 6",
+      "locrian pentatonic": "locrisch pentatonisch",
+      "locrian sharp 6": "locrisch verhoogd 6",
+      "lydian": "lydisch",
+      "lydian #5P pentatonic": "lydisch #5P pentatonisch",
+      "lydian #9": "lydisch #9",
+      "lydian augmented": "lydisch overmatig",
+      "lydian b7": "lydisch b7",
+      "lydian diminished": "lydisch verminderd",
+      "lydian dominant": "lydisch dominant",
+      "lydian dominant pentatonic": "lydisch dominant pentatonisch",
+      "lydian minor": "lydisch mineur",
+      "lydian pentatonic": "lydisch pentatonisch",
+      "major": "majeur",
+      "major #5": "majeur #5",
+      "major augmented": "majeur overmatig",
+      "major blues": "majeur blues",
+      "major pentatonic": "majeur pentatonisch",
+      "malkos raga": "raga malkos",
+      "melodic minor": "melodisch mineur",
+      "melodic minor fifth mode": "melodisch mineur vijfde modus",
+      "melodic minor second mode": "melodisch mineur tweede modus",
+      "minor": "mineur",
+      "minor #7M pentatonic": "mineur #7M pentatonisch",
+      "minor bebop": "mineur bebop",
+      "minor blues": "mineur blues",
+      "minor hexatonic": "mineur hexatonisch",
+      "minor pentatonic": "mineur pentatonisch",
+      "minor seven flat five pentatonic": "mineur septiem verlaagde kwint pentatonisch",
+      "minor six diminished": "mineur sext verminderd",
+      "minor six pentatonic": "mineur sext pentatonisch",
+      "mixolydian": "mixolydisch",
+      "mixolydian b6": "mixolydisch b6",
+      "mixolydian pentatonic": "mixolydisch pentatonisch",
+      "mystery #1": "mysterie #1",
+      "neopolitan major": "Napolitaans majeur",
+      "neopolitan major pentatonic": "Napolitaans majeur pentatonisch",
+      "oriental": "ori\u00ebntaals",
+      "overtone": "boventoon",
+      "pelog": "pelog",
+      "pentatonic": "pentatonisch",
+      "persian": "Perzisch",
+      "phrygian": "frygisch",
+      "phrygian #6": "frygisch #6",
+      "phrygian dominant": "frygisch dominant",
+      "phrygian major": "frygisch majeur",
+      "piongio": "piongio",
+      "pomeroy": "pomeroy",
+      "prometheus": "prometheus",
+      "prometheus neopolitan": "prometheus Napolitaans",
+      "purvi raga": "raga purvi",
+      "ritusen": "ritusen",
+      "romanian minor": "Roemeens mineur",
+      "scriabin": "Scriabin",
+      "six tone symmetric": "zestoons symmetrisch",
+      "spanish": "Spaans",
+      "spanish heptatonic": "Spaans heptatonisch",
+      "super locrian": "super locrisch",
+      "super locrian pentatonic": "super locrisch pentatonisch",
+      "superlocrian bb7": "super locrisch bb7",
+      "todi raga": "raga todi",
+      "ultralocrian": "ultralocrisch",
+      "vietnamese 1": "Vietnamees 1",
+      "vietnamese 2": "Vietnamees 2",
+      "whole tone": "heeltoon",
+      "whole tone pentatonic": "heeltoon pentatonisch",
+      "whole-half diminished": "hele-halve toon verminderd",
+    },
+  },
+
+  homepage: {
+    heroTitle: "Word een betere muzikant",
+    heroDescription: "Solfej is de beste app voor gehoortraining en muziektheorie. Leer muziektheorie en train je gehoor met vertrouwen.",
+    seoTitle: "Solfej - Muziektheorie en gehoortraining",
+    masterTitle: "Beheers muziektheorie, gehoortraining en ritme",
+    masterDesc: "Praktische lespaden om je muzikale doelen te bereiken. Geen Wikipedia/YouTube-konijnenholen meer.",
+    interactiveTitle: "Interactieve oefeningen",
+    interactiveDesc: "Wil je intervallen herkennen? Polyritmes leren spelen? Weten welke noot een grote septiem boven een andere ligt?",
+    simpleTitle: "Eenvoudige taal",
+    simpleDesc: "Moe van droge muziektheorielessen? De lessen van Solfej zijn gemaakt voor mensen.",
+    featuredStories: "Uitgelichte artikelen",
+  },
+
+  chordSearchPage: {
+    heroTitle: "🔍 Akkoorden zoeken 🎹",
+    heroDescription: "Wil je meer weten over een akkoord? Akkoorden zoeken toont je hoorbare voorbeelden, noten, intervallen, gitaar- en pianovingerzettingen voor elk akkoord. Typ gewoon een akkoordnaam om te beginnen.",
+    seoTitle: "Akkoorden zoeken - Piano en gitaar | Solfej",
+    masterTitle: "Beheers alle denkbare akkoorden",
+    masterDesc: "Zoek door duizenden akkoorden. Leer de vingerzettingen (gitaar en piano), noten, intervallen en aliassen van elk akkoord.",
+    hearTitle: "Luister naar voorbeelden van elk akkoord",
+    hearDesc: "Hoor hoe elk akkoord klinkt via interactieve voorbeelden",
+    pianoTitle: "Piano-akkoorddiagrammen",
+    pianoDesc: "Leer elk akkoord op de piano te spelen met eenvoudige vingerzettingsdiagrammen.",
+    guitarTitle: "Gitaar-akkoorddiagrammen",
+    guitarDesc: "Leer elk akkoord op de gitaar te spelen met eenvoudige vingerzettingsdiagrammen.",
+    moreTitle: "Noten, intervallen en meer!",
+    moreDesc: "Duik diep in de bouwstenen van elk akkoord. Leer noten, intervallen, toonladders en meer.",
+  },
+
+  scaleSearchPage: {
+    heroTitle: "🔍 Toonladders zoeken 🎼",
+    heroDescription: "Wil je meer weten over een toonladder? Toonladders zoeken toont je hoorbare voorbeelden, noten, intervallen, akkoorden, formule en gitaar-/pianovingerzettingen. Typ gewoon een toonladdernaam of noten om te beginnen.",
+    seoTitle: "Toonladders zoeken - Piano en gitaar | Solfej",
+    masterTitle: "Beheers alle denkbare toonladders",
+    masterDesc: "Zoek door duizenden toonladders. Leer de vingerzettingen (gitaar en piano), noten, intervallen, formule en akkoorden van elke toonladder.",
+    hearTitle: "Luister naar voorbeelden van elke toonladder",
+    hearDesc: "Hoor hoe elke toonladder klinkt via interactieve voorbeelden",
+    guitarTitle: "Gitaar-toonladderdiagrammen",
+    guitarDesc: "Leer elke toonladder op de gitaar te spelen met eenvoudige vingerzettingsdiagrammen.",
+    pianoTitle: "Piano-toonladdervingerzettingen",
+    pianoDesc: "Leer elke toonladder op de piano te spelen met eenvoudige vingerzettingsdiagrammen.",
+    moreTitle: "Noten, intervallen en meer!",
+    moreDesc: "Duik diep in de bouwstenen van elke toonladder. Leer noten, intervallen, akkoorden en meer.",
+  },
+
+  allChordsPage: {
+    title: "Alle akkoorden",
+    seoTitle: "Alle denkbare akkoorden | Solfej",
+    description: "Pagina met links naar elk akkoord in het universum",
+  },
+
+  allScalesPage: {
+    title: "Toonladder-overzicht",
+    seoTitle: "Alle denkbare toonladders | Solfej",
+    description: "Pagina met links naar elke toonladder in het universum",
+  },
+
+  blogIndex: {
+    featuredStories: "Uitgelichte artikelen",
+    seoTitle: "Blog | Solfej",
+  },
+
   "suno-ai-chord-progressions": {
     title: "Suno AI Akkoordprogressies: Hoe Je Echt Kunt Bepalen Welke Akkoorden Suno Speelt",
     seoTitle: "Suno AI Akkoordprogressies: Hoe Je Akkoorden Specificeert in Suno (2026 Gids) | Solfej",
@@ -413,5 +696,331 @@ module.exports = {
     <li><a href="/nl/blog/suno-ai-prompt-guide">Suno AI Promptgids: De Muziektheorie Cheat Sheet voor Betere Nummers</a></li>
     <li><a href="/nl/blog/suno-vs-udio">Suno vs Udio: Welke AI-muziekgenerator Is Beter in 2026?</a></li>
 </ul>`,
+  },
+  "how-to-learn-music-theory": {
+    title: "Hoe Leer Je Muziektheorie",
+    seoTitle: "Hoe Leer Je Muziektheorie. Veelgestelde vragen beantwoord.",
+    description: "Hoe Leer Je Muziektheorie",
+    timeToRead: "10 min",
+    body: `<p>Muziektheorie is een woord dat voor veel mensen een hoop bagage met zich meebrengt. Muziektheorie kan een eng onderwerp zijn, of je nu student bent op een muziekschool of gewoon terloops muziektheorie leert.</p>
+<p>Als autodidactische gitarist met 6 jaar ervaring heb ik mijn deel aan bloed, zweet en tranen in muziektheorie gestoken. Ik heb talloze avonden met mijn hoofd tegen de muur zitten bonken in een poging om modi, de kwintencirkel en eigenlijk elk ander bouwblok van muziektheorie te begrijpen.</p>
+<p>Het kwam niet makkelijk tot me. Maar het hoeft niet zo te zijn. Sterker nog, muziektheorie leren kan best bevredigend zijn! Het meeste van de negatieve houding ten opzichte van muziektheorie lijkt voort te komen uit frustratie met de academische setting waarin het wordt onderwezen, of het gebrek aan duidelijke leermiddelen.</p>
+<p>Dat gezegd hebbende, ongeacht je ervaring met muziektheorie, hier is een lijst met richtlijnen om je pad naar muziektheoretische kennis te verlichten.</p>
+<h2>Hoe begin ik met het leren van muziektheorie?</h2>
+<p>Vanaf het begin! Het klinkt grappig, maar een fundament in de bouwstenen van muziektheorie is de belangrijkste factor om meer geavanceerde onderwerpen te leren.</p>
+<p>Begin met de noten die we tot onze beschikking hebben, en werk je omhoog naar intervallen, akkoorden, melodie, harmonie, ritme, enzovoort.</p>
+<p>Zodra je een goed idee hebt van de basisprincipes, kun je van koers veranderen en beginnen te leren wat voor jou praktisch is. Wil je in een jazzsetting spelen? Begin met het leren van uitgebreide akkoorden en jazzcadensen. Wil je rocken met wat powerakkoorden? Begin met het transcriberen van de grote rocknummers en analyseer hun akkoordprogressies.</p>
+<p>Wat je wilt vermijden is het overslaan van de basisprincipes. Ik kan niet genoeg benadrukken hoe belangrijk het is om te weten waarom en hoe de basale atomen van muziektheorie werken.</p>
+<h2>Hoe lang duurt het om muziektheorie te leren?</h2>
+<p>Je zult nooit "klaar" zijn met het leren van muziektheorie. Er zullen altijd nieuwe dingen te leren zijn. Dat gezegd hebbende, als je echt de tijd neemt om de basisprincipes van muziektheorie te leren, kun je ze gemakkelijk binnen enkele weken gaan toepassen!</p>
+<p>In dit geval is oefening de sleutel. Volgens mensen die veel slimmer zijn dan ik, heb je ongeveer 60 herhalingen van een taak nodig voordat het intuïtie wordt. Zorg er dus voor dat je veel oefentijd besteedt aan muziektheorieconcepten totdat je ze hebt verinnerlijkt.</p>
+<p>Het beste wat je voor je leerproces kunt doen is jezelf onderdompelen in muziektheorie. Naast het direct leren van de theorie, raad ik aan om muziektheorie YouTube-kanalen op te zoeken (Adam Neely, Jens Larsen, 12 tone, etc.), en natuurlijk de theorie die je leert toe te passen. Dit kan zo simpel zijn als het maken van een kleine melodie van 3-4 noten met een nieuw concept dat je hebt geleerd.</p>
+<h2>Is muziektheorie noodzakelijk voor gitaar? Is muziektheorie noodzakelijk om piano te spelen? Kan ik letterlijk geen muziek maken zonder de theorie?</h2>
+<p>Nee!</p>
+<p>Muziektheorie is niet noodzakelijk om welk instrument dan ook te bespelen. Er zijn geweldige artiesten die weinig of geen muziektheorie kennen!</p>
+<p>Helpt het? Absoluut. Muziektheorie kennen kan wonderen doen voor je spel. Het maakt het navigeren op je instrument veel makkelijker en helpt je om je ideeën moeiteloos van je hoofd naar je instrument te vertalen.</p>
+<p>Je instrument geeft er echter niets om of je theorie kent of niet. En dat is het mooie ervan. Zelfs als je theorie leert, zul je onvermijdelijk iets spelen dat je niet kunt analyseren. En dat is prima! Het is belangrijker dat de muziek die je speelt goed klinkt in je oren dan of het al dan niet de theorie volgt.</p>
+<h2>Kun je muziektheorie op je eigen leren? Hoe leer ik mezelf muziektheorie?</h2>
+<p>Dat kan absoluut! Er is een overvloed aan leermiddelen beschikbaar, zowel online als offline, om muziektheorie te leren.</p>
+<p>In het tijdperk van YouTube is er niet veel meer dat je niet op eigen houtje kunt leren. Het wordt wel moeilijk om jezelf verantwoordelijk te houden. Maar als je gemotiveerd bent en doorzet, is er niets dat je ervan weerhoudt om muziektheorie onder de knie te krijgen.</p>
+<p>Dat gezegd hebbende, een muziektheorieleraar of zelfs naar een muziekschool gaan kan ook een grote impact hebben op je leerproces.</p>
+<p>Ik raad de <a href="https://www.youtube.com/watch?v=rgaTLrZGlk0">volgende video van Andrew Huang</a> aan om te beginnen met muziektheorie.</p>
+<h2>Heb je muziektheorie nodig om muziek te maken? Heb je muziektheorie nodig om muziek te produceren?</h2>
+<p>Dat heb je niet! Er zijn zoveel muzikanten en producers die geweldige muziek maken en produceren. Je vingers, instrumenten en vooral je computer geven er niets om of je muziektheorie kent en zullen hoe dan ook geluid produceren.</p>
+<p>Muziektheorie zal je vooral helpen als je een producer bent. Het kan het communiceren van ideeën veel makkelijker maken omdat je een gemeenschappelijke taal hebt met andere muzikanten.</p>
+<h2>Beperkt muziektheorie creativiteit? Verlies ik al mijn gevoel?</h2>
+<p>Laten we de olifant in de kamer meteen aanpakken. Muziektheorie is precies dat, een theorie. Het is makkelijk om te geloven dat muziektheorie je creativiteit zal schaden. Het is tenslotte een set "regels" en van nature houden we niet van regels en beperkingen.</p>
+<p>Dat gezegd hebbende kan het contraproductief zijn om muziektheorie als een set "regels" te zien. Het is veel productiever om muziektheorie te zien als een gemeenschappelijke taal om ideeën te communiceren in plaats van regels.</p>
+<p>Ze zeggen dat regels gemaakt zijn om gebroken te worden, en dat geldt hier ook. Ik zou zelfs zo ver gaan om te zeggen dat je muziektheorieregels MOET breken. Als je erover nadenkt, is wat we vandaag muziektheorie noemen het resultaat van onze voorouders die hun regels voor muziektheorie braken en met nieuwe ideeën en motieven kwamen!</p>
+<p>Ik raad ten zeerste aan om te experimenteren met muziektheorie. Stel jezelf zoveel mogelijk "waarom?"- en "wat als?"-vragen en wees niet bang om de regels te breken.</p>
+<h2>Geldt muziektheorie voor alle instrumenten?</h2>
+<p>Ja! Dat is het mooie van theorie. Je mechanische vaardigheden zijn misschien gebonden aan je instrument, maar je kennis van muziektheorie is universeel!</p>
+<p>Persoonlijk heb ik nooit piano geoefend, maar ik kan mijn weg vinden op het instrument met behulp van theorie. Ik weet bijvoorbeeld dat een C-akkoord bestaat uit de grondtoon, een grote terts en een reine kwint, dus als ik weet waar de C-noot is, kan ik gemakkelijk een C-akkoord vormen.</p>`,
+  },
+  "7-reasons-why-you-should-learn-music-theory": {
+    title: "7 Redenen Waarom Je Muziektheorie Zou Moeten Leren",
+    seoTitle: "Heb je muziektheorie nodig? Belemmert muziektheorie mijn creativiteit? Ontdek 7 redenen waarom je theorie nodig hebt.",
+    description: "Belemmert muziektheorie je creativiteit?",
+    timeToRead: "6 min",
+    body: `<p>Geloof me, ik snap het. Ik dacht niet dat het kunnen bouwen en benoemen van complexe akkoorden, het vinden van relaties tussen toonladders en akkoorden, en het werken in vreemde maatsoorten me als muzikant zou helpen.</p>
+<p>Maar dankzij muziektheorie heb ik mijn creatieve vaardigheden nog nooit zo onder controle gevoeld. Improvisatie voelt grenzeloos. Songwriting-mogelijkheden zijn eindeloos. Loslaten heeft zich nog nooit zo comfortabel gevoeld. Ik heb zelfs een <a href="https://www.solfej.io/">muziektheorie-app</a> gemaakt!</p>
+<p>Ik ben bang dat ik in het verleden de fout heb gemaakt om muziektheorie te onderschatten, maar daardoor zal ik mijn medemuzikanten niet dezelfde fout laten maken. Laat me je helpen om theorie te zien als de ultieme hack voor totale creatieve controle.</p>
+<p>Dit is waarom:</p>
+<h2>1. Muziektheorie Maakt Je Een Betere Muzikant</h2>
+<p>Je kunt een goede muzikant zijn zonder muziektheorie, je kunt zelfs een geweldige zijn. Maar met muziektheorie begin je alle bewegende delen van muziek te begrijpen.</p>
+<p>Het begrijpen van de theoretische redenen waarom dingen samen goed klinken zal wonderen doen voor je spel. Zelfs met een klein beetje muziektheoretische kennis kun je je ideeën en gevoelens veel makkelijker uitdrukken.</p>
+<h2>2. Muziektheorie Helpt Je Communiceren Met Andere Muzikanten</h2>
+<p>Muziektheorie is de gemeenschappelijke taal tussen jou en iedereen die het kent. Stel je voor dat je de kleur rood aan een vriend moet uitleggen zonder het woord rood te gebruiken.</p>
+<p>Zodra je namen aan muzikale concepten koppelt en ze in groepen organiseert, kun je je muzikale ideeën met gemak overbrengen aan andere muzikanten. "Ga twee frets omhoog en speel dat raar klinkende akkoord nog eens" wordt "Speel het B verminderd akkoord nog eens".</p>
+<h2>3. Muziektheorie Ontwikkelt Je Gehoor</h2>
+<p>Muziektheorie helpt je de geluiden die je in je hoofd hoort te vertalen naar je instrument.</p>
+<p>Je oor wordt blootgesteld aan zoveel verschillende geluiden dat muziek snel een tweede natuur wordt door gedisciplineerde focus.</p>
+<p>Vroeger dan je denkt zoek je geen tabs meer op om een nummer te leren, maar kun je gewoon de melodie neuriën en het ter plekke spelen.</p>
+<h2>4. Muziektheorie Leert Je De Regels Zodat Je Ze Kunt Breken</h2>
+<p>Muziektheorie is precies dat, een theorie. Het is een set regels en classificaties. Muzikanten die muziektheorie leren zijn NIET verplicht zich te committeren aan een eed om nooit buiten de regels te treden.</p>
+<p>Sterker nog, zij zijn degenen die de regels het meest breken en het verst buiten de lijntjes kleuren. Hoe kun je tenslotte de regels breken als je niet weet wat de regels zijn?</p>
+<h2>5. Muziektheorie Verbetert Je Improvisatievaardigheden</h2>
+<p>Met je ontwikkelde gehoor en kennis van akkoorden en toonladders, kun je een academisch zelfvertrouwen betreden terwijl je improviseert.</p>
+<p>Je weet welke noten "goed" klinken over welke akkoorden, en welke reeks akkoorden de bepaalde emotie oproept die je zoekt.</p>
+<h2>6. Muziektheorie Helpt Je Navigeren Op Je Instrument</h2>
+<p>Het is makkelijk om in een trance te raken en je plek op je instrument kwijt te raken terwijl je op het podium speelt of zelfs thuis. Beginners weten precies waar ik het over heb.</p>
+<p>Als voorbeeld voor gitaristen: wat gebeurt er als je per ongeluk je handen verplaatst van je vertrouwde A mineur pentatonische box en niet weet hoe je dezelfde toonladder ergens anders kunt recreëren? Je speelt per ongeluk een Cb mineur pentatonische toonladder en dat klinkt behoorlijk slecht.</p>
+<p>Maar als je wist hoe je een toonladder of akkoord moest opbouwen, zou je overal op je instrument in toonsoort kunnen blijven.</p>
+<h2>7. Muziektheorie Geeft Je Meer Mogelijkheden Om Creatief Te Zijn</h2>
+<p>Het is makkelijk om verdwaald te raken in basale pentatonische vormen als je gitarist bent, maar het kennen van slechts een of twee toonladders en akkoorden op welk instrument dan ook wordt in een oogwenk saai.</p>
+<p>Tijdens het studeren van theorie word je blootgesteld aan zoveel muzikale mogelijkheden. Je weet niet eens waar je moet beginnen met kiezen wat je wilt spelen.</p>
+<h2>Conclusie</h2>
+<p>Het leren van muziektheorie zal je improvisatie niet belemmeren of je "gevoel" verminderen.</p>
+<p>In plaats daarvan biedt het grenzeloze manieren om je improvisatie- en "gevoel"-vaardigheden te oefenen met nieuwe akkoorden, nieuwe toonladders en nieuwe riffs.</p>
+<p>Als je klaar bent om in muziektheorie te duiken en je gehoor te trainen, <b><a href="https://shayanjavadi.typeform.com/to/wO59zz">meld je dan aan voor de Solfej-beta</a></b></p>`,
+  },
+  "dont-give-up-on-music-theory": {
+    title: "Is Muziektheorie Moeilijk?",
+    seoTitle: "Is het leren van muziektheorie de moeite waard? Waarom zou je de moeite nemen om muziektheorie te leren?",
+    description: "Waarom het leren van muziektheorie de moeite waard is",
+    timeToRead: "10 min",
+    body: `<p><i>Dit is een gastbijdrage van JP Hwang - JP is een onlangs bekeerde octrooiadvocaat die zijn mooie pakken en kantoor in Sydney, Australië heeft opgegeven voor vele korte broeken, een laptop en een koffer in Zuidoost-Azië. Hij noemt zichzelf een online 'maker' en hoopt dat op een dag ook zelf te geloven. Je kunt zijn blog vinden op <b><a href="https://medium.com/@_jphwang">Medium</a></b> of op Twitter <b><a href="https://twitter.com/_jphwang">@_jphwang</a></b>.</i></p>
+<h2>Is Muziektheorie Moeilijk?</h2>
+<p>Als je deze post leest, delen jij en ik waarschijnlijk minstens één significante leemte in onze kennisbasis. Er zijn enorm veel van ons die deze zelfde last van onwetendheid met ons meedragen. Het gaat over iets dat zo universeel is dat het niet zo moeilijk zou moeten zijn. En toch durf ik te wedden dat er veel meer onwetenden zijn dan kenners op dit gebied.</p>
+<p>Ernaar gevraagd worden kan ook een schijnbaar onredelijke hoeveelheid schaamte in ons oproepen. Vervolgvragen over of we geprobeerd hebben het te leren (of waarom we ermee gestopt zijn) kunnen interne onrust veroorzaken in vergelijkbare, zo niet grotere, doses.</p>
+<p>Hierin worden we gedwongen om onze geschiedenis onder ogen te zien van falen in iets dat een tweede natuur zou moeten zijn, gezien het feit dat we echt lijken te genieten van andere aspecten ervan. Het spelen ervan, ernaar luisteren, en het gepassioneerd volgen van vele makers van deze prachtige kunstvorm.</p>
+<p>"Het" is natuurlijk <b>muziektheorie</b>.</p>
+<h2>Muziektheorie lijkt moeilijk (voor mij)</h2>
+<p>Wanneer ik zeg dat ik onwetend ben in muziektheorie, meen ik dat echt. Ik heb helemaal geen domeinexpertise in muziektheorie, of zelfs maar in muziek. Maar net als de meesten van ons waardeer ik het zeer. Ik heb zelfs geprobeerd een instrument of twee te leren spelen (wie niet?!). Ik kwam niet ver, maar kon een paar nummers spelen hier en daar.</p>
+<p>Ik heb advies gekregen en gelezen over hoe je het beste gitaar of piano kunt leren spelen, maar niet veel mensen adviseerden me om muziektheorie te leren. De paar keer dat ik zulk advies wel tegenkwam, <b>vond ik het bijbehorende materiaal zo onvriendelijk en moeilijk dat het me in een staat van verbijstering bracht</b>. Zo erg zelfs dat ik bijna overtuigd was dat het ontworpen was door een gilde van muzikanten die nieuwe mensen uit hun vakgebied probeerden te weren.</p>
+<p>Dit alles wil zeggen dat muziektheorie en ik niet de beste vrienden zijn geweest; en het leek me nooit dat we meer zouden zijn dan bewust van elkaars bestaan. Ik denk dat het makkelijk is om gefrustreerd te raken als we geen zichtbare vooruitgang boeken bij het leren van wat dan ook, vooral als volwassenen.</p>
+<h2>Muziektheorie IS Moeilijk</h2>
+<p>Klinkt dit herkenbaar? Ik weet natuurlijk niet specifiek van jou, en zal niet zo aanmatigend zijn om aan te nemen dat je het net zo moeilijk hebt gevonden als ik. Dat zou veel aangenomen zijn. Maar mijn zoekopdrachten op internet suggereren dat het zeker heel gebruikelijk is om je zo te voelen. Een vluchtige blik op Reddit, Quora of een aantal andere forums levert uitspraken op als deze van mensen die hulp zoeken:</p>
+<ul>
+    <li>"Waarom is muziektheorie zo moeilijk te leren?"</li>
+    <li>"Ik heb 6 (zes) keer geprobeerd muziektheorie te leren en ben elke keer uit frustratie gestopt."</li>
+    <li>"Ik heb het gevoel dat mijn brein niet gemaakt is om muziektheorie te begrijpen."</li>
+    <li>"Ik ben 48. Muziektheorie pest me al sinds mijn zevende en is er nu met mijn verloofde en mijn spaargeld vandoor gegaan." (Oké, deze heb ik zelf verzonnen.)</li>
+</ul>
+<p>Sommige van deze citaten of vergelijkbare komen van muzikanten met uiteenlopende ervaringsniveaus, niet alleen beginners of niet-ingewijden zoals ikzelf.</p>
+<p>We vonden zelfs een proefschrift uit 2018, specifiek geschreven over het verbeteren van studentenprestaties in muziektheorielessen voor studenten in bachelor-muziekprogramma's, omdat te veel studenten het te moeilijk vonden. Echt waar.</p>
+<p>Het leren van muziektheorie is inderdaad moeilijk voor velen van ons. Maar je had mij niet nodig om je dat te vertellen. Dat wist je al.</p>
+<h2>Maar Het Hoeft Niet Zo Te Zijn</h2>
+<p>Wat we je echt wilden vertellen, en iets dat ook bevestigd wordt door de ervaringen van veel andere mensen, is dit: <b>het leren van muziektheorie is niet onmogelijk; verre van dat</b>.</p>
+<p>Veel van de bovenstaande vragen over de moeilijkheid van het leren van muziektheorie eindigen met antwoorden, of een goed einde. In sommige gevallen vertellen mensen over hun eigen ervaringen met worstelen met muziektheorie maar uiteindelijk slagen, en in andere gevallen worden mensen naar een reeks nuttige leermiddelen of tips geleid.</p>
+<p>Degenen die er doorheen zijn gekomen zijn ook gepassioneerd over de voordelen van het begrijpen van muziektheorie. Ze spreken lovend over de positieve impact die het heeft gehad op hun uitvoeringen, improvisatie, het leren van nieuwe stukken en het communiceren of samenwerken met anderen. Niet velen van hen zouden zeggen dat het de moeite niet waard was.</p>
+<p>In de meeste gevallen benadrukken de succesverhalen bij het effectief leren van muziektheorie het belang van het vinden van de juiste manieren om te leren die voor jou werken.</p>
+<h2>De Juiste Hulpmiddelen Om Muziektheorie Te Leren</h2>
+<p>Het wordt gezegd de definitie van waanzin te zijn om steeds exact hetzelfde te proberen en een ander resultaat te verwachten. Het leren van muziektheorie is niet anders. Het is goed gedocumenteerd dat mensen op verschillende manieren leren. Als een bepaalde methode van muziektheorie leren niet werkt voor iemand, heeft het weinig tot geen zin om dezelfde methode keer op keer te proberen.</p>
+<p>Door de juiste hulpmiddelen te vinden voor jou en je muzikale doelen, denken we dat de juiste resultaten waarschijnlijker zullen volgen.</p>
+<p>Hier bij Solfej pretenderen we niet het enige leermiddel voor muziektheorie te zijn voor iedereen. Dat zou geweldig zijn, maar onwaarschijnlijk. Iedereen is anders. Maar we denken wel dat we het juiste hulpmiddel kunnen zijn voor sommigen - hopelijk velen - van jullie. <a href="https://shayanjavadi.typeform.com/to/wO59zz"><b>Dus probeer ons uit!</b></a> En het is oké als we niet jouw ding zijn. Hopelijk helpt het uitproberen je om erachter te komen wat wel en niet werkt voor jou. Het is allemaal onderdeel van de reis.</p>
+<p>Het kan gedaan worden, het is gedaan door velen van ons, en vertrouw het proces door de juiste hulp te vinden.</p>
+<p><b>Geef muziektheorie niet op.</b></p>`,
+  },
+  "cadences": {
+    title: "De Ultieme Gids Voor Cadensen in Muziektheorie: De 4 Soorten Cadensen Met Voorbeelden",
+    seoTitle: "De Ultieme Gids Voor Cadensen in Muziektheorie: De 4 Soorten Cadensen Met Voorbeelden",
+    description: "Leer de 4 soorten muziektheoretische cadensen",
+    timeToRead: "8 min",
+    body: `<p>Een van de belangrijkste concepten in muziektheorie is het concept van cadensen:</p>
+<p>Zoek "Cadens" op in het woordenboek en je vindt: "een opeenvolging van noten of akkoorden die het slot van een muzikale frase vormen."</p>
+<p>Maar ik zie het zo: net als in een film, hoe wil de regisseur zijn film afsluiten? Wil hij een perfecte oplossing, of wil hij zijn film eindigen met een cliffhanger vol vragen?</p>
+<p>Zo zie ik cadensen: het zijn je uiteindelijke bedoelingen, je laatste zin in een muzikale passage, je afsluiting, je zwanenzang als je wilt.</p>
+<p>Laten we onze blik op cadensen beginnen met de meest voorkomende van het stel.</p>
+<h2>1. Authentieke Cadens (V naar I)</h2>
+<p>Een authentieke cadens is er een die van de V naar I gaat. Authentieke cadensen zijn de makkelijkste manier om een tonaliteit vast te stellen. Authentieke cadensen worden geclassificeerd als <b>perfect</b> of <b>imperfect</b>. Hier is hoe perfecte en imperfecte cadensen verschillen.</p>
+<h3>Perfecte Authentieke Cadens</h3>
+<p>De meest voorkomende cadens in alle muziek, de perfecte (authentieke) cadens klinkt het meest <b>"definitief"</b> van allemaal. Dit is het gelukkige einde waar je muzikale verhaal bevredigd en opgelost is; geen cliffhangers en alle vragen beantwoord.</p>
+<p>Deze cadens wordt bereikt wanneer je van het dominant V-akkoord teruggaat naar de tonica I in een majeurtoonsoort of de tonica mineur in een mineurtoonsoort. Het is ook belangrijk op te merken dat deze twee akkoorden meestal in grondligging staan.</p>
+<p>Door de overgang tussen deze twee akkoorden te gebruiken aan het einde van je compositie, of het einde van een sectie binnen je compositie, kun je je stuk volledig rustig, volledig thuis en op een volledig bevredigend punt eindigen.</p>
+<h3>Imperfecte Authentieke Cadens</h3>
+<p>Op het eerste gezicht is het moeilijk om het subtiele verschil tussen de perfecte en imperfecte cadensen te missen, aangezien ze allebei van het dominant V-akkoord naar het respectieve Tonica I-akkoord gaan. Het verschil zit in de onregelmatige stapeling van de akkoorden.</p>
+<p>Hiermee bedoel ik dat je <b>gebruikelijke V- en I-akkoord omgekeerd zijn</b>, zodat de tonicanoten in verschillende registers staan. Op deze manier eindig je eigenlijk op de hoogste stem van een akkoord in plaats van je gebruikelijke tonica.</p>
+<p>Met de omgekeerde akkoorden heeft de imperfecte cadens een minder rustgevende oplossing. In tegenstelling tot de volledige stop van een perfecte cadens, is er ruimte om door te gaan na een imperfecte cadens. Dit voorwaartse momentum kan verder worden uitgewerkt en zo lang doorgaan als de componist wil, en daarom wordt de imperfecte cadens geprezen als een meer "gedeeltelijke oplossing".</p>
+<h3>Voorbeelden van Authentieke Cadens:</h3>
+<p>1. Adele - Someone Like You (eerste twee akkoorden van het refrein)</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hLQl3WQQoQ0?start=72" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>2. Bruno Mars - When I Was Your Man (intro)</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ekzHIouo8Q4?start=11" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2>2. Plagale Cadens (IV naar I)</h2>
+<p>De plagale cadens lijkt erg op de perfecte authentieke cadens in zijn beweging en oplossing naar de tonica. Echter, de plagale cadens begint op een ander akkoord.</p>
+<p>De plagale cadens beweegt van het IV (subdominant) naar het I (tonica) akkoord in majeurtoonsoorten (iv-i in mineurtoonsoorten). Vanwege de start op het subdominant klinkt de plagale cadens als een zwakkere versie van de perfecte cadens.</p>
+<p>De plagale cadens kan ook verschillende omkeringen van deze doelakkoorden bevatten, waardoor de componist ruimte heeft voor experimenten.</p>
+<h3>Voorbeelden van Plagale Cadens:</h3>
+<p>1. Abba - Mamma Mia ("Just (IV) one (I)"...)</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/unfzfe8f9NI?start=41" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2>3. Halve Cadens (I naar V)</h2>
+<p>De halve cadens wijkt af van de vorige drie cadensen. Terwijl de vorige drie eindigen op het tonica-akkoord van een toonsoort, eindigt de halve cadens op de V. Omdat het V-akkoord de sterkste aantrekkingskracht heeft naar het I-akkoord, zal het eindigen van een muziekstuk op het V-akkoord klinken als een tijdelijke pauze.</p>
+<p>Terugkerend naar mijn verwijzing naar film eerder, de halve cadens is synoniem aan een regisseur die zijn film eindigt met een zeer grote cliffhanger.</p>
+<p>Een ander gaaf ding aan de halve cadens is zijn veelzijdigheid. Wat ik bedoel is dat je naar het V-akkoord kunt gaan vanuit elk ander akkoord in de toonsoort, zolang het maar eindigt op het dominant. (I-V, ii-V etc.)</p>
+<h3>Voorbeelden van Halve Cadens:</h3>
+<p>1. 3 Doors Down - Be Like That (intro)</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HHpMtWtgUvc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2>4. Bedrieglijke Cadens (V naar vi)</h2>
+<p>Vaak een onderbroken cadens genoemd, een bedrieglijke cadens is een cadens van V naar vi. De bedrieglijke cadens wordt als zwak beschouwd vanwege het opschortende gevoel dat het oproept.</p>
+<p>Zoals de naam al doet vermoeden is deze cadens "bedrieglijk" omdat de V mooi oplost naar de I zoals we geleerd hebben. De bedrieglijke cadens draait dat om en laat de luisteraar hangen op een vi-akkoord.</p>
+<p>1. The Beatles - P.S. I Love You ("P. S. I love you, you, you, you." gedeelte)</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MA5DkiVKSlM?start=22" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2>Samenvatting</h2>
+<p>Cadensen zijn een manier om je uiteindelijke gedachten in een muziekstuk af te sluiten. Hoe je je stuk wilt eindigen is aan jou, en elk einde produceert een specifiek effect.</p>
+<p>Wil je dat je publiek rustig en opgelost weggaat? Wil je dat je publiek lichtjes opgelost weggaat? Wil je dat je publiek opgetild weggaat? Of wil je dat je publiek met ambigue gedachten weggaat die hen nog lang aan je stuk doen denken?</p>
+<p>Speel met deze basale cadensen en ontdek welke je het meest bevallen.</p>`,
+  },
+  "how-to-find-new-music": {
+    title: "Hoe Vind Je Nieuwe Muziek",
+    seoTitle: "Hoe vind je nieuwe en oude muziek.",
+    description: "Hoe Vind Je Nieuwe Muziek",
+    timeToRead: "10 min",
+    body: `<p><i>Dit is een gastbijdrage van Henry Garrett - Henry is overdag (en soms 's nachts) software-engineer en medeoprichter van <b><a href="https://albumdaily.com/?ref=Solfej">Album Daily Nieuwsbrief</a></b>. Hij is altijd gefascineerd geweest door de kracht van muziek. Hij noemt zichzelf een muziek-'onderzoeker', iemand die constant op zoek is naar zijn volgende favoriete artiest/nummer. Je kunt hem vinden op Twitter <b><a href="https://twitter.com/garretthenrym">@garretthenrym</a></b> of via <b><a href="https://albumdaily.com/?ref=Solfej" rel="nofollow">Album Daily</a></b>.</i></p>
+<h2>Voorwoord</h2>
+<p>Ik ga een beeld voor je schetsen, en laten we eens kijken of je dit herkent. Je luistert naar een artiest die je leuk vindt op Spotify of Apple Music, laten we zeggen Jack Johnson. Na het luisteren wil je meer muziek vinden die je leuk vindt, dus je probeert hun op algoritmen gebaseerde aanbevelingen. Wat beveelt het aan? Meer Jack Johnson-albums, en één, of als je geluk hebt, 2-3 vergelijkbare artiesten. Geweldig! Ergens om te beginnen, dus je probeert er een paar uit.</p>
+<p>Nu krijg je elke keer dat je teruggaat naar die app dezelfde aanbevelingen. In hetzelfde genre. Van dezelfde artiesten. Keer. Op. Keer. Op. Keer.</p>
+<p>Is je dit ooit overkomen? Voor mij was het dagelijks. Ik raakte hier enorm gefrustreerd door. Alleen omdat ik één genre leuk vind, wil dat niet zeggen dat ik alleen naar dat genre wil luisteren. Dit bracht me ertoe andere wegen te bewandelen om muziek te vinden, en gaf de aftrap voor een levenslange hobby van muziekontdekking. Dus ik ga een paar manieren met je delen waarop ik muziek vind, in de hoop dat het je kan helpen nieuwe nummers te ontdekken.</p>
+<p>Voordat we beginnen, moet ik de twee soorten "nieuwe" muziek definiëren. Dit is belangrijk, want hoewel sommige ontdekkingstechnieken overlappen, zijn ze grotendeels verschillend. Deze categorieën zijn:</p>
+<ul>
+    <li>Nieuw uitgebrachte muziek</li>
+    <li>Muziek die nieuw is voor mij (of jou!)</li>
+</ul>
+<h2>Nieuw Uitgebrachte Muziek</h2>
+<p>Laten we beginnen met de makkelijke, nieuw uitgebrachte muziek. Het grootste deel van de muziekindustrie volgt een vrij strak releaseschema, met vrijdag als de aangewezen wekelijkse releasedag. Tot juli 2015 was dat dinsdag, maar de industriehoofden kwamen samen en beslisten dat "New Music Friday" veel beter klinkt (ik geef ze geen ongelijk).</p>
+<p>Dus hoe vind je albums die gepland staan voor release? Nou, je kunt je favoriete artiesten of platenlabels volgen op sociale media, want zij zullen zeker hun werk promoten. Ik vind het echter beter om te checken bij <a href="https://consequenceofsound.net/upcoming-releases/" rel="nofollow">Consequence of Sound</a> omdat zij de aankomende albumreleases uitstekend aggregeren. Deze link staat als bladwijzer in mijn browser en ik check het door de week om te zien waar ik me die vrijdag op kan verheugen.</p>
+<h2>Muziek Die Nieuw Is Voor Mij</h2>
+<p>Nu de moeilijke categorie, muziek die nieuw is voor mij (of jou!). Hier zijn enkele technieken die ik gebruik, of plekken waar ik kijk.</p>
+<h3>Reddit</h3>
+<p>Ik vind Reddit essentieel voor muziekontdekking, om de simpele reden dat het andere mensen zijn die muziek delen die zij leuk vinden. De kans is groot dat je niet elk nummer dat iemand aanbeveelt leuk vindt (ik zeker niet), maar hoe meer je verkent en leert, hoe meer je zult vinden. Hier zijn een paar van de beste subreddits om muziek te vinden:</p>
+<ul>
+    <li><a href="https://www.reddit.com/r/Music/">r/Music</a></li>
+    <li><a href="https://www.reddit.com/r/listentothis/">r/listentothis</a></li>
+    <li><a href="https://www.reddit.com/r/LetsTalkMusic/">r/LetsTalkMusic</a></li>
+</ul>
+<h3>Vraag Rond</h3>
+<p>Dit is waarschijnlijk de meest voor de hand liggende, maar onderbenutte methode naar mijn mening. Zonder twijfel is een deel van de beste muziek die ik ooit heb gevonden op aanbeveling van een vriend of familielid. Ik wist bijvoorbeeld nooit dat mijn schoonvader van muziek hield, totdat ik hem vroeg: "Waar luister je graag naar?". Hij deelde vervolgens een aantal van de minder bekende muzikale acts uit de jaren '60 en '70 die tot mijn favorieten aller tijden zijn gaan behoren. Zonder twijfel had ik die artiesten nooit gevonden zonder een gesprek met hem aan te knopen.</p>
+<h3>Muziekstreaming-Apps</h3>
+<p>Ja, ik weet dat ik eerder op Spotify en Apple Music zat te hakken, maar ze hebben hun plek. Om ze effectief te gebruiken, moet je begrijpen hoe de algoritmen werken. Deze algoritmen filteren op basis van veel categorieën, maar de zwaarst gewogen zijn <b>populariteit, genre en peergedrag</b>. Als je bijvoorbeeld naar Ed Sheeran luistert, zou een algoritme hoogstwaarschijnlijk Taylor Swift, Shawn Mendes of One Direction aanbevelen; niet de 18-jarige Britse nieuwkomer die precies als Sheeran klinkt. Dit is een manifestatie van populariteits- en genrebias, wat geweldig kan zijn als dat is wat je verwacht. Meestal houden deze algoritmen je in een comfortzone, wat zijn plek heeft voor degenen die dat willen.</p>
+<h2><a href="https://albumdaily.com/?ref=Solfej_Blog" rel="nofollow">Album Daily</a></h2>
+<p>Oké, ik geef het toe, dit is een schaamteloze plug. Maar ik heb <a href="https://albumdaily.com/?ref=Solfej_Blog" rel="nofollow">Album Daily</a> opgericht om precies dit probleem van algoritmische muziekontdekking aan te pakken. Als je besluit je in te schrijven voor een van onze twee nieuwsbrieven, dagelijks of wekelijks, maak je kennis met veel verschillende genres en artiesten. Ik, samen met mijn vrouw en medeoprichter Paige, besteden uren aan het doorzoeken van muziek om uit te lichten wat we denken dat ons publiek geweldig zal vinden, uit alle hoeken van de muziekindustrie.</p>
+<p>Daar heb je het, een aantal interessante manieren om nieuw uitgebrachte muziek te vinden, en muziek die nieuw is voor jou. Ik hoop dat de tactieken in dit artikel je helpen je muzikale smaak uit te breiden en je nieuwe favoriete nummers te vinden. Laat me op <a href="https://twitter.com/garretthenrym">Twitter</a> weten hoe jij nieuwe muziek vindt! Veel luisterplezier!</p>
+<p>Henry Garrett</p>`,
+  },
+  "whats-new-in-solfej-v-1.3": {
+    title: "Wat is nieuw in Solfej v1.3",
+    seoTitle: "Nieuwe versie van Solfej, een muziektheorie-app, bevat interactieve muzieklessen.",
+    description: "Herziene lessen, interactieve muziektheorievoorbeelden, vele opgeloste bugs.",
+    timeToRead: "4 min",
+    body: `<p>Solfej versie 1.3.0 is vandaag uit!</p>
+<p>Versie 1.3.0 bevat wijzigingen op basis van de feedback van bètagebruikers (Dank aan iedereen die de app heeft geprobeerd en feedback heeft gegeven. Extra dank als het op <a href="https://solfej.canny.io/solfej-user-forums">Canny.io</a> was).</p>
+<p>Deze versie bevat interactieve lesvoorbeelden, herziene lessen, 3 gloednieuwe lessen, een paar bugfixes en vele algemene verbeteringen. Lees verder voor alle details!</p>
+<a href="https://shayanjavadi.typeform.com/to/wO59zz"><p>Schrijf je in voor vroege toegang als je dat nog niet hebt gedaan!</p></a>
+<h2>Interactieve Lesvoorbeelden</h2>
+<p>Interactieve muziektheorielessen was een van de meest gevraagde functies. Ik heb hoorbare voorbeelden toegevoegd aan bijna elke muziektheorieles.</p>
+<p>Daarbovenop heb ik ook een interactieve pianorol aan sommige lessen toegevoegd. Dit is om de concepten te helpen visualiseren.</p>
+<h2>Herziene Lessen</h2>
+<p>Zoals de meesten van jullie merkten, was het lesplan (vooral de muziektheorie) nog in een vroeg stadium. De nieuwe update is bedoeld om dat te verhelpen.</p>
+<p>Ik heb spelling- en grammaticafouten voor elke les opgelost. Sommige lessen bevatten onjuistheden. Die zijn ook gecorrigeerd.</p>
+<p>Ik heb ook een aantal lessen verplaatst. Dit is om ervoor te zorgen dat de lespaden logisch zijn en concepten in de juiste volgorde worden geïntroduceerd.</p>
+<p>P.S. stuur me gerust een berichtje als je problemen ziet met de tekst!</p>
+<h2>Nieuwe Lessen</h2>
+<p>Er zijn 3 gloednieuwe muziektheorielessen!</p>
+<p>Eén getiteld "Kruisen & Mollen", de andere 2 "Muziektheorie Omzetten in Muziek" en "De Majeurtoonladder".</p>
+<p>Bekijk ze zeker!</p>
+<h2>Pushmeldingen</h2>
+<p>Je hebt nu de mogelijkheid om ons handige herinneringen te laten sturen! Je krijgt een melding zodra je de app opent na het updaten.</p>
+<h2>Bugfixes</h2>
+<ul>
+    <li><a href="https://solfej.canny.io/admin/board/solfej-user-forums/p/login-bug">Probleem opgelost waarbij de app vastliep na het mislukken van Google-inloggen.</a></li>
+    <li><a href="https://solfej.canny.io/admin/board/solfej-user-forums/p/google-login-issue">Google-inloggen noemde de app "App" in plaats van Solfej - opgelost.</a></li>
+    <li><a href="https://solfej.canny.io/admin/board/solfej-user-forums/p/sounds-issue">Problemen met audio opgelost, inclusief audio die niet afspeelde. Daarnaast een pop-up toegevoegd om ervoor te zorgen dat gebruikers de afgespeelde audio kunnen horen.</a></li>
+    <li>Veel onder de motorkap verbeterd.</li>
+</ul>`,
+  },
+  "is-betapage-worth-it": {
+    title: "Is Betapage Het Waard?",
+    seoTitle: "Is Betapage het waard? Solfej, een muziektheorie-app, gebruikte Betapage om hun eerste klanten te krijgen.",
+    description: "Een prijskaartje van $100 dat het waard kan zijn.",
+    timeToRead: "5 min",
+    body: `<p>Het is een paar weken geleden dat Solfej is begonnen met het accepteren van vroege-toegang bètagebruikers <a href="https://shayanjavadi.typeform.com/to/wO59zz">(klik hier om je aan te sluiten bij de 900+ mensen die zich hebben aangemeld om de app te proberen)</a>.</p>
+<p>Als first-time founder is het ook dezelfde hoeveelheid tijd geleden dat ik serieus ben begonnen met het marketen van de app. Voor een muziektheorie-app zijn de distributiekanalen niet bepaald voor de hand liggend geweest.</p>
+<p>Hier komt <a href="https://betapage.co/">Betapage</a> om de hoek kijken. Betapage is een aggregator voor startups die in bèta/vroege toegang zijn. Om je startup uitgelicht te krijgen, moet je het indienen bij Betapage en ongeveer een maand wachten tot het wordt uitgelicht. Als alternatief kun je ook flink betalen en de wachttijd overslaan.</p>
+<h2>De Cijfers</h2>
+<p>Ik betaalde $119 om Solfej in totaal 2 dagen op Betapage uitgelicht te krijgen. Hier is het overzicht van wat ik kreeg (dit format schaamteloos gekopieerd van Pine.io, <a href="https://pine.io/blog/should-i-publish-to-betalist/">bekijk hun blogpost over Betalist</a>):</p>
+<ul>
+    <li>430 unieke bezoekers</li>
+    <li>120 aanmeldingen</li>
+    <li>$119</li>
+</ul>
+<p>Dat komt neer op ongeveer $1 per aanmelding. Dat is behoorlijk goed!</p>
+<p>Ter vergelijking, hier zijn de gemiddelde CPC's (kosten per klik) voor populaire advertentienetwerken:</p>
+<ul>
+    <li>Google Ads: ~$2,00</li>
+    <li>Facebook Ads: ~$1,86</li>
+    <li>Instagram Ads: ~$0,80</li>
+</ul>
+<h2>Dus Is Betapage Het Waard?</h2>
+<p>Ik heb me gecommitteerd aan het verzamelen van zoveel mogelijk gebruikersfeedback over mijn muziektheorie-app. Betapage hielp me precies dat te doen voor een redelijke prijs.</p>
+<p>Ik ontving uiteindelijk veel geweldige gedetailleerde feedback van de gebruikers die via Betapage kwamen. Mijn aanname is dat mensen die Betapage frequent bezoeken eerder geneigd zijn om feedback met je te delen.</p>
+<p>Ik ontving ook een paar hele lieve e-mails van mensen die me vertelden hoe enthousiast ze zijn voor de app en hoe ze worstelden met traditionele manieren van muziektheorie leren en ze zien dat Solfej hen kan helpen die horde te nemen.</p>
+<p>Wat me echt verraste is het aantal mensen dat geïnteresseerd zou zijn in een gehoortraining/muziektheorie-app die ook op Betapage zou zitten, maar dat terzijde.</p>
+<h2>De Conclusie</h2>
+<p>De conclusie is dat Betapage me heeft geholpen om Solfej onder de aandacht te brengen bij veel ogen voor een redelijke prijs. 120 aanmeldingen lijken misschien niet veel, maar dat is het wel als je het in perspectief plaatst van een nieuw gelanceerd product gemaakt door één persoon (ik).</p>
+<p>Natuurlijk zijn er talloze gratis manieren om het woord te verspreiden over je aankomende project, maar als je de ~$100 kunt missen, <b>zou ik het zeker aanraden</b>.</p>
+<p>Ik raad ook aan om eens naar Betalist te kijken. Het is hetzelfde proces als Betapage. Bekijk de blogpagina op <a href="https://pine.io/">Pine.io's blog</a> als je een vergelijkbare anekdote voor Betalist wilt zien als deze post.</p>
+<p><a href="https://shayanjavadi.typeform.com/to/wO59zz">Schrijf je zeker in voor de Solfej-bèta</a> als je geïnteresseerd bent in het leren van muziektheorie en het trainen van je gehoor.</p>`,
+  },
+  "5-beautiful-color-palette-generators-for-your-next-design-project": {
+    title: "5 Prachtige kleurenpalet-tools voor je volgende ontwerpproject",
+    seoTitle: "5 Prachtige kleurenpalet-tools voor je volgende ontwerpproject. Ontdek hoe Solfej, een muziektheorie-app, de tools gebruikte.",
+    description: "Kleurenpalet-generators/tools",
+    timeToRead: "7 min",
+    body: `<p>Hallo allemaal, Shayan hier. Ik ben de solo-oprichter/ontwikkelaar van Solfej, een muziektheorie- en gehoortrainingsapp <a href="https://shayanjavadi.typeform.com/to/wO59zz">(klik hier om je aan te sluiten bij de 900+ mensen die zich hebben aangemeld om de app te proberen)</a>.</p>
+<p>Steek je hand op als je een onredelijke hoeveelheid tijd hebt besteed aan het kiezen van een kleurenpalet!</p>
+<p>Ik ben in de eerste plaats een visueel persoon, en tot niemands verrassing zijn kleur en ontwerp belangrijk voor me. Ik kan ook een perfectionist zijn als het om ontwerp gaat. Dit geldt vooral als het voor een project is waar ik gepassioneerd over ben, zoals Solfej.</p>
+<p>Ik begon aan Solfej te werken om mijn twee passies, muziek en technologie, te combineren om een intuïtieve app te maken voor mensen die muziektheorie willen leren.</p>
+<h2>De Lijst</h2>
+<p>Hier zijn 5 tools die me hielpen mijn kleurenpalet voor Solfej te kiezen:</p>
+<h2><a href="https://coolors.co/">Coolors</a> door <a href="https://twitter.com/_fbrz">@_fbrz</a></h2>
+<p>Coolors is mijn persoonlijke favoriet onder alle hier genoemde kleurenpalet-generators. Je kunt het volledige kleurenpaletten voor je laten genereren vanuit het niets.</p>
+<p>Wat het mijn favoriet maakt is de mogelijkheid om kleuren te vergrendelen en aan te passen in de paletten. Het enige nadeel voor mij is dat de website niet zo mobielvriendelijk is als ik zou willen (ze hebben wel een iOS-app).</p>
+<p>Ik gebruikte Coolors om de drie lescategoriekleuren voor Solfej te bedenken (<b>gehoortraining</b>, <b>muziektheorie</b>, <b>ritme</b>).</p>
+<h2><a href="https://colorhunt.co/">Color Hunt</a> door <a href="https://twitter.com/thegalshir">@thegalshir</a></h2>
+<p>Color Hunt is, zoals zij het zelf omschrijven, "een gratis en open platform voor kleurinspiratie met duizenden trendy handgeselecteerde kleurenpaletten."</p>
+<p>Het is als Dribbble maar dan exclusief voor kleurenpaletten. De kleurenpaletten zijn zo prachtig dat ze je bijna willen doen iets maken alleen maar zodat je de paletten kunt gebruiken.</p>
+<h2><a href="https://www.happyhues.co/">Happy Hues</a> door <a href="https://twitter.com/mackenziechild">@mackenziechild</a></h2>
+<p>Happy Hues is een tool waarvan ik niet kan geloven dat die niet bestond tot de recente lancering. In een notendop laat het je zien hoe de kleurenpaletten eruit zullen zien in een echte website. Het is een geweldige draai aan het kleurenpalet-samengestelde-lijst-type app.</p>
+<p>Super handig! De hele ervaring is prachtig ontworpen. Het logo is ook heel schattig.</p>
+<h2><a href="https://culrs.com/">Culrs</a> door <a href="https://twitter.com/mshra_ji">@mshra_ji</a> & <a href="https://twitter.com/iamarnob6543">@iamarnob6543</a></h2>
+<p>Culrs is nog een lijst met samengestelde paletten (prachtige!). De paletten zijn onderverdeeld in categorieën op basis van de soorten kleurenschema's.</p>
+<p>Ik vind het geweldig dat Culrs naast kleurenpaletten ook kennis bevat over de verschillende soorten kleurenschema's. Ik had geen idee wat een tetradisch kleurenschema betekende voordat ik dit zag.</p>
+<h2><a href="https://www.webdesignrankings.com/resources/lolcolors/">LOL Colors</a></h2>
+<p>Last but not least is LOL Colors. LOL Colors is nog een samengestelde lijst van paletten. Ze hebben een heleboel prachtige paletten om je door te laten inspireren.</p>
+<p>Wat mijn aandacht trok was hun logo. Een van de meer creatieve logo's die ik heb gezien.</p>
+<p>Bedankt voor het lezen! Schrijf je zeker in voor de <b><a href="https://shayanjavadi.typeform.com/to/wO59zz">Solfej-bèta</a></b> als je geïnteresseerd bent in het leren van muziektheorie en het trainen van je gehoor.</p>`,
+  },
+  "the-4-best-ear-training-apps-for-2019": {
+    title: "Gehoortraining: De 4 Beste Gehoortraining-Apps Voor 2020",
+    seoTitle: "Beste gehoortraining-apps. Wat zijn de 4 beste gehoortraining-apps?",
+    description: "De beste apps om je gehoor te trainen",
+    timeToRead: "5 min",
+    body: `<p>Hallo allemaal, Shayan hier. Ik ben de solo-oprichter/ontwikkelaar van Solfej, een muziektheorie- en gehoortrainingsapp <a href="https://shayanjavadi.typeform.com/to/wO59zz">(klik hier om je aan te sluiten bij de 900+ mensen die zich hebben aangemeld om de app te proberen)</a>.</p>
+<p>De oren van een muzikant zijn hun belangrijkste gereedschap. Sommigen hebben het geluk geboren te worden met absoluut gehoor. De andere 99% van ons moet hard werken om ons gehoor te trainen.</p>
+<p>Gitaristen, pianisten, producers, DJ's, violisten, zangers en rappers kunnen allemaal baat hebben bij gehoortraining. Iedereen die nummers schrijft, improviseert of zelfs gedichten componeert kan profiteren van het trainen van hun gehoor.</p>
+<p>Het enige probleem is dat gehoortraining moeilijk is! Gelukkig leven we in het tijdperk van technologie.</p>
+<p>In deze post behandelen we de top 4 manieren om gehoortraining te leren in 2020.</p>
+<h2>Wat Is Gehoortraining</h2>
+<p>Gehoortraining is het proces van het identificeren van muzikale concepten (noten, akkoorden, toonladders, etc.) uitsluitend op gehoor. Gehoortraining is de brug die ons brein verbindt met de mysterieuze wereld van muziektheorie.</p>
+<p>Met genoeg oefening kan gehoortraining een tweede natuur worden. Denk aan hoe makkelijk het voor je is om woorden in je eigen taal te herkennen.</p>
+<h2>Waarom zou ik gehoortraining leren?</h2>
+<p>Het grootste voordeel van gehoortraining is het vermogen om de geluiden in je hoofd makkelijk te vertalen naar het instrument van je keuze.</p>
+<p>Gehoortraining kan je ook helpen zuiver te zingen en beter te improviseren.</p>
+<p>Gehoortraining kan je ook helpen makkelijker te communiceren met andere muzikanten.</p>
+<p>De makkelijkste manier om gehoortraining te leren is via technologie.</p>
+<p>Hier zijn de 4 beste gehoortraining-apps voor 2020:</p>
+<h2>1. <a href="https://www.solfej.io/">Solfej</a></h2>
+<p>Solfej is de beste nieuwe app om gehoortraining en muziektheorie te leren. Solfej is beschikbaar op iOS, Android en web!</p>
+<p>Solfej bevat meer dan 10 gehoortrainingslesmodules, variërend van intervalherkenning tot akkoordherkenning. Elke maand worden nieuwe gehoortrainingslessen toegevoegd.</p>
+<p>Solfej biedt ook muziektheorie- en ritmelessen.</p>
+<h2>Je Favoriete DAW (Ableton, Logic, Reaper, etc.)</h2>
+<p>Dit klinkt als een grap, maar houd me even vast. Een van de beste dingen die je voor je gehoor kunt doen is muziek transcriberen. Bonuspunten als de muziek die je transcribeert muziek is waar je van houdt.</p>
+<p>Hier komt de DAW om de hoek kijken. Download het nummer van je keuze en laad het in je favoriete DAW. Zodra je het daar hebt, selecteer je kleine stukjes van het nummer (zo klein als 2-4 tellen), zet het op een loop en probeer het geloopte gedeelte op gehoor te transcriberen.</p>
+<p>Het klinkt simpeler dan het is, het lijkt misschien zelfs onmogelijk in het begin. Een tip die ik zou geven is om de snelheid van het nummer met ongeveer 50% te verlagen, zodat je veel tijd hebt om elke noot te horen!</p>
+<h2><a href="https://www.soundgym.co/site/index">Sound Gym</a></h2>
+<p>Sound Gym is een app gericht op producers/audio-engineers. In hun eigen woorden helpt het je kernluistervaardigheden te verbeteren zoals frequentiedetectie en compressie.</p>
+<h2><a href="http://www.earplugins.eu/">Ear Plugins</a></h2>
+<p>Ear Plugins is nog een super handige app voor producers. Het leeft direct in je DAW. Het helpt je specifieke frequenties te herkennen, wat heel handig is tijdens het mixen.</p>
+<p>Bedankt voor het lezen! Schrijf je zeker in voor de <b><a href="https://shayanjavadi.typeform.com/to/wO59zz">Solfej-bèta</a></b> als je geïnteresseerd bent in het leren van muziektheorie en het trainen van je gehoor.</p>`,
   },
 }

@@ -2,6 +2,7 @@
 import React from 'react';
 import { isEmpty } from "lodash";
 import getChordDisplayName from '../../../common/utils/chords/getChordDisplayName';
+import { translateName } from '../../../i18n/translateName';
 import "./ChordInformation.scss";
 import { MAPPED_INTERVALS_TO_DISPLAY_NAMES } from '../../../common/consts/twelveToneConsts';
 import MdSubHeader from '../../../components/MdSubHeader/MdSubHeader';
@@ -18,7 +19,7 @@ const INVERSION_TEXT = [
     "8th"
 ]
 
-const renderScaleRow = (rootNote, scales) => {
+const renderScaleRow = (rootNote, scales, prefix = "", scaleNames) => {
     const rootNoteText = rootNote.replace("sharp", "#");
 
     return (
@@ -29,12 +30,18 @@ const renderScaleRow = (rootNote, scales) => {
             </MdSubHeader>
             <div className="scales">
                 {
-                    scales.map((scale, index) => (
-                        <p key={index}>
-                            {index !== 0 ? " - " : ""}
-                            <Link to={scale.path}>{scale.name}</Link>
-                        </p>
-                    ))
+                    scales.map((scale, index) => {
+                        const scaleParts = scale.name.split(" ");
+                        const scaleRootNote = scaleParts[0];
+                        const scaleTypeName = scaleParts.slice(1).join(" ");
+                        const translatedScaleName = translateName(scale.name, scaleTypeName, scaleRootNote, scaleNames);
+                        return (
+                            <p key={index}>
+                                {index !== 0 ? " - " : ""}
+                                <Link to={`${prefix}${scale.path}`}>{translatedScaleName}</Link>
+                            </p>
+                        );
+                    })
                 }
             </div>
         </div>
@@ -42,26 +49,40 @@ const renderScaleRow = (rootNote, scales) => {
 }
 
 export default function ChordInformation(props) {
-    const { chord } = props
-    const chordName = getChordDisplayName(chord)
+    const { chord, translatedStrings, locale } = props
+    const ui = translatedStrings || {
+        notes: "Notes",
+        whatNotesInChord: "What notes are in a %s chord?",
+        intervals: "Intervals",
+        whatIntervalsInChord: "What intervals are in a %s chord?",
+        inversions: "Inversions",
+        whatInversionsOfChord: "What are %s chord's inversions?",
+        scales: "Scales",
+        whatScalesFitChord: "What scales does a %s chord fit in?",
+        ordinals: ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th"],
+    };
+    const chordName = translateName(getChordDisplayName(chord), chord.name, chord.rootNote, ui.chordNames)
     const intervalNames = chord.intervals.map(interval => MAPPED_INTERVALS_TO_DISPLAY_NAMES[interval])
     const highestInversion = Math.max(...chord.inversions.map(inversion => inversion.inversion));
+    const prefix = locale ? `/${locale}` : "";
+
+    const ordinals = ui.ordinals || INVERSION_TEXT;
 
     return (
         <div className="chord-information-container">
             <div className="chord-notes-container container">
                 <MdSubHeader
-                    subText={`What notes are in a ${chordName} chord?`}
+                    subText={ui.whatNotesInChord.replace(/%s/g, chordName)}
                 >
-                    Notes
+                    {ui.notes}
                 </MdSubHeader>
                 <p>{chord.notes.join(" - ")}</p>
             </div>
             <div className="chord-intervals-container container">
                 <MdSubHeader
-                    subText={`What intervals are in a ${chordName} chord?`}
+                    subText={ui.whatIntervalsInChord.replace(/%s/g, chordName)}
                 >
-                    Intervals
+                    {ui.intervals}
                 </MdSubHeader>
                 {intervalNames.map(interval => <p key={Math.random()}>{interval}</p>)}
             </div>
@@ -69,26 +90,26 @@ export default function ChordInformation(props) {
                 !isEmpty(chord.inversions) &&
                 <div className="chord-intervals-container container">
                     <MdSubHeader
-                        subText={`What are ${chordName} chord's inversions?`}
+                        subText={ui.whatInversionsOfChord.replace(/%s/g, chordName)}
                     >
-                        Inversions
+                        {ui.inversions}
                     </MdSubHeader>
                     {
                         Array(highestInversion + 1).fill(0).map((_, index) => {
                             const chordsInversion = chord.inversions.find(inversion => inversion.inversion === index)
-                            
+
                             return (
                                 <div key={index}>
                                     <p>
-                                        {`${INVERSION_TEXT[index]}: `}
+                                        {`${ordinals[index]}: `}
                                         {
                                             chordsInversion ?
-                                                <Link to={chordsInversion.path}>
+                                                <Link to={`${prefix}${chordsInversion.path}`}>
                                                     {`${chordsInversion ? chordsInversion.name : "?"}`}
                                                 </Link> :
                                                 "?"
                                         }
-                                        
+
                                     </p>
                                 </div>
                             )
@@ -100,20 +121,20 @@ export default function ChordInformation(props) {
                 !isEmpty(chord.parentScales) &&
                 <div className="scales-container">
                     <MdSubHeader
-                        subText={`What scales does a ${chordName} chord fit in?`}
+                        subText={ui.whatScalesFitChord.replace(/%s/g, chordName)}
                     >
-                        Scales
+                        {ui.scales}
                     </MdSubHeader>
                     <div className="scale-names-container">
                         {
                             Object.entries(chord.parentScales)
                                 .filter(([rootNote]) => rootNote.replace("sharp", "#") === chord.rootNote)
-                                .map(([rootNote, scales]) => renderScaleRow(rootNote, scales))
+                                .map(([rootNote, scales]) => renderScaleRow(rootNote, scales, prefix, ui.scaleNames))
                         }
                         {
                             Object.entries(chord.parentScales)
                                 .filter(([rootNote]) => rootNote.replace("sharp", "#") !== chord.rootNote)
-                                .map(([rootNote, scales]) => renderScaleRow(rootNote, scales))
+                                .map(([rootNote, scales]) => renderScaleRow(rootNote, scales, prefix, ui.scaleNames))
                         }
                     </div>
                 </div>

@@ -2,6 +2,7 @@
 import React from 'react';
 import { isEmpty } from "lodash";
 import { Tonal } from "@tonaljs/modules";
+import { translateName } from '../../../i18n/translateName';
 import "./ScaleInformation.scss";
 import MdSubHeader from '../../../components/MdSubHeader/MdSubHeader';
 import { Link } from 'gatsby';
@@ -19,7 +20,7 @@ const ROMAN_NUMERALS = [
     "VIII"
 ];
 
-const INVERSION_TEXT = [
+const DEFAULT_INVERSION_TEXT = [
     "1st Inversion",
     "2nd Inversion",
     "3rd Inversion",
@@ -36,8 +37,23 @@ const SCALE_FORMULA_INTERVALS = {
 }
 
 export default function ScaleInformation(props) {
-    const { scale } = props;
+    const { scale, translatedStrings, locale } = props;
     const { displayName, notes, chords, intervals } = scale;
+    const prefix = locale ? `/${locale}` : "";
+    const ui = translatedStrings || {
+        notes: "Notes",
+        whatNotesInScale: "What notes are in the %s scale",
+        formula: "Formula",
+        whatFormulaOfScale: "What is the formula for the %s scale",
+        intervals: "Intervals",
+        whatIntervalsInScale: "What intervals are in the %s scale",
+        chords: "Chords",
+        whatChordsInScale: "What chords (diatonic) are in the %s scale",
+        chord: "chord",
+    };
+    const translatedScaleName = translateName(displayName, scale.name, scale.rootNote, ui.scaleNames);
+    const inversionLabels = ui.inversionLabels || DEFAULT_INVERSION_TEXT;
+
     const intervalNames = intervals.map(interval => MAPPED_INTERVALS_TO_DISPLAY_NAMES[interval])
     const scaleFormula = notes.map((note, index) => {
         if (notes[index + 1]) {
@@ -60,25 +76,25 @@ export default function ScaleInformation(props) {
     return (
         <div className="scale-information">
             <MdSubHeader
-                subText={`What notes are in the ${displayName} scale`}
+                subText={ui.whatNotesInScale.replace(/%s/g, translatedScaleName)}
             >
-                Notes
+                {ui.notes}
             </MdSubHeader>
             <p>
                 {scale.notes.join(" - ")}
             </p>
             <MdSubHeader
-                subText={`What is the formula for the ${displayName} scale`}
+                subText={ui.whatFormulaOfScale.replace(/%s/g, translatedScaleName)}
             >
-                Formula
+                {ui.formula}
             </MdSubHeader>
             <p>
                 {scaleFormula.join(" - ")}
             </p>
             <MdSubHeader
-                subText={`What intervals are in the ${displayName} scale`}
+                subText={ui.whatIntervalsInScale.replace(/%s/g, translatedScaleName)}
             >
-                Intervals
+                {ui.intervals}
             </MdSubHeader>
             <p>
                 {intervalNames.map(interval => <p key={Math.random()}>{interval}</p>)}
@@ -88,14 +104,17 @@ export default function ScaleInformation(props) {
                 chordScaleDegrees.some(chordScaleDegree => chordScaleDegree.chord) &&
                 <>
                     <MdSubHeader
-                        subText={`What chords (diatonic) are in the ${displayName} scale`}
+                        subText={ui.whatChordsInScale.replace(/%s/g, translatedScaleName)}
                         className="chords-sub-header"
                     >
-                        Chords
+                        {ui.chords}
                     </MdSubHeader>
                     <div className="chords-in-scale">
                         {
-                            chordScaleDegrees.map(({ scaleDegree, chord }) => (
+                            chordScaleDegrees.map(({ scaleDegree, chord }) => {
+                                const chordTypeName = chord ? chord.name.slice(chord.rootNote.length).trim() : "";
+                                const translatedChordName = chord ? translateName(chord.name, chordTypeName, chord.rootNote, ui.chordNames) : "";
+                                return (
                                 <div>
                                     <p className="scale-degree">
                                         {scaleDegree}
@@ -103,23 +122,24 @@ export default function ScaleInformation(props) {
                                     <p className="divider">-</p>
                                     {
                                         chord ?
-                                        <Link to={chord && chord.path}>
+                                        <Link to={`${prefix}${chord.path}`}>
                                             <p>
-                                                {chord.name} chord 
+                                                {translatedChordName} {ui.chord}
                                                 {
-                                                    ![undefined, null].includes(chord.inversion) && 
-                                                    `(${INVERSION_TEXT[chord.inversion]})`
+                                                    ![undefined, null].includes(chord.inversion) &&
+                                                    `(${inversionLabels[chord.inversion]})`
                                                 }
                                             </p>
                                         </Link>:
                                         <p>?</p>
                                     }
-                                    
+
                                 </div>
-                            ))
+                                )
+                            })
                         }
                     </div>
-                </>              
+                </>
             }
         </div>
     )

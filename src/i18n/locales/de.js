@@ -1,4 +1,287 @@
 module.exports = {
+  ui: {
+    home: "Startseite",
+    blog: "Blog",
+    chordSearch: "Akkordsuche",
+    scaleSearch: "Tonleitersuche",
+    contact: "Kontakt",
+    getTheApp: "APP HERUNTERLADEN",
+    allChords: "Alle Akkorde",
+    allScales: "Alle Tonleitern",
+    searchChordPlaceholder: "Hier tippen, um Akkorde zu suchen...",
+    searchScalePlaceholder: "Hier tippen, um Tonleitern zu suchen...",
+    chordSuffix: "Akkord",
+    chordSeoTitle: "%s - Noten, Intervalle und Fingersätze | Solfej",
+    chordSeoDescription: "Lerne den %s-Akkord. Finde Fingersatzdiagramme für Klavier und Gitarre, Noten, Intervalle und mehr.",
+    lookingForScale: "Suchen Sie eine Tonleiter?",
+    tryScaleSearch: "Versuchen Sie: Tonleitersuche",
+    chordTip: "💡Tipp: Sie können einen Akkord finden, indem Sie seine Noten durch Kommas getrennt eingeben (z.B. C, E, G)",
+    notes: "Noten",
+    whatNotesInChord: "Welche Noten enthält der %s-Akkord?",
+    intervals: "Intervalle",
+    whatIntervalsInChord: "Welche Intervalle enthält der %s-Akkord?",
+    inversions: "Umkehrungen",
+    whatInversionsOfChord: "Welche Umkehrungen hat der %s-Akkord?",
+    scales: "Tonleitern",
+    whatScalesFitChord: "In welche Tonleitern passt der %s-Akkord?",
+    ordinals: ["1.", "2.", "3.", "4.", "5.", "6.", "7.", "8."],
+    scaleSuffix: "Tonleiter",
+    scaleSeoTitle: "%s - Noten, Intervalle und Formel | Solfej",
+    scaleSeoDescription: "Lerne die %s-Tonleiter. Finde Diagramme für Gitarre und Klavier, Noten, Intervalle und mehr.",
+    lookingForChord: "Suchen Sie einen Akkord?",
+    tryChordSearch: "Versuchen Sie: Akkordsuche",
+    scaleTip: "💡Tipp: Sie können eine Tonleiter finden, indem Sie ihre Noten durch Kommas getrennt eingeben (z.B. C, E, G)",
+    formula: "Formel",
+    whatFormulaOfScale: "Was ist die Formel der %s-Tonleiter?",
+    whatNotesInScale: "Welche Noten enthält die %s-Tonleiter?",
+    whatIntervalsInScale: "Welche Intervalle enthält die %s-Tonleiter?",
+    chords: "Akkorde",
+    whatChordsInScale: "Welche (diatonischen) Akkorde enthält die %s-Tonleiter?",
+    chord: "Akkord",
+    getLatestStories: "Erhalten Sie unsere neuesten Geschichten",
+    joinNewsletter: "Newsletter beitreten",
+    chordPageSubText: "Unten finden Sie Akkorddiagramme, Klavierfingersätze, Gitarrenfingersätze, Noten, Intervalle, Tonleitern und Arpeggien.",
+    scalePageSubText: "Unten finden Sie Gitarren- und Klaviertonleiterdiagramme, Noten, Intervalle, Formeln und Akkorde",
+    audibleExample: "Hörbeispiel",
+    pianoFingering: "Klavierfingersatz",
+    guitarFingering: "Gitarrenfingersatz",
+    whatDoesChordSoundLike: "Wie klingt ein %s-Akkord?",
+    howPlayChordPiano: "Wie spielt man einen %s-Akkord auf dem Klavier?",
+    howPlayChordGuitar: "Wie spielt man einen %s-Akkord auf der Gitarre?",
+    whatDoesScaleSoundLike: "Wie klingt die %s-Tonleiter?",
+    howPlayScalePiano: "Wie spielt man die %s-Tonleiter auf dem Klavier?",
+    howPlayScaleGuitar: "Wie spielt man die %s-Tonleiter auf der Gitarre?",
+    tapNotesHint: "💡 Tippen Sie auf die Noten, um jede Note zu hören",
+    notesLabel: "Noten:",
+    intervalsLabel: "Intervalle:",
+    inversionLabels: ["1. Umkehrung", "2. Umkehrung", "3. Umkehrung", "4. Umkehrung", "5. Umkehrung", "6. Umkehrung", "7. Umkehrung", "8. Umkehrung"],
+    aliases: "Aliase: ",
+    chordWord: "Akkord",
+    scaleWord: "Tonleiter",
+    chordNames: {
+      "major": "Dur",
+      "minor": "Moll",
+      "augmented": "übermäßig",
+      "augmented 7th": "übermäßiger Septakkord",
+      "diminished": "vermindert",
+      "diminished 7th": "verminderter Septakkord",
+      "dominant #9": "Dominante #9",
+      "dominant 13th": "Dominanttredezimakkord",
+      "dominant 7th": "Dominantseptakkord",
+      "dominant 9th": "Dominantnonakkord",
+      "dominant b9": "Dominante b9",
+      "fifth": "Quinte",
+      "half-diminished": "halbvermindert",
+      "lydian": "lydisch",
+      "lydian dominant 7th": "lydisch Dominantseptakkord",
+      "major #11 (lydian)": "Dur #11 (lydisch)",
+      "major 13th": "Durtredezimakkord",
+      "major 7th": "Durseptakkord",
+      "major 7th b6": "Durseptakkord b6",
+      "major 9th": "Durnonakkord",
+      "minor 11th": "Mollundezimakkord",
+      "minor 13th": "Molltredezimakkord",
+      "minor 6th": "Mollsextakkord",
+      "minor 7th": "Mollseptakkord",
+      "minor 9th": "Mollnonakkord",
+      "minor/major 7th": "Moll/Dur Septakkord",
+      "power chord": "Powerakkord",
+      "quartal": "Quartakkord",
+      "suspended 2nd": "Sekundvorhalt",
+      "suspended 4th": "Quartvorhalt",
+      "suspended 4th 7th": "Quartvorhalt Septakkord",
+      "suspended 4th b9": "Quartvorhalt b9",
+      "altered": "alteriert",
+      "11th": "Undezimakkord",
+      "6th": "Sextakkord",
+      "6th/9th": "Sext/Nonakkord",
+    },
+    scaleNames: {
+      "aeolian": "äolisch",
+      "altered": "alteriert",
+      "arabian": "arabisch",
+      "augmented": "übermäßig",
+      "augmented heptatonic": "übermäßig heptatonisch",
+      "balinese": "balinesisch",
+      "bebop": "Bebop",
+      "bebop locrian": "Bebop lokrisch",
+      "bebop major": "Bebop Dur",
+      "bebop minor": "Bebop Moll",
+      "blues": "Blues",
+      "chinese": "chinesisch",
+      "chromatic": "chromatisch",
+      "composite blues": "zusammengesetzter Blues",
+      "diminished": "vermindert",
+      "diminished whole tone": "vermindert Ganzton",
+      "dominant": "dominant",
+      "dominant diminished": "dominant vermindert",
+      "dorian": "dorisch",
+      "dorian #4": "dorisch #4",
+      "dorian b2": "dorisch b2",
+      "double harmonic lydian": "doppelt harmonisch lydisch",
+      "double harmonic major": "doppelt harmonisch Dur",
+      "egyptian": "ägyptisch",
+      "enigmatic": "enigmatisch",
+      "flamenco": "Flamenco",
+      "flat six pentatonic": "pentatonisch verminderte Sexte",
+      "flat three pentatonic": "pentatonisch verminderte Terz",
+      "gypsy": "Zigeuner",
+      "half-diminished": "halbvermindert",
+      "half-whole diminished": "Halbton-Ganzton vermindert",
+      "harmonic major": "harmonisch Dur",
+      "harmonic minor": "harmonisch Moll",
+      "hindu": "hinduistisch",
+      "hirajoshi": "Hirajoshi",
+      "hungarian major": "ungarisch Dur",
+      "hungarian minor": "ungarisch Moll",
+      "ichikosucho": "Ichikosucho",
+      "in-sen": "In-Sen",
+      "indian": "indisch",
+      "ionian": "ionisch",
+      "ionian #5": "ionisch #5",
+      "ionian augmented": "ionisch übermäßig",
+      "ionian pentatonic": "ionisch pentatonisch",
+      "iwato": "Iwato",
+      "kafi raga": "Raga Kafi",
+      "kumoi": "Kumoi",
+      "kumoijoshi": "Kumoijoshi",
+      "leading whole tone": "Leitton Ganzton",
+      "locrian": "lokrisch",
+      "locrian #2": "lokrisch #2",
+      "locrian 6": "lokrisch 6",
+      "locrian major": "lokrisch Dur",
+      "locrian natural 6": "lokrisch natürlich 6",
+      "locrian pentatonic": "lokrisch pentatonisch",
+      "locrian sharp 6": "lokrisch erhöht 6",
+      "lydian": "lydisch",
+      "lydian #5P pentatonic": "lydisch #5P pentatonisch",
+      "lydian #9": "lydisch #9",
+      "lydian augmented": "lydisch übermäßig",
+      "lydian b7": "lydisch b7",
+      "lydian diminished": "lydisch vermindert",
+      "lydian dominant": "lydisch dominant",
+      "lydian dominant pentatonic": "lydisch dominant pentatonisch",
+      "lydian minor": "lydisch Moll",
+      "lydian pentatonic": "lydisch pentatonisch",
+      "major": "Dur",
+      "major #5": "Dur #5",
+      "major augmented": "Dur übermäßig",
+      "major blues": "Dur Blues",
+      "major pentatonic": "Dur pentatonisch",
+      "malkos raga": "Raga Malkos",
+      "melodic minor": "melodisch Moll",
+      "melodic minor fifth mode": "melodisch Moll fünfter Modus",
+      "melodic minor second mode": "melodisch Moll zweiter Modus",
+      "minor": "Moll",
+      "minor #7M pentatonic": "Moll #7M pentatonisch",
+      "minor bebop": "Moll Bebop",
+      "minor blues": "Moll Blues",
+      "minor hexatonic": "Moll hexatonisch",
+      "minor pentatonic": "Moll pentatonisch",
+      "minor seven flat five pentatonic": "Moll Sieben verminderte Fünf pentatonisch",
+      "minor six diminished": "Moll Sexte vermindert",
+      "minor six pentatonic": "Moll Sexte pentatonisch",
+      "mixolydian": "mixolydisch",
+      "mixolydian b6": "mixolydisch b6",
+      "mixolydian pentatonic": "mixolydisch pentatonisch",
+      "mystery #1": "Mysterium #1",
+      "neopolitan major": "neapolitanisch Dur",
+      "neopolitan major pentatonic": "neapolitanisch Dur pentatonisch",
+      "oriental": "orientalisch",
+      "overtone": "Oberton",
+      "pelog": "Pelog",
+      "pentatonic": "pentatonisch",
+      "persian": "persisch",
+      "phrygian": "phrygisch",
+      "phrygian #6": "phrygisch #6",
+      "phrygian dominant": "phrygisch dominant",
+      "phrygian major": "phrygisch Dur",
+      "piongio": "Piongio",
+      "pomeroy": "Pomeroy",
+      "prometheus": "Prometheus",
+      "prometheus neopolitan": "Prometheus neapolitanisch",
+      "purvi raga": "Raga Purvi",
+      "ritusen": "Ritusen",
+      "romanian minor": "rumänisch Moll",
+      "scriabin": "Skrjabin",
+      "six tone symmetric": "Sechston symmetrisch",
+      "spanish": "spanisch",
+      "spanish heptatonic": "spanisch heptatonisch",
+      "super locrian": "super lokrisch",
+      "super locrian pentatonic": "super lokrisch pentatonisch",
+      "superlocrian bb7": "super lokrisch bb7",
+      "todi raga": "Raga Todi",
+      "ultralocrian": "ultralokrisch",
+      "vietnamese 1": "vietnamesisch 1",
+      "vietnamese 2": "vietnamesisch 2",
+      "whole tone": "Ganzton",
+      "whole tone pentatonic": "Ganzton pentatonisch",
+      "whole-half diminished": "Ganzton-Halbton vermindert",
+    },
+  },
+
+  homepage: {
+    heroTitle: "Werde ein besserer Musiker",
+    heroDescription: "Solfej ist die beste App für Gehörbildung und Musiktheorie. Lerne Musiktheorie und trainiere dein Gehör mit Zuversicht.",
+    seoTitle: "Solfej - Musiktheorie und Gehörbildung",
+    masterTitle: "Meistere Musiktheorie, Gehörbildung und Rhythmus",
+    masterDesc: "Praktische Lernpfade, um deine musikalischen Ziele zu erreichen. Keine Wikipedia/YouTube-Kaninchenlöcher mehr.",
+    interactiveTitle: "Interaktive Übungen",
+    interactiveDesc: "Möchtest du Intervalle erkennen? Polyrhythmen spielen lernen? Wissen, welche Note eine große Septime über einer anderen liegt?",
+    simpleTitle: "Einfache Sprache",
+    simpleDesc: "Müde von trockenen Musiktheorie-Lektionen? Die Lektionen von Solfej sind für Menschen gemacht.",
+    featuredStories: "Ausgewählte Artikel",
+  },
+
+  chordSearchPage: {
+    heroTitle: "🔍 Akkordsuche 🎹",
+    heroDescription: "Möchten Sie mehr über einen Akkord erfahren? Die Akkordsuche zeigt Ihnen hörbare Beispiele, Noten, Intervalle, Gitarren- und Klavierfingersätze für jeden Akkord. Geben Sie einfach einen Akkordnamen ein.",
+    seoTitle: "Akkordsuche - Klavier und Gitarre | Solfej",
+    masterTitle: "Meistere alle erdenklichen Akkorde",
+    masterDesc: "Durchsuche Tausende von Akkorden. Lerne Fingersätze (Gitarre und Klavier), Noten, Intervalle und Aliase jedes Akkords.",
+    hearTitle: "Höre Beispiele jedes Akkords",
+    hearDesc: "Höre, wie jeder Akkord klingt, durch interaktive Beispiele",
+    pianoTitle: "Klavier-Akkorddiagramme",
+    pianoDesc: "Lerne, wie man jeden Akkord auf dem Klavier spielt, mit einfachen Fingersatzdiagrammen.",
+    guitarTitle: "Gitarren-Akkorddiagramme",
+    guitarDesc: "Lerne, wie man jeden Akkord auf der Gitarre spielt, mit einfachen Fingersatzdiagrammen.",
+    moreTitle: "Noten, Intervalle und mehr!",
+    moreDesc: "Tauche tief in die Bausteine jedes Akkords ein. Lerne Noten, Intervalle, Tonleitern und mehr.",
+  },
+
+  scaleSearchPage: {
+    heroTitle: "🔍 Tonleitersuche 🎼",
+    heroDescription: "Möchten Sie mehr über eine Tonleiter erfahren? Die Tonleitersuche zeigt Ihnen hörbare Beispiele, Noten, Intervalle, Akkorde, Formel und Gitarren-/Klavierfingersätze. Geben Sie einfach einen Tonleiternamen oder Noten ein.",
+    seoTitle: "Tonleitersuche - Klavier und Gitarre | Solfej",
+    masterTitle: "Meistere alle erdenklichen Tonleitern",
+    masterDesc: "Durchsuche Tausende von Tonleitern. Lerne Fingersätze (Gitarre und Klavier), Noten, Intervalle, Formel und Akkorde jeder Tonleiter.",
+    hearTitle: "Höre Beispiele jeder Tonleiter",
+    hearDesc: "Höre, wie jede Tonleiter klingt, durch interaktive Beispiele",
+    guitarTitle: "Gitarren-Tonleiterdiagramme",
+    guitarDesc: "Lerne, wie man jede Tonleiter auf der Gitarre spielt, mit einfachen Fingersatzdiagrammen.",
+    pianoTitle: "Klavier-Tonleiterfingersätze",
+    pianoDesc: "Lerne, wie man jede Tonleiter auf dem Klavier spielt, mit einfachen Fingersatzdiagrammen.",
+    moreTitle: "Noten, Intervalle und mehr!",
+    moreDesc: "Tauche tief in die Bausteine jeder Tonleiter ein. Lerne Noten, Intervalle, Akkorde und mehr.",
+  },
+
+  allChordsPage: {
+    title: "Alle Akkorde",
+    seoTitle: "Alle erdenklichen Akkorde | Solfej",
+    description: "Seite mit Links zu jedem Akkord im Universum",
+  },
+
+  allScalesPage: {
+    title: "Tonleiter-Verzeichnis",
+    seoTitle: "Alle erdenklichen Tonleitern | Solfej",
+    description: "Seite mit Links zu jeder Tonleiter im Universum",
+  },
+
+  blogIndex: {
+    featuredStories: "Ausgewählte Artikel",
+    seoTitle: "Blog | Solfej",
+  },
+
   "suno-ai-chord-progressions": {
     title: "Suno AI Akkordfolgen: So steuerst du wirklich, welche Akkorde Suno spielt",
     seoTitle: "Suno AI Akkordfolgen: So gibst du Akkorde in Suno vor (Anleitung 2026) | Solfej",
@@ -416,5 +699,340 @@ module.exports = {
 <li><a href="/de/blog/suno-ai-prompt-guide">Suno AI Prompt-Guide: Der Musiktheorie-Spickzettel fuer bessere Songs</a></li>
 <li><a href="/de/blog/suno-vs-udio">Suno vs. Udio: Welcher KI-Musikgenerator ist 2026 besser?</a></li>
 </ul>`,
+  },
+
+  "how-to-learn-music-theory": {
+    title: "Wie man Musiktheorie lernt",
+    seoTitle: "Wie man Musiktheorie lernt. Haeufige Fragen beantwortet.",
+    description: "Wie man Musiktheorie lernt",
+    timeToRead: "10 Min.",
+    body: `<p>Musiktheorie ist ein Wort, das bei vielen Menschen mit viel Ballast verbunden ist. Musiktheorie kann ein einschuechterndes Thema sein, egal ob du Student an einer Musikhochschule bist oder einfach nur nebenbei Musiktheorie lernst.</p>
+<p>Als autodidaktischer Gitarrist mit 6 Jahren Erfahrung habe ich meinen gerechten Anteil an Blut, Schweiss und Traenen in die Musiktheorie investiert. Ich habe unzaehlige Naechte damit verbracht, meinen Kopf gegen die Wand zu schlagen, um Modi, den Quintenzirkel und praktisch jeden anderen Baustein der Musiktheorie zu verstehen.</p>
+<p>Es fiel mir nicht leicht. Aber das muss nicht so sein. Tatsaechlich kann es ziemlich befriedigend sein, Musiktheorie zu lernen! Die meiste negative Einstellung gegenueber Musiktheorie scheint entweder aus einer Frustration mit dem akademischen Umfeld zu kommen, in dem sie gelehrt wird, oder aus dem Mangel an klaren Ressourcen.</p>
+<p>Vor diesem Hintergrund findest du hier, unabhaengig von deiner Erfahrung mit Musiktheorie, eine Liste von Leitlinien, die dir auf deinem Weg zum Theoriewissen helfen sollen.</p>
+<h2>Wie fange ich an, Musiktheorie zu lernen?</h2>
+<p>Von Anfang an! Es klingt lustig, aber ein Fundament in den Grundbausteinen der Musiktheorie ist der wichtigste Faktor, um fortgeschrittenere Themen zu lernen.</p>
+<p>Beginne mit den Noten, die uns zur Verfuegung stehen, und arbeite dich hoch zu Intervallen, Akkorden, Melodie, Harmonie, Rhythmus und so weiter.</p>
+<p>Sobald du ein gutes Verstaendnis der Grundlagen hast, kannst du den Gang wechseln und anfangen zu lernen, was fuer dich praktisch ist. Willst du in einem Jazz-Umfeld spielen? Beginne mit erweiterten Akkorden und Jazz-Kadenzen. Willst du mit Power-Chords rocken? Fang an, die grossen Rocksongs zu transkribieren und ihre Akkordfolgen zu analysieren.</p>
+<p>Was du vermeiden solltest, ist die Grundlagen zu ueberspringen. Ich kann nicht genug betonen, wie wichtig es ist zu wissen, warum und wie die grundlegenden Atome der Musiktheorie funktionieren.</p>
+<h2>Wie lange dauert es, Musiktheorie zu lernen?</h2>
+<p>Du wirst nie "fertig" sein mit dem Lernen von Musiktheorie. Es wird immer Neues zu lernen geben. Wenn du dir aber wirklich die Zeit nimmst und die Grundlagen der Musiktheorie lernst, kannst du sie leicht innerhalb weniger Wochen anwenden!</p>
+<p>In diesem Fall ist Uebung der Schluessel. Laut Leuten, die viel schlauer sind als ich, braucht man etwa 60 Wiederholungen einer Aufgabe, damit sie zur Intuition wird. Stelle also sicher, dass du viel Uebungszeit mit Musiktheorie-Konzepten bekommst, bis du sie verinnerlicht hast.</p>
+<p>Das Beste, was du fuer dein Lernen tun kannst, ist, dich in Musiktheorie einzutauchen. Neben dem reinen Lernen der Theorie wuerde ich empfehlen, Musiktheorie-YouTube-Kanaele aufzusuchen (Adam Neely, Jens Larsen, 12 tone usw.) und natuerlich die gelernte Theorie anzuwenden. Das kann so einfach sein wie eine kleine 3-4-Noten-Melodie mit einem neu gelernten Konzept zu erstellen.</p>
+<h2>Ist Musiktheorie fuer Gitarre notwendig? Ist Musiktheorie fuer Klavier notwendig? Kann ich ohne Theorie buchstaeblich keine Musik machen?</h2>
+<p>Nein!</p>
+<p>Musiktheorie ist nicht notwendig, um ein Instrument zu spielen. Es gibt erstaunliche Kuenstler da draussen, die wenig oder gar keine Musiktheorie kennen!</p>
+<p>Hilft es? Absolut. Musiktheorie zu kennen kann Wunder fuer dein Spiel bewirken. Es wird die Navigation auf deinem Instrument viel einfacher machen und dir helfen, deine Ideen mithelos von deinem Kopf auf dein Instrument zu uebertragen.</p>
+<p>Dein Instrument kuemmert es jedoch nicht, ob du Theorie kennst oder nicht. Und das ist das Schoene daran. Selbst wenn du Theorie lernst, wirst du unweigerlich etwas spielen, das du nicht analysieren kannst. Und das ist in Ordnung! Es ist wichtiger, dass die Musik, die du spielst, fuer dein Ohr gut klingt, als ob sie der Theorie folgt oder nicht.</p>
+<h2>Kann man Musiktheorie alleine lernen? Wie bringe ich mir selbst Musiktheorie bei?</h2>
+<p>Das kannst du absolut! Es gibt eine Fuelle von Ressourcen, sowohl online als auch offline, um Musiktheorie zu lernen.</p>
+<p>Im Zeitalter von YouTube gibt es nicht mehr viel, was man nicht alleine lernen kann. Es wird schwer sein, sich selbst zur Rechenschaft zu ziehen. Wenn du aber motiviert bist und dranbleibst, kann dich nichts davon abhalten, Musiktheorie zu meistern.</p>
+<p>Allerdings kann auch ein Musiktheorie-Lehrer oder sogar der Besuch einer Musikschule wirkungsvoll fuer dein Lernen sein.</p>
+<p>Ich empfehle das <a href="https://www.youtube.com/watch?v=rgaTLrZGlk0">folgende Video von Andrew Huang</a>, um mit Musiktheorie zu beginnen.</p>
+<h2>Braucht man Musiktheorie, um Musik zu machen? Braucht man Musiktheorie, um Musik zu produzieren?</h2>
+<p>Nein! Es gibt so viele Musiker und Produzenten da draussen, die grossartige Musik machen und produzieren. Deine Finger, Instrumente und besonders dein Computer kuemmern sich nicht darum, ob du Musiktheorie kennst, und werden trotzdem Klaenge erzeugen.</p>
+<p>Musiktheorie wird dir besonders helfen, wenn du Produzent bist. Sie kann die Kommunikation von Ideen viel einfacher machen, da du eine gemeinsame Sprache mit anderen Musikern hast.</p>
+<h2>Schraenkt Musiktheorie die Kreativitaet ein? Werde ich jedes Gefuehl verlieren?</h2>
+<p>Raeumen wir den Elefanten im Raum aus dem Weg. Musiktheorie ist genau das, eine Theorie. Es ist leicht, in den Glauben zu verfallen, dass Musiktheorie deiner Kreativitaet schadet. Schliesslich ist es ein Satz von "Regeln" und natuerlich moegen wir keine Regeln und Einschraenkungen.</p>
+<p>Allerdings kann es kontraproduktiv sein, Musiktheorie als ein Regelwerk zu betrachten. Es ist viel produktiver, Musiktheorie als eine gemeinsame Sprache zur Kommunikation von Ideen zu sehen, anstatt als Regeln.</p>
+<p>Man sagt, Regeln sind dazu da, gebrochen zu werden, und das gilt auch hier. Ich wuerde sogar so weit gehen zu sagen, dass du Musiktheorie-Regeln brechen SOLLTEST. Wenn du darueber nachdenkst, ist das, was wir heute Musiktheorie nennen, das Ergebnis davon, dass unsere Vorfahren ihre Regeln fuer Musiktheorie gebrochen und neue Ideen und Motive entwickelt haben!</p>
+<p>Ich empfehle sehr, mit Musiktheorie zu experimentieren. Stelle dir so viele "Warum?"- und "Was waere wenn?"-Fragen und hab keine Angst, die Regeln zu brechen.</p>
+<h2>Gilt Musiktheorie fuer alle Instrumente?</h2>
+<p>Ja! Das ist das Schoene an der Theorie. Deine mechanischen Faehigkeiten moegen an dein Instrument gebunden sein, aber dein Wissen ueber Musiktheorie ist universell!</p>
+<p>Persoenlich habe ich mich nie hingesetzt und Klavier spielen geuebt, aber ich kann mich mit Hilfe der Theorie auf dem Instrument zurechtfinden. Zum Beispiel weiss ich, dass ein C-Akkord aus dem Grundton, einer grossen Terz und einer reinen Quinte besteht, also kann ich, wenn ich weiss, wo die Note C ist, leicht einen C-Akkord bilden.</p>`,
+  },
+
+  "7-reasons-why-you-should-learn-music-theory": {
+    title: "7 Gruende, warum du Musiktheorie lernen solltest",
+    seoTitle: "Brauchst du Musiktheorie? Behindert Musiktheorie meine Kreativitaet? Entdecke 7 Gruende, warum du Theorie brauchst.",
+    description: "Behindert Musiktheorie deine Kreativitaet?",
+    timeToRead: "6 Min.",
+    body: `<p>Glaub mir, ich verstehe das. Ich dachte nicht, dass es mir als Musiker helfen wuerde, komplexe Akkorde bilden und benennen zu koennen, Beziehungen zwischen Tonleitern und Akkorden zu finden und in ungeraden Taktarten zu arbeiten.</p>
+<p>Aber dank der Musiktheorie habe ich meine kreativen Faehigkeiten noch nie so unter Kontrolle gefuehlt. Improvisation fuehlt sich grenzenlos an. Die Moeglichkeiten beim Songwriting sind endlos. Sich gehen zu lassen war noch nie so angenehm. Ich habe sogar eine <a href="https://www.solfej.io/">Musiktheorie-App</a> entwickelt!</p>
+<p>Ich habe leider den Fehler gemacht, Musiktheorie in der Vergangenheit zu unterschaetzen, aber genau deshalb werde ich nicht zulassen, dass meine Musikerkollegen denselben Fehler machen. Lass mich dir helfen, Theorie als den ultimativen Hack zur totalen kreativen Kontrolle zu sehen.</p>
+<p>Hier ist warum:</p>
+<h2>1. Musiktheorie wird dich zu einem besseren Musiker machen</h2>
+<p>Du kannst ein guter Musiker ohne Musiktheorie sein, du kannst sogar ein erstaunlicher sein. Aber mit Musiktheorie faengst du an, alle beweglichen Teile der Musik zu verstehen.</p>
+<p>Die theoretischen Gruende zu verstehen, warum Dinge zusammen gut klingen, wird Wunder fuer dein Spiel bewirken. Selbst mit nur ein wenig Musiktheorie-Wissen kannst du deine Ideen und Gefuehle viel leichter ausdruecken.</p>
+<h2>2. Musiktheorie hilft dir, mit anderen Musikern zu kommunizieren</h2>
+<p>Musiktheorie ist die gemeinsame Sprache zwischen dir und allen anderen, die sie kennen. Stell dir vor, du muesstest deinem Freund die Farbe Rot erklaeren, ohne das Wort Rot zu verwenden.</p>
+<p>Sobald du musikalischen Konzepten Namen gibst und sie in Gruppen organisierst, kannst du deine musikalischen Ideen mithelos an andere Musiker weitergeben. "Geh zwei Buende hoch und spiel den komisch klingenden Akkord nochmal" wird zu "Spiel den H-verminderten Akkord nochmal".</p>
+<h2>3. Musiktheorie wird dein Gehoer entwickeln</h2>
+<p>Musiktheorie wird dir helfen, die Klaenge, die du in deinem Kopf hoerst, auf dein Instrument zu uebertragen.</p>
+<p>Dein Ohr wird so vielen verschiedenen Klaengen ausgesetzt sein, dass Musik durch disziplinierte Konzentration schnell zur zweiten Natur wird.</p>
+<p>Eher frueher als spaeter wirst du nicht mehr nach Tabs suchen, um einen Song zu lernen, sondern einfach die Melodie summen und sie direkt spielen koennen.</p>
+<h2>4. Musiktheorie lehrt dich die Regeln, damit du sie brechen kannst</h2>
+<p>Musiktheorie ist genau das, eine Theorie. Es ist ein Satz von Regeln und Klassifikationen. Musiker, die Musiktheorie lernen, sind NICHT verpflichtet, einen Eid abzulegen, nie ausserhalb der Regeln zu spielen.</p>
+<p>Tatsaechlich sind sie diejenigen, die die Regeln am meisten brechen und am weitesten hinausgehen. Wie kann man schliesslich die Regeln brechen, wenn man nicht weiss, was die Regeln ueberhaupt sind?</p>
+<h2>5. Musiktheorie wird deine Improvisationsfaehigkeiten verbessern</h2>
+<p>Mit deinem entwickelten Gehoer und deinem Wissen ueber Akkorde und Tonleitern wirst du in der Lage sein, waehrend des Improvisierens ein akademisches Selbstvertrauen zu entwickeln.</p>
+<p>Du wirst wissen, welche Noten ueber welchen Akkorden "gut" klingen und welche Reihe von Akkorden die bestimmte Emotion hervorruft, die du suchst.</p>
+<h2>6. Musiktheorie hilft dir, dein Instrument zu navigieren</h2>
+<p>Es ist leicht, in Trance zu fallen und sich auf seinem Instrument zu verirren, waehrend man auf der Buehne oder sogar zu Hause spielt. Anfaenger wissen definitiv, wovon ich spreche.</p>
+<p>Am Beispiel eines Gitarristen: Was passiert, wenn du versehentlich deine Haende aus deiner vertrauten A-Moll-Pentatonik-Box bewegst und nicht weisst, wie du dieselbe Tonleiter woanders nachbilden kannst? Du spielst versehentlich eine Cb-Moll-Pentatonik-Tonleiter und klingst ziemlich schlecht.</p>
+<p>Aber wenn du wuesstest, wie man eine Tonleiter oder einen Akkord bildet, koenntest du ueberall auf deinem Instrument in der richtigen Tonart bleiben.</p>
+<h2>7. Musiktheorie wird dir mehr Moeglichkeiten geben, kreativ zu werden</h2>
+<p>Es ist leicht, sich in einfachen pentatonischen Formen zu verlieren, wenn du Gitarrist bist, aber nur ein oder zwei Tonleitern und Akkorde auf irgendeinem Instrument zu kennen, wird schnell langweilig.</p>
+<p>Waehrend du Theorie studierst, wirst du so vielen musikalischen Moeglichkeiten ausgesetzt sein. Du wirst gar nicht wissen, wo du anfangen sollst zu waehlen, was du spielen moechtest.</p>
+<h2>Fazit</h2>
+<p>Musiktheorie zu lernen wird deine Improvisation nicht behindern oder dein "Gefuehl" vermindern.</p>
+<p>Stattdessen wird sie dir grenzenlose Wege bieten, deine Improvisations- und "Gefuehl"-Faehigkeiten mit neuen Akkorden, neuen Tonleitern und neuen Riffs auszuueben.</p>
+<p>Wenn du bereit bist, in die Musiktheorie einzutauchen und deine Ohren zu trainieren, <b><a href="https://shayanjavadi.typeform.com/to/wO59zz">melde dich fuer die Solfej-Beta an</a></b></p>`,
+  },
+
+  "dont-give-up-on-music-theory": {
+    title: "Ist Musiktheorie schwer?",
+    seoTitle: "Lohnt es sich, Musiktheorie zu lernen? Warum solltest du dir die Muehe machen, Musiktheorie zu lernen?",
+    description: "Warum es sich lohnt, Musiktheorie zu lernen",
+    timeToRead: "10 Min.",
+    body: `<p><i>Dies ist ein Gastbeitrag von JP Hwang - JP ist ein kuerzlich reformierter Patentanwalt, der seine schicken Anzuege und sein Buero in Sydney, Australien, gegen viele kurze Hosen, einen Laptop und einen Koffer in Suedostasien eingetauscht hat. Er nennt sich selbst einen Online-"Maker" und moechte das eines Tages auch selbst so meinen. Du findest seinen Blog auf <b><a href="https://medium.com/@_jphwang">Medium</a></b> oder auf Twitter <b><a href="https://twitter.com/_jphwang">@_jphwang</a></b>.</i></p>
+<h2>Ist Musiktheorie schwer?</h2>
+<p>Wenn du diesen Beitrag liest, teilen du und ich wahrscheinlich mindestens eine bedeutende Luecke in unserem Wissensschatz. Es gibt eine riesige Anzahl von uns, die diese gleiche Last der Unwissenheit mit sich tragen. Es bezieht sich auf etwas so Universelles, dass es scheint, als sollte es nicht so schwierig sein. Und doch wuerde ich wetten, dass es weit mehr von uns Unwissenden gibt als solche, die in diesem Bereich kenntnisreich sind.</p>
+<p>Danach gefragt zu werden, kann auch ein scheinbar unverhaeltnismaessiges Mass an Scham in uns hervorrufen. Anschliessende Fragen, ob wir versucht haben, es zu lernen (oder warum wir nicht dabei geblieben sind), koennten in aehnlichen Dosen, wenn nicht hoeher, innere Bestuerztheit ausloesen.</p>
+<p>Dabei sind wir gezwungen, uns mit unserer Geschichte des Scheiterns an etwas auseinanderzusetzen, das wie eine Selbstverstaendlichkeit erscheinen sollte, da wir andere Aspekte davon wirklich geniessen. Es spielen, es hoeren und leidenschaftlich vielen Schoepfern dieser wunderschoenen Kunstform folgen.</p>
+<p>"Es" ist natuerlich <b>Musiktheorie</b>.</p>
+<h2>Musiktheorie erscheint schwer (fuer mich)</h2>
+<p>Wenn ich sage, dass ich in Musiktheorie unwissend bin, meine ich das wirklich. Ich habe ueberhaupt keine Fachkenntnisse in Musiktheorie oder auch nur Musik. Aber wie die meisten von uns schaetze ich sie sehr. Ich habe sogar versucht, ein oder zwei Instrumente zu lernen (wer hat das nicht?!). Ich bin nicht sehr weit gekommen, konnte aber hier und da ein paar Songs spielen.</p>
+<p>Ich habe Ratschlaege erhalten und gelesen, wie man am besten Gitarre oder Klavier spielen lernt, aber nicht viele Leute haben mir geraten, Musiktheorie zu lernen. Die wenigen Male, die ich auf solchen Rat stiess, <b>fand ich das begleitende Material so unfreundlich und schwierig, dass es mich in einen Zustand der Fassungslosigkeit versetzte</b>. So sehr, dass ich an der Grenze davon ueberzeugt war, es sei von einer Gilde von Musikern entworfen worden, die neue Leute davon abhalten wollten, in ihr Feld einzutreten.</p>
+<p>All das will sagen, dass Musiktheorie und ich nicht die besten Freunde waren; und es schien mir nie so, als wuerden wir jemals mehr sein als uns gegenseitig der Existenz bewusst. Ich denke, es ist leicht, frustriert zu werden, wenn wir beim Lernen von irgendetwas keine sichtbaren Fortschritte machen, besonders als Erwachsene.</p>
+<h2>Musiktheorie IST schwer</h2>
+<p>Kommt dir das bekannt vor? Ich weiss natuerlich nicht speziell ueber dich Bescheid und werde nicht so anmassend sein anzunehmen, dass du es so schwierig empfunden hast wie ich. Das waere sicherlich viel angenommen. Aber meine Internetrecherchen legen nahe, dass es sehr verbreitet ist, so zu fuehlen. Ein beilaeufiges Durchstoebern von Reddit, Quora oder einer beliebigen Anzahl anderer Foren bringt Aussagen wie diese von hilfesuchenden Personen hervor:</p>
+<ul>
+<li>"Warum ist Musiktheorie so schwer zu lernen?"</li>
+<li>"Ich habe versucht, Musiktheorie 6 (sechs) Mal zu lernen und jedes Mal frustriert aufgehoert."</li>
+<li>"Ich fuehle mich, als waere mein Gehirn nicht dafuer verdrahtet, Musiktheorie zu verstehen."</li>
+<li>"Ich bin 48. Musiktheorie hat mich seit ich sieben war gemobbt und ist gerade mit meiner Verlobten in meinen Ersparnissen fuer den Ruhestand abgehauen." (Okay, das habe ich mir gerade ausgedacht.)</li>
+</ul>
+<p>Einige dieser Zitate oder aehnliche stammen von Musikern unterschiedlicher Erfahrungsstufen, nicht nur von Anfaengern oder Uneingeweihten wie mir.</p>
+<p>Wir haben sogar eine Doktorarbeit aus dem Jahr 2018 gefunden, die speziell darueber geschrieben wurde, die Leistung von Studenten in Musiktheorie-Kursen fuer Studenten in Bachelor-Musikprogrammen zu verbessern, weil zu viele der Studenten es zu schwierig fanden. Wirklich.</p>
+<p>Musiktheorie zu lernen ist tatsaechlich fuer viele von uns schwierig. Aber das musste ich dir nicht sagen. Das wusstest du bereits.</p>
+<h2>Aber es muss nicht so sein</h2>
+<p>Was wir dir wirklich sagen wollten, und etwas, das auch durch die Erfahrungen vieler anderer Menschen bestaetigt wird, ist dies: <b>Musiktheorie zu lernen ist nicht unmoeglich; ganz im Gegenteil</b>.</p>
+<p>Viele der obigen Fragen ueber die Schwierigkeit des Lernens von Musiktheorie enden mit Antworten oder gluecklichen Enden. In einigen Faellen sprechen Menschen ueber ihre eigenen Erfahrungen des Kampfes mit Musiktheorie, die letztendlich siegreich waren, und in anderen werden Menschen zu einer Reihe nuetzlicher Ressourcen oder Tipps gefuehrt.</p>
+<p>Diejenigen, die es geschafft haben, sind auch leidenschaftlich ueber die Vorteile des Verstaendnisses von Musiktheorie. Sie sprechen begeistert ueber die positiven Auswirkungen auf ihre Darbietungen, Improvisation, das Erlernen neuer Stuecke und die Kommunikation oder Zusammenarbeit mit anderen. Nicht viele von ihnen wuerden sagen, dass es sich nicht gelohnt hat.</p>
+<p>In den meisten Faellen betonen die Erfolgsgeschichten beim effektiven Lernen von Musiktheorie die Wichtigkeit, die richtigen Wege zu finden, die fuer einen selbst funktionieren.</p>
+<h2>Die richtigen Werkzeuge, um Musiktheorie zu lernen</h2>
+<p>Es gilt als die Definition von Wahnsinn, genau dasselbe zu versuchen und ein anderes Ergebnis zu erwarten. Beim Lernen von Musiktheorie ist es nicht anders. Es ist gut dokumentiert, dass Menschen auf unterschiedliche Weise lernen. Wenn eine bestimmte Methode des Musiktheorie-Lernens fuer jemanden nicht funktioniert, hat es wenig bis keinen Sinn, immer wieder dieselbe Methode zu versuchen.</p>
+<p>Indem du die richtigen Werkzeuge fuer dich und deine musikalischen Ziele findest, glauben wir, dass die richtigen Ergebnisse eher als nicht folgen werden.</p>
+<p>Hier bei Solfej geben wir nicht vor, das eine Musiktheorie-Lernwerkzeug fuer alle zu sein. Das waere grossartig, aber unwahrscheinlich. Jeder ist anders. Aber wir glauben, dass wir das richtige Werkzeug fuer einige - hoffentlich viele - von euch sein koennen. <a href="https://shayanjavadi.typeform.com/to/wO59zz"><b>Also probier uns aus!</b></a> Und es ist okay, wenn wir nicht dein Ding sind. Hoffentlich hilft dir das Ausprobieren herauszufinden, was fuer dich funktioniert und was nicht. Es ist alles Teil der Reise.</p>
+<p>Es kann geschafft werden, es wurde von vielen von uns geschafft, und vertraue dem Prozess, indem du die richtige Hilfe findest.</p>
+<p><b>Gib die Musiktheorie nicht auf.</b></p>`,
+  },
+
+  "cadences": {
+    title: "Der ultimative Leitfaden zu Kadenzen in der Musiktheorie: Die 4 Arten von Kadenzen mit Beispielen",
+    seoTitle: "Der ultimative Leitfaden zu Kadenzen in der Musiktheorie: Die 4 Arten von Kadenzen mit Beispielen",
+    description: "Lerne die 4 Arten von Kadenzen in der Musiktheorie",
+    timeToRead: "8 Min.",
+    body: `<p>Eines der wichtigsten Konzepte in der Musiktheorie ist das Konzept der Kadenzen:</p>
+<p>Schlage "Kadenz" im Woerterbuch nach und du findest: "eine Folge von Toenen oder Akkorden, die den Abschluss einer musikalischen Phrase bilden".</p>
+<p>Aber ich sehe es so: Genau wie im Film, wie moechte der Regisseur seinen Film abschliessen? Moechte er eine perfekte Aufloesung, oder moechte er seinen Film mit einem Cliffhanger voller Fragen beenden?</p>
+<p>So sehe ich Kadenzen: Sie sind deine letzten Absichten, dein letzter Satz in einer musikalischen Passage, dein Abschluss, dein Schwanengesang sozusagen.</p>
+<p>Beginnen wir unseren Blick auf Kadenzen mit der haeufigsten der Gruppe.</p>
+<h2>1. Authentische Kadenz (V nach I)</h2>
+<p>Eine authentische Kadenz geht von V nach I. Authentische Kadenzen sind der einfachste Weg, eine Tonalitaet zu etablieren. Authentische Kadenzen werden als <b>perfekt</b> oder <b>imperfekt</b> klassifiziert. So unterscheiden sich perfekte und imperfekte Kadenzen.</p>
+<h3>Perfekte authentische Kadenz</h3>
+<p>Die haeufigste Kadenz in der gesamten Musik, die perfekte (authentische) Kadenz klingt am <b>"endgueltigsten"</b> von allen. Dies ist das Happy End, bei dem deine musikalische Geschichte zufrieden und aufgeloest ist; keine Cliffhanger und alle Fragen beantwortet.</p>
+<p>Diese Kadenz wird erreicht, wenn du vom dominanten V-Akkord zurueck zum tonischen I in einer Dur-Tonart oder zum tonischen Moll in einer Moll-Tonart gehst. Es ist auch wichtig zu beachten, dass diese beiden Akkorde normalerweise in Grundstellung stehen.</p>
+<p>Durch die Nutzung des Uebergangs zwischen diesen beiden Akkorden am Ende deiner Komposition oder am Ende eines Abschnitts innerhalb deiner Komposition kannst du dein Stueck in einem voellig ausgeglichenen, voellig heimischen und voellig befriedigenden Stopp beenden.</p>
+<h3>Imperfekte authentische Kadenz</h3>
+<p>Auf den ersten Blick ist es schwer, den feinen Unterschied zwischen der perfekten und imperfekten Kadenz zu erkennen, da beide vom dominanten V-Akkord zum jeweiligen tonischen I-Akkord gehen. Der Unterschied liegt in der ungewoehnlichen Schichtung der Akkorde.</p>
+<p>Damit meine ich, dass deine <b>ueblichen V- und I-Akkorde umgekehrt werden</b>, sodass die Grundtoene in verschiedenen Lagen liegen. Auf diese Weise endest du tatsaechlich auf der hoechsten Stimme eines Akkords anstatt auf deinem ueblichen Grundton.</p>
+<p>Mit den umgekehrten Akkorden hat die imperfekte Kadenz eine weniger abgeschlossene Aufloesung. Anders als der vollstaendige Stopp einer perfekten Kadenz gibt es Raum, nach einer imperfekten Kadenz weiterzumachen. Dieses Vorwaertsmomentum kann weiter ausgearbeitet werden und so lange andauern, wie der Komponist es moechte, und deshalb wird die imperfekte Kadenz als eher "teilweise Aufloesung" gefeiert.</p>
+<h3>Beispiele fuer authentische Kadenzen:</h3>
+<p>1. Adele - Someone Like You (erste zwei Akkorde des Refrains)</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hLQl3WQQoQ0?start=72" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>2. Bruno Mars - When I Was Your Man (Intro)</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ekzHIouo8Q4?start=11" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2>2. Plagale Kadenz (IV nach I)</h2>
+<p>Die plagale Kadenz ist der perfekten authentischen Kadenz in ihrer Bewegung und Aufloesung zum Grundton sehr aehnlich. Allerdings beginnt die plagale Kadenz auf einem anderen Akkord.</p>
+<p>Die plagale Kadenz bewegt sich vom IV (Subdominante) zum I (Tonika)-Akkord in Dur-Tonarten (iv-i in Moll-Tonarten). Wegen des Beginns auf der Subdominante klingt die plagale Kadenz wie eine schwaechere Version der perfekten Kadenz.</p>
+<p>Die plagale Kadenz kann auch verschiedene Umkehrungen dieser Zielakkorde beinhalten, was dem Komponisten Raum fuer Experimente gibt.</p>
+<h3>Beispiele fuer plagale Kadenzen:</h3>
+<p>1. Abba - Mamma Mia ("Just (IV) one (I)"...)</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/unfzfe8f9NI?start=41" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2>3. Halbschluss (I nach V)</h2>
+<p>Der Halbschluss weicht von den vorherigen drei Kadenzen ab. Waehrend die ersteren drei auf dem Tonika-Akkord einer Tonart enden, endet der Halbschluss auf dem V. Da der V-Akkord den staerksten Zug zum I-Akkord hat, klingt das Beenden eines Musikstuecks auf dem V-Akkord wie eine voruebergehende Pause.</p>
+<p>Zurueck zu meiner Anspielung auf den Film frueher: Der Halbschluss ist gleichbedeutend damit, dass ein Regisseur seinen Film mit einem sehr grossen Cliffhanger beendet.</p>
+<p>Eine weitere coole Sache am Halbschluss ist seine Vielseitigkeit. Damit meine ich, dass man von jedem anderen Akkord der Tonart zum V-Akkord gehen kann, solange er auf der Dominante endet. (I-V, ii-V usw.)</p>
+<h3>Beispiele fuer den Halbschluss:</h3>
+<p>1. 3 Doors Down - Be Like That (Intro)</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HHpMtWtgUvc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2>4. Trugerische Kadenz (V nach vi)</h2>
+<p>Oft auch als unterbrochene Kadenz bezeichnet, ist eine truegerische Kadenz eine Kadenz von V nach vi. Die truegerische Kadenz gilt als schwach aufgrund des schwebenden Gefuehls, das sie hervorruft.</p>
+<p>Wie der Name schon sagt, ist diese Kadenz "truegerisch", da der V sich, wie wir gelernt haben, schoen zum I aufloest. Die truegerische Kadenz dreht das um und laesst den Zuhoerer auf einem vi-Akkord haengen.</p>
+<p>1. The Beatles - P.S. I Love You ("P. S. I love you, you, you, you."-Teil)</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MA5DkiVKSlM?start=22" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2>Zusammenfassung</h2>
+<p>Kadenzen sind eine Moeglichkeit, deine letzten Gedanken in einem Musikstueck abzuschliessen. Wie du dein Stueck beenden moechtest, liegt bei dir, und jedes Ende erzeugt einen bestimmten Effekt.</p>
+<p>Moechtest du, dass dein Publikum ausgeglichen und aufgeloest geht? Moechtest du, dass dein Publikum leicht aufgeloest geht? Moechtest du, dass dein Publikum gehoben geht? Oder moechtest du, dass dein Publikum mit zweideutigen Gedanken geht, die es noch lange ueber dein Stueck nachdenken lassen?</p>
+<p>Experimentiere mit diesen grundlegenden Kadenzen und finde heraus, welche dir am besten gefallen.</p>`,
+  },
+
+  "how-to-find-new-music": {
+    title: "Wie man neue Musik findet",
+    seoTitle: "Wie man neue und alte Musik findet.",
+    description: "Wie man neue Musik findet",
+    timeToRead: "10 Min.",
+    body: `<p><i>Dies ist ein Gastbeitrag von Henry Garrett - Henry ist tagsueber (und manchmal nachts) Softwareentwickler und Mitbegruender des <b><a href="https://albumdaily.com/?ref=Solfej">Album Daily Newsletters</a></b>. Er war schon immer fasziniert von der Kraft der Musik. Er nennt sich selbst einen Musik-"Forscher", jemand, der staendig nach seinem naechsten Lieblingskuenstler/-song sucht. Du findest ihn auf Twitter <b><a href="https://twitter.com/garretthenrym">@garretthenrym</a></b> oder ueber <b><a href="https://albumdaily.com/?ref=Solfej" rel="nofollow">Album Daily</a></b>.</i></p>
+<h2>Vorwort</h2>
+<p>Ich werde dir ein Bild malen, und lass uns sehen, ob dir das schon mal passiert ist. Du hoerst einen Kuenstler, den du magst, auf Spotify oder Apple Music, sagen wir Jack Johnson. Nach dem Hoeren willst du mehr Musik finden, die dir gefaellt, also probierst du die algorithmusbasierten Empfehlungen aus. Was empfiehlt es? Mehr Jack Johnson Alben und einen, oder wenn du Glueck hast, 2-3 aehnliche Kuenstler. Grossartig! Ein Anfang, also probierst du einige davon aus.</p>
+<p>Jetzt bekommst du jedes Mal, wenn du zur App zurueckgehst, die gleichen Empfehlungen. Im gleichen Genre. Von den gleichen Kuenstlern. Immer. Und. Immer. Und. Immer. Wieder.</p>
+<p>Ist dir das schon mal passiert? Fuer mich war es ein taegliches Vorkommnis. Ich war extrem frustriert davon. Nur weil ich ein Genre mag, heisst das nicht, dass ich nur dieses Genre hoeren will. Das fuehrte mich dazu, andere Wege zur Musikentdeckung zu erkunden, und startete ein lebenslanges Hobby der Musikentdeckung. Also werde ich mit dir ein paar Wege teilen, wie ich Musik finde, in der Hoffnung, dass es dir helfen kann, neue Klaenge zu entdecken.</p>
+<p>Bevor wir anfangen, muss ich die zwei Arten von "neuer" Musik definieren. Das ist wichtig, denn waehrend sich einige der Entdeckungstechniken ueberschneiden, sind sie groesstenteils verschieden. Diese Kategorien sind:</p>
+<ul>
+<li>Neu veroeffentlichte Musik</li>
+<li>Musik, die neu fuer mich ist (oder fuer dich!)</li>
+</ul>
+<h2>Neu veroeffentlichte Musik</h2>
+<p>Beginnen wir mit der einfachen Kategorie, neu veroeffentlichte Musik. Der Grossteil der Musikindustrie folgt einem ziemlich strengen Veroeffentlichungsplan, wobei der Freitag als designierter woechentlicher Veroeffentlichungstag gilt. Bis Juli 2015 war es dienstags, aber die Branchenoberhaeupter kamen zusammen und entschieden, dass "New Music Friday" viel besser klingt (ich kann es ihnen nicht verdenken).</p>
+<p>Wie findest du also Alben, die zur Veroeffentlichung anstehen? Nun, du kannst deinen Lieblingskuenstlern oder Plattenlabels in den sozialen Medien folgen, da sie sicher ihre Arbeit bewerben werden. Ich finde es jedoch besser, bei <a href="https://consequenceofsound.net/upcoming-releases/" rel="nofollow">Consequence of Sound</a> vorbeizuschauen, da sie die kommenden Albumveroeffentlichungen hervorragend zusammenfassen. Dieser Link ist in meinem Browser als Lesezeichen gespeichert, und ich schaue die Woche ueber rein, um zu sehen, worauf ich mich am Freitag freuen kann.</p>
+<h2>Musik, die neu fuer mich ist</h2>
+<p>Jetzt zur schwierigen Kategorie, Musik, die neu fuer mich ist (oder fuer dich!). Hier sind einige der Techniken, die ich verwende, oder Orte, an denen ich suche.</p>
+<h3>Reddit</h3>
+<p>Ich finde Reddit unverzichtbar fuer die Musikentdeckung, aus dem einfachen Grund, dass es andere Menschen sind, die die Musik teilen, die sie moegen. Wahrscheinlich wirst du nicht jeden Song moegen, den jemand empfiehlt (ich sicher auch nicht), aber je mehr du erkundest und lernst, desto mehr wirst du finden. Hier sind einige der besten Subreddits, um Musik zu finden:</p>
+<ul>
+<li><a href="https://www.reddit.com/r/Music/">r/Music</a></li>
+<li><a href="https://www.reddit.com/r/listentothis/">r/listentothis</a></li>
+<li><a href="https://www.reddit.com/r/LetsTalkMusic/">r/LetsTalkMusic</a></li>
+</ul>
+<h3>Frag herum</h3>
+<p>Dies ist wahrscheinlich die offensichtlichste, aber am wenigsten genutzte Methode meiner Meinung nach. Ohne Zweifel war die beste Musik, die ich je gefunden habe, eine Empfehlung von einem Freund oder Familienmitglied. Zum Beispiel wusste ich nie, dass mein Schwiegervater sich fuer Musik interessiert, bis ich ihn fragte: "Was hoerst du gerne?" Er teilte mir dann einige der weniger bekannten Musikkuenstler der 60er und 70er Jahre mit, die zu einigen meiner absoluten Favoriten geworden sind. Ohne Zweifel haette ich diese Kuenstler ohne ein Gespraech mit ihm nie gefunden.</p>
+<h3>Musik-Streaming-Apps</h3>
+<p>Ja, ich weiss, ich habe vorhin auf Spotify und Apple Music geschimpft, aber sie haben ihren Platz. Um sie effektiv zu nutzen, musst du verstehen, wie die Algorithmen funktionieren. Diese Algorithmen filtern nach vielen Kategorien, aber die am staerksten gewichteten sind <b>Popularitaet, Genre und Nutzerverhalten</b>. Zum Beispiel, wenn du Ed Sheeran hoerst, wuerde ein Algorithmus hoechstwahrscheinlich Taylor Swift, Shawn Mendes oder One Direction empfehlen; nicht den 18-jaehrigen britischen Newcomer, der genau wie Sheeran klingt. Das ist eine Manifestation von Popularitaets- und Genre-Bias, was grossartig sein kann, wenn du das erwartest. Normalerweise halten dich diese Algorithmen in einer Komfortzone, was seinen Platz fuer diejenigen unter uns hat, die das wuenschen.</p>
+<h2><a href="https://albumdaily.com/?ref=Solfej_Blog" rel="nofollow">Album Daily</a></h2>
+<p>Okay, ich gebe es zu, das ist Eigenwerbung. Aber ich habe <a href="https://albumdaily.com/?ref=Solfej_Blog" rel="nofollow">Album Daily</a> gegruendet, um genau dieses Problem der algorithmischen Musikentdeckung anzugehen. Wenn du dich fuer einen unserer beiden Newsletter entscheidest, taeglich oder woechentlich verteilt, wirst du vielen verschiedenen Genres und Kuenstlern vorgestellt. Ich, zusammen mit meiner Frau und Mitgruenderin Paige, verbringen Stunden damit, Musik zu durchkaemmen, um das hervorzuheben, von dem wir glauben, dass unser Publikum es lieben wird, aus allen Bereichen der Musikindustrie.</p>
+<p>Da hast du es, einige interessante Wege, neu veroeffentlichte Musik und Musik, die neu fuer dich ist, zu finden. Ich hoffe, die Taktiken in diesem Artikel helfen dir, deinen musikalischen Geschmack zu erweitern und deine neuen Lieblingssongs zu finden. Lass mich auf <a href="https://twitter.com/garretthenrym">Twitter</a> wissen, wie du neue Musik findest! Viel Spass beim Hoeren!</p>
+<p>Henry Garrett</p>`,
+  },
+
+  "whats-new-in-solfej-v-1.3": {
+    title: "Was gibt es Neues in Solfej v1.3",
+    seoTitle: "Neue Version von Solfej, einer Musiktheorie-App, enthaelt interaktive Musiklektionen.",
+    description: "Ueberarbeitete Lektionen, interaktive Musiktheorie-Beispiele, viele behobene Fehler.",
+    timeToRead: "4 Min.",
+    body: `<p>Solfej Version 1.3.0 ist heute erschienen!</p>
+<p>Version 1.3.0 basiert auf dem Feedback der Beta-Nutzer (Vielen Dank an alle, die die App ausprobiert und Feedback gegeben haben. Doppelt danke, wenn es auf <a href="https://solfej.canny.io/solfej-user-forums">Canny.io</a> war).</p>
+<p>Diese Version beinhaltet interaktive Lektionsbeispiele, ueberarbeitete Lektionen, 3 brandneue Lektionen, einige Fehlerbehebungen und viele allgemeine Verbesserungen. Lies weiter fuer alle Details!</p>
+<a href="https://shayanjavadi.typeform.com/to/wO59zz"><p>Melde dich fuer den fruehen Zugang an, falls du es noch nicht getan hast!</p></a>
+<h2>Interaktive Lektionsbeispiele</h2>
+<p>Interaktive Musiktheorie-Lektionen waren eine der am meisten gewuenschten Funktionen. Ich habe hoerbare Beispiele zu fast jeder Musiktheorie-Lektion hinzugefuegt.</p>
+<p>Darueber hinaus habe ich auch eine interaktive Klavierrolle zu einigen der Lektionen hinzugefuegt. Dies soll helfen, die Konzepte zu visualisieren.</p>
+<h2>Ueberarbeitete Lektionen</h2>
+<p>Wie die meisten von euch bemerkt haben, war der Lektionsplan (besonders die Musiktheorie) in einem fruehen Stadium. Das neue Update zielt darauf ab, das zu beheben.</p>
+<p>Ich habe Rechtschreib- und Grammatikfehler in jeder Lektion behoben. Einige der Lektionen enthielten Ungenauigkeiten. Diese sind ebenfalls behoben.</p>
+<p>Ich habe auch einige der Lektionen umgestellt. Dies soll sicherstellen, dass die Lektionspfade Sinn ergeben und Konzepte in der richtigen Reihenfolge eingefuehrt werden.</p>
+<p>P.S. Schreib mir gerne, wenn du Probleme mit dem Text siehst!</p>
+<h2>Neue Lektionen</h2>
+<p>Es gibt 3 brandneue Musiktheorie-Lektionen!</p>
+<p>Eine mit dem Titel "Kreuz- und B-Vorzeichen", die anderen beiden "Musiktheorie in Musik umsetzen" und "Die Dur-Tonleiter".</p>
+<p>Schau sie dir unbedingt an!</p>
+<h2>Push-Benachrichtigungen</h2>
+<p>Du hast jetzt die Moeglichkeit, uns zu erlauben, dir hilfreiche Erinnerungen zu senden! Du erhaeltst eine Aufforderung, sobald du die App nach dem Update oeffnest.</p>
+<h2>Fehlerbehebungen</h2>
+<ul>
+<li><a href="https://solfej.canny.io/admin/board/solfej-user-forums/p/login-bug">Problem behoben, bei dem die App nach fehlgeschlagenem Google-Login haengen blieb.</a></li>
+<li><a href="https://solfej.canny.io/admin/board/solfej-user-forums/p/google-login-issue">Google-Login nannte die App "App" statt Solfej - behoben.</a></li>
+<li><a href="https://solfej.canny.io/admin/board/solfej-user-forums/p/sounds-issue">Probleme mit Audio und nicht abspielendem Audio behoben. Zusaetzlich wurde ein Pop-up hinzugefuegt, um sicherzustellen, dass Nutzer das abgespielte Audio hoeren koennen.</a></li>
+<li>Viele Verbesserungen unter der Haube.</li>
+</ul>`,
+  },
+
+  "is-betapage-worth-it": {
+    title: "Lohnt sich Betapage?",
+    seoTitle: "Lohnt sich Betapage? Solfej, eine Musiktheorie-App, hat Betapage genutzt, um die ersten Kunden zu gewinnen.",
+    description: "Ein Preisschild von 100$, das sich lohnen koennte.",
+    timeToRead: "5 Min.",
+    body: `<p>Es ist ein paar Wochen her, seit Solfej angefangen hat, Beta-Nutzer im fruehen Zugang aufzunehmen <a href="https://shayanjavadi.typeform.com/to/wO59zz">(klicke hier, um den ueber 900 Personen beizutreten, die sich angemeldet haben, um die App auszuprobieren)</a>.</p>
+<p>Als Erstgruender ist es auch die gleiche Zeitspanne, seit ich die App ernsthaft vermarkte. Fuer eine Musiktheorie-App waren die Vertriebskanaele nicht gerade offensichtlich.</p>
+<p>Hier kommt <a href="https://betapage.co/">Betapage</a> ins Spiel. Betapage ist ein Aggregator fuer Startups, die sich in der Beta/Fruehzugangsphase befinden. Um dein Startup vorgestellt zu bekommen, musst du es bei Betapage einreichen und etwa einen Monat auf die Vorstellung warten. Alternativ kannst du auch eine huebsche Summe bezahlen und die Wartezeit ueberspringen.</p>
+<h2>Die Zahlen</h2>
+<p>Ich habe 119$ bezahlt, damit Solfej insgesamt 2 Tage lang auf Betapage vorgestellt wird. Hier ist die Aufschluesselung dessen, was ich bekommen habe (ich kopiere dieses Format schamlos von Pine.io, <a href="https://pine.io/blog/should-i-publish-to-betalist/">schau dir deren Blogbeitrag ueber Betalist an</a>):</p>
+<ul>
+<li>430 einzigartige Besucher</li>
+<li>120 Anmeldungen</li>
+<li>119$</li>
+</ul>
+<p>Das laeuft auf etwa 1$ pro Anmeldung hinaus. Das ist ziemlich gut!</p>
+<p>Zum Vergleich hier die durchschnittlichen CPCs (Kosten pro Klick) fuer beliebte Werbenetzwerke:</p>
+<ul>
+<li>Google Ads: ~2,00$</li>
+<li>Facebook Ads: ~1,86$</li>
+<li>Instagram Ads: ~0,80$</li>
+</ul>
+<h2>Also lohnt sich Betapage?</h2>
+<p>Ich habe mich verpflichtet, so viel Nutzerfeedback wie moeglich fuer meine Musiktheorie-App zu bekommen. Betapage hat mir genau dabei zu einem ziemlich vernuenftigen Preis geholfen.</p>
+<p>Ich habe am Ende viel grossartiges, detailliertes Feedback von den Nutzern erhalten, die ueber Betapage kamen. Meine Annahme ist, dass Leute, die Betapage haeufig besuchen, eher bereit sind, Feedback zu teilen.</p>
+<p>Ich habe auch ein paar sehr nette E-Mails von Leuten bekommen, die mir erzaehlten, wie begeistert sie von der App sind und wie sie mit den traditionellen Wegen, Musiktheorie zu lernen, gekaempft haben und Solfej als Hilfe sehen, diese Huerde zu ueberwinden.</p>
+<p>Was mich wirklich ueberrascht hat, ist die Anzahl der Leute, die sich fuer eine Gehoertraining-/Musiktheorie-App interessieren wuerden und auch auf Betapage unterwegs sind, aber das ist nicht der Punkt dieses Beitrags.</p>
+<h2>Das Fazit</h2>
+<p>Unterm Strich hat Betapage mir geholfen, Solfej fuer einen ziemlich vernuenftigen Preis vor viele Augen zu bringen. 120 Anmeldungen moegen nicht nach viel klingen, aber es ist wirklich viel, wenn man es in die Perspektive eines neu gestarteten Produkts setzt, das von einer Person (mir) erstellt wurde.</p>
+<p>Natuerlich gibt es tonnenweise kostenlose Wege, dein aufkommendes Projekt bekannt zu machen, aber wenn du die ~100$ erubrigen kannst, <b>wuerde ich es definitiv empfehlen</b>.</p>
+<p>Ich empfehle auch, einen Blick auf Betalist zu werfen. Es ist der gleiche Prozess wie bei Betapage. Schau dir den Blogbeitrag auf <a href="https://pine.io/">Pine.ios Blog</a> an, wenn du eine aehnliche Anekdote fuer Betalist wie diesen Beitrag sehen moechtest.</p>
+<p><a href="https://shayanjavadi.typeform.com/to/wO59zz">Melde dich unbedingt fuer die Solfej-Beta an</a>, wenn du daran interessiert bist, Musiktheorie zu lernen und deine Ohren zu trainieren.</p>`,
+  },
+
+  "5-beautiful-color-palette-generators-for-your-next-design-project": {
+    title: "5 wunderschoene Farbpaletten-Tools fuer dein naechstes Designprojekt",
+    seoTitle: "5 wunderschoene Farbpaletten-Tools fuer dein naechstes Designprojekt. Erfahre, wie Solfej, eine Musiktheorie-App, die Tools genutzt hat.",
+    description: "Farbpaletten-Generatoren/Tools",
+    timeToRead: "7 Min.",
+    body: `<p>Hallo zusammen, hier ist Shayan. Ich bin der alleinige Gruender/Entwickler von Solfej, einer Musiktheorie- und Gehoertraining-App <a href="https://shayanjavadi.typeform.com/to/wO59zz">(klicke hier, um den ueber 900 Personen beizutreten, die sich angemeldet haben, um die App auszuprobieren)</a>.</p>
+<p>Hebe deine Hand, wenn du eine unangemessene Menge an Zeit mit der Auswahl einer Farbpalette verbracht hast!</p>
+<p>Ich bin hauptsaechlich ein visueller Mensch, und es ueberrascht niemanden, dass Farbe und Design mir wichtig sind. Ich kann auch ein Perfektionist sein, wenn es um Design geht. Das gilt besonders, wenn es fuer ein Projekt ist, fuer das ich mich begeistere, wie Solfej.</p>
+<p>Ich habe angefangen, an Solfej zu arbeiten, um meine zwei Leidenschaften, Musik und Technik, zu verbinden und eine intuitive App fuer Leute zu schaffen, die Musiktheorie lernen moechten.</p>
+<h2>Die Liste</h2>
+<p>Hier sind 5 Tools, die mir geholfen haben, meine Farbpalette fuer Solfej auszuwaehlen:</p>
+<h2><a href="https://coolors.co/">Coolors</a> von <a href="https://twitter.com/_fbrz">@_fbrz</a></h2>
+<p>Coolors ist mein persoenlicher Lieblings-Farbpaletten-Generator von allen hier aufgelisteten. Du kannst dir ganze Farbpaletten von Grund auf generieren lassen.</p>
+<p>Was es zu meinem Favoriten macht, ist die Moeglichkeit, Farben in den Paletten zu fixieren und anzupassen. Der einzige Nachteil fuer mich ist, dass die Website nicht so mobilfreundlich ist, wie ich es mir wuenschen wuerde (sie haben aber eine iOS-App).</p>
+<p>Ich habe Coolors verwendet, um die drei Lektionskategorie-Farben fuer Solfej zu entwickeln (<b>Gehoertraining</b>, <b>Musiktheorie</b>, <b>Rhythmus</b>).</p>
+<h2><a href="https://colorhunt.co/">Color Hunt</a> von <a href="https://twitter.com/thegalshir">@thegalshir</a></h2>
+<p>Color Hunt ist, wie sie es ausdruecken, "eine kostenlose und offene Plattform fuer Farbinspiration mit Tausenden von trendigen, handverlesenen Farbpaletten".</p>
+<p>Es ist wie Dribbble, aber ausschliesslich fuer Farbpaletten. Die Farbpaletten sind so wunderschoen, dass sie einen fast dazu bringen, etwas zu erstellen, nur um die Paletten verwenden zu koennen.</p>
+<h2><a href="https://www.happyhues.co/">Happy Hues</a> von <a href="https://twitter.com/mackenziechild">@mackenziechild</a></h2>
+<p>Happy Hues ist ein Tool, von dem ich nicht glauben kann, dass es das bis zu seiner kuerzlichen Veroeffentlichung nicht gab. Kurz gesagt zeigt es dir, wie die Farbpaletten auf einer echten Website aussehen wuerden. Es ist eine grossartige Abwandlung des kuratierten Farbpaletten-Listen-App-Konzepts.</p>
+<p>Super hilfreich! Das gesamte Erlebnis ist wunderschoen gestaltet. Das Logo ist auch super niedlich.</p>
+<h2><a href="https://culrs.com/">Culrs</a> von <a href="https://twitter.com/mshra_ji">@mshra_ji</a> und <a href="https://twitter.com/iamarnob6543">@iamarnob6543</a></h2>
+<p>Culrs ist eine weitere Liste kuratierter Paletten (wunderschoene!). Die Paletten sind nach Kategorien basierend auf den Arten von Farbschemata unterteilt.</p>
+<p>Ich finde es toll, dass Culrs neben Farbpaletten auch etwas Wissen ueber die verschiedenen Arten von Farbschemata vermittelt. Ich hatte keine Ahnung, was ein tetradisches Farbschema bedeutete, bevor ich das sah.</p>
+<h2><a href="https://www.webdesignrankings.com/resources/lolcolors/">LOL Colors</a></h2>
+<p>Zu guter Letzt LOL Colors. LOL Colors ist eine weitere kuratierte Liste von Paletten. Sie haben jede Menge wunderschoene Paletten, von denen du dich inspirieren lassen kannst.</p>
+<p>Was mir bei ihnen ins Auge fiel, war ihr Logo. Eines der kreativeren Logos, die ich gesehen habe.</p>
+<p>Danke fuers Lesen! Melde dich unbedingt fuer die <b><a href="https://shayanjavadi.typeform.com/to/wO59zz">Solfej-Beta an</a></b>, wenn du daran interessiert bist, Musiktheorie zu lernen und deine Ohren zu trainieren.</p>`,
+  },
+
+  "the-4-best-ear-training-apps-for-2019": {
+    title: "Gehoertraining: Die 4 besten Gehoertraining-Apps fuer 2020",
+    seoTitle: "Beste Gehoertraining-Apps. Was sind die 4 besten Gehoertraining-Apps?",
+    description: "Die besten Apps, um deine Ohren zu trainieren",
+    timeToRead: "5 Min.",
+    body: `<p>Hallo zusammen, hier ist Shayan. Ich bin der alleinige Gruender/Entwickler von Solfej, einer Musiktheorie- und Gehoertraining-App <a href="https://shayanjavadi.typeform.com/to/wO59zz">(klicke hier, um den ueber 900 Personen beizutreten, die sich angemeldet haben, um die App auszuprobieren)</a>.</p>
+<p>Die Ohren eines Musikers sind sein wichtigstes Werkzeug. Manche haben das Glueck, mit absolutem Gehoer geboren zu werden. Die anderen 99% von uns muessen hart arbeiten, um unsere Ohren zu trainieren.</p>
+<p>Gitarristen, Pianisten, Produzenten, DJs, Geiger, Saenger und Rapper koennen alle vom Gehoertraining profitieren. Jeder, der Songs schreibt, improvisiert oder sogar Gedichte komponiert, kann davon profitieren, seine Ohren zu trainieren.</p>
+<p>Das einzige Problem ist, dass Gehoertraining schwer ist! Zum Glueck leben wir im Zeitalter der Technologie.</p>
+<p>In diesem Beitrag gehen wir die Top 4 Wege durch, um 2020 Gehoertraining zu lernen.</p>
+<h2>Was ist Gehoertraining?</h2>
+<p>Gehoertraining ist der Prozess, musikalische Konzepte (Noten, Akkorde, Tonleitern usw.) ausschliesslich mit dem Ohr zu identifizieren. Gehoertraining ist die Bruecke, die unser Gehirn mit der mystischen Welt der Musiktheorie verbindet.</p>
+<p>Mit genug Uebung kann Gehoertraining zur zweiten Natur werden. Denk daran, wie einfach es fuer dich ist, Woerter in deiner Sprache zu erkennen.</p>
+<h2>Warum sollte ich Gehoertraining lernen?</h2>
+<p>Der groesste Vorteil des Gehoertrainings ist die Faehigkeit, die Klaenge in deinem Kopf leicht auf dein Instrument deiner Wahl zu uebertragen.</p>
+<p>Gehoertraining kann dir auch helfen, sauber zu singen und besser zu improvisieren.</p>
+<p>Gehoertraining kann dir auch helfen, leichter mit anderen Musikern zu kommunizieren.</p>
+<p>Der einfachste Weg, Gehoertraining zu lernen, ist durch Technologie.</p>
+<p>Hier sind die 4 besten Gehoertraining-Apps fuer 2020:</p>
+<h2>1. <a href="https://www.solfej.io/">Solfej</a></h2>
+<p>Solfej ist die beste neue App, um Gehoertraining und Musiktheorie zu lernen. Solfej ist auf iOS, Android und im Web verfuegbar!</p>
+<p>Solfej umfasst ueber 10+ Gehoertraining-Lektionsmodule, die von Intervallidentifikation bis zu Akkordidentifikation reichen. Jeden Monat werden neue Gehoertraining-Lektionen hinzugefuegt.</p>
+<p>Solfej bietet auch Musiktheorie- und Rhythmus-Lektionen an.</p>
+<h2>Deine Lieblings-DAW (Ableton, Logic, Reaper usw.)</h2>
+<p>Das klingt wie ein Witz, aber hoer mich an. Eines der besten Dinge, die du fuer dein Ohr tun kannst, ist Musik zu transkribieren. Bonuspunkte, wenn die Musik, die du transkribierst, eine ist, die du liebst.</p>
+<p>Hier kommt die DAW ins Spiel. Lade deinen Song deiner Wahl herunter und lade ihn in deine Lieblings-DAW. Sobald du ihn dort hast, waehle kleine Teile des Songs aus (so klein wie 2-4 Takte), setze sie in eine Schleife und versuche, den geschleiften Teil nach Gehoer zu transkribieren.</p>
+<p>Es klingt einfacher als es ist, es mag am Anfang sogar unmoeglich erscheinen. Ein Tipp, den ich geben wuerde, ist die Geschwindigkeit des Songs um etwa 50% zu verringern, damit du viel Zeit hast, jede Note zu hoeren!</p>
+<h2><a href="https://www.soundgym.co/site/index">Sound Gym</a></h2>
+<p>Sound Gym ist eine App, die sich an Produzenten/Toningenieure richtet. In ihren Worten hilft sie dir, grundlegende Hoerfaehigkeiten wie Frequenzerkennung und Kompression zu verbessern.</p>
+<h2><a href="http://www.earplugins.eu/">Ear Plugins</a></h2>
+<p>Ear Plugins ist eine weitere super hilfreiche App fuer Produzenten. Sie lebt direkt in deiner DAW. Sie hilft dir, bestimmte Frequenzen zu erkennen, was beim Mischen sehr nuetzlich ist.</p>
+<p>Danke fuers Lesen! Melde dich unbedingt fuer die <b><a href="https://shayanjavadi.typeform.com/to/wO59zz">Solfej-Beta an</a></b>, wenn du daran interessiert bist, Musiktheorie zu lernen und deine Ohren zu trainieren.</p>`,
   },
 }

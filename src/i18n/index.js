@@ -17,9 +17,34 @@ const SUNO_SLUGS = [
   "suno-ai-tips",
 ]
 
+const ALL_BLOG_SLUGS = [
+  ...SUNO_SLUGS,
+  "how-to-learn-music-theory",
+  "7-reasons-why-you-should-learn-music-theory",
+  "dont-give-up-on-music-theory",
+  "cadences",
+  "how-to-find-new-music",
+  "whats-new-in-solfej-v-1.3",
+  "is-betapage-worth-it",
+  "5-beautiful-color-palette-generators-for-your-next-design-project",
+  "the-4-best-ear-training-apps-for-2019",
+]
+
 function getTranslation(locale, slug) {
   const translations = require(`./locales/${locale}`)
   return translations[slug] || null
 }
 
-module.exports = { LOCALES, SUNO_SLUGS, getTranslation }
+function getTranslatedStrings(locale) {
+  const translations = require(`./locales/${locale}`)
+  return translations.ui || null
+}
+
+function getPageContent(locale, page) {
+  const translations = require(`./locales/${locale}`)
+  return translations[page] || null
+}
+
+const { translateName } = require('./translateName')
+
+module.exports = { LOCALES, SUNO_SLUGS, ALL_BLOG_SLUGS, getTranslation, getTranslatedStrings, getPageContent, translateName }

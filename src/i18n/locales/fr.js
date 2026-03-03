@@ -1,4 +1,287 @@
 module.exports = {
+  ui: {
+    home: "Accueil",
+    blog: "Blog",
+    chordSearch: "Recherche d'accords",
+    scaleSearch: "Recherche de gammes",
+    contact: "Contact",
+    getTheApp: "TÉLÉCHARGER L'APP",
+    allChords: "Tous les accords",
+    allScales: "Toutes les gammes",
+    searchChordPlaceholder: "Tapez ici pour rechercher des accords...",
+    searchScalePlaceholder: "Tapez ici pour rechercher des gammes...",
+    chordSuffix: "Accord",
+    chordSeoTitle: "%s - Notes, intervalles et doigtés | Solfej",
+    chordSeoDescription: "Apprenez l'accord %s. Trouvez les diagrammes de doigtés pour piano et guitare, les notes, intervalles et plus encore.",
+    lookingForScale: "Vous cherchez une gamme ?",
+    tryScaleSearch: "Essayez : Recherche de gammes",
+    chordTip: "💡Astuce : Trouvez un accord en tapant ses notes séparées par des virgules (ex: C, E, G)",
+    notes: "Notes",
+    whatNotesInChord: "Quelles notes composent l'accord %s ?",
+    intervals: "Intervalles",
+    whatIntervalsInChord: "Quels intervalles composent l'accord %s ?",
+    inversions: "Renversements",
+    whatInversionsOfChord: "Quels sont les renversements de l'accord %s ?",
+    scales: "Gammes",
+    whatScalesFitChord: "Dans quelles gammes s'inscrit l'accord %s ?",
+    ordinals: ["1er", "2e", "3e", "4e", "5e", "6e", "7e", "8e"],
+    scaleSuffix: "Gamme",
+    scaleSeoTitle: "%s - Notes, intervalles et formule | Solfej",
+    scaleSeoDescription: "Apprenez la gamme %s. Trouvez les diagrammes pour guitare et piano, les notes, intervalles et plus encore.",
+    lookingForChord: "Vous cherchez un accord ?",
+    tryChordSearch: "Essayez : Recherche d'accords",
+    scaleTip: "💡Astuce : Trouvez une gamme en tapant ses notes séparées par des virgules (ex: C, E, G)",
+    formula: "Formule",
+    whatFormulaOfScale: "Quelle est la formule de la gamme %s ?",
+    whatNotesInScale: "Quelles notes composent la gamme %s ?",
+    whatIntervalsInScale: "Quels intervalles composent la gamme %s ?",
+    chords: "Accords",
+    whatChordsInScale: "Quels accords (diatoniques) s'inscrivent dans la gamme %s ?",
+    chord: "accord",
+    getLatestStories: "Recevez nos dernières histoires",
+    joinNewsletter: "Rejoindre la Newsletter",
+    chordPageSubText: "Vous trouverez ci-dessous des diagrammes d'accords, des doigtés pour piano et guitare, des notes, des intervalles, des gammes et des arpèges.",
+    scalePageSubText: "Vous trouverez ci-dessous des diagrammes de gammes pour guitare et piano, des notes, des intervalles, des formules et des accords",
+    audibleExample: "Exemple sonore",
+    pianoFingering: "Doigté au piano",
+    guitarFingering: "Doigté à la guitare",
+    whatDoesChordSoundLike: "Comment sonne un accord %s ?",
+    howPlayChordPiano: "Comment jouer un accord %s au piano ?",
+    howPlayChordGuitar: "Comment jouer un accord %s à la guitare ?",
+    whatDoesScaleSoundLike: "Comment sonne une gamme %s ?",
+    howPlayScalePiano: "Comment jouer la gamme %s au piano ?",
+    howPlayScaleGuitar: "Comment jouer la gamme %s à la guitare ?",
+    tapNotesHint: "💡 Appuyez sur les notes pour entendre chaque note",
+    notesLabel: "Notes :",
+    intervalsLabel: "Intervalles :",
+    inversionLabels: ["1er renversement", "2e renversement", "3e renversement", "4e renversement", "5e renversement", "6e renversement", "7e renversement", "8e renversement"],
+    aliases: "Alias : ",
+    chordWord: "accord",
+    scaleWord: "gamme",
+    chordNames: {
+      "major": "majeur",
+      "minor": "mineur",
+      "augmented": "augmenté",
+      "augmented 7th": "septième augmentée",
+      "diminished": "diminué",
+      "diminished 7th": "septième diminuée",
+      "dominant #9": "dominante #9",
+      "dominant 13th": "treizième de dominante",
+      "dominant 7th": "septième de dominante",
+      "dominant 9th": "neuvième de dominante",
+      "dominant b9": "dominante b9",
+      "fifth": "quinte",
+      "half-diminished": "semi-diminué",
+      "lydian": "lydien",
+      "lydian dominant 7th": "septième lydien dominant",
+      "major #11 (lydian)": "majeur #11 (lydien)",
+      "major 13th": "treizième majeure",
+      "major 7th": "septième majeure",
+      "major 7th b6": "septième majeure b6",
+      "major 9th": "neuvième majeure",
+      "minor 11th": "onzième mineure",
+      "minor 13th": "treizième mineure",
+      "minor 6th": "sixte mineure",
+      "minor 7th": "septième mineure",
+      "minor 9th": "neuvième mineure",
+      "minor/major 7th": "mineur/majeur septième",
+      "power chord": "accord de puissance",
+      "quartal": "quartal",
+      "suspended 2nd": "suspendu 2nde",
+      "suspended 4th": "suspendu 4te",
+      "suspended 4th 7th": "suspendu 4te septième",
+      "suspended 4th b9": "suspendu 4te b9",
+      "altered": "altéré",
+      "11th": "onzième",
+      "6th": "sixte",
+      "6th/9th": "sixte/neuvième",
+    },
+    scaleNames: {
+      "aeolian": "éolien",
+      "altered": "altéré",
+      "arabian": "arabique",
+      "augmented": "augmenté",
+      "augmented heptatonic": "heptatonique augmenté",
+      "balinese": "balinais",
+      "bebop": "bebop",
+      "bebop locrian": "bebop locrien",
+      "bebop major": "bebop majeur",
+      "bebop minor": "bebop mineur",
+      "blues": "blues",
+      "chinese": "chinois",
+      "chromatic": "chromatique",
+      "composite blues": "blues composite",
+      "diminished": "diminué",
+      "diminished whole tone": "ton entier diminué",
+      "dominant": "dominant",
+      "dominant diminished": "dominant diminué",
+      "dorian": "dorien",
+      "dorian #4": "dorien #4",
+      "dorian b2": "dorien b2",
+      "double harmonic lydian": "double harmonique lydien",
+      "double harmonic major": "double harmonique majeur",
+      "egyptian": "égyptien",
+      "enigmatic": "énigmatique",
+      "flamenco": "flamenco",
+      "flat six pentatonic": "pentatonique sixte bémol",
+      "flat three pentatonic": "pentatonique tierce bémol",
+      "gypsy": "tzigane",
+      "half-diminished": "semi-diminué",
+      "half-whole diminished": "demi-ton/ton diminué",
+      "harmonic major": "majeur harmonique",
+      "harmonic minor": "mineur harmonique",
+      "hindu": "hindou",
+      "hirajoshi": "hirajoshi",
+      "hungarian major": "majeur hongrois",
+      "hungarian minor": "mineur hongrois",
+      "ichikosucho": "ichikosucho",
+      "in-sen": "in-sen",
+      "indian": "indien",
+      "ionian": "ionien",
+      "ionian #5": "ionien #5",
+      "ionian augmented": "ionien augmenté",
+      "ionian pentatonic": "pentatonique ionien",
+      "iwato": "iwato",
+      "kafi raga": "raga kafi",
+      "kumoi": "kumoi",
+      "kumoijoshi": "kumoijoshi",
+      "leading whole tone": "ton entier ascendant",
+      "locrian": "locrien",
+      "locrian #2": "locrien #2",
+      "locrian 6": "locrien 6",
+      "locrian major": "locrien majeur",
+      "locrian natural 6": "locrien naturel 6",
+      "locrian pentatonic": "pentatonique locrien",
+      "locrian sharp 6": "locrien dièse 6",
+      "lydian": "lydien",
+      "lydian #5P pentatonic": "pentatonique lydien #5P",
+      "lydian #9": "lydien #9",
+      "lydian augmented": "lydien augmenté",
+      "lydian b7": "lydien b7",
+      "lydian diminished": "lydien diminué",
+      "lydian dominant": "lydien dominant",
+      "lydian dominant pentatonic": "pentatonique lydien dominant",
+      "lydian minor": "lydien mineur",
+      "lydian pentatonic": "pentatonique lydien",
+      "major": "majeur",
+      "major #5": "majeur #5",
+      "major augmented": "majeur augmenté",
+      "major blues": "blues majeur",
+      "major pentatonic": "pentatonique majeur",
+      "malkos raga": "raga malkos",
+      "melodic minor": "mineur mélodique",
+      "melodic minor fifth mode": "mineur mélodique cinquième mode",
+      "melodic minor second mode": "mineur mélodique deuxième mode",
+      "minor": "mineur",
+      "minor #7M pentatonic": "pentatonique mineur #7M",
+      "minor bebop": "bebop mineur",
+      "minor blues": "blues mineur",
+      "minor hexatonic": "hexatonique mineur",
+      "minor pentatonic": "pentatonique mineur",
+      "minor seven flat five pentatonic": "pentatonique mineur sept bémol cinq",
+      "minor six diminished": "sixte mineure diminuée",
+      "minor six pentatonic": "pentatonique sixte mineure",
+      "mixolydian": "mixolydien",
+      "mixolydian b6": "mixolydien b6",
+      "mixolydian pentatonic": "pentatonique mixolydien",
+      "mystery #1": "mystère #1",
+      "neopolitan major": "napolitain majeur",
+      "neopolitan major pentatonic": "pentatonique napolitain majeur",
+      "oriental": "oriental",
+      "overtone": "harmonique",
+      "pelog": "pelog",
+      "pentatonic": "pentatonique",
+      "persian": "persan",
+      "phrygian": "phrygien",
+      "phrygian #6": "phrygien #6",
+      "phrygian dominant": "phrygien dominant",
+      "phrygian major": "phrygien majeur",
+      "piongio": "piongio",
+      "pomeroy": "pomeroy",
+      "prometheus": "prométhéen",
+      "prometheus neopolitan": "prométhéen napolitain",
+      "purvi raga": "raga purvi",
+      "ritusen": "ritusen",
+      "romanian minor": "mineur roumain",
+      "scriabin": "scriabine",
+      "six tone symmetric": "six tons symétrique",
+      "spanish": "espagnol",
+      "spanish heptatonic": "heptatonique espagnol",
+      "super locrian": "super locrien",
+      "super locrian pentatonic": "pentatonique super locrien",
+      "superlocrian bb7": "super locrien bb7",
+      "todi raga": "raga todi",
+      "ultralocrian": "ultralocrien",
+      "vietnamese 1": "vietnamien 1",
+      "vietnamese 2": "vietnamien 2",
+      "whole tone": "ton entier",
+      "whole tone pentatonic": "pentatonique ton entier",
+      "whole-half diminished": "ton/demi-ton diminué",
+    },
+  },
+
+  homepage: {
+    heroTitle: "Devenez un meilleur musicien",
+    heroDescription: "Solfej est la meilleure application d'entraînement auditif et de théorie musicale. Apprenez la théorie musicale et entraînez vos oreilles en toute confiance.",
+    seoTitle: "Solfej - Théorie musicale et entraînement auditif",
+    masterTitle: "Maîtrisez la théorie musicale, l'entraînement auditif et le rythme",
+    masterDesc: "Des parcours de leçons pratiques pour atteindre vos objectifs musicaux. Plus de terriers de lapin Wikipedia/YouTube.",
+    interactiveTitle: "Exercices interactifs",
+    interactiveDesc: "Voulez-vous reconnaître les intervalles ? Apprendre à jouer des polyrythmies ? Savoir quelle note est une septième majeure au-dessus d'une autre ?",
+    simpleTitle: "Un langage simple",
+    simpleDesc: "Fatigué des leçons de théorie musicale ennuyeuses ? Les leçons de Solfej sont conçues pour les humains.",
+    featuredStories: "Articles vedettes",
+  },
+
+  chordSearchPage: {
+    heroTitle: "🔍 Recherche d'accords 🎹",
+    heroDescription: "Vous voulez en savoir plus sur un accord ? La Recherche d'accords vous montre des exemples audio, des notes, des intervalles, des doigtés guitare et piano pour chaque accord. Tapez simplement le nom d'un accord pour commencer.",
+    seoTitle: "Recherche d'accords - Piano et guitare | Solfej",
+    masterTitle: "Maîtrisez tous les accords imaginables",
+    masterDesc: "Parcourez des milliers d'accords. Apprenez les doigtés (guitare et piano), notes, intervalles et alias de chaque accord.",
+    hearTitle: "Écoutez des exemples de chaque accord",
+    hearDesc: "Écoutez comment sonne chaque accord grâce à des exemples interactifs",
+    pianoTitle: "Diagrammes d'accords pour piano",
+    pianoDesc: "Apprenez à jouer chaque accord au piano grâce à de simples diagrammes de doigtés.",
+    guitarTitle: "Diagrammes d'accords pour guitare",
+    guitarDesc: "Apprenez à jouer chaque accord à la guitare grâce à de simples diagrammes de doigtés.",
+    moreTitle: "Notes, intervalles et plus encore !",
+    moreDesc: "Explorez les éléments constitutifs de chaque accord. Apprenez les notes, intervalles, gammes et plus encore.",
+  },
+
+  scaleSearchPage: {
+    heroTitle: "🔍 Recherche de gammes 🎼",
+    heroDescription: "Vous voulez en savoir plus sur une gamme ? La Recherche de gammes vous montre des exemples audio, des notes, des intervalles, des accords, la formule et les doigtés guitare/piano pour chaque gamme. Tapez simplement le nom d'une gamme ou ses notes pour commencer.",
+    seoTitle: "Recherche de gammes - Piano et guitare | Solfej",
+    masterTitle: "Maîtrisez toutes les gammes imaginables",
+    masterDesc: "Parcourez des milliers de gammes. Apprenez les doigtés (guitare et piano), notes, intervalles, formule et accords de chaque gamme.",
+    hearTitle: "Écoutez des exemples de chaque gamme",
+    hearDesc: "Écoutez comment sonne chaque gamme grâce à des exemples interactifs",
+    guitarTitle: "Diagrammes de gammes pour guitare",
+    guitarDesc: "Apprenez à jouer chaque gamme à la guitare grâce à de simples diagrammes de doigtés.",
+    pianoTitle: "Doigtés de gammes pour piano",
+    pianoDesc: "Apprenez à jouer chaque gamme au piano grâce à de simples diagrammes de doigtés.",
+    moreTitle: "Notes, intervalles et plus encore !",
+    moreDesc: "Explorez les éléments constitutifs de chaque gamme. Apprenez les notes, intervalles, accords et plus encore.",
+  },
+
+  allChordsPage: {
+    title: "Tous les accords",
+    seoTitle: "Tous les accords imaginables | Solfej",
+    description: "Page avec des liens vers chaque accord de l'univers",
+  },
+
+  allScalesPage: {
+    title: "Répertoire de gammes",
+    seoTitle: "Toutes les gammes imaginables | Solfej",
+    description: "Page avec des liens vers chaque gamme de l'univers",
+  },
+
+  blogIndex: {
+    featuredStories: "Articles vedettes",
+    seoTitle: "Blog | Solfej",
+  },
+
   "suno-ai-chord-progressions": {
     title: "Progressions d'accords Suno AI : comment vraiment contr\u00f4ler les accords jou\u00e9s par Suno",
     seoTitle: "Progressions d'accords Suno AI : comment sp\u00e9cifier les accords dans Suno (Guide 2026) | Solfej",
@@ -416,5 +699,331 @@ module.exports = {
 <li><a href="/fr/blog/suno-ai-prompt-guide">Guide de prompts Suno AI : l'aide-m\u00e9moire de th\u00e9orie musicale pour de meilleures chansons</a></li>
 <li><a href="/fr/blog/suno-vs-udio">Suno vs Udio : quel g\u00e9n\u00e9rateur de musique IA est meilleur en 2026 ?</a></li>
 </ul>`,
+  },
+  "how-to-learn-music-theory": {
+    title: "Comment apprendre la th\u00e9orie musicale",
+    seoTitle: "Comment apprendre la th\u00e9orie musicale. R\u00e9ponses aux questions courantes.",
+    description: "Comment apprendre la th\u00e9orie musicale",
+    timeToRead: "10 min",
+    body: `<p>La th\u00e9orie musicale est un terme qui porte beaucoup de bagages pour beaucoup de personnes. La th\u00e9orie musicale peut \u00eatre un sujet effrayant, que vous soyez \u00e9tudiant dans une \u00e9cole de musique ou que vous appreniez la th\u00e9orie musicale de mani\u00e8re informelle.</p>
+<p>En tant que guitariste autodidacte depuis 6 ans, j'ai consacr\u00e9 beaucoup de sang, de sueur et de larmes \u00e0 la th\u00e9orie musicale. J'ai pass\u00e9 d'innombrables nuits \u00e0 me cogner la t\u00eate contre le mur en essayant de comprendre les modes, le cycle des quintes, et pratiquement tous les autres fondements de la th\u00e9orie musicale.</p>
+<p>Cela ne m'est pas venu facilement. Cependant, il n'est pas n\u00e9cessaire que ce soit ainsi. En fait, la th\u00e9orie musicale peut \u00eatre tr\u00e8s satisfaisante \u00e0 apprendre ! La majeure partie de l'attitude n\u00e9gative envers la th\u00e9orie musicale semble provenir soit d'une frustration li\u00e9e au cadre acad\u00e9mique dans lequel elle est enseign\u00e9e, soit du manque de ressources claires.</p>
+<p>Cela dit, quelle que soit votre exp\u00e9rience avec la th\u00e9orie musicale, voici une liste de conseils pour \u00e9clairer votre chemin dans l'acquisition de connaissances th\u00e9oriques.</p>
+<h2>Comment commencer \u00e0 apprendre la th\u00e9orie musicale ?</h2>
+<p>Par le d\u00e9but ! Cela semble dr\u00f4le, mais une base solide dans les fondements de la th\u00e9orie musicale est le facteur le plus important pour commencer \u00e0 apprendre des sujets plus avanc\u00e9s.</p>
+<p>Commencez par les notes dont nous disposons, puis construisez progressivement vers les intervalles, les accords, la m\u00e9lodie, l'harmonie, le rythme, et ainsi de suite.</p>
+<p>Une fois que vous avez une bonne id\u00e9e des fondamentaux, vous pouvez changer de cap et commencer \u00e0 apprendre ce qui est pratique pour vous. Vous voulez jouer dans un contexte jazz ? Commencez \u00e0 apprendre les accords enrichis et les cadences jazz. Vous voulez d\u00e9chirer avec des power chords ? Commencez \u00e0 transcrire les grands morceaux de rock et analysez leurs progressions d'accords.</p>
+<p>Ce que vous voulez \u00e9viter, c'est de sauter les fondamentaux. Je ne saurais trop insister sur l'importance de savoir pourquoi et comment les atomes de base de la th\u00e9orie musicale fonctionnent.</p>
+<h2>Combien de temps faut-il pour apprendre la th\u00e9orie musicale ?</h2>
+<p>Vous n'aurez jamais \u00ab fini \u00bb d'apprendre la th\u00e9orie musicale. Il y aura toujours de nouvelles choses \u00e0 apprendre. Cela dit, si vous prenez vraiment le temps d'apprendre les fondamentaux de la th\u00e9orie musicale, vous pouvez facilement commencer \u00e0 les utiliser en quelques semaines !</p>
+<p>Dans ce cas, la pratique est essentielle. Selon des personnes bien plus intelligentes que moi, il faut environ 60 r\u00e9p\u00e9titions d'une t\u00e2che pour qu'elle devienne intuitive. Alors assurez-vous de pratiquer beaucoup les concepts de th\u00e9orie musicale jusqu'\u00e0 les int\u00e9rioriser.</p>
+<p>La meilleure chose que vous puissiez faire pour votre apprentissage est de vous immerger dans la th\u00e9orie musicale. En plus d'apprendre directement la th\u00e9orie, je recommande de chercher des cha\u00eenes YouTube de th\u00e9orie musicale (Adam Neely, Jens Larsen, 12 tone, etc.), et bien s\u00fbr d'appliquer la th\u00e9orie que vous apprenez. Cela peut \u00eatre aussi simple que cr\u00e9er une petite m\u00e9lodie de 3-4 notes en utilisant un nouveau concept que vous avez appris.</p>
+<h2>La th\u00e9orie musicale est-elle n\u00e9cessaire pour la guitare ? La th\u00e9orie musicale est-elle n\u00e9cessaire pour jouer du piano ? Serai-je litt\u00e9ralement incapable de faire de la musique sans la th\u00e9orie ?</h2>
+<p>Non !</p>
+<p>La th\u00e9orie musicale n'est pas n\u00e9cessaire pour jouer d'un instrument. Il existe d'incroyables artistes qui connaissent peu ou pas du tout la th\u00e9orie musicale !</p>
+<p>Est-ce que cela aide ? Absolument. Conna\u00eetre la th\u00e9orie musicale peut faire des merveilles pour votre jeu. Cela rendra la navigation sur votre instrument beaucoup plus facile et vous aidera \u00e0 traduire vos id\u00e9es de votre t\u00eate \u00e0 votre instrument avec facilit\u00e9.</p>
+<p>Votre instrument, cependant, ne se soucie pas de savoir si vous connaissez la th\u00e9orie ou non. Et c'est l\u00e0 toute la beaut\u00e9 de la chose. M\u00eame quand vous apprenez la th\u00e9orie, vous jouerez in\u00e9vitablement quelque chose que vous ne pouvez pas analyser. Et c'est tr\u00e8s bien ! Il est plus important que la musique que vous jouez sonne bien \u00e0 votre oreille plut\u00f4t que de savoir si elle suit ou non la th\u00e9orie.</p>
+<h2>Peut-on apprendre la th\u00e9orie musicale seul ? Comment apprendre la th\u00e9orie musicale par soi-m\u00eame ?</h2>
+<p>Absolument ! Il existe une pl\u00e9thore de ressources disponibles en ligne et hors ligne pour apprendre la th\u00e9orie musicale.</p>
+<p>\u00c0 l'\u00e8re de YouTube, il ne reste plus grand-chose que vous ne puissiez apprendre par vous-m\u00eame. Il sera difficile de vous responsabiliser. Cependant, si vous \u00eates motiv\u00e9 et que vous pers\u00e9v\u00e9rez, rien ne vous emp\u00eache de ma\u00eetriser la th\u00e9orie musicale.</p>
+<p>Cela dit, un professeur de th\u00e9orie musicale ou m\u00eame une \u00e9cole de musique peut \u00e9galement avoir un impact significatif sur votre apprentissage.</p>
+<p>Je recommande la <a href="https://www.youtube.com/watch?v=rgaTLrZGlk0">vid\u00e9o suivante par Andrew Huang</a> pour d\u00e9buter avec la th\u00e9orie musicale.</p>
+<h2>A-t-on besoin de la th\u00e9orie musicale pour faire de la musique ? A-t-on besoin de la th\u00e9orie musicale pour produire de la musique ?</h2>
+<p>Non ! Il y a tellement de musiciens et de producteurs qui cr\u00e9ent et produisent de la musique formidable. Vos doigts, vos instruments, et surtout votre ordinateur ne se soucient pas de savoir si vous connaissez la th\u00e9orie musicale et produiront du son quoi qu'il en soit.</p>
+<p>La th\u00e9orie musicale vous sera particuli\u00e8rement utile si vous \u00eates producteur. Elle peut faciliter grandement la communication de vos id\u00e9es puisque vous disposez d'un langage commun avec les autres musiciens.</p>
+<h2>La th\u00e9orie musicale limite-t-elle la cr\u00e9ativit\u00e9 ? Vais-je perdre tout mon feeling ?</h2>
+<p>Abordons le sujet qui f\u00e2che. La th\u00e9orie musicale est justement cela, une th\u00e9orie. Il est facile de tomber dans la croyance que la th\u00e9orie musicale nuira \u00e0 votre cr\u00e9ativit\u00e9. Apr\u00e8s tout, c'est un ensemble de \u00ab r\u00e8gles \u00bb et naturellement nous n'aimons pas les r\u00e8gles et les limitations.</p>
+<p>Cela dit, consid\u00e9rer la th\u00e9orie musicale comme un ensemble de \u00ab r\u00e8gles \u00bb peut \u00eatre contre-productif. Il est bien plus productif de voir la th\u00e9orie musicale comme un langage commun pour communiquer des id\u00e9es plut\u00f4t que comme des r\u00e8gles.</p>
+<p>On dit que les r\u00e8gles sont faites pour \u00eatre enfreintes, et cela s'applique ici aussi. J'irais m\u00eame jusqu'\u00e0 dire que vous DEVRIEZ enfreindre les r\u00e8gles de la th\u00e9orie musicale. Si vous y r\u00e9fl\u00e9chissez, ce que nous appelons th\u00e9orie musicale aujourd'hui est le r\u00e9sultat de nos anc\u00eatres qui ont enfreint leurs r\u00e8gles de th\u00e9orie musicale et qui ont propos\u00e9 de nouvelles id\u00e9es et de nouveaux motifs !</p>
+<p>Je recommande vivement d'exp\u00e9rimenter avec la th\u00e9orie musicale. Posez-vous autant de questions \u00ab pourquoi ? \u00bb et \u00ab et si ? \u00bb que possible et n'ayez pas peur d'enfreindre les r\u00e8gles.</p>
+<h2>La th\u00e9orie musicale s'applique-t-elle \u00e0 tous les instruments ?</h2>
+<p>Oui ! C'est la beaut\u00e9 de la th\u00e9orie. Vos comp\u00e9tences m\u00e9caniques sont peut-\u00eatre li\u00e9es \u00e0 votre instrument, mais votre connaissance de la th\u00e9orie musicale est universelle !</p>
+<p>Personnellement, je ne me suis jamais assis pour pratiquer le piano, mais je peux trouver mon chemin sur l'instrument en utilisant la th\u00e9orie. Par exemple, je sais qu'un accord de Do est compos\u00e9 de la fondamentale, d'une tierce majeure et d'une quinte juste, donc si je sais o\u00f9 se trouve la note Do, je peux facilement cr\u00e9er un accord de Do.</p>`,
+  },
+  "7-reasons-why-you-should-learn-music-theory": {
+    title: "7 raisons pour lesquelles vous devriez apprendre la th\u00e9orie musicale",
+    seoTitle: "Avez-vous besoin de la th\u00e9orie musicale ? La th\u00e9orie musicale nuit-elle \u00e0 ma cr\u00e9ativit\u00e9 ? D\u00e9couvrez 7 raisons pour lesquelles vous avez besoin de la th\u00e9orie.",
+    description: "La th\u00e9orie musicale nuit-elle \u00e0 votre cr\u00e9ativit\u00e9 ?",
+    timeToRead: "6 min",
+    body: `<p>Croyez-moi, je comprends. Je ne pensais pas que savoir construire et nommer des accords complexes, trouver des relations entre gammes et accords, et travailler dans des signatures rythmiques inhabituelles m'aiderait en tant que musicien.</p>
+<p>Mais gr\u00e2ce \u00e0 la th\u00e9orie musicale, mes capacit\u00e9s cr\u00e9atives n'ont jamais \u00e9t\u00e9 autant sous mon contr\u00f4le. L'improvisation me semble illimit\u00e9e. Les possibilit\u00e9s de composition sont infinies. Se l\u00e2cher n'a jamais \u00e9t\u00e9 aussi confortable. J'ai m\u00eame cr\u00e9\u00e9 une <a href="https://www.solfej.io/">application de th\u00e9orie musicale</a> !</p>
+<p>J'ai bien peur d'avoir commis l'erreur de sous-estimer la th\u00e9orie musicale par le pass\u00e9, mais gr\u00e2ce \u00e0 cela, je ne laisserai pas mes coll\u00e8gues musiciens faire la m\u00eame erreur. Laissez-moi vous aider \u00e0 voir la th\u00e9orie comme l'outil ultime pour un contr\u00f4le cr\u00e9atif total.</p>
+<p>Voici pourquoi :</p>
+<h2>1. La th\u00e9orie musicale fera de vous un meilleur musicien</h2>
+<p>Vous pouvez \u00eatre un bon musicien sans th\u00e9orie musicale, vous pouvez m\u00eame \u00eatre un musicien exceptionnel. Cependant, avec la th\u00e9orie musicale, vous commencez \u00e0 comprendre tous les rouages de la musique.</p>
+<p>Comprendre les raisons th\u00e9oriques pour lesquelles certaines choses sonnent bien ensemble fera des merveilles pour votre jeu. M\u00eame avec juste un peu de connaissances en th\u00e9orie musicale, vous pouvez exprimer vos id\u00e9es et vos sentiments beaucoup plus facilement.</p>
+<h2>2. La th\u00e9orie musicale vous aide \u00e0 communiquer avec d'autres musiciens</h2>
+<p>La th\u00e9orie musicale est le langage commun entre vous et tous ceux qui la connaissent. Imaginez expliquer la couleur rouge \u00e0 votre ami sans utiliser le mot rouge.</p>
+<p>Une fois que vous attachez des noms aux concepts musicaux et que vous les organisez en groupes, vous pouvez transmettre vos id\u00e9es musicales aux autres musiciens avec facilit\u00e9. \u00ab Monte de deux cases et rejoue l'accord bizarre \u00bb devient \u00ab Joue l'accord de Si diminu\u00e9 \u00bb.</p>
+<h2>3. La th\u00e9orie musicale d\u00e9veloppera votre oreille</h2>
+<p>La th\u00e9orie musicale vous aidera \u00e0 traduire les sons que vous entendez dans votre t\u00eate sur votre instrument.</p>
+<p>Votre oreille sera tellement expos\u00e9e \u00e0 tant de sons diff\u00e9rents que la musique deviendra rapidement une seconde nature gr\u00e2ce \u00e0 une concentration disciplin\u00e9e.</p>
+<p>Plus vite que vous ne le pensez, vous ne chercherez plus de tablatures pour apprendre un morceau, vous pourrez simplement fredonner la m\u00e9lodie et la jouer sur le champ.</p>
+<h2>4. La th\u00e9orie musicale vous enseigne les r\u00e8gles pour mieux les enfreindre</h2>
+<p>La th\u00e9orie musicale est justement cela, une th\u00e9orie. C'est un ensemble de r\u00e8gles et de classifications. Les musiciens qui apprennent la th\u00e9orie musicale ne sont PAS tenus de pr\u00eater serment de ne jamais sortir des r\u00e8gles.</p>
+<p>En fait, ce sont eux qui enfreignent le plus les r\u00e8gles et qui sortent le plus des sentiers battus. Apr\u00e8s tout, comment pouvez-vous enfreindre les r\u00e8gles si vous ne savez pas quelles sont les r\u00e8gles en premier lieu ?</p>
+<h2>5. La th\u00e9orie musicale am\u00e9liorera vos capacit\u00e9s d'improvisation</h2>
+<p>Avec votre oreille d\u00e9velopp\u00e9e et votre connaissance des accords et des gammes, vous pourrez entrer dans une confiance acad\u00e9mique lorsque vous improvisez.</p>
+<p>Vous saurez quelles notes sonnent \u00ab bien \u00bb sur quels accords, et quelle s\u00e9rie d'accords \u00e9voque l'\u00e9motion particuli\u00e8re que vous recherchez.</p>
+<h2>6. La th\u00e9orie musicale vous aide \u00e0 naviguer sur votre instrument</h2>
+<p>Il est facile de tomber dans une transe et de perdre vos rep\u00e8res sur votre instrument pendant que vous jouez sur sc\u00e8ne ou m\u00eame \u00e0 la maison. Les d\u00e9butants savent certainement de quoi je parle.</p>
+<p>En prenant l'exemple d'un guitariste, que se passe-t-il quand vous d\u00e9placez accidentellement vos mains de votre bo\u00eete pentatonique de La mineur familière et que vous ne savez pas comment recr\u00e9er la m\u00eame gamme ailleurs ? Vous jouerez une gamme pentatonique de Dob mineur par erreur et cela sonnera plut\u00f4t mal.</p>
+<p>Mais si vous saviez comment construire une gamme ou un accord, vous pourriez rester dans la tonalit\u00e9 n'importe o\u00f9 sur votre instrument.</p>
+<h2>7. La th\u00e9orie musicale vous donnera plus d'occasions d'\u00eatre cr\u00e9atif</h2>
+<p>Il est facile de se perdre dans les formes pentatoniques de base si vous \u00eates guitariste, mais ne conna\u00eetre qu'une ou deux gammes et accords sur n'importe quel instrument deviendra vite ennuyeux.</p>
+<p>En \u00e9tudiant la th\u00e9orie, vous serez expos\u00e9 \u00e0 tellement de possibilit\u00e9s musicales que vous ne saurez m\u00eame plus par o\u00f9 commencer pour choisir ce que vous voulez jouer.</p>
+<h2>Conclusion</h2>
+<p>Apprendre la th\u00e9orie musicale ne freinera pas votre improvisation et ne diminuera pas votre \u00ab feeling \u00bb.</p>
+<p>Au contraire, elle vous offrira des moyens illimit\u00e9s d'exercer votre improvisation et votre \u00ab feeling \u00bb avec de nouveaux accords, de nouvelles gammes et de nouveaux riffs.</p>
+<p>Si vous \u00eates pr\u00eat \u00e0 plonger dans la th\u00e9orie musicale et \u00e0 entra\u00eener vos oreilles, <b><a href="https://shayanjavadi.typeform.com/to/wO59zz">inscrivez-vous \u00e0 la b\u00eata de Solfej</a></b></p>`,
+  },
+  "dont-give-up-on-music-theory": {
+    title: "La th\u00e9orie musicale est-elle difficile ?",
+    seoTitle: "Apprendre la th\u00e9orie musicale en vaut-il la peine ? Pourquoi devriez-vous vous donner la peine d'apprendre la th\u00e9orie musicale ?",
+    description: "Pourquoi apprendre la th\u00e9orie musicale en vaut la peine",
+    timeToRead: "10 min",
+    body: `<p><i>Ceci est un article invit\u00e9 par JP Hwang - JP est un ancien avocat en brevets qui a troqu\u00e9 ses beaux costumes et son bureau \u00e0 Sydney, Australie, pour de nombreux shorts, un ordinateur portable et une valise en Asie du Sud-Est. Il se dit \u00ab maker \u00bb en ligne et aimerait bien le croire lui-m\u00eame un jour. Vous pouvez trouver son blog sur <b><a href="https://medium.com/@_jphwang">Medium</a></b> ou sur Twitter <b><a href="https://twitter.com/_jphwang">@_jphwang</a></b>.</i></p>
+<h2>La th\u00e9orie musicale est-elle difficile ?</h2>
+<p>Si vous lisez cet article, vous et moi partageons probablement au moins une lacune significative dans notre base de connaissances. Un nombre \u00e9norme d'entre nous portent ce m\u00eame fardeau d'ignorance. Cela concerne quelque chose de tellement universel qu'il semble que cela ne devrait pas \u00eatre si difficile. Et pourtant, je parierais qu'il y a bien plus d'ignorants parmi nous que de personnes comp\u00e9tentes dans ce domaine.</p>
+<p>\u00catre interrog\u00e9 \u00e0 ce sujet peut \u00e9galement susciter une quantit\u00e9 apparemment d\u00e9raisonnable de honte en nous. Les questions suivantes sur le fait de savoir si nous avons essay\u00e9 de l'apprendre (ou pourquoi nous n'avons pas persist\u00e9) pourraient provoquer une consternation interne \u00e0 doses similaires, voire sup\u00e9rieures.</p>
+<p>En cela, nous sommes forc\u00e9s de confronter notre pass\u00e9 d'avoir \u00e9chou\u00e9 dans quelque chose qui devrait \u00eatre une seconde nature, \u00e9tant donn\u00e9 que nous semblons vraiment appr\u00e9cier d'autres aspects de cette discipline. La jouer, l'\u00e9couter, et suivre passionn\u00e9ment de nombreux cr\u00e9ateurs de cette belle forme d'art.</p>
+<p>\u00ab \u00c7a \u00bb, c'est bien s\u00fbr la <b>th\u00e9orie musicale</b>.</p>
+<h2>La th\u00e9orie musicale me semble difficile</h2>
+<p>Quand je dis que je suis ignorant en th\u00e9orie musicale, je le pense vraiment. Je n'ai aucune expertise dans le domaine de la th\u00e9orie musicale, ni m\u00eame de la musique. Mais comme la plupart d'entre nous, je l'appr\u00e9cie \u00e9norm\u00e9ment. J'ai m\u00eame essay\u00e9 d'apprendre \u00e0 jouer d'un instrument ou deux auparavant (qui ne l'a pas fait ?!). Je ne suis pas all\u00e9 tr\u00e8s loin, mais je pouvais jouer quelques morceaux ici et l\u00e0.</p>
+<p>J'ai re\u00e7u et lu des conseils sur la meilleure fa\u00e7on d'apprendre la guitare ou le piano, mais peu de gens m'ont conseill\u00e9 d'apprendre la th\u00e9orie musicale. Les rares fois o\u00f9 j'ai rencontr\u00e9 un tel conseil, <b>j'ai trouv\u00e9 les ressources qui l'accompagnaient tellement hostiles et difficiles que cela m'a plong\u00e9 dans un \u00e9tat de stup\u00e9faction</b>. \u00c0 tel point que j'\u00e9tais presque convaincu qu'elles avaient \u00e9t\u00e9 con\u00e7ues par une guilde de musiciens cherchant \u00e0 emp\u00eacher les nouveaux venus d'entrer dans leur domaine.</p>
+<p>Tout cela pour dire que la th\u00e9orie musicale et moi n'avons pas \u00e9t\u00e9 les meilleurs amis ; et il ne me semblait pas que nous serions jamais plus que conscients de l'existence de l'autre. Je suppose qu'il est facile d'\u00eatre frustr\u00e9 quand on ne fait pas de progr\u00e8s visibles dans l'apprentissage de quoi que ce soit, surtout en tant qu'adulte.</p>
+<h2>La th\u00e9orie musicale EST difficile</h2>
+<p>Est-ce que cela vous semble familier ? Je ne vous connais pas sp\u00e9cifiquement bien s\u00fbr, et je ne serai pas assez pr\u00e9somptueux pour supposer que vous l'avez trouv\u00e9e aussi difficile que moi. Ce serait beaucoup supposer. Mais mes recherches sur Internet sugg\u00e8rent qu'il est certainement tr\u00e8s courant de ressentir cela. Une navigation rapide sur Reddit, Quora ou tout autre forum fait appara\u00eetre des d\u00e9clarations comme celles-ci de personnes cherchant de l'aide :</p>
+<ul>
+<li>\u00ab Pourquoi la th\u00e9orie musicale est-elle si difficile \u00e0 apprendre ? \u00bb</li>
+<li>\u00ab J'ai essay\u00e9 d'apprendre la th\u00e9orie musicale 6 (six) fois et j'ai abandonn\u00e9 de frustration \u00e0 chaque fois. \u00bb</li>
+<li>\u00ab J'ai l'impression que mon cerveau n'est pas c\u00e2bl\u00e9 pour comprendre la th\u00e9orie musicale. \u00bb</li>
+<li>\u00ab J'ai 48 ans. La th\u00e9orie musicale me pers\u00e9cute depuis mes sept ans et vient de s'enfuir avec ma fianc\u00e9e et mes \u00e9conomies de retraite. \u00bb (Bon, celle-l\u00e0 je l'ai invent\u00e9e.)</li>
+</ul>
+<p>Certaines de ces citations ou similaires proviennent de musiciens de niveaux d'exp\u00e9rience vari\u00e9s, pas seulement de d\u00e9butants ou de non-initi\u00e9s comme moi.</p>
+<p>Nous avons m\u00eame trouv\u00e9 une th\u00e8se de doctorat de 2018 \u00e9crite sp\u00e9cifiquement sur l'am\u00e9lioration des performances des \u00e9tudiants dans les cours de th\u00e9orie musicale pour les \u00e9tudiants de premier cycle en musique, car trop d'\u00e9tudiants trouvaient cela trop difficile. Vraiment.</p>
+<p>Apprendre la th\u00e9orie musicale est effectivement difficile pour beaucoup d'entre nous. Mais vous n'aviez pas besoin de moi pour vous le dire. Vous le saviez d\u00e9j\u00e0.</p>
+<h2>Mais ce n'est pas une fatalit\u00e9</h2>
+<p>Ce que nous voulions vraiment vous dire, et quelque chose qui est \u00e9galement confirm\u00e9 par les exp\u00e9riences de nombreuses autres personnes, c'est ceci : <b>apprendre la th\u00e9orie musicale n'est pas impossible ; loin de l\u00e0</b>.</p>
+<p>Beaucoup des questions ci-dessus sur la difficult\u00e9 d'apprendre la th\u00e9orie musicale se terminent par des r\u00e9ponses, ou des fins heureuses. Dans certains cas, les gens parlent de leurs propres exp\u00e9riences de lutte avec la th\u00e9orie musicale mais finissant par triompher, et dans d'autres cas, les gens sont orient\u00e9s vers une s\u00e9rie de ressources ou de conseils utiles.</p>
+<p>Ceux qui ont r\u00e9ussi sont \u00e9galement passionn\u00e9s par les avantages de la compr\u00e9hension de la th\u00e9orie musicale. Ils parlent avec enthousiasme de l'impact positif qu'elle a eu sur leurs performances, leur improvisation, l'apprentissage de nouvelles pi\u00e8ces et la communication ou la collaboration avec d'autres. Peu d'entre eux diraient que cela n'en valait pas la peine.</p>
+<p>Dans la plupart des cas, les histoires de r\u00e9ussite dans l'apprentissage efficace de la th\u00e9orie musicale soulignent l'importance de trouver les bonnes m\u00e9thodes d'apprentissage qui fonctionnent pour vous.</p>
+<h2>Les bons outils pour apprendre la th\u00e9orie musicale</h2>
+<p>On dit que c'est la d\u00e9finition m\u00eame de la folie que d'essayer exactement la m\u00eame chose et d'attendre un r\u00e9sultat diff\u00e9rent. L'apprentissage de la th\u00e9orie musicale ne fait pas exception. Il est bien document\u00e9 que les gens apprennent de diff\u00e9rentes mani\u00e8res les uns par rapport aux autres. Si une m\u00e9thode particuli\u00e8re d'apprentissage de la th\u00e9orie musicale ne fonctionne pas pour quelqu'un, il n'y a que peu ou pas d'int\u00e9r\u00eat \u00e0 continuer \u00e0 essayer la m\u00eame m\u00e9thode encore et encore.</p>
+<p>En trouvant les bons outils pour vous et vos objectifs musicaux, nous pensons que les bons r\u00e9sultats suivront plus probablement que non.</p>
+<p>Chez Solfej, nous ne pr\u00e9tendons pas \u00eatre l'outil unique d'apprentissage de la th\u00e9orie musicale pour tout le monde. Ce serait formidable, mais peu probable. Tout le monde est diff\u00e9rent. Mais nous pensons que nous pouvons \u00eatre le bon outil pour certains - esp\u00e9rons beaucoup - d'entre vous. <a href="https://shayanjavadi.typeform.com/to/wO59zz"><b>Alors essayez-nous !</b></a> Et ce n'est pas grave si nous ne sommes pas faits pour vous. Esp\u00e9rons que nous essayer vous aidera \u00e0 d\u00e9terminer ce qui fonctionne et ne fonctionne pas pour vous. Tout cela fait partie du voyage.</p>
+<p>C'est faisable, beaucoup d'entre nous l'ont fait, et faites confiance au processus en trouvant la bonne aide.</p>
+<p><b>N'abandonnez pas la th\u00e9orie musicale.</b></p>`,
+  },
+  "cadences": {
+    title: "Le guide ultime des cadences en th\u00e9orie musicale : les 4 types de cadences avec exemples",
+    seoTitle: "Le guide ultime des cadences en th\u00e9orie musicale : les 4 types de cadences avec exemples",
+    description: "Apprenez les 4 types de cadences en th\u00e9orie musicale",
+    timeToRead: "8 min",
+    body: `<p>L'un des concepts les plus importants en th\u00e9orie musicale est le concept de cadences :</p>
+<p>Cherchez \u00ab Cadence \u00bb dans le dictionnaire et vous trouverez : \u00ab une s\u00e9quence de notes ou d'accords constituant la cl\u00f4ture d'une phrase musicale \u00bb.</p>
+<p>Mais je vois les choses ainsi : tout comme dans un film, comment le r\u00e9alisateur veut-il conclure son film ? Veut-il une r\u00e9solution parfaite, ou veut-il terminer son film sur un suspense rempli de questions ?</p>
+<p>C'est ainsi que je vois les cadences : ce sont vos intentions finales, votre derni\u00e8re phrase dans un passage musical, votre conclusion, votre chant du cygne si vous voulez.</p>
+<p>Commen\u00e7ons notre exploration des cadences avec la plus courante de toutes.</p>
+<h2>1. Cadence authentique (V vers I)</h2>
+<p>Une cadence authentique est celle qui va du V au I. Les cadences authentiques sont le moyen le plus simple d'\u00e9tablir une tonalit\u00e9. Les cadences authentiques sont class\u00e9es comme <b>parfaites</b> ou <b>imparfaites</b>. Voici comment les cadences parfaites et imparfaites diff\u00e8rent.</p>
+<h3>Cadence authentique parfaite</h3>
+<p>La cadence la plus courante de toute la musique, la cadence (authentique) parfaite sonne comme la plus <b>\u00ab finale \u00bb</b> de toutes. C'est la fin heureuse o\u00f9 votre histoire musicale est satisfaite et r\u00e9solue ; pas de suspense, et toutes les questions ont trouv\u00e9 r\u00e9ponse.</p>
+<p>Cette cadence est accomplie lorsque vous passez de l'accord de dominante V \u00e0 l'accord de tonique I dans une tonalit\u00e9 majeure ou \u00e0 la tonique mineure dans une tonalit\u00e9 mineure. Il est \u00e9galement important de noter que ces deux accords sont g\u00e9n\u00e9ralement en position fondamentale.</p>
+<p>En utilisant la transition entre ces deux accords \u00e0 la fin de votre composition, ou \u00e0 la fin d'une section de votre composition, vous pouvez terminer votre pi\u00e8ce de mani\u00e8re compl\u00e8tement apais\u00e9e, compl\u00e8tement chez vous, et avec un arr\u00eat compl\u00e8tement satisfaisant.</p>
+<h3>Cadence authentique imparfaite</h3>
+<p>\u00c0 premi\u00e8re vue, il est difficile de remarquer la l\u00e9g\u00e8re diff\u00e9rence entre les cadences parfaites et imparfaites du fait qu'elles vont toutes deux de l'accord de dominante V \u00e0 l'accord de tonique I respectif. La diff\u00e9rence r\u00e9side dans l'empilement irr\u00e9gulier des accords.</p>
+<p>Par cela, je veux dire que vos <b>accords V et I habituels sont renvers\u00e9s</b> de sorte que les notes toniques se trouvent dans des registres diff\u00e9rents. De cette mani\u00e8re, vous terminez en r\u00e9alit\u00e9 sur la voix la plus aigu\u00eb d'un accord au lieu de votre tonique habituelle.</p>
+<p>Avec les accords renvers\u00e9s, la cadence imparfaite a une r\u00e9solution moins apais\u00e9e. Contrairement \u00e0 l'arr\u00eat complet d'une cadence parfaite, il y a de la place pour continuer apr\u00e8s une cadence imparfaite. Cet \u00e9lan peut \u00eatre d\u00e9velopp\u00e9 davantage et peut continuer aussi longtemps que le compositeur le souhaite, et c'est pourquoi la cadence imparfaite est consid\u00e9r\u00e9e comme une \u00ab r\u00e9solution partielle \u00bb.</p>
+<h3>Exemples de cadence authentique :</h3>
+<p>1. Adele - Someone Like You (les deux premiers accords du refrain)</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hLQl3WQQoQ0?start=72" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>2. Bruno Mars - When I Was Your Man (intro)</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ekzHIouo8Q4?start=11" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2>2. Cadence plagale (IV vers I)</h2>
+<p>La cadence plagale est tr\u00e8s similaire \u00e0 la cadence authentique parfaite dans son mouvement et sa r\u00e9solution vers la tonique. Cependant, la cadence plagale commence sur un accord diff\u00e9rent.</p>
+<p>La cadence plagale passe du IV (sous-dominante) au I (tonique) dans les tonalit\u00e9s majeures (iv-i dans les tonalit\u00e9s mineures). En raison du d\u00e9part sur la sous-dominante, la cadence plagale sonne comme une version plus faible de la cadence parfaite.</p>
+<p>La cadence plagale peut \u00e9galement inclure diff\u00e9rents renversements de ces accords cibles, donnant au compositeur de la marge pour l'exp\u00e9rimentation.</p>
+<h3>Exemples de cadence plagale :</h3>
+<p>1. Abba - Mamma Mia (\u00ab Just (IV) one (I) \u00bb...)</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/unfzfe8f9NI?start=41" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2>3. Demi-cadence (I vers V)</h2>
+<p>La demi-cadence s'\u00e9loigne des trois cadences pr\u00e9c\u00e9dentes. Alors que les trois premi\u00e8res se terminent sur l'accord de tonique d'une tonalit\u00e9, la demi-cadence se termine sur le V. Parce que l'accord V a l'attraction la plus forte vers l'accord I, terminer un morceau de musique sur l'accord V sonnera comme une pause temporaire.</p>
+<p>Pour revenir \u00e0 mon allusion au cin\u00e9ma plus t\u00f4t, la demi-cadence est synonyme d'un r\u00e9alisateur terminant son film avec un tr\u00e8s gros suspense.</p>
+<p>Un autre aspect int\u00e9ressant de la demi-cadence est sa polyvalence. Ce que je veux dire, c'est que vous pouvez aller vers l'accord V depuis n'importe quel autre accord de la tonalit\u00e9 tant que cela se termine sur la dominante. (I-V, ii-V, etc.)</p>
+<h3>Exemples de demi-cadence :</h3>
+<p>1. 3 Doors Down - Be Like That (intro)</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HHpMtWtgUvc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2>4. Cadence rompue (V vers vi)</h2>
+<p>Souvent appel\u00e9e cadence interrompue, une cadence rompue est une cadence du V au vi. La cadence rompue est consid\u00e9r\u00e9e comme faible en raison du sentiment de suspens qu'elle \u00e9voque.</p>
+<p>Comme son nom l'indique, cette cadence est \u00ab trompeuse \u00bb puisque le V se r\u00e9sout bien vers le I comme nous l'avons appris. La cadence rompue renverse cela et laisse l'auditeur suspendu sur un accord vi.</p>
+<p>1. The Beatles - P.S. I Love You (la partie \u00ab P. S. I love you, you, you, you. \u00bb)</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MA5DkiVKSlM?start=22" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2>Conclusion</h2>
+<p>Les cadences sont un moyen de conclure vos derni\u00e8res pens\u00e9es dans un morceau de musique. La fa\u00e7on dont vous voulez terminer votre pi\u00e8ce ne d\u00e9pend que de vous, et chaque fin produit un effet sp\u00e9cifique.</p>
+<p>Voulez-vous que votre public parte apais\u00e9 et r\u00e9solu ? Voulez-vous que votre public parte l\u00e9g\u00e8rement r\u00e9solu ? Voulez-vous que votre public parte \u00e9lev\u00e9 ? Ou voulez-vous que votre public parte avec des pens\u00e9es ambigues qui les feront r\u00e9fl\u00e9chir \u00e0 votre pi\u00e8ce pendant longtemps ?</p>
+<p>Exp\u00e9rimentez avec ces cadences de base et trouvez celles que vous pr\u00e9f\u00e9rez.</p>`,
+  },
+  "how-to-find-new-music": {
+    title: "Comment trouver de la nouvelle musique",
+    seoTitle: "Comment trouver de la musique nouvelle et ancienne.",
+    description: "Comment trouver de la nouvelle musique",
+    timeToRead: "10 min",
+    body: `<p><i>Ceci est un article invit\u00e9 par Henry Garrett - Henry est ing\u00e9nieur logiciel le jour (et parfois la nuit), et cofondateur de <b><a href="https://albumdaily.com/?ref=Solfej">Album Daily Newsletter</a></b>. Il a toujours \u00e9t\u00e9 fascin\u00e9 par le pouvoir de la musique. Il se d\u00e9crit comme un \u00ab chercheur \u00bb musical, quelqu'un qui est constamment \u00e0 la recherche de son prochain artiste/morceau pr\u00e9f\u00e9r\u00e9. Vous pouvez le trouver sur Twitter <b><a href="https://twitter.com/garretthenrym">@garretthenrym</a></b> ou via <b><a href="https://albumdaily.com/?ref=Solfej" rel="nofollow">Album Daily</a></b>.</i></p>
+<h2>Pr\u00e9face</h2>
+<p>Je vais vous d\u00e9peindre une situation, et voyons si vous l'avez d\u00e9j\u00e0 v\u00e9cue. Vous \u00e9coutez un artiste que vous aimez sur Spotify ou Apple Music, disons Jack Johnson. Apr\u00e8s l'\u00e9coute, vous voulez trouver plus de musique que vous aimez, alors vous essayez leurs recommandations bas\u00e9es sur les algorithmes. Que recommandent-ils ? Plus d'albums de Jack Johnson, et un, ou si vous avez de la chance, 2-3 artistes similaires. Super ! Un point de d\u00e9part, alors vous en essayez quelques-uns.</p>
+<p>Maintenant, chaque fois que vous retournez sur cette application, vous obtenez les m\u00eames recommandations. Dans le m\u00eame genre. Des m\u00eames artistes. Encore. Et encore. Et encore.</p>
+<p>Cela vous est-il d\u00e9j\u00e0 arriv\u00e9 ? Pour moi, c'\u00e9tait quotidien. J'\u00e9tais extr\u00eamement frustr\u00e9 par cela. Ce n'est pas parce que j'aime un genre que je veux \u00e9couter uniquement ce genre. Cela m'a pouss\u00e9 \u00e0 explorer d'autres voies pour trouver de la musique, et a lanc\u00e9 un hobby de toute une vie : la d\u00e9couverte musicale. Alors, je vais partager avec vous quelques fa\u00e7ons dont je trouve de la musique, dans l'espoir que cela vous aide \u00e0 trouver de nouvelles p\u00e9pites.</p>
+<p>Avant de commencer, je dois d\u00e9finir les deux types de \u00ab nouvelle \u00bb musique. C'est important, car bien que certaines techniques de d\u00e9couverte se chevauchent, elles sont largement diff\u00e9rentes. Ces cat\u00e9gories sont :</p>
+<ul>
+<li>La musique r\u00e9cemment sortie</li>
+<li>La musique qui est nouvelle pour moi (ou pour vous !)</li>
+</ul>
+<h2>Musique r\u00e9cemment sortie</h2>
+<p>Commen\u00e7ons par la plus simple, la musique r\u00e9cemment sortie. La majorit\u00e9 de l'industrie musicale suit un calendrier de sorties assez rigide, avec le vendredi comme jour de sortie hebdomadaire d\u00e9sign\u00e9. Jusqu'en juillet 2015, c'\u00e9tait le mardi, mais les dirigeants de l'industrie se sont r\u00e9unis et ont d\u00e9cid\u00e9 que \u00ab New Music Friday \u00bb sonnait beaucoup mieux (je ne leur en veux pas).</p>
+<p>Alors comment trouver les albums qui doivent sortir ? Eh bien, vous pouvez suivre vos artistes ou labels pr\u00e9f\u00e9r\u00e9s sur les r\u00e9seaux sociaux, car ils ne manqueront pas de promouvoir leur travail. Cependant, je trouve qu'il est pr\u00e9f\u00e9rable de consulter <a href="https://consequenceofsound.net/upcoming-releases/" rel="nofollow">Consequence of Sound</a> car ils agr\u00e8gent les prochaines sorties d'albums extr\u00eamement bien. Ce lien est dans mes favoris, et je le consulte tout au long de la semaine pour voir ce que je peux attendre le vendredi.</p>
+<h2>Musique nouvelle pour moi</h2>
+<p>Passons maintenant \u00e0 la cat\u00e9gorie difficile, la musique qui est nouvelle pour moi (ou pour vous !). Voici quelques-unes des techniques que j'utilise, ou des endroits o\u00f9 je cherche.</p>
+<h3>Reddit</h3>
+<p>Je trouve Reddit essentiel pour la d\u00e9couverte musicale, pour la simple raison que ce sont d'autres personnes qui partagent la musique qu'elles aiment. Il y a des chances que vous n'aimiez pas chaque morceau recommand\u00e9 par quelqu'un (moi non plus), mais plus vous explorez et apprenez, plus vous trouverez. Voici quelques-uns des meilleurs subreddits pour trouver de la musique :</p>
+<ul>
+<li><a href="https://www.reddit.com/r/Music/">r/Music</a></li>
+<li><a href="https://www.reddit.com/r/listentothis/">r/listentothis</a></li>
+<li><a href="https://www.reddit.com/r/LetsTalkMusic/">r/LetsTalkMusic</a></li>
+</ul>
+<h3>Demandez autour de vous</h3>
+<p>Celle-ci est probablement la plus \u00e9vidente, mais la m\u00e9thode la plus sous-utilis\u00e9e \u00e0 mon avis. Sans aucun doute, certaines des meilleures musiques que j'ai jamais trouv\u00e9es \u00e9taient sur recommandation d'un ami ou d'un membre de ma famille. Par exemple, je ne savais pas que mon beau-p\u00e8re \u00e9tait amateur de musique, jusqu'\u00e0 ce que je lui demande : \u00ab Qu'est-ce que tu aimes \u00e9couter ? \u00bb. Il a alors partag\u00e9 avec moi certains des groupes moins connus des ann\u00e9es 60 et 70 qui sont devenus parmi mes favoris de tous les temps. Sans aucun doute, il n'y a aucune chance que j'aurais trouv\u00e9 ces artistes sans avoir engag\u00e9 la conversation avec lui.</p>
+<h3>Applications de streaming musical</h3>
+<p>Oui, je sais que j'ai critiqu\u00e9 Spotify et Apple Music plus t\u00f4t, mais ils ont leur place. Pour les utiliser efficacement, vous devez comprendre comment fonctionnent les algorithmes. Ces algorithmes filtrent selon de nombreuses cat\u00e9gories, mais les plus fortement pond\u00e9r\u00e9es sont la <b>popularit\u00e9, le genre et les habitudes des pairs</b>. Par exemple, si vous \u00e9coutez Ed Sheeran, un algorithme recommanderait tr\u00e8s probablement Taylor Swift, Shawn Mendes ou One Direction ; pas le jeune Britannique de 18 ans en pleine ascension qui sonne exactement comme Sheeran. C'est une manifestation du biais de popularit\u00e9 et de genre, ce qui peut \u00eatre tr\u00e8s bien si c'est ce que vous attendez. G\u00e9n\u00e9ralement, ces algorithmes vous maintiendront dans une zone de confort, ce qui a sa place pour ceux d'entre nous qui le souhaitent.</p>
+<h2><a href="https://albumdaily.com/?ref=Solfej_Blog" rel="nofollow">Album Daily</a></h2>
+<p>D'accord, je l'avoue, c'est une auto-promotion. Mais j'ai cr\u00e9\u00e9 <a href="https://albumdaily.com/?ref=Solfej_Blog" rel="nofollow">Album Daily</a> pour s'attaquer exactement \u00e0 ce probl\u00e8me de d\u00e9couverte musicale algorithmique. Si vous d\u00e9cidez de vous abonner \u00e0 l'une de nos deux newsletters, distribu\u00e9es quotidiennement ou hebdomadairement, vous serez initi\u00e9 \u00e0 de nombreux genres et artistes diff\u00e9rents. Moi, ainsi que ma femme et cofondatrice Paige, passons des heures et des heures \u00e0 \u00e9plucher la musique pour mettre en lumi\u00e8re ce que nous pensons que notre public adorera, dans tous les domaines de l'industrie musicale.</p>
+<p>Voil\u00e0, quelques fa\u00e7ons int\u00e9ressantes de trouver de la musique r\u00e9cemment sortie et de la musique qui est nouvelle pour vous. J'esp\u00e8re que les techniques de cet article vous aideront \u00e0 \u00e9largir vos go\u00fbts musicaux et \u00e0 trouver vos nouvelles chansons pr\u00e9f\u00e9r\u00e9es. Dites-moi sur <a href="https://twitter.com/garretthenrym">Twitter</a> comment vous trouvez de la nouvelle musique ! Bonne \u00e9coute !</p>
+<p>Henry Garrett</p>`,
+  },
+  "whats-new-in-solfej-v-1.3": {
+    title: "Quoi de neuf dans Solfej v1.3",
+    seoTitle: "Nouvelle version de Solfej, une application de th\u00e9orie musicale, inclut des le\u00e7ons de musique interactives.",
+    description: "Le\u00e7ons r\u00e9vis\u00e9es, exemples interactifs de th\u00e9orie musicale, nombreux bugs corrig\u00e9s.",
+    timeToRead: "4 min",
+    body: `<p>La version 1.3.0 de Solfej est disponible aujourd'hui !</p>
+<p>La version 1.3.0 comprend des modifications bas\u00e9es sur les retours des utilisateurs b\u00eata (Merci \u00e0 tous ceux qui ont essay\u00e9 l'application et donn\u00e9 leur avis. Double merci si c'\u00e9tait sur <a href="https://solfej.canny.io/solfej-user-forums">Canny.io</a>).</p>
+<p>Cette version comprend des exemples de le\u00e7ons interactifs, des le\u00e7ons r\u00e9vis\u00e9es, 3 toutes nouvelles le\u00e7ons, quelques corrections de bugs et de nombreuses am\u00e9liorations g\u00e9n\u00e9rales. Lisez la suite pour tous les d\u00e9tails !</p>
+<a href="https://shayanjavadi.typeform.com/to/wO59zz"><p>N'oubliez pas de vous inscrire pour un acc\u00e8s anticip\u00e9 si ce n'est pas d\u00e9j\u00e0 fait !</p></a>
+<h2>Exemples de le\u00e7ons interactifs</h2>
+<p>Les le\u00e7ons interactives de th\u00e9orie musicale \u00e9taient l'une des fonctionnalit\u00e9s les plus demand\u00e9es. J'ai ajout\u00e9 des exemples sonores \u00e0 presque toutes les le\u00e7ons de th\u00e9orie musicale.</p>
+<p>En plus de cela, j'ai \u00e9galement ajout\u00e9 un piano roll interactif \u00e0 certaines le\u00e7ons. Cela sert \u00e0 aider \u00e0 visualiser les concepts.</p>
+<h2>Le\u00e7ons r\u00e9vis\u00e9es</h2>
+<p>Comme la plupart d'entre vous l'ont remarqu\u00e9, le programme de le\u00e7ons (\u00e9tant donn\u00e9 que c'est surtout de la th\u00e9orie musicale) \u00e9tait \u00e0 un stade initial. La nouvelle mise \u00e0 jour vise \u00e0 corriger cela.</p>
+<p>J'ai corrig\u00e9 les fautes d'orthographe et de grammaire pour chaque le\u00e7on. Certaines le\u00e7ons contenaient des inexactitudes. Celles-ci sont \u00e9galement corrig\u00e9es.</p>
+<p>J'ai \u00e9galement d\u00e9plac\u00e9 certaines le\u00e7ons. C'est pour s'assurer que les parcours de le\u00e7ons ont du sens et que les concepts sont introduits dans le bon ordre.</p>
+<p>P.S. n'h\u00e9sitez pas \u00e0 me contacter si vous voyez des probl\u00e8mes avec le texte !</p>
+<h2>Nouvelles le\u00e7ons</h2>
+<p>Il y a 3 toutes nouvelles le\u00e7ons de th\u00e9orie musicale !</p>
+<p>L'une intitul\u00e9e \u00ab Di\u00e8ses et b\u00e9mols \u00bb, les 2 autres \u00ab Transformer la th\u00e9orie musicale en musique \u00bb et \u00ab La gamme majeure \u00bb.</p>
+<p>N'oubliez pas d'y jeter un coup d'oeil !</p>
+<h2>Notifications push</h2>
+<p>Vous avez maintenant la possibilit\u00e9 de nous autoriser \u00e0 vous envoyer des rappels utiles ! Vous recevrez une demande une fois que vous ouvrirez l'application apr\u00e8s la mise \u00e0 jour.</p>
+<h2>Corrections de bugs</h2>
+<ul>
+<li><a href="https://solfej.canny.io/admin/board/solfej-user-forums/p/login-bug">Correction du probl\u00e8me o\u00f9 l'application restait bloqu\u00e9e apr\u00e8s l'\u00e9chec de la connexion Google.</a></li>
+<li><a href="https://solfej.canny.io/admin/board/solfej-user-forums/p/google-login-issue">Correction de la connexion Google qui appelait l'application \u00ab App \u00bb au lieu de Solfej.</a></li>
+<li><a href="https://solfej.canny.io/admin/board/solfej-user-forums/p/sounds-issue">Correction des probl\u00e8mes li\u00e9s \u00e0 l'audio et \u00e0 l'audio qui ne jouait pas. De plus, ajout d'un pop-up pour s'assurer que les utilisateurs peuvent entendre l'audio jou\u00e9.</a></li>
+<li>Beaucoup de choses sous le capot.</li>
+</ul>`,
+  },
+  "is-betapage-worth-it": {
+    title: "Betapage en vaut-il la peine ?",
+    seoTitle: "Betapage en vaut-il la peine ? Solfej, une application de th\u00e9orie musicale, a utilis\u00e9 Betapage pour obtenir ses premiers clients.",
+    description: "Un prix de 100 $ qui pourrait en valoir la peine.",
+    timeToRead: "5 min",
+    body: `<p>Cela fait quelques semaines que Solfej a commenc\u00e9 \u00e0 accepter des utilisateurs b\u00eata en acc\u00e8s anticip\u00e9 <a href="https://shayanjavadi.typeform.com/to/wO59zz">(cliquez ici pour rejoindre les plus de 900 personnes inscrites pour essayer l'application)</a>.</p>
+<p>En tant que fondateur d\u00e9butant, cela fait \u00e9galement le m\u00eame temps que j'ai commenc\u00e9 \u00e0 commercialiser s\u00e9rieusement l'application. Pour une application de th\u00e9orie musicale, les canaux de distribution n'ont pas exactement \u00e9t\u00e9 \u00e9vidents.</p>
+<p>C'est l\u00e0 qu'intervient <a href="https://betapage.co/">Betapage</a>. Betapage est un agr\u00e9gateur pour les startups qui sont en b\u00eata/acc\u00e8s anticip\u00e9. Pour que votre startup soit mise en avant, vous devez la soumettre \u00e0 Betapage et attendre environ un mois pour qu'elle soit pr\u00e9sent\u00e9e. Alternativement, vous pouvez aussi payer une somme rondelette et passer la file d'attente.</p>
+<h2>Les chiffres</h2>
+<p>J'ai pay\u00e9 119 $ pour que Solfej soit mis en avant sur Betapage pendant un total de 2 jours. Voici le d\u00e9tail de ce que j'ai obtenu (je copie sans vergogne ce format de Pine.io, <a href="https://pine.io/blog/should-i-publish-to-betalist/">allez voir leur article de blog sur Betalist</a>) :</p>
+<ul>
+<li>430 visiteurs uniques</li>
+<li>120 inscriptions</li>
+<li>119 $</li>
+</ul>
+<p>Cela revient \u00e0 environ 1 $ par inscription. C'est plut\u00f4t excellent !</p>
+<p>Pour comparer, voici les CPC moyens (co\u00fbt par clic) pour les r\u00e9seaux publicitaires populaires :</p>
+<ul>
+<li>Google Ads : environ 2,00 $</li>
+<li>Facebook Ads : environ 1,86 $</li>
+<li>Instagram Ads : environ 0,80 $</li>
+</ul>
+<h2>Alors, Betapage en vaut-il la peine ?</h2>
+<p>Je me suis engag\u00e9 \u00e0 obtenir le plus de retours utilisateurs possible sur mon application de th\u00e9orie musicale. Betapage m'a aid\u00e9 \u00e0 faire exactement cela \u00e0 un prix tr\u00e8s raisonnable.</p>
+<p>J'ai fini par recevoir beaucoup de retours d\u00e9taill\u00e9s et excellents des utilisateurs provenant de Betapage. Mon hypoth\u00e8se est que les personnes qui fr\u00e9quentent Betapage sont plus susceptibles de partager leurs retours avec vous.</p>
+<p>J'ai \u00e9galement re\u00e7u quelques e-mails tr\u00e8s sympathiques de personnes me disant \u00e0 quel point elles \u00e9taient enthousiastes pour l'application et comment elles avaient eu du mal avec les m\u00e9thodes traditionnelles d'apprentissage de la th\u00e9orie musicale et qu'elles voyaient Solfej les aider \u00e0 surmonter cet obstacle.</p>
+<p>Ce qui m'a vraiment surpris, c'est le nombre de personnes int\u00e9ress\u00e9es par une application d'entra\u00eenement de l'oreille/th\u00e9orie musicale qui seraient aussi sur Betapage, mais ce n'est pas le sujet de cet article.</p>
+<h2>Le bilan</h2>
+<p>En r\u00e9sum\u00e9, Betapage m'a aid\u00e9 \u00e0 mettre Solfej sous les yeux de beaucoup de monde pour un prix tr\u00e8s raisonnable. 120 inscriptions ne semblent peut-\u00eatre pas beaucoup, mais c'est vraiment \u00e9norme quand on le met en perspective d'un produit fra\u00eechement lanc\u00e9 cr\u00e9\u00e9 par une seule personne (moi).</p>
+<p>\u00c9videmment, il existe des tonnes de moyens gratuits pour faire conna\u00eetre votre projet en cours, mais si vous pouvez vous permettre le prix d'environ 100 $, <b>je le recommande vivement</b>.</p>
+<p>Je recommande \u00e9galement de jeter un oeil \u00e0 Betalist. C'est le m\u00eame processus que Betapage. Consultez la page blog de <a href="https://pine.io/">Pine.io</a> si vous voulez voir un retour d'exp\u00e9rience sur Betalist similaire \u00e0 cet article.</p>
+<p><a href="https://shayanjavadi.typeform.com/to/wO59zz">N'oubliez pas de vous inscrire \u00e0 la b\u00eata de Solfej</a> si vous souhaitez apprendre la th\u00e9orie musicale et entra\u00eener vos oreilles.</p>`,
+  },
+  "5-beautiful-color-palette-generators-for-your-next-design-project": {
+    title: "5 beaux outils de palettes de couleurs pour votre prochain projet de design",
+    seoTitle: "5 beaux outils de palettes de couleurs pour votre prochain projet de design. D\u00e9couvrez comment Solfej, une application de th\u00e9orie musicale, a utilis\u00e9 ces outils.",
+    description: "G\u00e9n\u00e9rateurs/outils de palettes de couleurs",
+    timeToRead: "7 min",
+    body: `<p>Bonjour \u00e0 tous, ici Shayan. Je suis le fondateur/d\u00e9veloppeur solo de Solfej, une application de th\u00e9orie musicale et d'entra\u00eenement de l'oreille <a href="https://shayanjavadi.typeform.com/to/wO59zz">(cliquez ici pour rejoindre les plus de 900 personnes inscrites pour essayer l'application)</a>.</p>
+<p>Levez la main si vous avez pass\u00e9 un temps d\u00e9raisonnable \u00e0 choisir une palette de couleurs !</p>
+<p>Je suis avant tout une personne visuelle, et sans surprise, la couleur et le design sont importants pour moi. Je peux aussi \u00eatre perfectionniste en mati\u00e8re de design. C'est particuli\u00e8rement vrai quand c'est pour un projet qui me passionne comme Solfej.</p>
+<p>J'ai commenc\u00e9 \u00e0 travailler sur Solfej pour combiner mes deux passions, la musique et l'ing\u00e9nierie, afin de cr\u00e9er une application intuitive pour les personnes qui essaient d'apprendre la th\u00e9orie musicale.</p>
+<h2>La liste</h2>
+<p>Voici 5 outils qui m'ont aid\u00e9 \u00e0 choisir ma palette de couleurs pour Solfej :</p>
+<h2><a href="https://coolors.co/">Coolors</a> par <a href="https://twitter.com/_fbrz">@_fbrz</a></h2>
+<p>Coolors est mon g\u00e9n\u00e9rateur de palettes de couleurs pr\u00e9f\u00e9r\u00e9 parmi tous ceux list\u00e9s ici. Vous pouvez lui faire g\u00e9n\u00e9rer des palettes de couleurs enti\u00e8res \u00e0 partir de z\u00e9ro.</p>
+<p>Ce qui en fait mon favori, c'est votre capacit\u00e9 \u00e0 verrouiller des couleurs et \u00e0 les ajuster dans les palettes. Le seul inconv\u00e9nient pour moi est que le site n'est pas aussi adapt\u00e9 aux mobiles que je le souhaiterais (ils ont cependant une application iOS).</p>
+<p>J'ai utilis\u00e9 Coolors pour cr\u00e9er les trois couleurs de cat\u00e9gories de le\u00e7ons pour Solfej (<b>entra\u00eenement de l'oreille</b>, <b>th\u00e9orie musicale</b>, <b>rythme</b>).</p>
+<h2><a href="https://colorhunt.co/">Color Hunt</a> par <a href="https://twitter.com/thegalshir">@thegalshir</a></h2>
+<p>Color Hunt est, comme ils le disent, \u00ab une plateforme gratuite et ouverte pour l'inspiration couleur avec des milliers de palettes de couleurs tendance choisies \u00e0 la main \u00bb.</p>
+<p>C'est comme Dribbble mais exclusivement pour les palettes de couleurs. Les palettes de couleurs sont tellement magnifiques qu'elles vous donnent presque envie de cr\u00e9er quelque chose juste pour pouvoir les utiliser.</p>
+<h2><a href="https://www.happyhues.co/">Happy Hues</a> par <a href="https://twitter.com/mackenziechild">@mackenziechild</a></h2>
+<p>Happy Hues est un outil dont je n'arrive pas \u00e0 croire qu'il n'existait pas avant sa sortie r\u00e9cente. En r\u00e9sum\u00e9, il vous permet de voir \u00e0 quoi ressembleront les palettes de couleurs dans un vrai site web. C'est une variante g\u00e9niale de l'application de type liste de palettes de couleurs s\u00e9lectionn\u00e9es.</p>
+<p>Super utile ! L'exp\u00e9rience enti\u00e8re est magnifiquement con\u00e7ue. Le logo est aussi tr\u00e8s mignon.</p>
+<h2><a href="https://culrs.com/">Culrs</a> par <a href="https://twitter.com/mshra_ji">@mshra_ji</a> et <a href="https://twitter.com/iamarnob6543">@iamarnob6543</a></h2>
+<p>Culrs est une autre liste de palettes s\u00e9lectionn\u00e9es (magnifiques !). Les palettes sont s\u00e9par\u00e9es en cat\u00e9gories bas\u00e9es sur les types de sch\u00e9mas de couleurs.</p>
+<p>J'adore le fait qu'en plus des palettes de couleurs, Culrs inclut des connaissances sur les diff\u00e9rents types de sch\u00e9mas de couleurs. Je ne savais pas ce que signifiait un sch\u00e9ma de couleurs t\u00e9tradique avant cela.</p>
+<h2><a href="https://www.webdesignrankings.com/resources/lolcolors/">LOL Colors</a></h2>
+<p>Le dernier mais non le moindre est LOL Colors. LOL Colors est une autre liste s\u00e9lectionn\u00e9e de palettes. Ils ont une tonne de magnifiques palettes pour vous inspirer.</p>
+<p>Ce qui a attir\u00e9 mon attention chez eux, c'est leur logo. L'un des logos les plus cr\u00e9atifs que j'ai vus.</p>
+<p>Merci d'avoir lu ! N'oubliez pas de <b><a href="https://shayanjavadi.typeform.com/to/wO59zz">vous inscrire \u00e0 la b\u00eata de Solfej</a></b> si vous souhaitez apprendre la th\u00e9orie musicale et entra\u00eener vos oreilles.</p>`,
+  },
+  "the-4-best-ear-training-apps-for-2019": {
+    title: "Entra\u00eenement de l'oreille : les 4 meilleures applications d'entra\u00eenement auditif pour 2020",
+    seoTitle: "Meilleures applications d'entra\u00eenement auditif. Quelles sont les 4 meilleures applications d'entra\u00eenement de l'oreille ?",
+    description: "Les meilleures applications pour entra\u00eener vos oreilles",
+    timeToRead: "5 min",
+    body: `<p>Bonjour \u00e0 tous, ici Shayan. Je suis le fondateur/d\u00e9veloppeur solo de Solfej, une application de th\u00e9orie musicale et d'entra\u00eenement de l'oreille <a href="https://shayanjavadi.typeform.com/to/wO59zz">(cliquez ici pour rejoindre les plus de 900 personnes inscrites pour essayer l'application)</a>.</p>
+<p>Les oreilles d'un musicien sont son outil le plus important. Certains ont la chance de na\u00eetre avec l'oreille absolue. Les 99 % restants d'entre nous doivent travailler dur pour entra\u00eener nos oreilles.</p>
+<p>Guitaristes, pianistes, producteurs, DJs, violonistes, chanteurs et rappeurs peuvent tous trouver l'entra\u00eenement de l'oreille utile. Toute personne qui compose des chansons, improvise ou m\u00eame compose des po\u00e8mes peut b\u00e9n\u00e9ficier de l'entra\u00eenement auditif.</p>
+<p>Le seul probl\u00e8me est que l'entra\u00eenement de l'oreille est difficile ! Heureusement pour nous, nous vivons \u00e0 l'\u00e8re de la technologie.</p>
+<p>Dans cet article, nous passerons en revue les 4 meilleures fa\u00e7ons d'apprendre l'entra\u00eenement de l'oreille en 2020.</p>
+<h2>Qu'est-ce que l'entra\u00eenement de l'oreille</h2>
+<p>L'entra\u00eenement de l'oreille est le processus d'identification des concepts musicaux (notes, accords, gammes, etc.) uniquement par notre oreille. L'entra\u00eenement de l'oreille est le pont qui relie notre cerveau au monde mystique de la th\u00e9orie musicale.</p>
+<p>Avec suffisamment de pratique, l'entra\u00eenement de l'oreille peut devenir une seconde nature. Pensez \u00e0 la facilit\u00e9 avec laquelle vous reconnaissez les mots dans votre langue.</p>
+<h2>Pourquoi devrais-je apprendre l'entra\u00eenement de l'oreille ?</h2>
+<p>Le premier avantage de l'entra\u00eenement de l'oreille est la capacit\u00e9 de traduire facilement les sons dans votre t\u00eate vers l'instrument de votre choix.</p>
+<p>L'entra\u00eenement de l'oreille peut aussi vous aider \u00e0 chanter juste et \u00e0 mieux improviser.</p>
+<p>L'entra\u00eenement de l'oreille peut \u00e9galement vous aider \u00e0 communiquer plus facilement avec d'autres musiciens.</p>
+<p>Le moyen le plus simple d'apprendre l'entra\u00eenement de l'oreille est gr\u00e2ce \u00e0 la technologie.</p>
+<p>Voici les 4 meilleures applications d'entra\u00eenement de l'oreille pour 2020 :</p>
+<h2>1. <a href="https://www.solfej.io/">Solfej</a></h2>
+<p>Solfej est la meilleure nouvelle application pour apprendre l'entra\u00eenement de l'oreille et la th\u00e9orie musicale. Solfej est disponible sur iOS, Android et le web !</p>
+<p>Solfej comprend plus de 10 modules de le\u00e7ons d'entra\u00eenement de l'oreille allant de l'identification des intervalles \u00e0 l'identification des accords. De nouvelles le\u00e7ons d'entra\u00eenement de l'oreille sont ajout\u00e9es chaque mois.</p>
+<p>Solfej propose \u00e9galement des le\u00e7ons de th\u00e9orie musicale et de rythme.</p>
+<h2>Votre DAW pr\u00e9f\u00e9r\u00e9 (Ableton, Logic, Reaper, etc.)</h2>
+<p>Cela semble \u00eatre une blague, mais restez avec moi. L'une des meilleures choses que vous puissiez faire pour votre oreille est de transcrire de la musique. Points bonus si la musique que vous transcrivez est celle que vous adorez.</p>
+<p>C'est l\u00e0 que le DAW entre en jeu. T\u00e9l\u00e9chargez le morceau de votre choix et chargez-le dans votre DAW pr\u00e9f\u00e9r\u00e9. Une fois que vous l'avez, s\u00e9lectionnez de petites parties du morceau (aussi petites que 2-4 temps), mettez-les en boucle et essayez de transcrire la partie en boucle \u00e0 l'oreille.</p>
+<p>C'est plus simple \u00e0 dire qu'\u00e0 faire, cela peut m\u00eame sembler impossible au d\u00e9but. Un conseil que je donnerais est de ralentir la vitesse du morceau d'environ 50 %, de cette fa\u00e7on vous avez beaucoup de temps pour entendre chaque note !</p>
+<h2><a href="https://www.soundgym.co/site/index">Sound Gym</a></h2>
+<p>Sound Gym est une application ciblant les producteurs/ing\u00e9nieurs du son. Selon leurs propres mots, elle vous aide \u00e0 am\u00e9liorer vos comp\u00e9tences d'\u00e9coute fondamentales comme la d\u00e9tection de fr\u00e9quences et la compression.</p>
+<h2><a href="http://www.earplugins.eu/">Ear Plugins</a></h2>
+<p>Ear Plugins est une autre application super utile pour les producteurs. Elle vit directement dans votre DAW. Elle vous aide \u00e0 reconna\u00eetre des fr\u00e9quences sp\u00e9cifiques, ce qui s'av\u00e8re tr\u00e8s pratique lors du mixage.</p>
+<p>Merci d'avoir lu ! N'oubliez pas de <b><a href="https://shayanjavadi.typeform.com/to/wO59zz">vous inscrire \u00e0 la b\u00eata de Solfej</a></b> si vous souhaitez apprendre la th\u00e9orie musicale et entra\u00eener vos oreilles.</p>`,
   },
 }

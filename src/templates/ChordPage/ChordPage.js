@@ -2,6 +2,7 @@ import { graphql, Link } from "gatsby";
 import React from "react";
 import chords from "../../../chordsMinified.json";
 import getChordDisplayName from "../../common/utils/chords/getChordDisplayName";
+import { translateName } from "../../i18n/translateName";
 import Layout from "../../components/layout";
 import MdHeader from "../../components/MdHeader/MdHeader";
 import SearchBar from "../../components/SearchBar/SearchBar";
@@ -10,42 +11,57 @@ import ChordGuitarDiagram from "./ChordGuitarDiagram/ChordGuitarDiagram";
 import ChordInformation from "./ChordInformation/ChordInformation";
 import "./ChordPage.scss";
 
-const renderHeader = ({ chord }) => {
-    const chordName = getChordDisplayName(chord)
-
+const renderHeader = ({ chord, ui, translatedChordName, translatedStrings }) => {
     return (
         <div className="header-container">
-            <AliasOverline aliases={chord.aliases} />
-            <MdHeader subText="Below you can find chord diagrams, piano fingerings, guitar fingering, notes, intervals, scales, and arpeggios.">
-                {chordName} Chord
+            <AliasOverline aliases={chord.aliases} translatedStrings={translatedStrings} />
+            <MdHeader subText={ui.chordPageSubText || "Below you can find chord diagrams, piano fingerings, guitar fingering, notes, intervals, scales, and arpeggios."}>
+                {translatedChordName} {ui.chordSuffix}
             </MdHeader>
         </div>
     )
 }
 
-export default function ChordPage({ data }) {
+export default function ChordPage({ data, pageContext }) {
     const { chord } = data.allSitePage.edges[0].node.context;
     const { displayName } = chord;
+    const { translatedStrings, locale } = pageContext || {};
+    const prefix = locale ? `/${locale}` : "";
+    const ui = translatedStrings || {
+        chordSuffix: "Chord",
+        chordSeoTitle: "How to play %s on guitar and piano? What notes are in %s",
+        chordSeoDescription: "How to play a %s chord on piano and guitar? What notes and intervals are in %s? Find out how and search through 1000s of chords.",
+        lookingForScale: "Looking For a Scale?",
+        tryScaleSearch: "Try: Scale Search",
+        chordTip: "💡Tip: You can find a chord by typing in its notes seperated by commas e.g. (C, E, G)",
+        searchChordPlaceholder: null,
+    };
+
+    const translatedChordName = translateName(displayName, chord.name, chord.rootNote, ui.chordNames);
+    const seoTitle = ui.chordSeoTitle ? ui.chordSeoTitle.replace(/%s/g, translatedChordName) : `How to play ${displayName} on guitar and piano?`;
+    const seoDescription = ui.chordSeoDescription ? ui.chordSeoDescription.replace(/%s/g, translatedChordName) : `How to play a ${displayName} chord on piano and guitar?`;
 
     return (
         <Layout
-            title={`How to play ${displayName} on guitar and piano? What notes are in ${displayName}`}
-            description={`How to play a ${displayName} chord on piano and guitar? What notes and intervals are in ${displayName}? Find out how and search through 1000s of chords.`}
+            title={seoTitle}
+            description={seoDescription}
             image="/images/chords.png"
+            translatedStrings={translatedStrings}
+            locale={locale}
         >
             <div className="chord-page-template md-styles">
                 <div className="suggestion flex" style={{ marginTop: "2rem", marginBottom: "1rem" }}>
-                    <sub><b>Looking For a Scale? Try: <Link to="/scales">Scale Search</Link></b></sub>
+                    <sub><b>{ui.lookingForScale} <Link to={`${prefix}/scales`}>{ui.tryScaleSearch}</Link></b></sub>
                 </div>
-                
-                <SearchBar searchData={chords} searchResultPostFix={"chord"} />
-                
+
+                <SearchBar searchData={chords} searchResultPostFix={"chord"} placeholder={ui.searchChordPlaceholder} locale={locale} />
+
                 <div className="hint" >
-                    <sub style={{ textAlign: "left" }}><b>💡Tip: You can find a chord by typing in its notes seperated by commas e.g. (C, E, G)</b></sub>
+                    <sub style={{ textAlign: "left" }}><b>{ui.chordTip}</b></sub>
                 </div>
-                {renderHeader({ chord })}
-                <ChordGuitarDiagram chord={chord} />
-                <ChordInformation chord={chord} />
+                {renderHeader({ chord, ui, translatedChordName, translatedStrings })}
+                <ChordGuitarDiagram chord={chord} translatedStrings={translatedStrings} />
+                <ChordInformation chord={chord} translatedStrings={translatedStrings} locale={locale} />
             </div>
         </Layout>
     )

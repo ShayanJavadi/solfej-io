@@ -5,14 +5,15 @@ import "./AliasOverline.scss";
 import { Link } from 'gatsby';
 
 export default function AliasOverline(props) {
-    const { aliases } = props
+    const { aliases, translatedStrings } = props
+    const ui = translatedStrings || {};
 
     return (
         <div className="alias-overline">
                 {
                     !isEmpty(aliases) &&
                     <p className="alias-p">
-                        Aliases: {
+                        {ui.aliases || "Aliases: "}{
                             aliases.map(alias => {
                                 return (
                                     <Link to={alias.url} key={alias.url}>{alias.name}</Link>

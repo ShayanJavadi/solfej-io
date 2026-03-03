@@ -36,7 +36,8 @@ const getGetTheAppLink = () => {
 export default function Header(props) {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isTypeformOpen, setIsTypeformOpen] = useState(false);
-    const { isDetatched } = props;
+    const { isDetatched, translatedStrings, locale } = props;
+    const prefix = locale ? `/${locale}` : "";
     let typeForm = React.createRef();
     const getTheAppLink = getGetTheAppLink();
 
@@ -70,31 +71,31 @@ export default function Header(props) {
             />
             <div className={classes}>
                 <nav className="logo">
-                    <Link to="/">
+                    <Link to={`${prefix}/`}>
                         <img src={logo} alt="solfej-logo-music-theory-app" className="solfej-logo" />
                     </Link>
                 </nav>
-     
+
                 <ul>
-    
+
                     <li>
-                        <Link to="/blog">
-                            Blog
+                        <Link to={`${prefix}/blog`}>
+                            {translatedStrings ? translatedStrings.blog : "Blog"}
                 </Link>
                     </li>
                     <li>
-                        <Link to="/chords">
-                            Chord Search
+                        <Link to={`${prefix}/chords`}>
+                            {translatedStrings ? translatedStrings.chordSearch : "Chord Search"}
                 </Link>
                     </li>
                     <li>
-                        <Link to="/scales">
-                            Scale Search
+                        <Link to={`${prefix}/scales`}>
+                            {translatedStrings ? translatedStrings.scaleSearch : "Scale Search"}
                 </Link>
                     </li>
                     <li>
                         <a href="mailto:shayanjavadi1375@gmail.com">
-                            Contact
+                            {translatedStrings ? translatedStrings.contact : "Contact"}
                 </a>
                     </li>
                   
@@ -117,14 +118,14 @@ export default function Header(props) {
                                     <button
                                         className="cta-button primary"
                                     >
-                                        GET THE APP
+                                        {translatedStrings ? translatedStrings.getTheApp : "GET THE APP"}
                                     </button>
                                 </Link> :
                                 <a href={getTheAppLink}>
                                     <button
                                         className="cta-button primary"
                                     >
-                                        GET THE APP
+                                        {translatedStrings ? translatedStrings.getTheApp : "GET THE APP"}
                                     </button>
                                 </a>
                         }
@@ -134,29 +135,29 @@ export default function Header(props) {
             <div className={mobileNavClasses}>
                 <ul>
                     <li>
-                        <Link to="/">
-                            Home
+                        <Link to={`${prefix}/`}>
+                            {translatedStrings ? translatedStrings.home : "Home"}
                 </Link>
                     </li>
                     <li>
-                        <Link to="/chords">
-                            Chord Search
+                        <Link to={`${prefix}/chords`}>
+                            {translatedStrings ? translatedStrings.chordSearch : "Chord Search"}
                 </Link>
                     </li>
                     <li>
-                        <Link to="/scales">
-                            Scale Search
+                        <Link to={`${prefix}/scales`}>
+                            {translatedStrings ? translatedStrings.scaleSearch : "Scale Search"}
                 </Link>
                     </li>
                     <li>
-                        <Link to="/blog">
-                            Blog
+                        <Link to={`${prefix}/blog`}>
+                            {translatedStrings ? translatedStrings.blog : "Blog"}
                 </Link>
                     </li>
 
                     <li>
                         <a href="mailto:shayanjavadi1375@gmail.com">
-                            Contact
+                            {translatedStrings ? translatedStrings.contact : "Contact"}
                 </a>
                     </li>
                 </ul>

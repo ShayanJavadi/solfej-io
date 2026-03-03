@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { ChordBox } from 'vexchords';
 import { red } from "../../../common/consts/colors";
 import getChordDisplayName from "../../../common/utils/chords/getChordDisplayName";
+import { translateName } from "../../../i18n/translateName";
 import flattenArray from "../../../common/utils/flattenArray";
 import pianoContainerNotesAdapter from "../../../common/utils/pianoContainerNotesAdapter";
 import usePianoSound from "../../../common/hooks/usePianoSound";
@@ -83,12 +84,13 @@ const drawChordDiagram = (chord) => {
     }
 }
 
-export default function ChordGuitarDiagram({ chord }) {
+export default function ChordGuitarDiagram({ chord, translatedStrings }) {
     const { notes, rootNote, displayName } = chord;
 
     const [showTone, setShowTone] = useState(!isServer() && !!window.TONE_AUDIO_CONTEXT);
     const [shouldAutoPlaySound, setShouldAutoPlaySound] = useState(false)
-    const chordName = getChordDisplayName(chord);
+    const ui = translatedStrings || {};
+    const chordName = translateName(getChordDisplayName(chord), chord.name, chord.rootNote, ui.chordNames);
     const onPianoKeyClick = usePianoSound(rootNote);
     const onGuitarNoteClick = useGuitarSound();
     const pianoNotes = pianoContainerNotesAdapter(notes, rootNote);
@@ -108,9 +110,9 @@ export default function ChordGuitarDiagram({ chord }) {
         <div className="chord-diagrams-container">
             <div className="chord-notes-container container" style={{ marginBottom: "2.5rem"}}>
                 <MdSubHeader
-                    subText={`What does a ${chordName} chord sound like?`}
+                    subText={(ui.whatDoesChordSoundLike || "What does a %s chord sound like?").replace(/%s/g, chordName)}
                 >
-                    Audible Example
+                    {ui.audibleExample || "Audible Example"}
                     </MdSubHeader>
                 {
                     !showTone ?
@@ -119,11 +121,11 @@ export default function ChordGuitarDiagram({ chord }) {
                                 setShowTone(true);
                                 setShouldAutoPlaySound(true)
                             }}
-                            text={displayName + " chord"}
+                            text={chordName + " " + (ui.chordWord || "chord")}
                         /> :
                         <TonePolySynthProvider>
                             <PlayerBlock
-                                text={displayName + " chord"}
+                                text={chordName + " " + (ui.chordWord || "chord")}
                                 notesToPlay={notes}
                                 shouldAutoPlaySound={shouldAutoPlaySound}
                             />
@@ -133,11 +135,11 @@ export default function ChordGuitarDiagram({ chord }) {
 
             </div>
             <div className="piano-diagram-container container">
-               
+
                 <MdSubHeader
-                    subText={`How do you play a ${chordName} chord on the piano?`}
+                    subText={(ui.howPlayChordPiano || "How do you play a %s chord on the piano?").replace(/%s/g, chordName)}
                 >
-                    Piano Fingering
+                    {ui.pianoFingering || "Piano Fingering"}
                 </MdSubHeader>
                 <PianoRollContainer
                     notes={pianoNotes}
@@ -148,9 +150,9 @@ export default function ChordGuitarDiagram({ chord }) {
             </div>
             <div className="guitar-diagram-container">
                 <MdSubHeader
-                    subText={`How do you play a ${chordName} chord on the guitar?`}
+                    subText={(ui.howPlayChordGuitar || "How do you play a %s chord on the guitar?").replace(/%s/g, chordName)}
                 >
-                    Guitar Fingering
+                    {ui.guitarFingering || "Guitar Fingering"}
                 </MdSubHeader>
                 {
                     !isEmpty(chord.fingering) && <div id="guitar-diagram" />
@@ -167,7 +169,7 @@ export default function ChordGuitarDiagram({ chord }) {
                 </div>
                 
                 <div className="fretboard-hint-container flex-centered">
-                    <sub>💡 Tap the notes to hear each note</sub>
+                    <sub>{ui.tapNotesHint || "💡 Tap the notes to hear each note"}</sub>
                 </div>
             </div>
         </div>

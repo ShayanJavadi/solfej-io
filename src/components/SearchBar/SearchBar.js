@@ -6,12 +6,26 @@ import { navigate, Link } from "gatsby";
 import "./SearchBar.scss";
 
 export default function SearchBar(props) {
-    const { searchData, searchResultPostFix } = props;
+    const { searchData, searchResultPostFix, placeholder, locale } = props;
+    const prefix = locale ? `/${locale}` : "";
     const [searchQuery, setSearchQuery] = useState("");
     const [isInputFocused, setIsInputFocused] = useState(false);
     const [searchResults, setSearchResults] = useState(undefined);
+    const [localeSearchData, setLocaleSearchData] = useState(null);
     const searchResultsNotEmpty = !isEmpty(searchResults);
     const searchWrapperRef = useRef(null);
+
+    // Fetch locale-specific search data on mount
+    useEffect(() => {
+        if (!locale) return;
+        const type = searchResultPostFix === "chord" ? "chords" : "scales";
+        fetch(`/searchData/${type}.${locale}.json`)
+            .then(res => res.ok ? res.json() : null)
+            .then(data => { if (data) setLocaleSearchData(data); })
+            .catch(() => {});
+    }, [locale, searchResultPostFix]);
+
+    const activeData = localeSearchData || searchData;
 
     const classes = classNames(
         "search-bar-container",
@@ -26,12 +40,9 @@ export default function SearchBar(props) {
         distance: 100,
         maxPatternLength: 32,
         minMatchCharLength: 1,
-        keys: [
-            {
-                name: "a",
-                weight: 1,
-            },
-        ]
+        keys: localeSearchData
+            ? ["a", "e"]
+            : ["a"],
     };
 
     const optionsReverse = {
@@ -50,8 +61,8 @@ export default function SearchBar(props) {
         ]
     }
 
-    const fuse = new Fuse(searchData, options); // "list" is the item array
-    const fuseReverseSearch = new Fuse(searchData, optionsReverse)
+    const fuse = new Fuse(activeData, options);
+    const fuseReverseSearch = new Fuse(activeData, optionsReverse)
 
     const handleClickOutside = event => {
         if (searchWrapperRef.current && !searchWrapperRef.current.contains(event.target)) {
@@ -92,11 +103,11 @@ export default function SearchBar(props) {
                 <input
                     type="text"
                     onChange={event => setSearchQuery(event.target.value)}
-                    placeholder={`Type here to search for ${searchResultPostFix}s...`}
+                    placeholder={placeholder || `Type here to search for ${searchResultPostFix}s...`}
                     onFocus={() => setIsInputFocused(true)}
                     onKeyDown={e => {
                         if (searchResultsNotEmpty && e.keyCode === 13) {
-                            navigate(searchResults[0].b)
+                            navigate(`${prefix}${searchResults[0].b}`)
                         }
                     }}
                 />
@@ -116,13 +127,13 @@ export default function SearchBar(props) {
                                             <span>{`${index > 0 ? ", " : ""}${note}`}</span>
                                         ));
                                 return (
-                                    <Link to={chord.b} key={chord.b}>
+                                    <Link to={`${prefix}${chord.b}`} key={chord.b}>
 
                                         <div className="search-result">
                                             <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                                 <path style={{ fill: "#666" }} d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
                                             </svg>
-                                            <p>{chord.a.trim()} {!chord.a.includes(searchResultPostFix) && searchResultPostFix || ""} {reverseSearchString && "("}{reverseSearchString && reverseSearchString}{reverseSearchString && ")"}</p>
+                                            <p>{(chord.e || chord.a).trim()} {!(chord.e || chord.a).includes(searchResultPostFix) && searchResultPostFix || ""} {reverseSearchString && "("}{reverseSearchString && reverseSearchString}{reverseSearchString && ")"}</p>
                                         </div>
                                     </Link>
 
