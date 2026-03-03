@@ -1,0 +1,6 @@
+[build]
+  command = "gatsby build"
+  publish = "public"
+
+[build.environment]
+  NODE_OPTIONS = "--max-old-space-size=4096"
