@@ -126,7 +126,7 @@ ${urls}
 ${sitemapEntries}
 </sitemapindex>`
 
-    fs.writeFileSync(path.join(sitemapDir, 'sitemap-index.xml'), sitemapIndex)
+    fs.writeFileSync(path.join(sitemapDir, 'sitemap-index-1.xml'), sitemapIndex)
 
     // Also remove the old single sitemap.xml if it exists
     const oldSitemap = path.join(__dirname, 'public', 'sitemap.xml')

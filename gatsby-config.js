@@ -36,7 +36,7 @@ module.exports = {
           resolve: 'gatsby-plugin-robots-txt',
           options: {
               host: 'https://www.solfej.io',
-              sitemap: 'https://www.solfej.io/sitemap/sitemap-index.xml',
+              sitemap: 'https://www.solfej.io/sitemap/sitemap-index-1.xml',
               policy: [{ userAgent: '*', allow: '/' }]
           }
       },
