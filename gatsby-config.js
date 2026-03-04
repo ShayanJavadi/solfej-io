@@ -23,37 +23,8 @@ module.exports = {
               pixelId: '627048344833116',
           },
       },
-      {
-          resolve: `gatsby-plugin-sitemap`,
-          options: {
-              output: '/sitemap',
-              entryLimit: 5000,
-              query: `
-        {
-          site {
-            siteMetadata {
-              siteUrl
-            }
-          }
-
-          allSitePage {
-            edges {
-              node {
-                path
-              }
-            }
-          }
-      }`,
-              serialize: ({ site, allSitePage }) =>
-                  allSitePage.edges.map(edge => {
-                      return {
-                          url: site.siteMetadata.siteUrl + edge.node.path,
-                          changefreq: `daily`,
-                          priority: 0.7,
-                      }
-                  })
-          }
-      },
+      // Sitemap is generated manually in gatsby-node.js onPostBuild
+      // because gatsby-plugin-sitemap v2.x doesn't support entryLimit/chunking
       {
           resolve: `gatsby-plugin-canonical-urls`,
           options: {

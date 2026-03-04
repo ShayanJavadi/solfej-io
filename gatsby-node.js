@@ -74,6 +74,69 @@ exports.onCreateWebpackConfig = ({ actions, loaders }) => {
     })
 }
 
+exports.onPostBuild = async ({ graphql }) => {
+    const SITE_URL = 'https://www.solfej.io'
+    const URLS_PER_SITEMAP = 5000
+
+    const result = await graphql(`
+        {
+            allSitePage {
+                nodes {
+                    path
+                }
+            }
+        }
+    `)
+
+    const allPaths = result.data.allSitePage.nodes.map(node => node.path)
+
+    // Split into chunks
+    const chunks = []
+    for (let i = 0; i < allPaths.length; i += URLS_PER_SITEMAP) {
+        chunks.push(allPaths.slice(i, i + URLS_PER_SITEMAP))
+    }
+
+    // Ensure output directory exists
+    const sitemapDir = path.join(__dirname, 'public', 'sitemap')
+    if (!fs.existsSync(sitemapDir)) {
+        fs.mkdirSync(sitemapDir, { recursive: true })
+    }
+
+    // Generate individual sitemap files
+    chunks.forEach((chunk, index) => {
+        const urls = chunk.map(p =>
+            `  <url>\n    <loc>${SITE_URL}${p}</loc>\n    <changefreq>daily</changefreq>\n    <priority>0.7</priority>\n  </url>`
+        ).join('\n')
+
+        const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls}
+</urlset>`
+
+        fs.writeFileSync(path.join(sitemapDir, `sitemap-${index}.xml`), sitemap)
+    })
+
+    // Generate sitemap index
+    const sitemapEntries = chunks.map((_, index) =>
+        `  <sitemap>\n    <loc>${SITE_URL}/sitemap/sitemap-${index}.xml</loc>\n  </sitemap>`
+    ).join('\n')
+
+    const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemapEntries}
+</sitemapindex>`
+
+    fs.writeFileSync(path.join(sitemapDir, 'sitemap-index.xml'), sitemapIndex)
+
+    // Also remove the old single sitemap.xml if it exists
+    const oldSitemap = path.join(__dirname, 'public', 'sitemap.xml')
+    if (fs.existsSync(oldSitemap)) {
+        fs.unlinkSync(oldSitemap)
+    }
+
+    console.log(`Generated ${chunks.length} sitemaps with ${allPaths.length} total URLs`)
+}
+
 exports.createPages = async ({ actions }) => {
     const { createPage } = actions
     const chordTemplate = path.resolve(`src/templates/ChordPage/ChordPage.js`)
