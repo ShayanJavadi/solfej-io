@@ -26,9 +26,8 @@ module.exports = {
       {
           resolve: `gatsby-plugin-sitemap`,
           options: {
-              // Exclude specific pages or groups of pages using glob parameters
-              // See: https://github.com/isaacs/minimatch
-              // The example below will exclude the single `path/to/page` and all routes beginning with `category`
+              output: '/sitemap',
+              entryLimit: 5000,
               query: `
         {
           site {
@@ -66,7 +65,7 @@ module.exports = {
           resolve: 'gatsby-plugin-robots-txt',
           options: {
               host: 'https://www.solfej.io',
-              sitemap: 'https://www.solfej.io/sitemap.xml',
+              sitemap: 'https://www.solfej.io/sitemap/sitemap-index.xml',
               policy: [{ userAgent: '*', allow: '/' }]
           }
       },
