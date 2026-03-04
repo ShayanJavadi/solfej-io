@@ -26,7 +26,7 @@ export default () => {
     const { title } = blogData;
 
     return (
-        <BlogPostLayout blogData={blogData} hero={<Hero />}>
+        <BlogPostLayout blogData={blogData} hero={<Hero />} noIndex>
             <p>Hi everybody Shayan here. I’m the solo founder/developer of Solfej a music theory and ear training app <a href="https://shayanjavadi.typeform.com/to/wO59zz">(click here to join the 900+ people signed up to try the app 😉)</a>.</p>
             <p>Raise your hand if you’ve spent  an unreasonable amount of time picking a color palette ✋😄</p>
             <p>I'm primarily a visual person, and to no one's surprise color and design are important to me. I can also be a perfectionist when it comes to design. This is especially true if it’s for a project that I’m passionate about like Solfej.</p>

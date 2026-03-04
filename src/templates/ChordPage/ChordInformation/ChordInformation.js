@@ -5,6 +5,7 @@ import getChordDisplayName from '../../../common/utils/chords/getChordDisplayNam
 import { translateName } from '../../../i18n/translateName';
 import "./ChordInformation.scss";
 import { MAPPED_INTERVALS_TO_DISPLAY_NAMES } from '../../../common/consts/twelveToneConsts';
+import { chordDescriptions as defaultChordDescriptions, chordQualityDescriptions as defaultQualityDescriptions } from '../../../common/consts/chordDescriptions';
 import MdSubHeader from '../../../components/MdSubHeader/MdSubHeader';
 import { Link } from 'gatsby';
 
@@ -68,8 +69,21 @@ export default function ChordInformation(props) {
 
     const ordinals = ui.ordinals || INVERSION_TEXT;
 
+    const chordDescs = ui.chordDescriptions || defaultChordDescriptions;
+    const qualityDescs = ui.chordQualityDescriptions || defaultQualityDescriptions;
+    const description = chordDescs[chord.name] || qualityDescs[chord.quality] || qualityDescs["Unknown"];
+    const descriptionHeading = (ui.chordDescriptionHeading || "About the %s chord").replace(/%s/g, chordName);
+
     return (
         <div className="chord-information-container">
+            {description &&
+                <div className="chord-description-container container">
+                    <MdSubHeader>
+                        {descriptionHeading}
+                    </MdSubHeader>
+                    <p>{description}</p>
+                </div>
+            }
             <div className="chord-notes-container container">
                 <MdSubHeader
                     subText={ui.whatNotesInChord.replace(/%s/g, chordName)}

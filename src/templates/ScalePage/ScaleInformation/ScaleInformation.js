@@ -7,6 +7,7 @@ import "./ScaleInformation.scss";
 import MdSubHeader from '../../../components/MdSubHeader/MdSubHeader';
 import { Link } from 'gatsby';
 import { MAPPED_INTERVALS_TO_DISPLAY_NAMES } from '../../../common/consts/twelveToneConsts';
+import { scaleDescriptions as defaultScaleDescriptions, scaleDefaultDescription as defaultFallback } from '../../../common/consts/scaleDescriptions';
 const { distance } = Tonal;
 
 const ROMAN_NUMERALS = [
@@ -54,6 +55,10 @@ export default function ScaleInformation(props) {
     const translatedScaleName = translateName(displayName, scale.name, scale.rootNote, ui.scaleNames);
     const inversionLabels = ui.inversionLabels || DEFAULT_INVERSION_TEXT;
 
+    const scaleDescs = ui.scaleDescriptions || defaultScaleDescriptions;
+    const description = scaleDescs[scale.name] || ui.scaleDefaultDescription || defaultFallback;
+    const descriptionHeading = (ui.scaleDescriptionHeading || "About the %s scale").replace(/%s/g, translatedScaleName);
+
     const intervalNames = intervals.map(interval => MAPPED_INTERVALS_TO_DISPLAY_NAMES[interval])
     const scaleFormula = notes.map((note, index) => {
         if (notes[index + 1]) {
@@ -75,6 +80,14 @@ export default function ScaleInformation(props) {
 
     return (
         <div className="scale-information">
+            {description &&
+                <div className="scale-description-container">
+                    <MdSubHeader>
+                        {descriptionHeading}
+                    </MdSubHeader>
+                    <p>{description}</p>
+                </div>
+            }
             <MdSubHeader
                 subText={ui.whatNotesInScale.replace(/%s/g, translatedScaleName)}
             >

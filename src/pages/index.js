@@ -104,6 +104,12 @@ const IndexPage = () => (
             <HeroImage />
         </div>
     </div>
+    <div className="site-overview-container" style={{ maxWidth: "800px", margin: "0 auto", padding: "2rem 1.5rem", textAlign: "center" }}>
+        <h2>Your Complete Music Theory Resource</h2>
+        <p style={{ lineHeight: "1.7", fontSize: "1.05rem" }}>
+            Solfej is a free, comprehensive music theory reference and learning platform for musicians of all levels. Use our <Link to="/chords">Chord Search</Link> to explore thousands of chords with interactive piano and guitar diagrams, fingerings, notes, intervals, and related scales. Our <Link to="/scales">Scale Search</Link> lets you look up any scale and instantly see its notes, formula, intervals, and diatonic chords. Whether you are a beginner learning your first major scale or an advanced player exploring exotic modes and jazz harmony, Solfej gives you the tools to deepen your understanding of music. Browse our <Link to="/blog">blog</Link> for in-depth articles on ear training, chord progressions, and practical music theory tips — all written in plain, accessible language.
+        </p>
+    </div>
     <div className="marketing-content-container gray">
         <div className="image-container">
             <div className="illustration-container girl">
@@ -112,7 +118,7 @@ const IndexPage = () => (
             <div className="mock-container">
                 <MockImageOne />
             </div>
-        </div>    
+        </div>
         <div className="copy-container small">
             <h2>Master Music Theory, Ear Training, & Rhythm</h2>
             <p>Practical lesson paths to help you reach your musical goals. No more Wikipedia/YouTube rabbit holes. </p>

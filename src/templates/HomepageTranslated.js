@@ -76,6 +76,12 @@ export default function HomepageTranslated({ pageContext }) {
                     <HeroImage />
                 </div>
             </div>
+            <div className="site-overview-container" style={{ maxWidth: "800px", margin: "0 auto", padding: "2rem 1.5rem", textAlign: "center" }}>
+                <h2>{content.overviewTitle || "Your Complete Music Theory Resource"}</h2>
+                <p style={{ lineHeight: "1.7", fontSize: "1.05rem" }}>
+                    {content.overviewDesc || "Solfej is a free, comprehensive music theory reference and learning platform for musicians of all levels. Use our Chord Search to explore thousands of chords with interactive piano and guitar diagrams, fingerings, notes, intervals, and related scales. Our Scale Search lets you look up any scale and instantly see its notes, formula, intervals, and diatonic chords. Whether you are a beginner learning your first major scale or an advanced player exploring exotic modes and jazz harmony, Solfej gives you the tools to deepen your understanding of music. Browse our blog for in-depth articles on ear training, chord progressions, and practical music theory tips — all written in plain, accessible language."}
+                </p>
+            </div>
             <div className="marketing-content-container gray">
                 <div className="image-container">
                     <div className="illustration-container girl">

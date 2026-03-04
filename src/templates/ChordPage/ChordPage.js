@@ -48,6 +48,7 @@ export default function ChordPage({ data, pageContext }) {
             image="/images/chords.png"
             translatedStrings={translatedStrings}
             locale={locale}
+            pagePath={chord.path}
         >
             <div className="chord-page-template md-styles">
                 <div className="suggestion flex" style={{ marginTop: "2rem", marginBottom: "1rem" }}>

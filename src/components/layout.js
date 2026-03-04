@@ -20,7 +20,7 @@ import SEO from "./seo";
 import Header from "./Header/index";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 
-const Layout = ({ children, title, className, image, description, translatedStrings, locale }) => {
+const Layout = ({ children, title, className, image, description, translatedStrings, locale, pagePath, noIndex }) => {
   const prefix = locale ? `/${locale}` : "";
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -51,7 +51,7 @@ const Layout = ({ children, title, className, image, description, translatedStri
     <>
 
     <div className={classes}>
-        <SEO title={title} {...{ image, description}}/>
+        <SEO title={title} {...{ image, description}} locale={locale} pagePath={pagePath} noIndex={noIndex} />
         <Header isDetatched={isDetatched} translatedStrings={translatedStrings} locale={locale} />
         <main className={className}>{children}</main>
         <footer>
@@ -62,33 +62,41 @@ const Layout = ({ children, title, className, image, description, translatedStri
                               <li>
                                   <Link to={`${prefix}/`}>
                                       {translatedStrings ? translatedStrings.home : "Home"}
-                </Link>
+                                  </Link>
                               </li>
                               <li>
                                   <Link to={`${prefix}/chords`}>
                                       {translatedStrings ? translatedStrings.chordSearch : "Chord Search"}
-                </Link>
+                                  </Link>
                               </li>
-                               <li>
+                              <li>
                                   <Link to={`${prefix}/scales/all`}>
-                                      {translatedStrings ? translatedStrings.allScales : "Homeless Scales"}
-                </Link>
+                                      {translatedStrings ? translatedStrings.allScales : "All Scales"}
+                                  </Link>
                               </li>
                               <li>
                                   <Link to={`${prefix}/blog`}>
                                       {translatedStrings ? translatedStrings.blog : "Blog"}
-                </Link>
+                                  </Link>
                               </li>
-                                <li>
+                              <li>
                                   <Link to={`${prefix}/chords/all`}>
                                       {translatedStrings ? translatedStrings.allChords : "All Chords"}
-                </Link>
+                                  </Link>
                               </li>
-
+                              <li>
+                                  <Link to="/about">About</Link>
+                              </li>
                               <li>
                                   <a href="mailto:shayanjavadi1375@gmail.com">
                                       {translatedStrings ? translatedStrings.contact : "Contact"}
-                </a>
+                                  </a>
+                              </li>
+                              <li>
+                                  <Link to="/privacy">Privacy Policy</Link>
+                              </li>
+                              <li>
+                                  <Link to="/terms-of-service">Terms of Service</Link>
                               </li>
                           </ul>
                 </div>

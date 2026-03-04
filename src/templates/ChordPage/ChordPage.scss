@@ -107,6 +107,14 @@
         & > div {
             flex: 1;
         }
+
+        .chord-description-container {
+            p {
+                font-size: 16px !important;
+                line-height: 1.7;
+                color: #333;
+            }
+        }
     }
 
     .guitar-diagram-container {

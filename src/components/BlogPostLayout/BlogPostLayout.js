@@ -9,10 +9,10 @@ import TwitterIcon from "../../images/twitter.svg";
 import Author from '../Author';
 
 export default function BlogPostLayout(props) {
-    const { blogData: { title, description, image, seoTitle, route, ...author }, hero = () => null, } = props;
+    const { blogData: { title, description, image, seoTitle, route, ...author }, hero = () => null, noIndex } = props;
 
     return (
-        <Layout {...{ title: seoTitle, description, image }} className="blog-post-layout">
+        <Layout {...{ title: seoTitle, description, image }} className="blog-post-layout" noIndex={noIndex}>
            {hero} 
            <div className="content-container">
                <div className="content">

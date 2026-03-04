@@ -49,6 +49,7 @@ export default function ScalePage({ data, pageContext }) {
             image="/images/chords.png"
             translatedStrings={translatedStrings}
             locale={locale}
+            pagePath={scale.path}
         >
             <Page className="scale-page md-styles">
                 <div className="suggestion flex" style={{ marginTop: "2rem", marginBottom: "1rem" }}>
@@ -83,6 +84,7 @@ export const pageQuery = graphql`
                     notes,
                     displayName,
                     rootNote,
+                    path,
                     chords {
                         name,
                         path,
