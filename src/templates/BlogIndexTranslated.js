@@ -44,9 +44,18 @@ import { blogData as blogData12 } from "../pages/blog/suno-vs-udio"
 import { blogData as blogData13 } from "../pages/blog/suno-ai-tips"
 
 export default function BlogIndexTranslated({ pageContext }) {
-    const { locale, translatedStrings, pageContent } = pageContext
+    const { locale, translatedStrings, pageContent, blogTranslations } = pageContext
     const content = pageContent || {}
     const ui = translatedStrings || {}
+    const bt = blogTranslations || {}
+
+    function t(blogData) {
+        const slug = blogData.route
+        if (bt[slug]) {
+            return { ...blogData, title: bt[slug].title || blogData.title, description: bt[slug].description || blogData.description }
+        }
+        return blogData
+    }
 
     return (
         <Layout
@@ -61,19 +70,19 @@ export default function BlogIndexTranslated({ pageContext }) {
 
             <Section title={content.featuredStories || "Featured Stories"} h1Header>
                 <BlogPostsContainer>
-                    <BlogPostThumbnail {...blogData10} authorImage={<ShayanJavadi />} image={<BlogPostHeroSunoChords />} />
-                    <BlogPostThumbnail {...blogData11} authorImage={<ShayanJavadi />} image={<BlogPostHeroSunoPrompts />} />
-                    <BlogPostThumbnail {...blogData12} authorImage={<ShayanJavadi />} image={<BlogPostHeroSunoVsUdio />} />
-                    <BlogPostThumbnail {...blogData13} authorImage={<ShayanJavadi />} image={<BlogPostHeroSunoTips />} />
-                    <BlogPostThumbnail {...blogData9} authorImage={<ShayanJavadi />} image={<BlogPostHeroNine />} />
-                    <BlogPostThumbnail {...blogData8} authorImage={<Henry />} image={<BlogPostHeroEight />} />
-                    <BlogPostThumbnail {...blogData7} authorImage={<Alvin />} image={<BlogPostHeroSeven />} />
-                    <BlogPostThumbnail {...blogData6} authorImage={<ShayanJavadi />} image={<BlogPostHeroSix />} />
-                    <BlogPostThumbnail {...blogData5} authorImage={<JP />} image={<BlogPostHeroFive />} />
-                    <BlogPostThumbnail {...blogData4} authorImage={<Alvin />} image={<BlogPostHeroFour />} />
-                    <BlogPostThumbnail {...blogData3} authorImage={<ShayanJavadi />} image={<BlogPostHeroThree />} />
-                    <BlogPostThumbnail {...blogData2} authorImage={<ShayanJavadi />} image={<BlogPostHeroTwo />} />
-                    <BlogPostThumbnail {...blogData1} authorImage={<ShayanJavadi />} image={<BlogPostHeroOne />} />
+                    <BlogPostThumbnail {...t(blogData10)} locale={locale} authorImage={<ShayanJavadi />} image={<BlogPostHeroSunoChords />} />
+                    <BlogPostThumbnail {...t(blogData11)} locale={locale} authorImage={<ShayanJavadi />} image={<BlogPostHeroSunoPrompts />} />
+                    <BlogPostThumbnail {...t(blogData12)} locale={locale} authorImage={<ShayanJavadi />} image={<BlogPostHeroSunoVsUdio />} />
+                    <BlogPostThumbnail {...t(blogData13)} locale={locale} authorImage={<ShayanJavadi />} image={<BlogPostHeroSunoTips />} />
+                    <BlogPostThumbnail {...t(blogData9)} locale={locale} authorImage={<ShayanJavadi />} image={<BlogPostHeroNine />} />
+                    <BlogPostThumbnail {...t(blogData8)} locale={locale} authorImage={<Henry />} image={<BlogPostHeroEight />} />
+                    <BlogPostThumbnail {...t(blogData7)} locale={locale} authorImage={<Alvin />} image={<BlogPostHeroSeven />} />
+                    <BlogPostThumbnail {...t(blogData6)} locale={locale} authorImage={<ShayanJavadi />} image={<BlogPostHeroSix />} />
+                    <BlogPostThumbnail {...t(blogData5)} locale={locale} authorImage={<JP />} image={<BlogPostHeroFive />} />
+                    <BlogPostThumbnail {...t(blogData4)} locale={locale} authorImage={<Alvin />} image={<BlogPostHeroFour />} />
+                    <BlogPostThumbnail {...t(blogData3)} locale={locale} authorImage={<ShayanJavadi />} image={<BlogPostHeroThree />} />
+                    <BlogPostThumbnail {...t(blogData2)} locale={locale} authorImage={<ShayanJavadi />} image={<BlogPostHeroTwo />} />
+                    <BlogPostThumbnail {...t(blogData1)} locale={locale} authorImage={<ShayanJavadi />} image={<BlogPostHeroOne />} />
                 </BlogPostsContainer>
             </Section>
             <CenteredGraySection>

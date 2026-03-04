@@ -11,14 +11,26 @@ import Author from '../Author';
 export default function BlogPostLayout(props) {
     const { blogData: { title, description, image, seoTitle, route, ...author }, hero = () => null, noIndex } = props;
 
+    const articleSchema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": title,
+        "description": description,
+        "image": image ? `https://www.solfej.io${image}` : undefined,
+        "author": { "@type": "Person", "name": author.authorName },
+        "publisher": { "@type": "Organization", "name": "Solfej", "url": "https://www.solfej.io" },
+        "url": `https://www.solfej.io/blog/${route}`,
+    }
+
     return (
         <Layout {...{ title: seoTitle, description, image }} className="blog-post-layout" noIndex={noIndex}>
-           {hero} 
+           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+           {hero}
            <div className="content-container">
                <div className="content">
                     <h1>{title}</h1>
                     <div className="author-social-container">
-                        <Author 
+                        <Author
                             {...author}
                         />
                         <div className="social-links">

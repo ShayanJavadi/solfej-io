@@ -332,6 +332,7 @@ module.exports = {
     guitarDesc: "Lerne, wie man jeden Akkord auf der Gitarre spielt, mit einfachen Fingersatzdiagrammen.",
     moreTitle: "Noten, Intervalle und mehr!",
     moreDesc: "Tauche tief in die Bausteine jedes Akkords ein. Lerne Noten, Intervalle, Tonleitern und mehr.",
+    introText: "Akkorde sind die grundlegenden Bausteine der Musik. Ob Anfänger oder erfahrener Musiker — das Verständnis, wie Akkorde aufgebaut sind — ihre Noten, Intervalle und Fingersätze — ist essenziell für das Spielen und Komponieren von Musik. Nutzen Sie unser Akkord-Suchtool, um Gitarren- und Klavierdiagramme, Hörbeispiele und mehr für Tausende von Akkorden zu erkunden.",
   },
 
   scaleSearchPage: {
@@ -348,18 +349,21 @@ module.exports = {
     pianoDesc: "Lerne, wie man jede Tonleiter auf dem Klavier spielt, mit einfachen Fingersatzdiagrammen.",
     moreTitle: "Noten, Intervalle und mehr!",
     moreDesc: "Tauche tief in die Bausteine jeder Tonleiter ein. Lerne Noten, Intervalle, Akkorde und mehr.",
+    introText: "Tonleitern bilden die Grundlage für Melodie und Improvisation. Das Kennen von Tonleitern hilft Ihnen zu verstehen, wie Songs aufgebaut sind, Solos zu improvisieren und eigene Musik zu komponieren. Nutzen Sie unser Tonleiter-Suchtool, um Gitarren- und Klavierdiagramme, Noten, Intervalle, Formeln und zugehörige Akkorde für Tausende von Tonleitern zu erkunden.",
   },
 
   allChordsPage: {
     title: "Alle Akkorde",
     seoTitle: "Alle erdenklichen Akkorde | Solfej",
     description: "Seite mit Links zu jedem Akkord im Universum",
+    introText: "Durchsuchen Sie unsere vollständige Akkordbibliothek. Jeder Akkord enthält Klavier- und Gitarrendiagramme, Noten, Intervalle und Hörbeispiele, die Ihnen helfen, jeden Akkord zu meistern.",
   },
 
   allScalesPage: {
     title: "Tonleiter-Verzeichnis",
     seoTitle: "Alle erdenklichen Tonleitern | Solfej",
     description: "Seite mit Links zu jeder Tonleiter im Universum",
+    introText: "Durchsuchen Sie unsere vollständige Skalenbibliothek. Jede Tonleiter enthält Gitarren- und Klavierdiagramme, Noten, Intervalle, Formeln und Akkorde, die Ihnen helfen, jede Tonleiter zu meistern.",
   },
 
   blogIndex: {

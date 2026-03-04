@@ -25,6 +25,7 @@ export default function AllScalesPage({ data, pageContext }) {
         >
             <div className="chord-page-template md-styles">
                 <h1>{content.title}</h1>
+                {content.introText && <p>{content.introText}</p>}
                 <div>
                     {
                         scales.map(scale => {

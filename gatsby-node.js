@@ -242,10 +242,17 @@ exports.createPages = async ({ actions }) => {
         })
 
         // Blog index: /{locale}/blog
+        const blogTranslations = {}
+        ALL_BLOG_SLUGS.forEach(slug => {
+            const t = getTranslation(locale, slug)
+            if (t) {
+                blogTranslations[slug] = { title: t.title, description: t.description }
+            }
+        })
         createPage({
             path: `/${locale}/blog`,
             component: blogIndexTemplate,
-            context: { locale, translatedStrings, pageContent: getPageContent(locale, 'blogIndex') },
+            context: { locale, translatedStrings, pageContent: getPageContent(locale, 'blogIndex'), blogTranslations },
         })
 
         // All blog posts

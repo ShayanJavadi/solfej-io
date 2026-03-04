@@ -42,6 +42,17 @@ export default function ScalePage({ data, pageContext }) {
     const seoTitle = ui.scaleSeoTitle ? ui.scaleSeoTitle.replace(/%s/g, translatedScaleName) : `How to play ${displayName} scale on guitar and piano?`;
     const seoDescription = ui.scaleSeoDescription ? ui.scaleSeoDescription.replace(/%s/g, translatedScaleName) : `How to play a ${displayName} scale on piano and guitar?`;
 
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            { "@type": "Question", "name": (ui.whatNotesInScale || "What notes are in the %s scale").replace(/%s/g, translatedScaleName), "acceptedAnswer": { "@type": "Answer", "text": scale.notes ? scale.notes.join(", ") : displayName } },
+            { "@type": "Question", "name": (ui.whatIntervalsInScale || "What intervals are in the %s scale").replace(/%s/g, translatedScaleName), "acceptedAnswer": { "@type": "Answer", "text": scale.intervals ? scale.intervals.join(", ") : displayName } },
+            { "@type": "Question", "name": (ui.whatFormulaOfScale || "What is the formula for the %s scale").replace(/%s/g, translatedScaleName), "acceptedAnswer": { "@type": "Answer", "text": scale.intervals ? scale.intervals.join(", ") : displayName } },
+            { "@type": "Question", "name": (ui.howPlayScaleGuitar || "How do you play the %s scale on the guitar?").replace(/%s/g, translatedScaleName), "acceptedAnswer": { "@type": "Answer", "text": `${translatedScaleName}: ${scale.notes ? scale.notes.join(", ") : displayName}` } },
+        ]
+    }
+
     return (
         <Layout
             title={seoTitle}
@@ -51,6 +62,7 @@ export default function ScalePage({ data, pageContext }) {
             locale={locale}
             pagePath={scale.path}
         >
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <Page className="scale-page md-styles">
                 <div className="suggestion flex" style={{ marginTop: "2rem", marginBottom: "1rem" }}>
                     <sub><b>{ui.lookingForChord} <Link to={`${prefix}/chords`}>{ui.tryChordSearch}</Link></b></sub>

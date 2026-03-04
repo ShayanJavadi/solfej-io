@@ -332,6 +332,7 @@ module.exports = {
     guitarDesc: "Aprende a tocar cada acorde en la guitarra con simples diagramas de digitación.",
     moreTitle: "¡Notas, intervalos y más!",
     moreDesc: "Profundiza en los elementos de cada acorde. Aprende las notas, intervalos, escalas y más.",
+    introText: "Los acordes son los bloques fundamentales de la música. Ya seas principiante o músico experimentado, comprender cómo se construyen los acordes — sus notas, intervalos y digitaciones — es esencial para tocar y componer música. Usa nuestra herramienta de búsqueda de acordes para explorar diagramas de guitarra y piano, ejemplos de audio y más para miles de acordes.",
   },
 
   scaleSearchPage: {
@@ -348,18 +349,21 @@ module.exports = {
     pianoDesc: "Aprende a tocar cada escala en el piano con simples diagramas de digitación.",
     moreTitle: "¡Notas, intervalos y más!",
     moreDesc: "Profundiza en los elementos de cada escala. Aprende las notas, intervalos, acordes y más.",
+    introText: "Las escalas son la base de la melodía y la improvisación. Conocer las escalas te ayuda a entender cómo se construyen las canciones, improvisar solos y crear música original. Usa nuestra herramienta de búsqueda de escalas para explorar diagramas de guitarra y piano, notas, intervalos, fórmulas y acordes relacionados para miles de escalas.",
   },
 
   allChordsPage: {
     title: "Todos los acordes",
     seoTitle: "Todos los acordes imaginables | Solfej",
     description: "Página con enlaces a cada acorde del universo",
+    introText: "Explore nuestra biblioteca completa de acordes. Cada acorde incluye diagramas para piano y guitarra, notas, intervalos y ejemplos de audio para ayudarte a dominar cualquier acorde.",
   },
 
   allScalesPage: {
     title: "Directorio de escalas",
     seoTitle: "Todas las escalas imaginables | Solfej",
     description: "Página con enlaces a cada escala del universo",
+    introText: "Explore nuestra biblioteca completa de escalas. Cada escala incluye diagramas para guitarra y piano, notas, intervalos, fórmulas y acordes para ayudarte a dominar cualquier escala.",
   },
 
   blogIndex: {

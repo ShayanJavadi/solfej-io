@@ -332,6 +332,7 @@ module.exports = {
     guitarDesc: "Impara a suonare ogni accordo alla chitarra con semplici diagrammi di diteggiatura.",
     moreTitle: "Note, intervalli e altro!",
     moreDesc: "Approfondisci gli elementi costitutivi di ogni accordo. Impara note, intervalli, scale e altro.",
+    introText: "Gli accordi sono i mattoni fondamentali della musica. Che tu sia un principiante o un musicista esperto, capire come sono costruiti gli accordi — le loro note, intervalli e diteggiature — è essenziale per suonare e comporre musica. Usa il nostro strumento di ricerca accordi per esplorare diagrammi per chitarra e pianoforte, esempi audio e altro per migliaia di accordi.",
   },
 
   scaleSearchPage: {
@@ -348,18 +349,21 @@ module.exports = {
     pianoDesc: "Impara a suonare ogni scala al pianoforte con semplici diagrammi di diteggiatura.",
     moreTitle: "Note, intervalli e altro!",
     moreDesc: "Approfondisci gli elementi costitutivi di ogni scala. Impara note, intervalli, accordi e altro.",
+    introText: "Le scale sono la base della melodia e dell'improvvisazione. Conoscere le scale ti aiuta a capire come sono costruite le canzoni, a improvvisare assoli e a creare musica originale. Usa il nostro strumento di ricerca scale per esplorare diagrammi per chitarra e pianoforte, note, intervalli, formule e accordi correlati per migliaia di scale.",
   },
 
   allChordsPage: {
     title: "Tutti gli accordi",
     seoTitle: "Tutti gli accordi immaginabili | Solfej",
     description: "Pagina con link a ogni singolo accordo nell'universo",
+    introText: "Esplora la nostra libreria completa di accordi. Ogni accordo include diagrammi per pianoforte e chitarra, note, intervalli ed esempi audio per aiutarti a padroneggiare qualsiasi accordo.",
   },
 
   allScalesPage: {
     title: "Directory delle scale",
     seoTitle: "Tutte le scale immaginabili | Solfej",
     description: "Pagina con link a ogni singola scala nell'universo",
+    introText: "Esplora la nostra libreria completa di scale. Ogni scala include diagrammi per chitarra e pianoforte, note, intervalli, formule e accordi per aiutarti a padroneggiare qualsiasi scala.",
   },
 
   blogIndex: {

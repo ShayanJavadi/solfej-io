@@ -332,6 +332,7 @@ module.exports = {
     guitarDesc: "Aprenda a tocar cada acorde no violão com diagramas simples de digitação.",
     moreTitle: "Notas, intervalos e mais!",
     moreDesc: "Aprofunde-se nos elementos de cada acorde. Aprenda notas, intervalos, escalas e mais.",
+    introText: "Acordes são os blocos fundamentais da música. Seja você iniciante ou músico experiente, entender como os acordes são construídos — suas notas, intervalos e digitações — é essencial para tocar e compor música. Use nossa ferramenta de busca de acordes para explorar diagramas de violão e piano, exemplos de áudio e mais para milhares de acordes.",
   },
 
   scaleSearchPage: {
@@ -348,18 +349,21 @@ module.exports = {
     pianoDesc: "Aprenda a tocar cada escala no piano com diagramas simples de digitação.",
     moreTitle: "Notas, intervalos e mais!",
     moreDesc: "Aprofunde-se nos elementos de cada escala. Aprenda notas, intervalos, acordes e mais.",
+    introText: "Escalas são a base da melodia e da improvisação. Conhecer escalas ajuda você a entender como as músicas são construídas, improvisar solos e criar música original. Use nossa ferramenta de busca de escalas para explorar diagramas de violão e piano, notas, intervalos, fórmulas e acordes relacionados para milhares de escalas.",
   },
 
   allChordsPage: {
     title: "Todos os acordes",
     seoTitle: "Todos os acordes imagináveis | Solfej",
     description: "Página com links para cada acorde do universo",
+    introText: "Explore nossa biblioteca completa de acordes. Cada acorde inclui diagramas para piano e violão, notas, intervalos e exemplos de áudio para ajudá-lo a dominar qualquer acorde.",
   },
 
   allScalesPage: {
     title: "Diretório de escalas",
     seoTitle: "Todas as escalas imagináveis | Solfej",
     description: "Página com links para cada escala do universo",
+    introText: "Explore nossa biblioteca completa de escalas. Cada escala inclui diagramas para violão e piano, notas, intervalos, fórmulas e acordes para ajudá-lo a dominar qualquer escala.",
   },
 
   blogIndex: {

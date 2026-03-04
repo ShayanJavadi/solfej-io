@@ -41,6 +41,17 @@ export default function ChordPage({ data, pageContext }) {
     const seoTitle = ui.chordSeoTitle ? ui.chordSeoTitle.replace(/%s/g, translatedChordName) : `How to play ${displayName} on guitar and piano?`;
     const seoDescription = ui.chordSeoDescription ? ui.chordSeoDescription.replace(/%s/g, translatedChordName) : `How to play a ${displayName} chord on piano and guitar?`;
 
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            { "@type": "Question", "name": (ui.whatNotesInChord || "What notes are in a %s chord?").replace(/%s/g, translatedChordName), "acceptedAnswer": { "@type": "Answer", "text": chord.notes ? chord.notes.join(", ") : displayName } },
+            { "@type": "Question", "name": (ui.whatIntervalsInChord || "What intervals are in a %s chord?").replace(/%s/g, translatedChordName), "acceptedAnswer": { "@type": "Answer", "text": chord.intervals ? chord.intervals.join(", ") : displayName } },
+            { "@type": "Question", "name": (ui.howPlayChordPiano || "How do you play a %s chord on the piano?").replace(/%s/g, translatedChordName), "acceptedAnswer": { "@type": "Answer", "text": `${translatedChordName}: ${chord.notes ? chord.notes.join(", ") : displayName}` } },
+            { "@type": "Question", "name": (ui.howPlayChordGuitar || "How do you play a %s chord on the guitar?").replace(/%s/g, translatedChordName), "acceptedAnswer": { "@type": "Answer", "text": `${translatedChordName}: ${chord.notes ? chord.notes.join(", ") : displayName}` } },
+        ]
+    }
+
     return (
         <Layout
             title={seoTitle}
@@ -50,6 +61,7 @@ export default function ChordPage({ data, pageContext }) {
             locale={locale}
             pagePath={chord.path}
         >
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <div className="chord-page-template md-styles">
                 <div className="suggestion flex" style={{ marginTop: "2rem", marginBottom: "1rem" }}>
                     <sub><b>{ui.lookingForScale} <Link to={`${prefix}/scales`}>{ui.tryScaleSearch}</Link></b></sub>

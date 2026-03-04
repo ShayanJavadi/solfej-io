@@ -332,6 +332,7 @@ module.exports = {
     guitarDesc: "Apprenez à jouer chaque accord à la guitare grâce à de simples diagrammes de doigtés.",
     moreTitle: "Notes, intervalles et plus encore !",
     moreDesc: "Explorez les éléments constitutifs de chaque accord. Apprenez les notes, intervalles, gammes et plus encore.",
+    introText: "Les accords sont les éléments fondamentaux de la musique. Que vous soyez débutant ou musicien expérimenté, comprendre comment les accords sont construits — leurs notes, intervalles et doigtés — est essentiel pour jouer et composer de la musique. Utilisez notre outil de recherche d'accords pour explorer des diagrammes guitare et piano, des exemples audio et plus encore pour des milliers d'accords.",
   },
 
   scaleSearchPage: {
@@ -348,18 +349,21 @@ module.exports = {
     pianoDesc: "Apprenez à jouer chaque gamme au piano grâce à de simples diagrammes de doigtés.",
     moreTitle: "Notes, intervalles et plus encore !",
     moreDesc: "Explorez les éléments constitutifs de chaque gamme. Apprenez les notes, intervalles, accords et plus encore.",
+    introText: "Les gammes sont le fondement de la mélodie et de l'improvisation. Connaître les gammes vous aide à comprendre comment les chansons sont construites, à improviser des solos et à créer de la musique originale. Utilisez notre outil de recherche de gammes pour explorer des diagrammes guitare et piano, des notes, des intervalles, des formules et des accords associés pour des milliers de gammes.",
   },
 
   allChordsPage: {
     title: "Tous les accords",
     seoTitle: "Tous les accords imaginables | Solfej",
     description: "Page avec des liens vers chaque accord de l'univers",
+    introText: "Parcourez notre bibliothèque complète d'accords. Chaque accord comprend des diagrammes pour piano et guitare, des notes, des intervalles et des exemples audio pour vous aider à maîtriser n'importe quel accord.",
   },
 
   allScalesPage: {
     title: "Répertoire de gammes",
     seoTitle: "Toutes les gammes imaginables | Solfej",
     description: "Page avec des liens vers chaque gamme de l'univers",
+    introText: "Parcourez notre bibliothèque complète de gammes. Chaque gamme comprend des diagrammes pour guitare et piano, des notes, des intervalles, des formules et des accords pour vous aider à maîtriser n'importe quelle gamme.",
   },
 
   blogIndex: {

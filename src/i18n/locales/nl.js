@@ -332,6 +332,7 @@ module.exports = {
     guitarDesc: "Leer elk akkoord op de gitaar te spelen met eenvoudige vingerzettingsdiagrammen.",
     moreTitle: "Noten, intervallen en meer!",
     moreDesc: "Duik diep in de bouwstenen van elk akkoord. Leer noten, intervallen, toonladders en meer.",
+    introText: "Akkoorden zijn de fundamentele bouwstenen van muziek. Of u nu een beginner of een ervaren muzikant bent, begrijpen hoe akkoorden zijn opgebouwd — hun noten, intervallen en vingerzettingen — is essentieel voor het spelen en componeren van muziek. Gebruik onze akkoordzoektool om gitaar- en pianodiagrammen, audiovoorbeelden en meer te verkennen voor duizenden akkoorden.",
   },
 
   scaleSearchPage: {
@@ -348,18 +349,21 @@ module.exports = {
     pianoDesc: "Leer elke toonladder op de piano te spelen met eenvoudige vingerzettingsdiagrammen.",
     moreTitle: "Noten, intervallen en meer!",
     moreDesc: "Duik diep in de bouwstenen van elke toonladder. Leer noten, intervallen, akkoorden en meer.",
+    introText: "Toonladders vormen de basis van melodie en improvisatie. Het kennen van toonladders helpt u begrijpen hoe liedjes zijn opgebouwd, solo's te improviseren en originele muziek te creëren. Gebruik onze toonladderzoektool om gitaar- en pianodiagrammen, noten, intervallen, formules en gerelateerde akkoorden te verkennen voor duizenden toonladders.",
   },
 
   allChordsPage: {
     title: "Alle akkoorden",
     seoTitle: "Alle denkbare akkoorden | Solfej",
     description: "Pagina met links naar elk akkoord in het universum",
+    introText: "Blader door onze complete akkoordbibliotheek. Elk akkoord bevat piano- en gitaardiagrammen, noten, intervallen en audiovoorbeelden om u te helpen elk akkoord onder de knie te krijgen.",
   },
 
   allScalesPage: {
     title: "Toonladder-overzicht",
     seoTitle: "Alle denkbare toonladders | Solfej",
     description: "Pagina met links naar elke toonladder in het universum",
+    introText: "Blader door onze complete toonladderbibliotheek. Elke toonladder bevat gitaar- en pianodiagrammen, noten, intervallen, formules en akkoorden om u te helpen elke toonladder onder de knie te krijgen.",
   },
 
   blogIndex: {

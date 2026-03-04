@@ -41,6 +41,7 @@ export default function ScaleSearchTranslated({ pageContext }) {
                         </div>
                     </div>
                 </div>
+                {content.introText && <div style={{ maxWidth: "800px", margin: "0 auto", padding: "1rem 2rem" }}><p>{content.introText}</p></div>}
                 <div className="marketing-content-container reverse copy-on-left">
                     <div className="image-container">
                         <div className="mock-container">
