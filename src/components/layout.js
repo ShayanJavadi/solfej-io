@@ -70,18 +70,8 @@ const Layout = ({ children, title, className, image, description, translatedStri
                                   </Link>
                               </li>
                               <li>
-                                  <Link to={`${prefix}/scales/all`}>
-                                      {translatedStrings ? translatedStrings.allScales : "All Scales"}
-                                  </Link>
-                              </li>
-                              <li>
                                   <Link to={`${prefix}/blog`}>
                                       {translatedStrings ? translatedStrings.blog : "Blog"}
-                                  </Link>
-                              </li>
-                              <li>
-                                  <Link to={`${prefix}/chords/all`}>
-                                      {translatedStrings ? translatedStrings.allChords : "All Chords"}
                                   </Link>
                               </li>
                               <li>

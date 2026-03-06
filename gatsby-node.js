@@ -141,8 +141,6 @@ exports.createPages = async ({ actions }) => {
     const { createPage } = actions
     const chordTemplate = path.resolve(`src/templates/ChordPage/ChordPage.js`)
     const scaleTemplate = path.resolve(`src/templates/ScalePage/ScalePage.js`)
-    const allChordsPage = path.resolve(`src/templates/ChordPage/AllChordsPage.js`)
-    const allScalesPage = path.resolve(`src/templates/ScalePage/AllScalesPage.js`)
     const homepageTemplate = path.resolve(`src/templates/HomepageTranslated.js`)
     const chordSearchTemplate = path.resolve(`src/templates/ChordSearchTranslated.js`)
     const scaleSearchTemplate = path.resolve(`src/templates/ScaleSearchTranslated.js`)
@@ -166,19 +164,7 @@ exports.createPages = async ({ actions }) => {
         })
     })
 
-    createPage({
-        path: "/chords/all",
-        component: allChordsPage,
-        context: { chords },
-    })
-
     const emptyScales = scales.filter(scale => isEmpty(scale.chords))
-
-    createPage({
-        path: "/scales/all",
-        component: allScalesPage,
-        context: { scales: emptyScales },
-    })
 
     // === Translated pages ===
     // In dev mode, only build one locale to avoid V8 array size limits
@@ -204,20 +190,6 @@ exports.createPages = async ({ actions }) => {
                 component: scaleTemplate,
                 context: { scale, locale, translatedStrings },
             })
-        })
-
-        // All chords: /{locale}/chords/all
-        createPage({
-            path: `/${locale}/chords/all`,
-            component: allChordsPage,
-            context: { chords, locale, translatedStrings, pageContent: getPageContent(locale, 'allChordsPage') },
-        })
-
-        // All scales: /{locale}/scales/all
-        createPage({
-            path: `/${locale}/scales/all`,
-            component: allScalesPage,
-            context: { scales: emptyScales, locale, translatedStrings, pageContent: getPageContent(locale, 'allScalesPage') },
         })
 
         // Homepage: /{locale}/
