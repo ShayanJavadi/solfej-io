@@ -37,6 +37,9 @@ export default function usePianoSound(rootNote) {
         }
 
         if (synthRef.current) {
+            let resolvedName = ENHARMONIC[noteName] || noteName;
+            if (CHROMATIC.indexOf(resolvedName) === -1) return;
+
             let octave = 4;
             if (rootNote) {
                 const rootIdx = chromaticIndex(rootNote);
@@ -45,7 +48,11 @@ export default function usePianoSound(rootNote) {
                     octave = 5;
                 }
             }
-            synthRef.current.triggerAttackRelease(`${noteName}${octave}`, 1);
+            try {
+                synthRef.current.triggerAttackRelease(`${resolvedName}${octave}`, 1);
+            } catch (e) {
+                // Ignore audio param errors from rapid key presses
+            }
         }
     }, [rootNote]);
 
