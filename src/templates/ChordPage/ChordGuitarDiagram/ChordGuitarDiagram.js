@@ -15,6 +15,8 @@ import PianoRollContainer from "../../../components/PianoRollContainer/PianoRoll
 import "./ChordGuitarDiagram.scss";
 import PlayerBlock from '../../../components/PlayerBlock/PlayerBlock';
 import isServer from '../../../common/utils/isServer';
+import { trackPianoKeyClick, trackFretboardNoteClick } from '../../../common/utils/analytics';
+import useSectionTracking from '../../../common/hooks/useSectionTracking';
 
 const TonePolySynthProvider = loadable(() => import('../../../components/TonePolySynthProvider'))
 
@@ -91,8 +93,13 @@ export default function ChordGuitarDiagram({ chord, translatedStrings }) {
     const [shouldAutoPlaySound, setShouldAutoPlaySound] = useState(false)
     const ui = translatedStrings || {};
     const chordName = translateName(getChordDisplayName(chord), chord.name, chord.rootNote, ui.chordNames);
-    const onPianoKeyClick = usePianoSound(rootNote);
-    const onGuitarNoteClick = useGuitarSound();
+    const playPianoNote = usePianoSound(rootNote);
+    const playGuitarNote = useGuitarSound();
+    const onPianoKeyClick = (note) => { trackPianoKeyClick(chordName, note); playPianoNote(note); }
+    const onGuitarNoteClick = (note) => { trackFretboardNoteClick(chordName, note); playGuitarNote(note); }
+    const audibleRef = useSectionTracking("Audible Example");
+    const pianoRef = useSectionTracking("Piano Fingering");
+    const guitarRef = useSectionTracking("Guitar Fingering");
     const pianoNotes = pianoContainerNotesAdapter(notes, rootNote);
     const noteOptions = {
         [rootNote]: {
@@ -108,7 +115,7 @@ export default function ChordGuitarDiagram({ chord, translatedStrings }) {
 
     return (
         <div className="chord-diagrams-container">
-            <div className="chord-notes-container container" style={{ marginBottom: "2.5rem"}}>
+            <div className="chord-notes-container container" style={{ marginBottom: "2.5rem"}} ref={audibleRef}>
                 <MdSubHeader
                     subText={(ui.whatDoesChordSoundLike || "What does a %s chord sound like?").replace(/%s/g, chordName)}
                 >
@@ -134,7 +141,7 @@ export default function ChordGuitarDiagram({ chord, translatedStrings }) {
                 }
 
             </div>
-            <div className="piano-diagram-container container">
+            <div className="piano-diagram-container container" ref={pianoRef}>
 
                 <MdSubHeader
                     subText={(ui.howPlayChordPiano || "How do you play a %s chord on the piano?").replace(/%s/g, chordName)}
@@ -148,7 +155,7 @@ export default function ChordGuitarDiagram({ chord, translatedStrings }) {
                     onKeyClick={onPianoKeyClick}
                 />
             </div>
-            <div className="guitar-diagram-container">
+            <div className="guitar-diagram-container" ref={guitarRef}>
                 <MdSubHeader
                     subText={(ui.howPlayChordGuitar || "How do you play a %s chord on the guitar?").replace(/%s/g, chordName)}
                 >

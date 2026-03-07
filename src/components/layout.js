@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useState } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { Link } from "gatsby"
 import logo from "../images/logo.png"
 import classNames from "classnames";
@@ -19,6 +19,11 @@ import "./index.scss"
 import SEO from "./seo";
 import Header from "./Header/index";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
+import { socialLinkClicked, contactClicked, trackScrollDepth, trackTimeOnPage } from "../common/utils/analytics";
+
+const handleFacebookClick = () => socialLinkClicked("Facebook")
+const handleInstagramClick = () => socialLinkClicked("Instagram")
+const handleTwitterClick = () => socialLinkClicked("Twitter")
 
 const Layout = ({ children, title, className, image, description, translatedStrings, locale, pagePath, noIndex }) => {
   const prefix = locale ? `/${locale}` : "";
@@ -33,6 +38,9 @@ const Layout = ({ children, title, className, image, description, translatedStri
   `)
 
     const [isDetatched, setIsDetatched] = useState(false);
+    const scrollMilestonesHit = useRef({});
+    const timeMilestonesHit = useRef({});
+
     useScrollPosition(({ prevPos, currPos }) => {
         if (currPos.y < 0 && !isDetatched) {
             setIsDetatched(true)
@@ -41,7 +49,40 @@ const Layout = ({ children, title, className, image, description, translatedStri
         if (currPos.y === 0 && isDetatched) {
             setIsDetatched(false)
         }
+
+        // Scroll depth tracking
+        if (typeof document !== 'undefined') {
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            if (scrollHeight > 0) {
+                const pct = Math.round((Math.abs(currPos.y) / scrollHeight) * 100);
+                [25, 50, 75, 100].forEach(milestone => {
+                    if (pct >= milestone && !scrollMilestonesHit.current[milestone]) {
+                        scrollMilestonesHit.current[milestone] = true;
+                        trackScrollDepth(milestone);
+                    }
+                });
+            }
+        }
     }, [isDetatched])
+
+    // Time-on-page tracking
+    useEffect(() => {
+        let elapsed = 0;
+        const thresholds = [30, 60, 120, 300];
+        const interval = setInterval(() => {
+            if (typeof document !== 'undefined' && document.visibilityState === 'visible') {
+                elapsed++;
+                thresholds.forEach(t => {
+                    if (elapsed === t && !timeMilestonesHit.current[t]) {
+                        timeMilestonesHit.current[t] = true;
+                        trackTimeOnPage(t);
+                    }
+                });
+            }
+        }, 1000);
+        return () => clearInterval(interval);
+    }, []);
+
     const classes = classNames(
         "solfej",
         isDetatched && "header-detatched"
@@ -78,7 +119,7 @@ const Layout = ({ children, title, className, image, description, translatedStri
                                   <Link to="/about">About</Link>
                               </li>
                               <li>
-                                  <a href="mailto:shayanjavadi1375@gmail.com">
+                                  <a href="mailto:shayanjavadi1375@gmail.com" onClick={contactClicked}>
                                       {translatedStrings ? translatedStrings.contact : "Contact"}
                                   </a>
                               </li>
@@ -91,13 +132,13 @@ const Layout = ({ children, title, className, image, description, translatedStri
                           </ul>
                 </div>
                 <div>
-                          <a href="https://www.facebook.com/Solfej-Music-Theory-App-116381003147367/">
+                          <a href="https://www.facebook.com/Solfej-Music-Theory-App-116381003147367/" onClick={handleFacebookClick}>
                               <img src={FacebookIcon} alt="" />
                           </a>
-                          <a href="https://www.instagram.com/solfej.app/">
+                          <a href="https://www.instagram.com/solfej.app/" onClick={handleInstagramClick}>
                               <img src={InstagramIcon} alt="" />
                           </a>
-                          <a href="https://twitter.com/solfej_app">
+                          <a href="https://twitter.com/solfej_app" onClick={handleTwitterClick}>
                               <img src={TwitterIcon} alt="" />
                           </a>
                 </div>

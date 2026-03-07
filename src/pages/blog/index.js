@@ -26,6 +26,7 @@ import BlogPostHeroSunoTips from '../../components/blogImages/suno-ai-tips/Thumb
 import CenteredGraySection from '../../components/CenteredGraySection/index'
 import BlogPostsContainer from "../../components/BlogPostsContainer";
 import MailingListImage from '../../components/MailingListImage'
+import { newsletterClicked } from '../../common/utils/analytics'
 import TempOne from '../../components/Temp1'
 import TempTwo from '../../components/Temp2'
 import TempThree from '../../components/Temp3'
@@ -43,6 +44,8 @@ import { blogData as blogData10 } from "./suno-ai-chord-progressions";
 import { blogData as blogData11 } from "./suno-ai-prompt-guide";
 import { blogData as blogData12 } from "./suno-vs-udio";
 import { blogData as blogData13 } from "./suno-ai-tips";
+
+const handleNewsletterClick = () => newsletterClicked("Blog Index")
 
 export default function tos() {
     return (
@@ -144,7 +147,7 @@ export default function tos() {
                 <div className="image-container">
                     <MailingListImage />
                 </div>
-                <a href="https://mailchi.mp/a64190eaf494/solfej-newsletter">
+                <a href="https://mailchi.mp/a64190eaf494/solfej-newsletter" onClick={handleNewsletterClick}>
                     <button className="cta-button primary">Join the Newsletter</button>
                 </a>
             </CenteredGraySection>

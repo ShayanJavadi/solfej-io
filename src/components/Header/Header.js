@@ -2,7 +2,6 @@
 import { Link } from "gatsby";
 import { ReactTypeformEmbed } from 'react-typeform-embed';
 import classNames from "classnames";
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import React, { useState } from 'react';
 import MenuImg from "./menu.svg";
 import CloseMenuImg from "./close-menu.svg";
@@ -10,11 +9,15 @@ import logo from "../../images/logo.png";
 import logoNoText from "../../images/logo-no-text.png";
 import getPlatform, { IOS, ANDROID, DESKTOP } from "../../common/utils/getPlatform";
 import { APP_STORE_URL, PLAY_STORE_URL } from "../../common/consts/outBoundLinks";
-import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
-import appStoreLinkClicked from "../../common/utils/analytics/appStoreLinkClicked";
+import { appStoreLinkClicked, navigationClicked, contactClicked } from "../../common/utils/analytics";
 
 import "./Header.scss";
 const typeFormUrl = "https://shayanjavadi.typeform.com/to/wO59zz";
+
+const handleNavBlog = () => navigationClicked("Blog")
+const handleNavChordSearch = () => navigationClicked("Chord Search")
+const handleNavScaleSearch = () => navigationClicked("Scale Search")
+const handleNavHome = () => navigationClicked("Home")
 
 const getGetTheAppLink = () => {
     const platform = getPlatform()
@@ -43,6 +46,10 @@ export default function Header(props) {
 
     function handleClick() {
         typeForm.current.typeform.open();
+    }
+
+    function handleCtaClick() {
+        if (getTheAppLink !== "/") appStoreLinkClicked(0)
     }
 
     const classes = classNames(
@@ -79,26 +86,26 @@ export default function Header(props) {
                 <ul>
 
                     <li>
-                        <Link to={`${prefix}/blog`}>
+                        <Link to={`${prefix}/blog`} onClick={handleNavBlog}>
                             {translatedStrings ? translatedStrings.blog : "Blog"}
                 </Link>
                     </li>
                     <li>
-                        <Link to={`${prefix}/chords`}>
+                        <Link to={`${prefix}/chords`} onClick={handleNavChordSearch}>
                             {translatedStrings ? translatedStrings.chordSearch : "Chord Search"}
                 </Link>
                     </li>
                     <li>
-                        <Link to={`${prefix}/scales`}>
+                        <Link to={`${prefix}/scales`} onClick={handleNavScaleSearch}>
                             {translatedStrings ? translatedStrings.scaleSearch : "Scale Search"}
                 </Link>
                     </li>
                     <li>
-                        <a href="mailto:shayanjavadi1375@gmail.com">
+                        <a href="mailto:shayanjavadi1375@gmail.com" onClick={contactClicked}>
                             {translatedStrings ? translatedStrings.contact : "Contact"}
                 </a>
                     </li>
-                  
+
                     <li className="menu-button" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
                         {
                             isMobileMenuOpen ?
@@ -111,7 +118,7 @@ export default function Header(props) {
                             <img src={logoNoText} alt="solfej-logo-music-theory-app" className="solfej-logo" />
                         </Link>
                     </li>
-                    <li className="cta" onClick={getTheAppLink !== "/" && appStoreLinkClicked(0)}>
+                    <li className="cta" onClick={handleCtaClick}>
                         {
                             getTheAppLink === "/" ?
                                 <Link to={getTheAppLink}>
@@ -135,28 +142,28 @@ export default function Header(props) {
             <div className={mobileNavClasses}>
                 <ul>
                     <li>
-                        <Link to={`${prefix}/`}>
+                        <Link to={`${prefix}/`} onClick={handleNavHome}>
                             {translatedStrings ? translatedStrings.home : "Home"}
                 </Link>
                     </li>
                     <li>
-                        <Link to={`${prefix}/chords`}>
+                        <Link to={`${prefix}/chords`} onClick={handleNavChordSearch}>
                             {translatedStrings ? translatedStrings.chordSearch : "Chord Search"}
                 </Link>
                     </li>
                     <li>
-                        <Link to={`${prefix}/scales`}>
+                        <Link to={`${prefix}/scales`} onClick={handleNavScaleSearch}>
                             {translatedStrings ? translatedStrings.scaleSearch : "Scale Search"}
                 </Link>
                     </li>
                     <li>
-                        <Link to={`${prefix}/blog`}>
+                        <Link to={`${prefix}/blog`} onClick={handleNavBlog}>
                             {translatedStrings ? translatedStrings.blog : "Blog"}
                 </Link>
                     </li>
 
                     <li>
-                        <a href="mailto:shayanjavadi1375@gmail.com">
+                        <a href="mailto:shayanjavadi1375@gmail.com" onClick={contactClicked}>
                             {translatedStrings ? translatedStrings.contact : "Contact"}
                 </a>
                     </li>

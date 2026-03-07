@@ -6,6 +6,7 @@ import { translateName } from '../../../i18n/translateName';
 import "./ScaleInformation.scss";
 import MdSubHeader from '../../../components/MdSubHeader/MdSubHeader';
 import { Link } from 'gatsby';
+import { trackRelatedContentClick } from '../../../common/utils/analytics';
 import { MAPPED_INTERVALS_TO_DISPLAY_NAMES } from '../../../common/consts/twelveToneConsts';
 import { scaleDescriptions as defaultScaleDescriptions, scaleDefaultDescription as defaultFallback } from '../../../common/consts/scaleDescriptions';
 const { distance } = Tonal;
@@ -135,7 +136,7 @@ export default function ScaleInformation(props) {
                                     <p className="divider">-</p>
                                     {
                                         chord ?
-                                        <Link to={`${prefix}${chord.path}`}>
+                                        <Link to={`${prefix}${chord.path}`} onClick={() => trackRelatedContentClick("Diatonic Chord Click", translatedChordName)}>
                                             <p>
                                                 {translatedChordName} {ui.chord}
                                                 {

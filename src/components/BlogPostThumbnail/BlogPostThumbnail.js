@@ -3,6 +3,7 @@ import React from 'react';
 import "./BlogPostThumbnail.scss";
 import Author from '../../components/Author/index';
 import { Link } from "gatsby";
+import { trackBlogThumbnailClick } from '../../common/utils/analytics';
 
 export default function BlogPostThumbnail(props) {
     const { image, title, description, authorName, authorImage, date, timeToRead, route, isUnavailable, hidden, locale } = props;
@@ -22,7 +23,7 @@ export default function BlogPostThumbnail(props) {
                     <p>{description}</p>
                 </div>
             </a> :
-            <Link to={`${linkPrefix}/blog/${route}`}>
+            <Link to={`${linkPrefix}/blog/${route}`} onClick={() => trackBlogThumbnailClick(route)}>
                 <div className="image-container">
                     {props.image}
                 </div>

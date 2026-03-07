@@ -6,6 +6,7 @@ import Block from "../Block/Block";
 import Paragraph from "../Paragraph";
 import "./PlayerBlock.scss";
 import playNotes from "../../common/utils/playNotes";
+import { trackAudioPlayback } from "../../common/utils/analytics";
 
 function usePrevious(value) {
     // The ref object is a generic container whose current property is mutable ...
@@ -41,6 +42,7 @@ export default function PlayerBlock(props) {
 
     const playBlock = () => {
         setBlockMessage(undefined)
+        trackAudioPlayback(text)
         if (instrument && sequencePlayer && !isLoading) {
             if (playNotesSequentially) {
                 const partToPlay = notesToPlay.map((note, index) => ({

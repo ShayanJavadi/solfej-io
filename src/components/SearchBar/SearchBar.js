@@ -3,6 +3,7 @@ import Fuse from "fuse.js";
 import { isEmpty } from "lodash";
 import React, { useEffect, useState, useRef } from "react";
 import { navigate, Link } from "gatsby";
+import { trackSearchQuery, trackSearchResultClick, trackSearchNoResults } from "../../common/utils/analytics";
 import "./SearchBar.scss";
 
 export default function SearchBar(props) {
@@ -84,6 +85,14 @@ export default function SearchBar(props) {
             allResults.slice(0, 10);
         setSearchResults(topTenSearchResults)
 
+        if (searchQuery.length >= 3 && topTenSearchResults.length > 0) {
+            trackSearchQuery(searchResultPostFix, searchQuery)
+        }
+
+        if (searchQuery.length >= 3 && topTenSearchResults.length === 0) {
+            trackSearchNoResults(searchResultPostFix, searchQuery)
+        }
+
 
         // Bind the event listener
         document.addEventListener("mousedown", handleClickOutside);
@@ -107,6 +116,7 @@ export default function SearchBar(props) {
                     onFocus={() => setIsInputFocused(true)}
                     onKeyDown={e => {
                         if (searchResultsNotEmpty && e.keyCode === 13) {
+                            trackSearchResultClick(searchResultPostFix, searchResults[0].a)
                             navigate(`${prefix}${searchResults[0].b}`)
                         }
                     }}
@@ -127,7 +137,7 @@ export default function SearchBar(props) {
                                             <span>{`${index > 0 ? ", " : ""}${note}`}</span>
                                         ));
                                 return (
-                                    <Link to={`${prefix}${chord.b}`} key={chord.b}>
+                                    <Link to={`${prefix}${chord.b}`} key={chord.b} onClick={() => trackSearchResultClick(searchResultPostFix, chord.a)}>
 
                                         <div className="search-result">
                                             <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

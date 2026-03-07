@@ -7,9 +7,14 @@ import MailingListImage from '../../components/MailingListImage';
 import FacebookIcon from "../../images/facebook.svg"
 import TwitterIcon from "../../images/twitter.svg";
 import Author from '../Author';
+import { newsletterClicked, blogShareClicked } from '../../common/utils/analytics';
 
 export default function BlogPostLayout(props) {
     const { blogData: { title, description, image, seoTitle, route, ...author }, hero = () => null, noIndex } = props;
+
+    function handleTwitterShare() { blogShareClicked("Twitter", route) }
+    function handleFacebookShare() { blogShareClicked("Facebook", route) }
+    function handleNewsletterClick() { newsletterClicked("Blog Post") }
 
     const articleSchema = {
         "@context": "https://schema.org",
@@ -35,10 +40,10 @@ export default function BlogPostLayout(props) {
                         />
                         <div className="social-links">
 
-                            <a href={`https://twitter.com/intent/tweet/?text=Check this out&url=https://www.solfej.io/blog/${route}`}>
+                            <a href={`https://twitter.com/intent/tweet/?text=Check this out&url=https://www.solfej.io/blog/${route}`} onClick={handleTwitterShare}>
                                 <img src={TwitterIcon} alt="twitter share" width="1.5rem" />
                             </a>
-                            <a href={`https://www.facebook.com/sharer/sharer.php?u=https://www.solfej.io/blog/${route}`}>
+                            <a href={`https://www.facebook.com/sharer/sharer.php?u=https://www.solfej.io/blog/${route}`} onClick={handleFacebookShare}>
                                 <img src={FacebookIcon} alt="facebook share" width="1.5rem" />
                             </a>
          
@@ -52,7 +57,7 @@ export default function BlogPostLayout(props) {
                 <div className="image-container">
                     <MailingListImage />
                 </div>
-                <a href="https://mailchi.mp/a64190eaf494/solfej-newsletter">
+                <a href="https://mailchi.mp/a64190eaf494/solfej-newsletter" onClick={handleNewsletterClick}>
                     <button className="cta-button primary">Join the Newsletter</button>
                 </a>
             </CenteredGraySection>

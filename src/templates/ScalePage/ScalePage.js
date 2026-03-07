@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import scales from "../../../scalesMinified.json"
 import { translateName } from '../../i18n/translateName';
 import Layout from '../../components/layout';
@@ -11,6 +11,7 @@ import ScaleInstrumentDiagrams from './ScaleInstrumentDiagrams/ScaleInstrumentDi
 import "./ScalePage.scss";
 import SearchBar from '../../components/SearchBar/SearchBar';
 import { Link } from 'gatsby';
+import { trackContentView, trackCrossLinkClick } from '../../common/utils/analytics';
 
 const renderHeader = (scale, ui, translatedScaleName, translatedStrings) => {
     return (
@@ -39,6 +40,9 @@ export default function ScalePage({ data, pageContext }) {
     };
 
     const translatedScaleName = translateName(displayName, scale.name, scale.rootNote, ui.scaleNames);
+
+    useEffect(() => { trackContentView("Scale", translatedScaleName); }, []);
+
     const seoTitle = ui.scaleSeoTitle ? ui.scaleSeoTitle.replace(/%s/g, translatedScaleName) : `How to play ${displayName} scale on guitar and piano?`;
     const seoDescription = ui.scaleSeoDescription ? ui.scaleSeoDescription.replace(/%s/g, translatedScaleName) : `How to play a ${displayName} scale on piano and guitar?`;
 
@@ -65,7 +69,7 @@ export default function ScalePage({ data, pageContext }) {
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <Page className="scale-page md-styles">
                 <div className="suggestion flex" style={{ marginTop: "2rem", marginBottom: "1rem" }}>
-                    <sub><b>{ui.lookingForChord} <Link to={`${prefix}/chords`}>{ui.tryChordSearch}</Link></b></sub>
+                    <sub><b>{ui.lookingForChord} <Link to={`${prefix}/chords`} onClick={() => trackCrossLinkClick("Scale→Chord")}>{ui.tryChordSearch}</Link></b></sub>
                 </div>
 
                 <SearchBar searchData={scales} searchResultPostFix={"scale"} placeholder={ui.searchScalePlaceholder} locale={locale} />

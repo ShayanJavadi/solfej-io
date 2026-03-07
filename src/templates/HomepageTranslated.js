@@ -32,7 +32,7 @@ import { APP_STORE_URL, PLAY_STORE_URL } from "../common/consts/outBoundLinks"
 import getPlatform, { DESKTOP, IOS, ANDROID } from "../common/utils/getPlatform"
 import getBrowser, { SAFARI } from "../common/utils/getBrowser"
 import classNames from "classnames"
-import appStoreLinkClicked from "../common/utils/analytics/appStoreLinkClicked"
+import { appStoreLinkClicked } from "../common/utils/analytics"
 
 const platform = getPlatform()
 const browser = getBrowser()

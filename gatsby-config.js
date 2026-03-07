@@ -9,12 +9,16 @@ module.exports = {
   },
   plugins: [
       {
-          resolve: `gatsby-plugin-google-analytics`,
+          resolve: `gatsby-plugin-google-gtag`,
           options: {
-              // The property ID; the tracking code won't be generated without it
-              trackingId: "UA-150995686-1",
-              head: true,
-              anonymize: true,
+              trackingIds: ["G-D638KQNXX8"],
+              pluginConfig: {
+                  head: true,
+              },
+              gtagConfig: {
+                  send_page_view: true,
+                  anonymize_ip: true,
+              },
           },
       },
       {

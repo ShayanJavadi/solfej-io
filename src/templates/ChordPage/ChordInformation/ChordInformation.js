@@ -8,6 +8,7 @@ import { MAPPED_INTERVALS_TO_DISPLAY_NAMES } from '../../../common/consts/twelve
 import { chordDescriptions as defaultChordDescriptions, chordQualityDescriptions as defaultQualityDescriptions } from '../../../common/consts/chordDescriptions';
 import MdSubHeader from '../../../components/MdSubHeader/MdSubHeader';
 import { Link } from 'gatsby';
+import { trackRelatedContentClick } from '../../../common/utils/analytics';
 
 const INVERSION_TEXT = [
     "1st",
@@ -39,7 +40,7 @@ const renderScaleRow = (rootNote, scales, prefix = "", scaleNames) => {
                         return (
                             <p key={index}>
                                 {index !== 0 ? " - " : ""}
-                                <Link to={`${prefix}${scale.path}`}>{translatedScaleName}</Link>
+                                <Link to={`${prefix}${scale.path}`} onClick={() => trackRelatedContentClick("Parent Scale Click", translatedScaleName)}>{translatedScaleName}</Link>
                             </p>
                         );
                     })
@@ -118,7 +119,7 @@ export default function ChordInformation(props) {
                                         {`${ordinals[index]}: `}
                                         {
                                             chordsInversion ?
-                                                <Link to={`${prefix}${chordsInversion.path}`}>
+                                                <Link to={`${prefix}${chordsInversion.path}`} onClick={() => trackRelatedContentClick("Inversion Click", chordsInversion.name)}>
                                                     {`${chordsInversion ? chordsInversion.name : "?"}`}
                                                 </Link> :
                                                 "?"

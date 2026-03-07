@@ -1,5 +1,5 @@
 import { graphql, Link } from "gatsby";
-import React from "react";
+import React, { useEffect } from "react";
 import chords from "../../../chordsMinified.json";
 import getChordDisplayName from "../../common/utils/chords/getChordDisplayName";
 import { translateName } from "../../i18n/translateName";
@@ -9,6 +9,7 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import AliasOverline from "../partials/AliasOverline/AliasOverline";
 import ChordGuitarDiagram from "./ChordGuitarDiagram/ChordGuitarDiagram";
 import ChordInformation from "./ChordInformation/ChordInformation";
+import { trackContentView, trackCrossLinkClick } from "../../common/utils/analytics";
 import "./ChordPage.scss";
 
 const renderHeader = ({ chord, ui, translatedChordName, translatedStrings }) => {
@@ -38,6 +39,9 @@ export default function ChordPage({ data, pageContext }) {
     };
 
     const translatedChordName = translateName(displayName, chord.name, chord.rootNote, ui.chordNames);
+
+    useEffect(() => { trackContentView("Chord", translatedChordName); }, []);
+
     const seoTitle = ui.chordSeoTitle ? ui.chordSeoTitle.replace(/%s/g, translatedChordName) : `How to play ${displayName} on guitar and piano?`;
     const seoDescription = ui.chordSeoDescription ? ui.chordSeoDescription.replace(/%s/g, translatedChordName) : `How to play a ${displayName} chord on piano and guitar?`;
 
@@ -64,7 +68,7 @@ export default function ChordPage({ data, pageContext }) {
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <div className="chord-page-template md-styles">
                 <div className="suggestion flex" style={{ marginTop: "2rem", marginBottom: "1rem" }}>
-                    <sub><b>{ui.lookingForScale} <Link to={`${prefix}/scales`}>{ui.tryScaleSearch}</Link></b></sub>
+                    <sub><b>{ui.lookingForScale} <Link to={`${prefix}/scales`} onClick={() => trackCrossLinkClick("Chord→Scale")}>{ui.tryScaleSearch}</Link></b></sub>
                 </div>
 
                 <SearchBar searchData={chords} searchResultPostFix={"chord"} placeholder={ui.searchChordPlaceholder} locale={locale} />

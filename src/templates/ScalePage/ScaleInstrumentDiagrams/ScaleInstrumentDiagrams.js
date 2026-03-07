@@ -13,6 +13,8 @@ import PianoRollContainer from '../../../components/PianoRollContainer/PianoRoll
 import PlayerBlock from '../../../components/PlayerBlock/PlayerBlock';
 import "./ScaleInstrumentDiagrams.scss";
 import isServer from '../../../common/utils/isServer';
+import { trackPianoKeyClick, trackFretboardNoteClick } from '../../../common/utils/analytics';
+import useSectionTracking from '../../../common/hooks/useSectionTracking';
 
 
 const TonePolySynthProvider = loadable(() => import('../../../components/TonePolySynthProvider'))
@@ -24,8 +26,13 @@ export default function ScaleInstrumentDiagrams(props) {
     const ui = translatedStrings || {};
     const { displayName, notes, rootNote, intervals } = scale;
     const scaleName = translateName(displayName, scale.name, rootNote, ui.scaleNames);
-    const onPianoKeyClick = usePianoSound(rootNote);
-    const onGuitarNoteClick = useGuitarSound();
+    const playPianoNote = usePianoSound(rootNote);
+    const playGuitarNote = useGuitarSound();
+    const onPianoKeyClick = (note) => { trackPianoKeyClick(scaleName, note); playPianoNote(note); }
+    const onGuitarNoteClick = (note) => { trackFretboardNoteClick(scaleName, note); playGuitarNote(note); }
+    const audibleRef = useSectionTracking("Audible Example");
+    const pianoRef = useSectionTracking("Piano Fingering");
+    const guitarRef = useSectionTracking("Guitar Fingering");
     const pianoNotes = pianoContainerNotesAdapter(notes, rootNote);
     const noteOptions = {
         [rootNote]: {
@@ -46,7 +53,7 @@ export default function ScaleInstrumentDiagrams(props) {
 
     return (
         <div className="scale-instrument-diagrams">
-            <div className="chord-notes-container container" style={{ marginBottom: "2.5rem" }}>
+            <div className="chord-notes-container container" style={{ marginBottom: "2.5rem" }} ref={audibleRef}>
                 <MdSubHeader
                     subText={(ui.whatDoesScaleSoundLike || "What does a %s scale sound like?").replace(/%s/g, scaleName)}
                 >
@@ -76,7 +83,7 @@ export default function ScaleInstrumentDiagrams(props) {
             >
                 {ui.pianoFingering || "Piano Fingering"}
             </MdSubHeader>
-            <div className="piano-diagram-container">
+            <div className="piano-diagram-container" ref={pianoRef}>
                 <h3 className="sub-sub-header">{ui.notesLabel || "Notes:"}</h3>
 
                 <PianoRollContainer
@@ -97,11 +104,13 @@ export default function ScaleInstrumentDiagrams(props) {
                     onKeyClick={onPianoKeyClick}
                 />
             </div>
+            <div ref={guitarRef}>
             <MdSubHeader
                 subText={(ui.howPlayScaleGuitar || "How do you play the %s scale on the guitar?").replace(/%s/g, scaleName)}
             >
                 {ui.guitarFingering || "Guitar Fingering"}
             </MdSubHeader>
+            </div>
             <h3 className="sub-sub-header">{ui.notesLabel || "Notes:"}</h3>
             <div className="guitar-fretboard-diagram-container">
                 <FretBoard
