@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import "../../styles/mdStyles.scss"
 import "./chords.scss"
 import chords from "../../../chordsMinified.json"
@@ -9,9 +9,15 @@ import MarketingTwo from '../../components/Marketing2'
 import MarketingThree from '../../components/Marketing3'
 import MarketingFour from '../../components/Marketing4'
 import  MarketingFive from '../../components/Marketing5'
-import { Link } from 'gatsby'
+import { Link, navigate } from 'gatsby'
+import { trackRandomClick } from '../../common/utils/analytics'
 
-export default function index() {
+export default function ChordsIndex() {
+    const handleRandomChord = useCallback(() => {
+        trackRandomClick("chord");
+        const chord = chords[Math.floor(Math.random() * chords.length)];
+        navigate(chord.b);
+    }, []);
     return (
         <Layout
             title="Free chord search. Search through 1000s of chords."
@@ -33,6 +39,7 @@ export default function index() {
                             <sub><b>💡Tip: You can find a chord by typing in its notes seperated by commas e.g. (C, E, G)</b></sub>
                         </div>
                         <SearchBar searchData={chords} searchResultPostFix={"chord"} />
+                        <button className="random-btn" onClick={handleRandomChord}>🎲 Random Chord</button>
                         <div className="suggestion flex-centered">
                             <sub><b>Looking For a Scale? Try: <Link to="/scales">Scale Search</Link></b></sub>
                         </div>

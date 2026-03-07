@@ -6,6 +6,24 @@
             text-decoration: underline;
         }
     }
+  .random-btn {
+        background: #FFB902;
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        padding: 8px 20px !important;
+        font-size: 16px !important;
+        font-weight: 600;
+        cursor: pointer;
+        width: auto !important;
+        height: auto !important;
+        white-space: nowrap;
+
+        &:hover {
+            background: #eee;
+        }
+  }
+
   .header-container {
         padding-bottom: 1.3rem;
         margin-top: 3rem;
@@ -14,7 +32,16 @@
         }
   }
 
-  .scale-information { 
+  .scale-information {
       margin-top: 1rem;
+
+      .scale-description-container {
+          p {
+              font-size: 16px !important;
+              line-height: 1.7;
+              color: #333;
+              margin-top: 15px;
+          }
+      }
   }
 }

@@ -9,8 +9,15 @@ import "./SearchBar.scss";
 export default function SearchBar(props) {
     const { searchData, searchResultPostFix, placeholder, locale } = props;
     const prefix = locale ? `/${locale}` : "";
-    const [searchQuery, setSearchQuery] = useState("");
-    const [isInputFocused, setIsInputFocused] = useState(false);
+    const [searchQuery, setSearchQuery] = useState(props.initialQuery || "");
+    const [isInputFocused, setIsInputFocused] = useState(props.initialQuery ? true : false);
+
+    useEffect(() => {
+        if (props.initialQuery) {
+            setSearchQuery(props.initialQuery);
+            setIsInputFocused(true);
+        }
+    }, [props.initialQuery]);
     const [searchResults, setSearchResults] = useState(undefined);
     const [localeSearchData, setLocaleSearchData] = useState(null);
     const searchResultsNotEmpty = !isEmpty(searchResults);
@@ -111,6 +118,7 @@ export default function SearchBar(props) {
                 </svg>
                 <input
                     type="text"
+                    value={searchQuery}
                     onChange={event => setSearchQuery(event.target.value)}
                     placeholder={placeholder || `Type here to search for ${searchResultPostFix}s...`}
                     onFocus={() => setIsInputFocused(true)}

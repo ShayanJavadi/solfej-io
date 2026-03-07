@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import "../../styles/mdStyles.scss"
 import "./scales.scss"
 import scales from "../../../scalesMinified.json"
@@ -11,9 +11,15 @@ import MarketingFour from '../../components/scales4'
 import MarketingFive from '../../components/scales5'
 import MarketingSix from '../../components/scales6'
 import MarketingSeven from '../../components/scales7'
-import { Link } from 'gatsby'
+import { Link, navigate } from 'gatsby'
+import { trackRandomClick } from '../../common/utils/analytics'
 
-export default function index() {
+export default function ScalesIndex() {
+    const handleRandomScale = useCallback(() => {
+        trackRandomClick("scale");
+        const scale = scales[Math.floor(Math.random() * scales.length)];
+        navigate(scale.b);
+    }, []);
     return (
         <Layout
             title="Free scale search. Search through 1000s of scales."
@@ -35,6 +41,7 @@ export default function index() {
                             <sub><b>💡Tip: You can find a scale by typing in its notes seperated by commas e.g. (C, E, G)</b></sub>
                         </div>
                         <SearchBar searchData={scales} searchResultPostFix={"scale"} />
+                        <button className="random-btn" onClick={handleRandomScale}>🎲 Random Scale</button>
                         <div className="suggestion flex-centered">
                             <sub><b>Looking For a Chord? Try: <Link to="/chords">Chord Search</Link></b></sub>
                         </div>

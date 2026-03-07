@@ -95,3 +95,15 @@ export function trackSearchNoResults(type, query) {
 export function trackSectionView(section) {
     trackEvent({ category: "Section Viewed", action: "View", label: section })
 }
+
+export function trackRandomClick(type) {
+    trackEvent({ category: "Random", action: "Click", label: type })
+}
+
+export function trackCoachmarkImpression(id) {
+    trackEvent({ category: "Coachmark", action: "Impression", label: id })
+}
+
+export function trackCoachmarkClick(id, target) {
+    trackEvent({ category: "Coachmark", action: "Click", label: `${id}: ${target}` })
+}

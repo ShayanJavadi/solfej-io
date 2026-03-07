@@ -11,6 +11,24 @@
             text-decoration: underline;
         }
     }
+    .random-btn {
+        background: #ff8c8c;
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        padding: 8px 20px !important;
+        font-size: 16px !important;
+        font-weight: 600;
+        cursor: pointer;
+        width: auto !important;
+        height: auto !important;
+        white-space: nowrap;
+
+        &:hover {
+            background: #eee;
+        }
+    }
+
     .container {
         margin-bottom: 1rem;
     }
@@ -113,6 +131,7 @@
                 font-size: 16px !important;
                 line-height: 1.7;
                 color: #333;
+                margin-top: 15px;
             }
         }
     }

@@ -52,11 +52,12 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "build": "node --max-old-space-size=4096 node_modules/.bin/gatsby build",
+    "develop": "node --max-old-space-size=4096 node_modules/.bin/gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
+    "build:serve": "node --max-old-space-size=4096 node_modules/.bin/gatsby build && gatsby serve",
     "createComponent": "node ./tools/createReactComponent.js",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
@@ -66,5 +67,8 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "resolutions": {
+    "remark-mdx": "1.6.22"
   }
 }

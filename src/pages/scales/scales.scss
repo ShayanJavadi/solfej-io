@@ -106,6 +106,26 @@
             }
         }
 
+        .random-btn {
+            display: block;
+            margin: 1rem auto 0;
+            background: #fff;
+            color: #333;
+            border: none;
+            border-radius: 24px;
+            padding: 8px 24px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            width: auto !important;
+            height: auto !important;
+
+            &:hover {
+                background: #f5f5f5;
+            }
+        }
+
         .search-bar-container {
             background: #fff;
             max-width: 630px;

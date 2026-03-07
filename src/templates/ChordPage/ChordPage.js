@@ -1,15 +1,16 @@
-import { graphql, Link } from "gatsby";
-import React, { useEffect } from "react";
+import { graphql, Link, navigate } from "gatsby";
+import React, { useEffect, useState, useCallback } from "react";
 import chords from "../../../chordsMinified.json";
 import getChordDisplayName from "../../common/utils/chords/getChordDisplayName";
 import { translateName } from "../../i18n/translateName";
 import Layout from "../../components/layout";
 import MdHeader from "../../components/MdHeader/MdHeader";
 import SearchBar from "../../components/SearchBar/SearchBar";
+import Coachmark from "../../components/Coachmark";
 import AliasOverline from "../partials/AliasOverline/AliasOverline";
 import ChordGuitarDiagram from "./ChordGuitarDiagram/ChordGuitarDiagram";
 import ChordInformation from "./ChordInformation/ChordInformation";
-import { trackContentView, trackCrossLinkClick } from "../../common/utils/analytics";
+import { trackContentView, trackCrossLinkClick, trackRandomClick } from "../../common/utils/analytics";
 import "./ChordPage.scss";
 
 const renderHeader = ({ chord, ui, translatedChordName, translatedStrings }) => {
@@ -24,6 +25,7 @@ const renderHeader = ({ chord, ui, translatedChordName, translatedStrings }) => 
 }
 
 export default function ChordPage({ data, pageContext }) {
+    const [searchQuery, setSearchQuery] = useState("");
     const { chord } = data.allSitePage.edges[0].node.context;
     const { displayName } = chord;
     const { translatedStrings, locale } = pageContext || {};
@@ -36,11 +38,21 @@ export default function ChordPage({ data, pageContext }) {
         tryScaleSearch: "Try: Scale Search",
         chordTip: "💡Tip: You can find a chord by typing in its notes seperated by commas e.g. (C, E, G)",
         searchChordPlaceholder: null,
+        coachmarkChordTitle: "Search for chords",
+        coachmarkChordText: "Find any chord by name or notes",
+        randomChord: "🎲 Random Chord",
+        coachmarkChordCta: "Try: C Major",
     };
 
     const translatedChordName = translateName(displayName, chord.name, chord.rootNote, ui.chordNames);
 
     useEffect(() => { trackContentView("Chord", translatedChordName); }, []);
+
+    const handleRandomChord = useCallback(() => {
+        trackRandomClick("chord");
+        const random = chords[Math.floor(Math.random() * chords.length)];
+        navigate(`${prefix}${random.b}`);
+    }, [prefix]);
 
     const seoTitle = ui.chordSeoTitle ? ui.chordSeoTitle.replace(/%s/g, translatedChordName) : `How to play ${displayName} on guitar and piano?`;
     const seoDescription = ui.chordSeoDescription ? ui.chordSeoDescription.replace(/%s/g, translatedChordName) : `How to play a ${displayName} chord on piano and guitar?`;
@@ -67,11 +79,24 @@ export default function ChordPage({ data, pageContext }) {
         >
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <div className="chord-page-template md-styles">
-                <div className="suggestion flex" style={{ marginTop: "2rem", marginBottom: "1rem" }}>
+                <div className="suggestion flex" style={{ marginTop: "2rem", marginBottom: "1rem", alignItems: "center", justifyContent: "space-between" }}>
                     <sub><b>{ui.lookingForScale} <Link to={`${prefix}/scales`} onClick={() => trackCrossLinkClick("Chord→Scale")}>{ui.tryScaleSearch}</Link></b></sub>
+                    <button className="random-btn" onClick={handleRandomChord}>{ui.randomChord}</button>
                 </div>
 
-                <SearchBar searchData={chords} searchResultPostFix={"chord"} placeholder={ui.searchChordPlaceholder} locale={locale} />
+                <Coachmark
+                    id="chord-search-tip"
+                    title={ui.coachmarkChordTitle}
+                    text={ui.coachmarkChordText}
+                    position="bottom"
+                    offset={0}
+                    buttons={[{
+                        label: ui.coachmarkChordCta,
+                        onClick: () => setSearchQuery("C major")
+                    }]}
+                >
+                    <SearchBar searchData={chords} searchResultPostFix={"chord"} placeholder={ui.searchChordPlaceholder} locale={locale} initialQuery={searchQuery} />
+                </Coachmark>
 
                 <div className="hint" >
                     <sub style={{ textAlign: "left" }}><b>{ui.chordTip}</b></sub>
