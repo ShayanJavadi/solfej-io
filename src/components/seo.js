@@ -82,7 +82,7 @@ function SEO({ description, lang, meta, title, image, locale, pagePath, noIndex 
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
@@ -97,7 +97,7 @@ function SEO({ description, lang, meta, title, image, locale, pagePath, noIndex 
           content: metaDescription,
         },
         {
-            name: "og:image",
+            property: "og:image",
             content: `${siteUrl}${image || site.siteMetadata.image}`
         },
         {

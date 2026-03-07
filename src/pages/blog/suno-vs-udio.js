@@ -8,6 +8,7 @@ export const blogData = {
     description: "An honest comparison of Suno and Udio in 2026. We test both on vocals, chord progressions, genre accuracy, and musical quality — with actual music theory analysis.",
     authorName: "Shayan Javadi",
     date: "Mar 2026",
+    datePublished: "2026-03-01",
     timeToRead: "9 min",
     route: "suno-vs-udio",
     image: "/images/blog-post-hero-7.png",

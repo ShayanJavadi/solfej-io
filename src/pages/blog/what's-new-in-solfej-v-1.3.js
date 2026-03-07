@@ -13,6 +13,7 @@ export const blogData = {
     description: "Revised lessons, interactive music theory examples, many squashed bugs.",
     authorName: "Shayan Javadi",
     date: "Dec 2",
+    datePublished: "2019-12-02",
     timeToRead: "4 min",
     route: "what's-new-in-solfej-v-1.3",
     image: "/images/blog-post-hero-1.png",

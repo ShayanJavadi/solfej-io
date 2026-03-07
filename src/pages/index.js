@@ -1,4 +1,5 @@
 import React from "react"
+import Helmet from "react-helmet"
 import { Link } from "gatsby"
 import loadable from '@loadable/component'
 import Layout from "../components/layout"
@@ -91,6 +92,20 @@ const renderAppStoreButtons = () => {
 
 const IndexPage = () => (
   <Layout title="Solfej">
+    <Helmet>
+      <script type="application/ld+json">{JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Solfej",
+        "url": "https://www.solfej.io",
+        "logo": "https://www.solfej.io/images/logo.png",
+        "sameAs": [
+          "https://www.facebook.com/Solfej-Music-Theory-App-116381003147367/",
+          "https://www.instagram.com/solfej.app/",
+          "https://twitter.com/solfej_app"
+        ]
+      })}</script>
+    </Helmet>
     <div className="hero-container">
         <div className="copy-container">
             <h1>Become A Better Musician</h1>

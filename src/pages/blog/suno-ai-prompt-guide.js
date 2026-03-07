@@ -8,6 +8,7 @@ export const blogData = {
     description: "A practical guide to writing better Suno AI prompts using basic music theory. Covers keys, scales, modes, tempo, and how to translate what you hear in your head into prompts that work.",
     authorName: "Shayan Javadi",
     date: "Mar 2026",
+    datePublished: "2026-03-01",
     timeToRead: "9 min",
     route: "suno-ai-prompt-guide",
     image: "/images/blog-post-hero-7.png",

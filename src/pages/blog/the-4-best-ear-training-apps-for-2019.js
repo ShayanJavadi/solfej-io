@@ -16,6 +16,7 @@ export const blogData = {
     description: "The best apps to help train your ears",
     authorName: "Shayan Javadi",
     date: "Dec 24",
+    datePublished: "2019-12-24",
     timeToRead: "5 min",
     route: "the-4-best-ear-training-apps-for-2019",
     image: "/images/blog-post-hero-6.png",

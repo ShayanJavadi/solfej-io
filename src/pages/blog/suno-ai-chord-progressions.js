@@ -8,6 +8,7 @@ export const blogData = {
     description: "Learn how to specify chord progressions in Suno AI prompts. Includes working examples with common progressions, tips for minor and major keys, and why basic music theory makes your Suno songs 10x better.",
     authorName: "Shayan Javadi",
     date: "Mar 2026",
+    datePublished: "2026-03-01",
     timeToRead: "10 min",
     route: "suno-ai-chord-progressions",
     image: "/images/blog-post-hero-7.png",

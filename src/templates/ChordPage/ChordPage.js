@@ -32,8 +32,8 @@ export default function ChordPage({ data, pageContext }) {
     const prefix = locale ? `/${locale}` : "";
     const ui = translatedStrings || {
         chordSuffix: "Chord",
-        chordSeoTitle: "How to play %s on guitar and piano? What notes are in %s",
-        chordSeoDescription: "How to play a %s chord on piano and guitar? What notes and intervals are in %s? Find out how and search through 1000s of chords.",
+        chordSeoTitle: "%s Chord - Notes, Intervals & Diagrams | Solfej",
+        chordSeoDescription: "Free %s chord diagrams for guitar & piano. Interactive fingering charts, notes, intervals, and related scales.",
         lookingForScale: "Looking For a Scale?",
         tryScaleSearch: "Try: Scale Search",
         chordTip: "💡Tip: You can find a chord by typing in its notes seperated by commas e.g. (C, E, G)",
@@ -54,8 +54,18 @@ export default function ChordPage({ data, pageContext }) {
         navigate(`${prefix}${random.b}`);
     }, [prefix]);
 
-    const seoTitle = ui.chordSeoTitle ? ui.chordSeoTitle.replace(/%s/g, translatedChordName) : `How to play ${displayName} on guitar and piano?`;
-    const seoDescription = ui.chordSeoDescription ? ui.chordSeoDescription.replace(/%s/g, translatedChordName) : `How to play a ${displayName} chord on piano and guitar?`;
+    const seoTitle = ui.chordSeoTitle ? ui.chordSeoTitle.replace(/%s/g, translatedChordName) : `${displayName} Chord - Notes, Intervals & Diagrams | Solfej`;
+    const seoDescription = ui.chordSeoDescription ? ui.chordSeoDescription.replace(/%s/g, translatedChordName) : `Free ${displayName} chord diagrams for guitar & piano. Interactive fingering charts, notes, intervals, and related scales.`;
+
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": ui.home || "Home", "item": "https://www.solfej.io" + prefix + "/" },
+            { "@type": "ListItem", "position": 2, "name": ui.chordSearch || "Chords", "item": "https://www.solfej.io" + prefix + "/chords" },
+            { "@type": "ListItem", "position": 3, "name": translatedChordName + " " + ui.chordSuffix }
+        ]
+    };
 
     const faqSchema = {
         "@context": "https://schema.org",
@@ -77,6 +87,7 @@ export default function ChordPage({ data, pageContext }) {
             locale={locale}
             pagePath={chord.path}
         >
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <div className="chord-page-template md-styles">
                 <div className="suggestion flex" style={{ marginTop: "2rem", marginBottom: "1rem", alignItems: "center", justifyContent: "space-between" }}>

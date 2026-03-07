@@ -15,6 +15,7 @@ export const blogData = {
     description: "Color palette generators/tools",
     authorName: "Shayan Javadi",
     date: "Dec 17",
+    datePublished: "2019-12-17",
     timeToRead: "7 min",
     route: "5-beautiful-color-palette-generators-for-your-next-design-project",
     image: "/images/blog-post-hero-3.png",

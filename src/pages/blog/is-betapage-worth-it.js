@@ -13,6 +13,7 @@ export const blogData = {
     description: "$100 price tag that may be worth it.",
     authorName: "Shayan Javadi",
     date: "Dec 15",
+    datePublished: "2019-12-15",
     timeToRead: "5 min",
     route: "is-betapage-worth-it",
     image: "/images/blog-post-hero-2.png",

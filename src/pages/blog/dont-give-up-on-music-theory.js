@@ -19,6 +19,7 @@ export const blogData = {
     description: "Why learning music theory is worth it",
     authorName: "JP Hwang",
     date: "Dec 23",
+    datePublished: "2019-12-23",
     timeToRead: "10 min",
     route: "dont-give-up-on-music-theory",
     image: "/images/blog-post-hero-5.png",

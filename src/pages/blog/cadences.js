@@ -18,6 +18,7 @@ export const blogData = {
     description: "Learn the 4 types of music theory cadences",
     authorName: "Alvin",
     date: "Dec 29",
+    datePublished: "2019-12-29",
     timeToRead: "8 min",
     route: "cadences",
     image: "/images/blog-post-hero-7.png",

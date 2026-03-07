@@ -8,6 +8,7 @@ export const blogData = {
     description: "Your Suno AI songs sound amateur because you're missing basic music theory. Here are the specific concepts that will make your AI-generated music sound dramatically better.",
     authorName: "Shayan Javadi",
     date: "Mar 2026",
+    datePublished: "2026-03-01",
     timeToRead: "8 min",
     route: "suno-ai-tips",
     image: "/images/blog-post-hero-7.png",

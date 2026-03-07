@@ -18,6 +18,7 @@ export const blogData = {
     description: "Does music theory hinder your creativity?",
     authorName: "Alvin",
     date: "Dec 21",
+    datePublished: "2019-12-21",
     timeToRead: "6 min",
     route: "7-reasons-why-you-should-learn-music-theory",
     image: "/images/blog-post-hero-4.png",

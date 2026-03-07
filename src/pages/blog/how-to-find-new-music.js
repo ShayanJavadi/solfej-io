@@ -8,6 +8,7 @@ export const blogData = {
     description: "How To Find New Music",
     authorName: "Henry Garrett",
     date: "Jan 20",
+    datePublished: "2020-01-20",
     timeToRead: "10 min",
     route: "how-to-find-new-music",
     image: "/images/album-daily.png",

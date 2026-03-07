@@ -33,8 +33,8 @@ export default function ScalePage({ data, pageContext }) {
     const prefix = locale ? `/${locale}` : "";
     const ui = translatedStrings || {
         scaleSuffix: "Scale",
-        scaleSeoTitle: "How to play %s scale on guitar and piano? What notes are in %s",
-        scaleSeoDescription: "How to play a %s scale on piano and guitar? What notes and intervals are in %s? Find out how and search through 1000s of scales.",
+        scaleSeoTitle: "%s Scale - Notes, Intervals & Diagrams | Solfej",
+        scaleSeoDescription: "Free %s scale diagrams for guitar & piano. Interactive charts with notes, intervals, formula, and diatonic chords.",
         lookingForChord: "Looking For a Chord?",
         tryChordSearch: "Try: Chord Search",
         scaleTip: "💡Tip: You can find a scale by typing in its notes seperated by commas e.g. (C, E, G)",
@@ -55,8 +55,18 @@ export default function ScalePage({ data, pageContext }) {
         navigate(`${prefix}${random.b}`);
     }, [prefix]);
 
-    const seoTitle = ui.scaleSeoTitle ? ui.scaleSeoTitle.replace(/%s/g, translatedScaleName) : `How to play ${displayName} scale on guitar and piano?`;
-    const seoDescription = ui.scaleSeoDescription ? ui.scaleSeoDescription.replace(/%s/g, translatedScaleName) : `How to play a ${displayName} scale on piano and guitar?`;
+    const seoTitle = ui.scaleSeoTitle ? ui.scaleSeoTitle.replace(/%s/g, translatedScaleName) : `${displayName} Scale - Notes, Intervals & Diagrams | Solfej`;
+    const seoDescription = ui.scaleSeoDescription ? ui.scaleSeoDescription.replace(/%s/g, translatedScaleName) : `Free ${displayName} scale diagrams for guitar & piano. Interactive charts with notes, intervals, formula, and diatonic chords.`;
+
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": ui.home || "Home", "item": "https://www.solfej.io" + prefix + "/" },
+            { "@type": "ListItem", "position": 2, "name": ui.scaleSearch || "Scales", "item": "https://www.solfej.io" + prefix + "/scales" },
+            { "@type": "ListItem", "position": 3, "name": translatedScaleName + " " + ui.scaleSuffix }
+        ]
+    };
 
     const faqSchema = {
         "@context": "https://schema.org",
@@ -78,6 +88,7 @@ export default function ScalePage({ data, pageContext }) {
             locale={locale}
             pagePath={scale.path}
         >
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <Page className="scale-page md-styles">
                 <div className="suggestion flex" style={{ marginTop: "2rem", marginBottom: "1rem", alignItems: "center", justifyContent: "space-between" }}>

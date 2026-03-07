@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Solfej`,
-    description: `The best new way to learn music theory and ear training`,
+    description: `Free chord & scale diagrams, music theory lessons, and ear training tools for guitar and piano players.`,
     author: `Shayan Javadi`,
     image: "/images/logo.png",
     url: "https://www.solfej.io",
@@ -59,8 +59,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Solfej - Music Theory & Ear Training`,
+        short_name: `Solfej`,
         start_url: `/`,
         background_color: `#FFB5B5`,
         theme_color: `#FFB5B5`,

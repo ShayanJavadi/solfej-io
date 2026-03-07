@@ -10,11 +10,21 @@ import Author from '../Author';
 import { newsletterClicked, blogShareClicked } from '../../common/utils/analytics';
 
 export default function BlogPostLayout(props) {
-    const { blogData: { title, description, image, seoTitle, route, ...author }, hero = () => null, noIndex } = props;
+    const { blogData: { title, description, image, seoTitle, route, datePublished, dateModified, ...author }, hero = () => null, noIndex } = props;
 
     function handleTwitterShare() { blogShareClicked("Twitter", route) }
     function handleFacebookShare() { blogShareClicked("Facebook", route) }
     function handleNewsletterClick() { newsletterClicked("Blog Post") }
+
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.solfej.io/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.solfej.io/blog" },
+            { "@type": "ListItem", "position": 3, "name": title }
+        ]
+    };
 
     const articleSchema = {
         "@context": "https://schema.org",
@@ -25,10 +35,13 @@ export default function BlogPostLayout(props) {
         "author": { "@type": "Person", "name": author.authorName },
         "publisher": { "@type": "Organization", "name": "Solfej", "url": "https://www.solfej.io" },
         "url": `https://www.solfej.io/blog/${route}`,
+        ...(datePublished ? { "datePublished": datePublished } : {}),
+        ...(dateModified ? { "dateModified": dateModified } : { ...(datePublished ? { "dateModified": datePublished } : {}) }),
     }
 
     return (
         <Layout {...{ title: seoTitle, description, image }} className="blog-post-layout" noIndex={noIndex}>
+           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
            {hero}
            <div className="content-container">

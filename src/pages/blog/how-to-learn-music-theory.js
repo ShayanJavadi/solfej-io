@@ -8,6 +8,7 @@ export const blogData = {
     description: "How To Learn Music Theory",
     authorName: "Shayan Javadi",
     date: "Feb 22",
+    datePublished: "2020-02-22",
     timeToRead: "10 min",
     route: "how-to-learn-music-theory",
     image: "/images/blog-post-hero-8.png",
