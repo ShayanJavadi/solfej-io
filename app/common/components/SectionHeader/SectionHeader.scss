@@ -1,0 +1,27 @@
+.section-header {
+  text-align: left;
+  margin-top: 1rem;
+  padding-left: 6%;
+
+  &.sub {
+    padding-left: 2px;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    margin-bottom: .3rem;
+
+    &.subtext {
+      margin-top: .5rem;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 18px;
+      color: #666666;
+      position: relative;
+      left: 2px;
+    }
+  }
+}

@@ -1,0 +1,1 @@
+export const CUSTOM_EXERCISE_OPTIONS_FORM_NAMESPACE = "custom-exercise-options";

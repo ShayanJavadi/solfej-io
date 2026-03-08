@@ -1,0 +1,15 @@
+.bottom-floating-menu {
+  position: fixed;
+  height: 4rem;
+  width: 100%;
+  bottom: 0;
+  background: #fff;
+  border-top: 2px solid #e5e5e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  z-index: 99999999999 !important;
+  padding-bottom: env(safe-area-inset-bottom, 0.5vh);
+  
+}

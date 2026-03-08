@@ -1,0 +1,52 @@
+@import "../../styles/variables";
+
+.sign-in-screen {
+  background: #fff;
+
+  .header-container {
+    justify-content: flex-start;
+
+    h1 {
+      padding: 4rem 0 0 2rem;
+      font-size: 2.5rem;
+      color: $black;
+    }
+  }
+
+  .buttons-container {
+    flex: 2 1;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    .button:first-of-type {
+      margin-bottom: 20px;
+    }
+
+    .button {
+      width: 87%;
+    }
+  }
+
+  .copy-container {
+    flex: 1 1;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+    p {
+      text-align: center;
+      width: 290px;
+      height: 23px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #666;
+
+      span {
+        color: $black;
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.paragraph {
+  padding: 0 1.5rem;
+  margin-bottom: 1rem;
+
+  .inline-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    &.width {
+      width: 2rem;
+    }
+    &.pad {
+      padding: 0 0.5rem
+    }
+  }
+
+  &.centered {
+    p {
+      text-align: center;
+    }
+  }
+
+  &.no-margin {
+    margin-bottom: 0;
+  }
+
+  &.opaque {
+    opacity: .8;
+  }
+
+  p {
+    color: #344356;
+    opacity: 0.8;
+    font-weight: 500;
+    line-height: 28px;
+
+    b {
+      opacity: 1;
+      color: #040517
+    }
+  }
+
+  &.space-between {
+    p {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &.flex-centered {
+    p {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &.link {
+    p {
+      color: #407088;
+      font-weight: bold !important;
+      opacity: 1 !important;
+      text-decoration: underline;
+    }
+  }
+}

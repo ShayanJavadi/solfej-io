@@ -1,0 +1,137 @@
+@import "../../../styles/variables";
+
+.lesson-cards-container {
+  display: flex;
+  flex: 6;
+  flex-direction: column;
+
+  &.no-lessons-message {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    
+    p {
+      width: 80%;
+      opacity: .6;
+      box-shadow: none;
+      font-weight: normal;
+    }
+  }
+  &.embedded {
+    margin-top: 1rem;
+    .lesson-card {
+      box-shadow: 1px 1px 13px rgba(0, 0, 0, 0.15);
+      h4, p {
+        margin: 0;
+      }
+
+    @media (max-width: 320px){
+        h4 {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  &.horizontal {
+    flex-direction: unset;
+    flex: unset;
+
+    .lesson-card {
+      height: 9.5rem;
+
+      .icon-container {
+        top: .7rem;
+      }
+
+      .header-container {
+        padding: 1rem 0 0 0;
+        position: relative;
+        left: .7rem;
+      }
+    }
+
+    .description-container p {
+      width: 100%;
+    }
+    
+     .divider-parent-container .divider-flex-container {
+       display: unset;
+       flex: unset;
+     }
+
+    .divider-parent-container .divider-flex-container .divider-container .divider {
+      width: 100%;
+      height: 4px;
+      position: relative;
+      bottom: .9rem;
+      left: 38%;
+    }
+
+    .lesson-card-horizontal-container .card-progress-container .dot-container {
+      margin-top: 1rem;
+    }
+  }
+
+  .lesson-card-horizontal-container {
+    flex: 0 0 60%;
+
+    .card-progress-container {
+      width: 85%;
+    }
+  }
+
+  .card-progress-container {
+    .lesson-card-container {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+      .lesson-card {
+        display: flex;
+        flex-direction: column;
+        flex: 6;
+      }
+    }
+    .dot-container {
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      .dot {
+        width: 1.5rem;
+        height: 1.5rem;
+        z-index: 999;
+      }
+    }
+  }
+  .divider-parent-container {
+
+    &.disabled {
+      .divider {
+        background: rgba(0,0,0,.1) !important;
+      }
+    }
+    .divider-flex-container {
+      display: flex;
+      flex: 1;
+
+      .divider-container {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        max-height: 20px;
+
+        .divider {
+          width: 4px;
+          height: 8rem;
+          background: $green;
+          margin-right: .15em;
+        }
+      }
+      .lesson-card-mock {
+        display: flex;
+        flex: 6;
+      }
+    }
+  }
+}

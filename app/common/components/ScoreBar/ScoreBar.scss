@@ -1,0 +1,11 @@
+@import "../../../styles/variables";
+
+.score-bar {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: $font-size-3;
+  background-color: $secondary;
+}

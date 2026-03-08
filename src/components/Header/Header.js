@@ -20,20 +20,7 @@ const handleNavScaleSearch = () => navigationClicked("Scale Search")
 const handleNavHome = () => navigationClicked("Home")
 
 const getGetTheAppLink = () => {
-    const platform = getPlatform()
-    if (platform === DESKTOP) {
-        return "/";
-    }
-
-    if (platform === IOS) {
-        return APP_STORE_URL;
-    }
-
-    if (platform === ANDROID) {
-        return PLAY_STORE_URL;
-    }
-
-    return APP_STORE_URL
+    return "/app";
 }
 
 export default function Header(props) {
@@ -86,6 +73,11 @@ export default function Header(props) {
                 <ul>
 
                     <li>
+                        <Link to="/app">
+                            Learn
+                        </Link>
+                    </li>
+                    <li>
                         <Link to={`${prefix}/blog`} onClick={handleNavBlog}>
                             {translatedStrings ? translatedStrings.blog : "Blog"}
                 </Link>
@@ -118,24 +110,14 @@ export default function Header(props) {
                             <img src={logoNoText} alt="solfej-logo-music-theory-app" className="solfej-logo" />
                         </Link>
                     </li>
-                    <li className="cta" onClick={handleCtaClick}>
-                        {
-                            getTheAppLink === "/" ?
-                                <Link to={getTheAppLink}>
-                                    <button
-                                        className="cta-button primary"
-                                    >
-                                        {translatedStrings ? translatedStrings.getTheApp : "GET THE APP"}
-                                    </button>
-                                </Link> :
-                                <a href={getTheAppLink}>
-                                    <button
-                                        className="cta-button primary"
-                                    >
-                                        {translatedStrings ? translatedStrings.getTheApp : "GET THE APP"}
-                                    </button>
-                                </a>
-                        }
+                    <li className="cta">
+                        <Link to="/app">
+                            <button
+                                className="cta-button primary"
+                            >
+                                {translatedStrings ? translatedStrings.getTheApp : "OPEN APP"}
+                            </button>
+                        </Link>
                     </li>
                 </ul>
             </div>
@@ -167,8 +149,13 @@ export default function Header(props) {
                             {translatedStrings ? translatedStrings.contact : "Contact"}
                 </a>
                     </li>
+                    <li>
+                        <Link to="/app">
+                            Learn
+                        </Link>
+                    </li>
                 </ul>
-              
+
             </div>
         </header>
 

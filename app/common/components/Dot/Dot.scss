@@ -1,0 +1,22 @@
+@import "../../../styles/variables";
+
+.dot {
+  width: 15px;
+  height: 15px;
+  background: $green;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  &.gray {
+    background: rgb(219, 220, 224) !important
+  }
+
+  .empty {
+    background: #fff;
+    width: 11px;
+    height: 11px;
+    border-radius: 100%;
+  }
+}

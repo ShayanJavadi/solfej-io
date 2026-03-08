@@ -1,0 +1,24 @@
+.i-am-a-slide {
+  height: 100%;
+  .text-container {
+    .header-text {
+      padding-top: 1rem;
+      flex-direction: column;
+    }
+  }
+ .choices-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    .buttons {
+      height: 55vh;
+      overflow-y: auto;
+      padding: 0 1.5rem;
+      
+      .button {
+        margin-bottom: 1rem;
+      }
+    }
+ } 
+}

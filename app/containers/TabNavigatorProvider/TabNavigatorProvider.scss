@@ -1,0 +1,37 @@
+.tab-navigator {
+  .icon-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+    }
+    .icon {
+      color: #dadada;
+    }
+
+    &.active {
+      .icon {
+        color: #878787;
+      }
+    }
+
+    &.feedback {
+      .icon {
+        color: #407088;
+      }
+
+      p {
+        font-size: .5rem;
+        color: #407088;
+        position: absolute;
+        top: 2.8rem;
+      }
+    } 
+  }
+}

@@ -1,0 +1,36 @@
+.lesson-finish-buttons {
+  display: flex;
+  flex: 2 1;
+  justify-content: center !important;
+  align-items: center;
+  flex-direction: column;
+
+  .button:first-of-type {
+    margin-bottom: 1rem;
+  }
+
+  .button {
+    height: 3.5rem !important;
+    width: 80% !important;
+    max-height: unset;
+    flex: unset;
+
+    &.success-button {
+      border: none !important;
+    }
+
+    &:nth-of-type(1) {
+      border: 2px solid rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 12px 19px rgba(60, 128, 209, 0.0851449);
+    }
+
+    &:nth-of-type(2) {
+      background: #00D9CD;
+      box-shadow: 0px 12px 19px rgba(60, 128, 209, 0.0851449);
+
+      p {
+        color: #fff
+      }
+    }
+  }
+}

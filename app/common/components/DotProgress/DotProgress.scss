@@ -1,0 +1,31 @@
+@import "../../../styles/variables";
+
+.dot-progress {
+  display: flex;
+  height: 40px;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  
+  .dot {
+      height: 2.3rem;
+      width: 2.3rem;
+      background: #E6E6E6;
+      border-radius: 100px;
+
+      &.current, &.finished {
+        background: $green;
+      }
+  }
+
+  .divider {
+      width: 15%;
+      height: 5px;
+      background: #E6E6E6;
+      align-self: center;
+
+      &.finished {
+          background: $green;
+      }
+  }
+}

@@ -1,0 +1,37 @@
+.music-theory-lesson-screen {
+  padding-bottom: 3rem;
+
+  .floating-buttons-container {
+    bottom: 1rem;
+    width: calc(100% - 3rem);
+    justify-content: space-between;
+    align-items: flex-end;
+    display: flex;
+    padding: 0 1.5rem;
+    margin-top: 1.5rem;
+    flex: 1;
+
+    .button {
+      width: 40%;
+      height: 2.5rem;
+      display: flex;
+      flex: unset;
+
+      &.hidden {
+        visibility: hidden;
+      }
+
+      &.ghost {
+        border: 2px solid #00D9CD;
+        height: calc(2.5rem - 4px);
+        box-shadow: 0px 12px 19px rgba(60, 128, 209, 0.0851449);
+
+        .text-container {
+          p {
+            color: #00D9CD;
+          }
+        }
+      }
+    }
+  }
+}

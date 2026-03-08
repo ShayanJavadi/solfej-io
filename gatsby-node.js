@@ -60,8 +60,56 @@ exports.onPreBootstrap = () => {
     })
 }
 
-exports.onCreateWebpackConfig = ({ actions, loaders }) => {
+exports.onCreatePage = async ({ page, actions }) => {
+    const { createPage } = actions
+    if (page.path.match(/^\/app/)) {
+        page.matchPath = "/app/*"
+        createPage(page)
+    }
+}
+
+exports.onCreateWebpackConfig = ({ stage, actions, loaders, getConfig }) => {
+    const config = getConfig()
+    const appDir = path.resolve(__dirname, 'app')
+
+    // Exclude app/ from Gatsby's default url-loader rules for audio/font files
+    // to prevent double-processing (file-loader + url-loader conflict)
+    config.module.rules.forEach(rule => {
+        if (rule.test instanceof RegExp) {
+            if (rule.test.test('.mp3') || rule.test.test('.wav') || rule.test.test('.ogg') ||
+                rule.test.test('.otf') || rule.test.test('.ttf') || rule.test.test('.woff')) {
+                rule.exclude = rule.exclude
+                    ? [].concat(rule.exclude, appDir)
+                    : [appDir]
+            }
+        }
+        if (rule.oneOf) {
+            rule.oneOf.forEach(r => {
+                if (r.test instanceof RegExp) {
+                    if (r.test.test('.mp3') || r.test.test('.wav') || r.test.test('.ogg') ||
+                        r.test.test('.otf') || r.test.test('.ttf') || r.test.test('.woff')) {
+                        r.exclude = r.exclude
+                            ? [].concat(r.exclude, appDir)
+                            : [appDir]
+                    }
+                }
+            })
+        }
+    })
+    actions.replaceWebpackConfig(config)
+
+    // Deduplicate React — prevent multiple instances when app/ imports React
+    const reactPath = path.resolve(__dirname, 'node_modules', 'react')
+    const reactDomPath = path.resolve(__dirname, 'node_modules', 'react-dom')
+
     actions.setWebpackConfig({
+        resolve: {
+            alias: {
+                '@solfej-app': appDir,
+                'react': reactPath,
+                'react-dom': reactDomPath,
+            },
+        },
         module: {
             rules: [
                 {
@@ -69,9 +117,38 @@ exports.onCreateWebpackConfig = ({ actions, loaders }) => {
                     include: /node_modules\/@svgdotjs/,
                     use: [loaders.js()],
                 },
+                {
+                    test: /\.js$/,
+                    include: appDir,
+                    use: [loaders.js()],
+                },
+                {
+                    test: /\.(mp3|wav|ogg)$/,
+                    include: appDir,
+                    use: [{ loader: 'file-loader' }],
+                },
+                {
+                    test: /\.(otf|ttf|woff|woff2)$/,
+                    include: appDir,
+                    use: [{ loader: 'file-loader' }],
+                },
             ],
         },
     })
+
+    // Null-load Capacitor/Ionic modules during SSR to avoid Node errors
+    if (stage === 'build-html' || stage === 'develop-html') {
+        actions.setWebpackConfig({
+            module: {
+                rules: [
+                    {
+                        test: /(@capacitor|@ionic|capacitor-|@ionic-native)/,
+                        use: [loaders.null()],
+                    },
+                ],
+            },
+        })
+    }
 }
 
 exports.onPostBuild = async ({ graphql }) => {

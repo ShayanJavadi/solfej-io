@@ -1,0 +1,64 @@
+.choices-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  margin-top: .2rem;
+
+  &.two-choices {
+    .choice-card {
+      height: unset;
+      width: 100%;
+    }
+  }
+
+&.three-choices {
+    .choice-card {
+      height: unset;
+      width: 31%;
+    }
+  }
+
+
+
+  &.four-choices { 
+    .choice-card {
+      height: unset;
+      width: 48%;
+    }
+  }
+
+  &.five-choices {
+    .choice-card {
+      height: unset;
+    }
+  }
+
+  &.eight-choices {
+    .choice-card {
+      height: unset;
+    }
+  }
+
+  &.six-choices {
+    .choice-card {
+      height: unset;
+    }
+  }
+
+  &.more-than-12-choices {
+    .choice-card {
+      width: 23%;
+    }
+  }
+
+  &.rhythm {
+    .choice-card {
+      p {
+          font-family: "Notes";
+          font-weight: normal !important;
+          font-size: 3rem;
+          padding-left: 1.5rem;
+      }
+    }
+  }
+}

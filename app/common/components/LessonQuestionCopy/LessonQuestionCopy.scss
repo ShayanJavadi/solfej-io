@@ -1,0 +1,30 @@
+.lesson-question-copy {
+  h2 {
+    text-align: center;
+  }
+  
+  .streak-copy-container {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+    }
+
+    p, h2 {
+      text-align: center;
+    }
+
+    p {
+      font-weight: normal;
+
+      @media (max-height: 568px) {
+        padding-bottom: 10px;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,80 @@
+.chord-quality-screen {
+  .question-copy-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    
+    h2 {
+      width: 80%;
+    }
+  }
+
+   .notes-container {
+    display: flex;
+    flex: 2;
+    justify-content: space-around;
+    align-items: center;
+    .button {
+      height: 90%;
+      width: 45%;
+      max-height: unset;
+      flex: unset;
+      &.daily-lesson-button {
+        height: 50%;
+        width: 86%;
+        border: none !important
+      }
+      &:nth-of-type(1) {
+        border: 2px solid rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 12px 19px rgba(60, 128, 209, 0.0851449);
+      }
+
+      &:nth-of-type(2) {
+        background: #00D9CD;
+        box-shadow: 0px 12px 19px rgba(60, 128, 209, 0.0851449);
+
+        p {
+          color: #fff
+        }
+      }
+    }
+  }
+
+
+  .progress-bar-container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    .progress-bar {
+      width: 80%;
+    }
+  }
+
+  .menu-bar-container {
+    height: 50px;
+    background: #f1f1f1;
+    border-width: 1px 0px 0px 0px;
+    border-top: 2px solid #e5e5e5;
+    display: flex;
+
+    .menu-bar-items {
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      display: flex;
+    }
+  }
+
+  .interval-choices-container {
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+
+    .piano-roll {
+      display: flex;
+      flex: 7;
+    }
+  }
+}

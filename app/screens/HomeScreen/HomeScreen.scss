@@ -1,0 +1,167 @@
+@import "../../styles/variables";
+p.overlay {
+  color: $blue-text;
+  opacity: .8;
+  line-height: 22px;
+
+}
+h2.overlay {
+  color: $blue-text;
+}
+
+img.overlay {
+  width: 100%;
+}
+
+.home-screen {
+  max-width: 100vw;
+  .embla {
+  position: relative;
+}
+
+.embla__viewport {
+  overflow: hidden;
+}
+
+.embla__viewport.is-draggable {
+  cursor: move;
+  cursor: grab;
+}
+
+.embla__viewport.is-dragging {
+  cursor: grabbing;
+}
+
+.embla__container {
+  display: flex;
+  will-change: transform;
+  margin-left: -1rem;
+}
+
+.embla__slide {
+  flex: 0 0 auto;
+  width: 80%;
+  position: relative;
+  padding-left: 1rem;
+  counter-increment: embla;
+}
+
+.embla__slide__inner {
+  background-color: rgb(40, 44, 52);
+  position: relative;
+  border-radius: 0.5rem;
+  min-height: 200px;
+  padding-bottom: 46%;
+  font-size: 5rem;
+}
+
+
+
+  .greeting-container {
+    padding-bottom: 1rem;
+    
+    .section-header {
+      h1 {
+        font-size: 1.7rem !important;
+      }
+    }
+    .lesson-category-tile {
+      width: unset !important;
+    }
+  }
+  // background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #EAEBEF;
+  background: $blue-gray;
+  padding-top: calc(1rem + 57px); // header height
+
+  .drop-down-content {
+    display: flex;
+    flex-direction: column;
+
+    &.streak {
+      flex: 2;
+      justify-content: center;
+      align-items: center;
+      .streak {
+        font-size: 33px;
+      }
+    }
+
+    &.streak-copy {
+      flex: 5;
+      
+      .section-header {
+        padding-left: unset;
+      }
+
+      .paragraph {
+        padding-right: 1rem;
+        padding-left: unset;
+      }
+    }
+  }
+  
+  .lesson-category-tiles-container {
+    display: flex;
+    justify-content: space-around;
+    min-height: 20rem;
+    flex-wrap: wrap;
+    z-index: 2;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 10rem;
+    padding-top: 1rem;
+  }
+
+  .daily-lesson-section-container {
+    padding: 1rem 0;
+    padding-top: 0rem;
+    // border-bottom: 2px solid #e5e5e5;
+
+    .card {
+      padding: 1rem 1rem;
+      margin: 1rem;
+
+      .button.success {
+        box-shadow: rgba(255, 104, 104, .25) 0px 4px 1px;
+        background: rgb(255, 104, 104);
+      }
+    }
+    .cta-container {
+      padding: 0 5%;
+      &.hide-shadow {
+        .button {
+          box-shadow: inherit;
+        }
+      }
+      .button {
+        box-shadow: rgba(0, 217, 205, 0.25) 0px 4px 1px
+      }
+    }
+
+    .dot-progress {
+      padding-top: 15px;
+      padding-bottom: 25px; 
+    }
+  }
+
+  .section-header {
+    margin-top: 1rem;
+    padding-left: 6%;
+  }
+
+  .recommended-section-container {
+    margin-top: 1.5rem;
+    position: relative;
+    .lesson-cards-container {
+      // padding-bottom: 8rem;
+
+      .lesson-card {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 1.40rem !important
+  }
+}

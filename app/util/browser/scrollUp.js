@@ -1,0 +1,1 @@
+export default () => window && window.scrollTo(0, 0);

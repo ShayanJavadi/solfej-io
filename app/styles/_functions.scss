@@ -1,0 +1,3 @@
+@function boxShadow($baseColor, $lightenPercentage) {
+  @return lighten($baseColor, $lightenPercentage) 0px 4px 1px;
+}

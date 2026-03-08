@@ -1,0 +1,58 @@
+@import "../../../styles/variables";
+
+.header {
+  display: flex;
+  height: 40px;
+  padding-top: 15px;
+
+  &.drop-down-header {
+    top: calc(57px +  env(safe-area-inset-top)) !important;
+    height: unset;
+    min-height: 40px;
+    padding-bottom: 10px;
+    padding-top:  unset !important;
+  }
+
+  &.is-fixed {
+    background: #fff;
+    border-bottom: 2px solid #e5e5e5;
+    z-index: 99999999999 !important;
+    position: fixed;
+    width: 100%;
+    bottom: 1r;
+    top: 0;
+    min-height: 55px;
+    padding-top: calc(env(safe-area-inset-top));
+  }
+
+  .header-middle {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-left {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+  }
+
+  .header-right {
+    display: flex;
+    flex: 5;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+
+    .progress-bar {
+      flex: 1
+    }
+  }
+
+  .menu-icons {
+   
+  }
+}

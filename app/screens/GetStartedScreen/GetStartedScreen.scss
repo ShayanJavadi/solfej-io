@@ -1,0 +1,42 @@
+.get-started-screen {
+  .logo-container {
+    flex: .5;
+    justify-content: flex-start;
+    align-items: flex-start;
+    img {
+      width: 6rem;
+      padding: 1.5rem 0 0 2rem;
+    }
+  }
+
+  .image-container {
+    img {
+       @media (max-width: 320px)  {
+        width: 13rem;
+      }
+    }
+  }
+
+  .copy-container {
+    justify-content: space-evenly;
+    flex: 2.5;
+
+    .copy {
+      p {
+        text-align: center;
+        font-size: 1.3rem;
+      }
+
+      p:first-of-type {
+        margin-bottom: .5rem;
+      }
+    }
+  }
+
+  .buttons-container {
+    display: flex;
+    flex: 1.5;
+    flex-direction: column;
+    padding: 0 2rem;
+  }
+}

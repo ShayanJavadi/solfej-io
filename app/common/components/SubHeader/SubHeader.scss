@@ -1,0 +1,18 @@
+.sub-header {
+    padding: 0 1.5rem;
+    height: 3rem;
+
+    &.padding {
+      padding-bottom: 1.6rem;
+    }
+
+  h2 {
+    color: #344356;
+    font-size: 1.5rem;
+
+    @media (max-width: 370px) {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+  }
+}

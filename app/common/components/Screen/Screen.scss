@@ -1,0 +1,19 @@
+.screen {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  // adds notch padding to avoid body background color bleeding into the screen
+  &.notch-padding {
+    min-height: calc(100% + env(safe-area-inset-bottom, 0.5vh));   
+  }
+
+  &.is-modal {
+    width: 100vw;
+    height: 100vh
+  }
+
+  &.bottom-padding {
+    padding-bottom: 10rem;
+  }
+}

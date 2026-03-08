@@ -1,0 +1,192 @@
+@import "./styles/variables";
+@font-face {
+    font-family: Notes;
+    src: url("./Rhyth.otf") format("opentype");
+}
+
+.router-outlet {
+  overflow-y: auto !important;
+}
+
+.switch-wrapper {
+  position: relative;
+}
+
+.switch-wrapper > div {
+  position: absolute;
+}
+.pop-over-fixed {
+  position: fixed !important;
+  top: 60px !important;
+  z-index: 9999
+}
+
+.fixed-root-range-selector {
+  .rc-slider-track {
+    background-color: unset !important;
+  }
+}
+
+.rc-slider {
+  .rc-slider-handle {
+    border-color: $primary;
+    width: 18px;
+    height: 18px;
+    top: 3px;
+  }
+
+  .rc-slider-track {
+    background-color: $primary;
+  }
+
+}
+
+.drop-down-arrow {
+  bottom: -2px;
+  height: 10px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+
+  &::after {
+    background-color: #fff;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+    box-sizing: border-box;
+    content: "";
+    height: 30px;
+    left: 50%;
+    position: absolute;
+    transform: rotate(45deg);
+    transform-origin: top left;
+    width: 30px;
+  }
+}
+
+$tab-height: 4rem;
+// remove blue background on press on chrome
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+      -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Opera and Firefox */
+  outline: none;
+}
+
+input {
+    -webkit-user-select: all !important; /* Safari */
+    -khtml-user-select: all !important; /* Konqueror HTML */
+      -moz-user-select: all !important; /* Old versions of Firefox */
+      -ms-user-select: all !important; /* Internet Explorer/Edge */
+          user-select: all !important; /* Non-prefixed version, currently */
+
+}
+.App {
+  overflow-x: hidden;
+}
+html, body, #root, .App {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  &.long-height {
+    .App {
+        height: 100%;
+    }
+  }
+
+  &.long-height-lessons {
+    height: 100%;
+    .App {
+      min-height: calc(100vh - env(safe-area-inset-top, 20px) - env(safe-area-inset-bottom, 0.5vh));
+      height: unset;
+    }
+  }
+
+  &.no-height {
+    .App {
+      height: unset;
+    }
+  }
+}
+
+.notes-font {
+  font-family: "Notes";
+  font-weight: normal !important;
+  font-size: 2rem;
+  color: $black;
+  opacity: 1 !important;
+}
+
+.App {
+  display: flex;
+  flex: 1;
+  height: calc(100vh - (env(safe-area-inset-top, 20px) + env(safe-area-inset-bottom, 0.5vh)));
+  padding: env(safe-area-inset-top, 20px) env(safe-area-inset-right) env(safe-area-inset-bottom, 0.5vh) env(safe-area-inset-left);
+ 
+  .yellow {
+    color: $yellow;
+  }
+
+  .pink {
+    color: $primary
+  }
+
+  .accent {
+    color: $accent-one
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: $font-size-4;
+  }
+
+  h2 {
+    font-size: $font-size-3;
+  }
+
+  h1, h2, h3, h4 {
+  font-weight: bold;
+  }
+
+  h1, h2, h3, h4, p {
+    color: $black;
+    margin: 0;
+  }
+
+  p {
+    font-weight: bold;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flex-vertical {
+    flex-direction: column;
+  }
+
+  .flex-horizontal {
+    flex-direction: row;
+  }
+}
+
+.disable-interactions {
+  pointer-events: none;
+  opacity: .7;
+  overflow: hidden;
+}

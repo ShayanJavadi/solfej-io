@@ -1,0 +1,2 @@
+export const IOSAppStoreLink = "https://apps.apple.com/us/app/solfej-ear-trainer-theory/id1487555711";
+export const AndroidAppStoreLink = "https://play.google.com/store/apps/details?id=com.solfejio.solfej";

@@ -1,0 +1,34 @@
+.modal-overlay {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.modal-container {
+  border-radius: 15px;
+  width: 85%;
+  max-height: 80vh;
+
+  .header-text {
+    height: unset;
+    justify-content: flex-start;
+    
+    svg {
+      margin-right: .3rem;
+    }
+    h1 {
+      font-size: 25px;
+      margin-bottom: 0;
+      display: flex;
+      flex: 1;
+      align-items: center;
+    }
+  }
+
+  .paragraph {
+    padding: 0;
+    margin-bottom: 0;
+
+    p {
+      padding-left: .5rem;
+    }
+  }
+}

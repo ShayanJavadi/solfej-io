@@ -1,0 +1,3 @@
+import CustomExerciseChooseCategoryScreen from "./CustomExerciseChooseCategoryScreen";
+
+export default CustomExerciseChooseCategoryScreen;

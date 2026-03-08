@@ -1,0 +1,23 @@
+@import "../../../styles/variables";
+
+.fullscreen-button {
+  &.reverse-background {
+    background: $secondary;
+
+    h1 {
+      color: #fff
+    }
+  }
+  
+  background: $primary;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  
+  h1 {
+    color: $secondary
+  }
+}

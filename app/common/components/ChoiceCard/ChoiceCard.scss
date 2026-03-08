@@ -1,0 +1,61 @@
+@import "./../../../styles/variables";
+@import "./../../../styles/functions";
+
+.choice-card {
+  justify-content: center;
+  background: #eaebef;
+  border-radius: 8px;
+  display: flex;
+  width: 31.33%;
+  align-items: center;
+  height: 20%;
+  opacity: 1;
+  margin: 1%;
+  box-shadow: boxShadow(#eaebef, 6%);
+
+  &:active {
+    opacity: .5;
+    box-shadow: none;
+  }
+
+  p {
+    font-size: .9rem;
+    font-weight: bold;
+    color: $black;
+    text-align: center;
+      @media (max-width: 370px)  {
+        font-size: .7rem
+      }
+  }
+
+  &.disabled {
+    opacity: .4;
+    box-shadow: none;
+  }
+
+  &.interactions-disabled {
+     &:active {
+      opacity: .4
+    }
+  }
+
+  &.correct {
+    &:active {
+      p {
+        color: #fff;
+      }
+      background: $green;
+      opacity: 1
+    }
+  }
+
+  &.wrong {
+    &:active {
+      p {
+        color: #fff;
+      }
+      background:  $red;
+      opacity: 1
+    }
+  }
+}

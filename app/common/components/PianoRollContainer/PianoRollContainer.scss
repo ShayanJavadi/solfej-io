@@ -1,0 +1,10 @@
+.piano-roll-container {
+    display: flex;
+    height: 11rem;
+    padding: 1.5rem 0;
+
+    .piano-roll {
+      display: flex;
+      flex: 1;
+    }
+}

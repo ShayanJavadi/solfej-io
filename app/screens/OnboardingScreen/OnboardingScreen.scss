@@ -1,0 +1,25 @@
+.onboarding-screen {
+  .slide-container {
+    flex: 6 1;
+  }
+
+  .buttons-container {
+    flex: 1;
+    padding: 0 1.5rem;
+  }
+  
+  &.two-buttons {
+    .slide-container {
+      display: flex;
+      flex-direction: column;
+    }
+    .buttons-container {
+      flex: 1 1;
+      padding: 0 1.5rem;
+      justify-content: center;
+      /* align-items: center; */
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

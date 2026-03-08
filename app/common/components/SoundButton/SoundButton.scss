@@ -1,0 +1,68 @@
+@import "../../../styles/variables";
+@import "../../../styles/functions";
+
+.note-button {
+  background-color: $primary;
+  box-shadow: boxShadow($primary, 10%);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: opacity 0.01s;
+  opacity: 1;
+  font-size: $font-size-5;
+  color: $secondary;
+  border-radius: 100%;
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+
+  @media (max-width: 320px)  {
+    max-height: 125px;
+    max-width: 125px;
+  }
+
+  &.long {
+    width: 90%;
+    border-radius: 71px;
+    height: 7rem;
+
+    @media (max-width: 320px)  {
+      max-height: initial;
+      max-width: initial;
+      height: 6.5rem;
+    }
+  }
+  
+  &.white-text {
+    color: #fff;
+  }
+  
+  &.secondary-background-color {
+    background-color: $accent-one;
+    box-shadow: boxShadow($accent-one, 50%);
+  }
+
+  &:active, &.active {
+    opacity: .5;
+    box-shadow: none;
+  }
+  
+  &.small-font {
+    font-size: 1.7rem;
+    font-weight: bold
+  }
+
+  &.is-text {
+    border: 1px solid #132743;  
+    box-shadow: #132743 0px 1.5px 1px;
+    background: transparent;
+
+    &.reverse {
+      color: #fff;
+      background: #132743;
+    }
+  }
+  
+}

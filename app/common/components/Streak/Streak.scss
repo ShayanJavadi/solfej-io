@@ -1,0 +1,7 @@
+.streak {
+  font-size: 22px;
+  &.gray-scale {
+    color:grey; 
+    filter: grayscale(100%);
+  }
+}

@@ -1,0 +1,2 @@
+export const TOS = "https://app.termly.io/document/terms-of-use-for-saas/10a0af81-1526-4a39-a0b6-1cc23ef1adaf";
+export const PRIVACY_POLICY = "https://app.termly.io/document/privacy-policy/53b877ac-fc0c-42d8-a723-0fea1c4d38dc";

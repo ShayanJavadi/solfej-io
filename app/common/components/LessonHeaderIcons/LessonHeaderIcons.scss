@@ -1,0 +1,63 @@
+@import "../../../styles/variables";
+
+.lesson-header-icons {
+   display: flex;
+    flex: 5;
+    justify-content: flex-end;
+    align-items: center;
+
+    &.disabled {
+      transition: none;
+      .svg-container {
+        opacity: .5;
+      }
+    }
+
+    .svg-container {
+      border-radius: 100%;
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: .4rem;
+      opacity: .92;
+
+       &.yellow-glow {
+          background: $yellow;
+          box-shadow: 0 0 13px 4px #ffb9025e;
+          p {
+            color: #fff
+          }
+
+          svg {
+            color: #fff
+          }
+        }
+
+      &.has-text {
+        width: 5rem;
+        border-radius: 32px;
+        justify-content: flex-start;
+        svg {
+          color: rgb(72, 83, 88);
+          padding-left: .5rem;
+          transition: all 0.2s;
+          
+          
+        }
+
+        p {
+          color: rgb(72, 83, 88);
+          font-size: 14px;
+          padding-left: .2rem;
+                    transition: all 0.2s;
+
+        }
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+}

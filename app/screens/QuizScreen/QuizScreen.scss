@@ -1,0 +1,100 @@
+@import "../../styles/variables";
+
+.quiz-screen {
+  .title-container {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      color: $blue-text;
+      font-size: 1.5rem;
+      @media (max-width: 320px) {
+        font-size: 1.4rem;  
+      }
+
+      width: 80%;
+      text-align: center;
+    }
+  }
+
+  .choices-container {
+    flex: 4;
+    flex: 4 1;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 0 2.5rem;
+
+    .choice {
+      height: 3.2rem;
+      background: #fff;
+      background: #FFFFFF;
+      box-shadow: 0px 12px 19px rgba(60, 128, 209, 0.0851449);
+      margin-top: 1rem;
+      border-radius: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $blue-text;
+      opacity: .9;
+
+      &.disabled {
+        background: #ffffff50 !important;
+       p {
+          color: #344356;
+          opacity: .4;
+        }
+      }
+
+      &.selected {
+        height: calc(3.2rem - 6px);
+        border: 3px solid rgba(0, 217, 205, 0.303185);
+        color: $green;
+      }
+    }
+  }
+
+  .message-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+
+    &.correct {
+      background: #00d9cd45;
+      p {
+        color: #00867e;
+      }
+    }
+
+    &.wrong {
+      background: #e94c7445;
+       p {
+        color: $red;
+      }
+    }
+    
+  }
+
+  .button-container {
+    flex: 1.5;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    
+    &.correct {
+      background: #00d9cd45;
+    }
+    
+
+    &.wrong {
+      background: #e94c7445
+    }
+    
+    .button {
+      height: 3.5rem;
+    }
+  }
+}

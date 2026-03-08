@@ -1,0 +1,8 @@
+.loading-screen {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999999999999999;
+}

@@ -1,0 +1,71 @@
+.account-screen {
+  display: flex;
+  flex-direction: column;
+
+  .switch {
+    margin-top: .5rem;
+  }
+  
+  .tos-container {
+    flex-direction: column;
+    display: flex;
+    flex: 3;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: bold;
+
+    a, p {
+      color: rgba(170, 170, 170, 1);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    span {
+      margin: 0 .4rem;
+      color: #AAAAAA;
+      font-size: 14px;
+    }
+  }
+  .avatar-container {
+    flex: 3 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    .avatar {
+      width: 7rem;
+      height: 7rem;
+      border-radius: 100%;
+      background: #afafaf;
+    }
+  }
+
+  .name-container {
+    display: flex;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .account-buttons-container {
+    display: flex;
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .button {
+      width: 80%;
+      .text-container {
+        p  {
+          display: unset;
+          flex: unset;
+        }
+      }
+    }
+  }
+}

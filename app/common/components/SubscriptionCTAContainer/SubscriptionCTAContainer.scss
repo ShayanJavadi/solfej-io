@@ -1,0 +1,12 @@
+.subscription-ctacontainer {
+  margin: 0 1rem;
+  z-index: 99999 !important;
+  h2 {
+    font-size: 20px !important;
+    margin-bottom: 1rem;
+  }
+
+  &.add-margin-top {
+    margin-top: 1rem;
+  }
+}

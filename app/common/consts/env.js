@@ -1,0 +1,1 @@
+export const MOBILE_PUBLIC_URL = "capacitor://localhost";

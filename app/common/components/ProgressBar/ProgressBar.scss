@@ -1,0 +1,21 @@
+@import "../../../styles/variables";
+
+.progress-bar {
+  position: relative;
+  height: 20px;
+  display: flex;
+  border-radius: 50px;
+  background-color: #e6e6e6;
+
+  &.small {
+    height: 8px;
+    background-color: #fff;
+  }
+
+  .filler {
+    background: $green;
+    height: 100%;
+    border-radius: inherit;
+    transition: width .2s ease-in;
+  }
+}

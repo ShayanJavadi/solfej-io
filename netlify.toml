@@ -4,3 +4,8 @@
 
 [build.environment]
   NODE_OPTIONS = "--max-old-space-size=4096"
+
+[[redirects]]
+  from = "/app/*"
+  to = "/app/"
+  status = 200

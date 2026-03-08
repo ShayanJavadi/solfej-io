@@ -1,0 +1,64 @@
+.musician-level-slide {
+  height: 100%;
+
+  .header-text {
+    padding-top: 2rem;  
+    @media (max-width: 320px) {
+      padding-top: 0 !important;
+    }
+
+  }
+
+  .levels-container {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 4rem;
+    @media (max-height: 667px) {
+      padding-top: 2rem;
+    }
+
+    @media (max-width: 320px) {
+      padding-top: 0 !important;
+    }
+
+    .level:nth-of-type(2) {
+      margin-bottom: 1rem;
+    }
+
+    .level {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 4px 1px rgba(0, 0, 0, 0.02);
+      border-radius: 20px;
+      width: 46%;
+      height: 10rem;
+
+      &.selected {
+        box-shadow: 0px 4px 1px rgba(0, 217, 205, 0.39);
+        border-radius: 20px;
+        border: 1px solid #00D9CD;
+        p {
+          color: #00D9CD;
+          opacity: 1;
+        }
+      }
+
+
+      .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        img {
+          width: 65%;
+        }
+
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.custom-exercise-choose-options-screen {
+  .input {
+    background-color: white;
+    border-color: hsl(0,0%,80%);
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    padding-left: .8rem !important;
+    width: calc(100% - .8rem) !important;
+    height: 2rem;
+    font-size: 1rem;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 8rem;
+  }
+}

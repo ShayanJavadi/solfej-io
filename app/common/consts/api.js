@@ -1,0 +1,10 @@
+export const USERS = "users";
+export const LESSON_CATEGORIES = "app/lessonCategories";
+export const LESSONS = "app/lessons";
+export const LESSONS_PROGRESS = "lessonsProgress";
+export const LESSON_ANALYTICS = "lessonAnalytics";
+export const DAILY_LESSON = "dailyLesson";
+export const SHARES = "shares";
+export const LAST_SUPPORTED_VERSION_ANDROID = "app/lastSupportedVersionAndroid";
+export const LAST_SUPPORT_VERSION_IOS = "app/lastSupportedVersionIOS";
+export const CUSTOM_LESSONS = "customLessons";
