@@ -8,6 +8,7 @@
   height: 8rem;
   display: flex;
   flex-direction: column;
+  max-width: 480px;
 
   &.custom-lesson {
     .header-container {

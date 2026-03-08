@@ -12,6 +12,7 @@
   opacity: 1;
   margin: 1%;
   box-shadow: boxShadow(#eaebef, 6%);
+  max-width: 480px;
 
   &:active {
     opacity: .5;

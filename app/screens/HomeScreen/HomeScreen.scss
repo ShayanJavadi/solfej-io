@@ -59,15 +59,15 @@ img.overlay {
 
   .greeting-container {
     padding-bottom: 1rem;
-    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     .section-header {
       h1 {
         font-size: 1.7rem !important;
       }
     }
-    .lesson-category-tile {
-      width: unset !important;
-    }
+
   }
   // background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #EAEBEF;
   background: $blue-gray;
@@ -102,7 +102,7 @@ img.overlay {
   
   .lesson-category-tiles-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     min-height: 20rem;
     flex-wrap: wrap;
     z-index: 2;
@@ -116,11 +116,14 @@ img.overlay {
     padding: 1rem 0;
     padding-top: 0rem;
     // border-bottom: 2px solid #e5e5e5;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
     .card {
       padding: 1rem 1rem;
       margin: 1rem;
-
+      width: 100%;
       .button.success {
         box-shadow: rgba(255, 104, 104, .25) 0px 4px 1px;
         background: rgb(255, 104, 104);
@@ -146,18 +149,12 @@ img.overlay {
 
   .section-header {
     margin-top: 1rem;
-    padding-left: 6%;
   }
 
   .recommended-section-container {
     margin-top: 1.5rem;
     position: relative;
     .lesson-cards-container {
-      // padding-bottom: 8rem;
-
-      .lesson-card {
-        margin-right: 1rem;
-      }
     }
   }
 

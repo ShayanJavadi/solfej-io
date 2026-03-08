@@ -72,11 +72,11 @@ export default function Header(props) {
 
                 <ul>
 
-                    <li>
+                    {process.env.NODE_ENV === "development" && <li>
                         <Link to="/app">
                             Learn
                         </Link>
-                    </li>
+                    </li>}
                     <li>
                         <Link to={`${prefix}/blog`} onClick={handleNavBlog}>
                             {translatedStrings ? translatedStrings.blog : "Blog"}
@@ -149,11 +149,11 @@ export default function Header(props) {
                             {translatedStrings ? translatedStrings.contact : "Contact"}
                 </a>
                     </li>
-                    <li>
+                    {process.env.NODE_ENV === "development" && <li>
                         <Link to="/app">
                             Learn
                         </Link>
-                    </li>
+                    </li>}
                 </ul>
 
             </div>

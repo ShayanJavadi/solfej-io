@@ -64,7 +64,7 @@
       height: 4px;
       position: relative;
       bottom: .9rem;
-      left: 38%;
+      left: 50%;
     }
 
     .lesson-card-horizontal-container .card-progress-container .dot-container {
@@ -74,9 +74,11 @@
 
   .lesson-card-horizontal-container {
     flex: 0 0 60%;
+    max-width: 280px;
 
     .card-progress-container {
       width: 85%;
+      margin: 0 auto;
     }
   }
 
@@ -84,6 +86,7 @@
     .lesson-card-container {
       display: flex;
       flex-direction: row;
+      justify-content: space-around;
       flex: 1;
       .lesson-card {
         display: flex;

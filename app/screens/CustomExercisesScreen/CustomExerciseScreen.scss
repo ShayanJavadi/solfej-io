@@ -7,9 +7,11 @@
   }
   
 	.lessons-container {
-		margin: 1rem 1rem 0 1rem;
+		margin: 1rem auto 0;
 		display: flex;
     flex: 1;
+    max-width: 500px;
+    width: 100%;
     z-index: 999;
     
     .lesson-card {
