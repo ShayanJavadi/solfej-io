@@ -19,7 +19,7 @@ import { TOS, PRIVACY_POLICY } from '../../common/consts/outboundLinks';
 const { subscriptions } = config;
 
 const STRIPE_PRICES = {
-  annual: { label: "12 month plan", price: "$119.00", monthlyPrice: "$9.99", trialText: "1 week free trial", savingsText: "BEST VALUE! - Save 50%" },
+  annual: { label: "12 month plan", price: "$89.99", monthlyPrice: "$7.50", trialText: "1 week free trial", savingsText: "BEST VALUE! - Save 63%" },
   threeMonth: { label: "3 month plan", price: "$47.99", monthlyPrice: "$15.99", trialText: "1 week free trial", savingsText: "Save 20%" },
   monthly: { label: "1 month plan", price: "$19.99", monthlyPrice: "$19.99" },
 };

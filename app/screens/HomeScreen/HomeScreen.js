@@ -42,6 +42,7 @@ import getGreeting from "../../util/getGreeting";
 import EmblaCarouselReact from "embla-carousel-react";
 import Card from "../../common/components/Card";
 import getCurrentLesson from "../../util/lessons/getCurrentLesson";
+import queryString from "query-string";
 
 // Web share API fallback
 const Share = {
@@ -281,6 +282,7 @@ export default function HomeScreen(props) {
   const [dropDownVisible, setDropDownVisible] = useState(undefined);
   const [hasCreatedDailyLesson, setHasCreatedDailyLesson] = useState(false);
   const [shouldShowDailyLessonFinishedHeader, setShouldShowDailyLessonFinishedHeader] = useState(false);
+  const [checkoutSuccess, setCheckoutSuccess] = useState(false);
   const firebase = useFirebase();
   const { history = {}, user = {}  } = props;
   const didFinishDailyLesson = history.location && history.location.state && history.location.state.didFinishDailyLesson;
@@ -299,7 +301,16 @@ export default function HomeScreen(props) {
     document.body.classList.add("long-height");
 
     scrollUp();
-    
+
+    const params = queryString.parse(window.location.search);
+    if (params.checkout === "success") {
+      setCheckoutSuccess(true);
+      // Clean up the query param from URL
+      const url = new URL(window.location);
+      url.searchParams.delete("checkout");
+      window.history.replaceState({}, "", url.pathname);
+    }
+
     return () => document.body.classList.remove("long-height");
   }, []);
 
@@ -428,6 +439,18 @@ export default function HomeScreen(props) {
           Send any and all feedback/bugs/requests you have using the <b>"Feedback"</b> link at the bottom 😊
         </p>
         <p className="overlay">Feel free to reach out to me at <b>shayanjavadi1375@gmail.com</b> with any questions as well!</p>
+      </Modal>
+      <Modal open={checkoutSuccess} onClose={() => setCheckoutSuccess(false)} center>
+        <h2 className="overlay">{"Welcome to Solfej! 🎉"}</h2>
+        <p className="overlay">
+          Thank you for subscribing! You now have full access to all lessons and features.
+        </p>
+        <Button
+          text="Start Learning"
+          isTextCentered
+          isSuccess
+          onClick={() => setCheckoutSuccess(false)}
+        />
       </Modal>
       <Modal open={userHasSeenPopup && !userHasSeenUnlockLessonsPopup && user.musicianLevel > 1} onClose={() => {
         setUnlockLessonModalOpen(false);

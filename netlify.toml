@@ -2,6 +2,9 @@
   command = "gatsby build"
   publish = "public"
 
+[functions]
+  directory = "netlify/functions"
+
 [build.environment]
   NODE_OPTIONS = "--max-old-space-size=4096"
 
