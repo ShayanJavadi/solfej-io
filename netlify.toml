@@ -5,6 +5,11 @@
 [functions]
   directory = "netlify/functions"
 
+[dev]
+  command = "./dev.sh"
+  targetPort = 8000
+  framework = "#custom"
+
 [build.environment]
   NODE_OPTIONS = "--max-old-space-size=4096"
 

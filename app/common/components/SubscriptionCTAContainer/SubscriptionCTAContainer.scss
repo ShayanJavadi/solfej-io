@@ -1,6 +1,15 @@
 .subscription-ctacontainer {
   margin: 0 1rem;
   z-index: 99999 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .card {
+    min-width: 72%;
+  }
+
+
   h2 {
     font-size: 20px !important;
     margin-bottom: 1rem;

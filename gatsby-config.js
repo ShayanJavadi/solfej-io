@@ -1,4 +1,15 @@
+const createProxyMiddleware = require("http-proxy-middleware");
+
 module.exports = {
+  developMiddleware: app => {
+    app.use(
+      "/.netlify/functions/",
+      createProxyMiddleware({
+        target: "http://localhost:9999",
+        pathRewrite: { "^/.netlify/functions/": "/.netlify/functions/" },
+      })
+    );
+  },
   siteMetadata: {
     title: `Solfej`,
     description: `Free chord & scale diagrams, music theory lessons, and ear training tools for guitar and piano players.`,

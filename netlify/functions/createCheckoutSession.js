@@ -1,9 +1,11 @@
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
+const isTest = process.env.STRIPE_SECRET_KEY.startsWith("sk_test_");
+
 const PRICE_MAP = {
-  price_annual: process.env.STRIPE_PRICE_ANNUAL,
-  price_three_month: process.env.STRIPE_PRICE_THREE_MONTH,
-  price_monthly: process.env.STRIPE_PRICE_MONTHLY,
+  price_annual: isTest ? process.env.STRIPE_PRICE_ANNUAL_TEST : process.env.STRIPE_PRICE_ANNUAL,
+  price_three_month: isTest ? process.env.STRIPE_PRICE_THREE_MONTH_TEST : process.env.STRIPE_PRICE_THREE_MONTH,
+  price_monthly: isTest ? process.env.STRIPE_PRICE_MONTHLY_TEST : process.env.STRIPE_PRICE_MONTHLY,
 };
 
 const TRIAL_ELIGIBLE = ["price_annual", "price_three_month"];
