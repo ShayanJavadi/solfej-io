@@ -14,6 +14,7 @@ import { EAR_TRAINING_PERFECT_PITCH_SINGLE_NOTE_IDENTIFICATION_ID, EAR_TRAINING_
 import { HOME_SCREEN } from "../../common/consts/routes";
 import LessonScore from "../../common/components/LessonScore";
 import DotProgress from "../../common/components/DotProgress";
+import { logExerciseReplayPressed } from "../../common/consts/analytics";
 
 const NOTE_BUTTON_SIZE = 150;
 class SingleNotePractice extends Component {
@@ -23,10 +24,11 @@ class SingleNotePractice extends Component {
 
   onReplayButtonClick = () => {
     const {
-      isQuestionStandby, loopThroughQuestionSounds, lessonId, referenceNote, noteToGuess 
+      isQuestionStandby, loopThroughQuestionSounds, lessonId, referenceNote, noteToGuess
     } = this.props;
 
     if (isQuestionStandby) {
+      logExerciseReplayPressed("single_note");
       if (lessonId === EAR_TRAINING_PERFECT_PITCH_SINGLE_NOTE_IDENTIFICATION_ID) {
         loopThroughQuestionSounds([[noteToGuess]]);
       }
@@ -275,6 +277,7 @@ class SingleNotePractice extends Component {
           text="Play Again"
           isTextCentered
           onClick={() => {
+            logExerciseReplayPressed("single_note");
             this.props.resetQuestion();
             this.props.getNewQuestion();
             this.setState({ startedAt: Date.now() });

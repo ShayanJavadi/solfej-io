@@ -6,6 +6,7 @@ import Button from "../../../../common/components/Button/Button";
 import HeaderText from "../../../../common/components/HeaderText/HeaderText";
 import setOnboardingSlidesDone from "../../../../store/firebase/setOnboardingSlidesDone";
 import setUserIsA from "../../../../store/firebase/setUserIsA";
+import { logOnboardingStepCompleted } from "../../../../common/consts/analytics";
 import "./IAmASlide.scss";
 
 const IAmAChoices = [
@@ -98,7 +99,8 @@ export default function IAmASlide(props) {
         <Button
           onClick={() => {
             if (hasChoicesSelected) {
-              const isA = choices.reduce((choicesToUpdate, choice) => ({ 
+              logOnboardingStepCompleted("i_am_a", 2);
+              const isA = choices.reduce((choicesToUpdate, choice) => ({
                 ...choicesToUpdate,
                 ...{ [choice.id]: choice.isSelected }
               }), {});

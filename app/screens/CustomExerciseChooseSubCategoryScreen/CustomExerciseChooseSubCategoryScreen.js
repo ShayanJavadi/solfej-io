@@ -17,6 +17,7 @@ import { CHORD_IDENTIFICATION_SUBCATEGORY, INTERVAL_IDENTIFICATION_SUBCATEGORY }
 import { CUSTOM_EXERCISES_CHOOSE_SUB_CATEGORY_SCREEN, CUSTOM_EXERCISES_CHOOSE_OPTIONS_SCREEN } from "../../common/consts/routes";
 import { customExerciseSetSubCategoryId } from "../../store/customExercises/actions";
 import "./CustomExerciseChooseSubCategoryScreen.scss";
+import { logCustomExerciseSubcategorySelected } from "../../common/consts/analytics";
 
 const EXERCISE_TYPES = {
   [EAR_TRAINING_CATEGORY_ID]: {
@@ -41,6 +42,7 @@ export default function CustomExerciseChooseSubCategoryScreen(props) {
   const { types = [], color, boxShadow } = EXERCISE_TYPES[categoryId] || {};
 
   const onSubCategorySelected = (selectedSubCategoryId) => {
+    logCustomExerciseSubcategorySelected(selectedSubCategoryId);
     dispatch(customExerciseSetSubCategoryId(selectedSubCategoryId));
     props.history.push(CUSTOM_EXERCISES_CHOOSE_OPTIONS_SCREEN);
   };

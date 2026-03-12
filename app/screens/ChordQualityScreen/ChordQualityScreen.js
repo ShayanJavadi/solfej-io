@@ -21,6 +21,7 @@ import getChordFromDisplayName from "../../util/chordUtils/getChordFromDisplayNa
 import goToDailyLesson from "../../util/lessons/goToDailyLesson";
 import "./ChordQualityScreen.scss";
 import { CHORD_IDENTIFICATION_SUBCATEGORY } from "../../common/consts/lessonSubcategoryIds";
+import { logExerciseReplayPressed } from "../../common/consts/analytics";
 
 const NOTE_BUTTON_SIZE = 150;
 
@@ -33,6 +34,7 @@ export default class ChordQualityScreen extends Component {
   onReplayButtonClick = () => {
     const { isQuestionStandby, loopThroughQuestionSounds, playableSounds } = this.props;
     if (isQuestionStandby) {
+      logExerciseReplayPressed("chord_quality");
       loopThroughQuestionSounds(playableSounds);
     }
   }

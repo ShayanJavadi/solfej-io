@@ -6,6 +6,7 @@ import Button from "../../../../common/components/Button/Button";
 import HeaderText from "../../../../common/components/HeaderText/HeaderText";
 import setOnboardingSlidesDone from "../../../../store/firebase/setOnboardingSlidesDone";
 import setUserWantsTo from "../../../../store/firebase/setUserWantsTo";
+import { logOnboardingStepCompleted } from "../../../../common/consts/analytics";
 import "./IWantToSlide.scss";
 
 const IAmAChoices = [
@@ -92,6 +93,7 @@ export default function IWantToSlide(props) {
         <Button
           onClick={() => {
             if (hasChoicesSelected) {
+              logOnboardingStepCompleted("i_want_to", 3);
               const wantsTo = choices.reduce((choicesToUpdate, choice) => ({
                 ...choicesToUpdate,
                 ...{ [choice.id]: choice.isSelected }

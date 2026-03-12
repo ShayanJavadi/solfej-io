@@ -7,7 +7,7 @@ import Switch from "react-switch";
 import Button from "../../common/components/Button/Button";
 import Screen from "../../common/components/Screen/Screen";
 import SectionHeader from "../../common/components/SectionHeader/SectionHeader";
-import { SCREEN_VIEW } from "../../common/consts/analytics";
+import { SCREEN_VIEW, logSignOut, logLessonsUnlockToggled } from "../../common/consts/analytics";
 import { blueGray, green } from "../../common/consts/colors";
 import { PRIVACY_POLICY, TOS } from "../../common/consts/outboundLinks";
 import { ACCOUNT_SCREEN } from "../../common/consts/routes";
@@ -15,6 +15,7 @@ import useSetNotchColor from "../../common/hooks/useSetNotchColor";
 import config from "../../config";
 import "./AccountScreen.scss";
 import setUserHasLessonsUnlocked from "../../store/firebase/setUserHasLessonsUnlocked";
+
 import { useRef } from "react";
 import Container from "../../common/components/Container";
 
@@ -28,6 +29,7 @@ export default function AccountScreen(props) {
   const delayedQuery = useRef(debounce(checked => setUserHasLessonsUnlocked(firebase, uid, checked), 500)).current;
 
   const onSwitchChange = checked => {
+    logLessonsUnlockToggled(checked);
     setUnlockAllLessonsToggled(checked);
     delayedQuery(checked);
   };
@@ -55,7 +57,10 @@ export default function AccountScreen(props) {
       <div className="account-buttons-container">
         <Button
           text="Sign out"
-          onClick={() => firebase.logout()}
+          onClick={() => {
+            logSignOut();
+            firebase.logout();
+          }}
         />
       </div>
       <div className="tos-container">

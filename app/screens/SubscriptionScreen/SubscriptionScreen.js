@@ -15,6 +15,7 @@ import pricing3 from "./pricing-3.png";
 import "./SubscriptionScreen.scss";
 import { secondary } from '../../common/consts/colors';
 import { TOS, PRIVACY_POLICY } from '../../common/consts/outboundLinks';
+import { logPlanSelected, logCheckoutStarted, logCheckoutError, logCheckoutAbandoned } from "../../common/consts/analytics";
 
 const { subscriptions } = config;
 
@@ -28,9 +29,12 @@ const renderHeader = (props) => (
   <div className="header-container">
     <div
       onClick={
-        () => props.isModal ?
-          props.history.goBack() :
-          props.history.push(HOME_SCREEN)
+        () => {
+          logCheckoutAbandoned("subscription_closed");
+          props.isModal ?
+            props.history.goBack() :
+            props.history.push(HOME_SCREEN);
+        }
       }
       className="close-button-container"
     >
@@ -68,6 +72,8 @@ const renderCopy = () => (
   </div>
 );
 
+const PLAN_IDS = ['price_annual', 'price_three_month', 'price_monthly'];
+
 const RenderPricePlans = (selectedPrice, setSelectedPrice) => {
   const plans = [STRIPE_PRICES.annual, STRIPE_PRICES.threeMonth, STRIPE_PRICES.monthly];
 
@@ -77,7 +83,7 @@ const RenderPricePlans = (selectedPrice, setSelectedPrice) => {
         <div
           key={index}
           className={classNames("price-plan", selectedPrice === index && "active")}
-          onClick={() => setSelectedPrice(index)}
+          onClick={() => { logPlanSelected(PLAN_IDS[index]); setSelectedPrice(index); }}
         >
           {plan.savingsText && (
             <div className="deal-header">
@@ -118,6 +124,7 @@ const renderButtons = (selectedPrice, auth) => {
   const handleSubscribe = async () => {
     try {
       const priceIds = ['price_annual', 'price_three_month', 'price_monthly'];
+      logCheckoutStarted(priceIds[selectedPrice], plan.price);
       const response = await fetch('/.netlify/functions/createCheckoutSession', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -131,6 +138,7 @@ const renderButtons = (selectedPrice, auth) => {
         window.location.href = url;
       }
     } catch (e) {
+      logCheckoutError(e.message);
       console.error('Failed to create checkout session:', e);
     }
   };

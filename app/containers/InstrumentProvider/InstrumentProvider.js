@@ -13,6 +13,7 @@ import PlayerBlock from "../../common/components/PlayerBlock/PlayerBlock";
 import playNotes from "../../util/noteUtils/playNotes";
 import Button from "../../common/components/Button/Button";
 import isIOS from "../../util/platform/isIOS";
+import { logAudioPlaybackError } from "../../common/consts/analytics";
 
 const mapDispatchToProps = { initPiano, onNotePlay, setAppIsInteractive, };
 
@@ -32,6 +33,8 @@ export default (WrappedComponent) => {
       StartAudioContext(Tone.context, "body").then(() => {
         console.log("[SOLFEJ] StartAudioContext resolved");
         setAppIsInteractive(true);
+      }).catch(e => {
+        logAudioPlaybackError(e.message || "audio_context_init_failed");
       });
 
       if (!props.instrument) {

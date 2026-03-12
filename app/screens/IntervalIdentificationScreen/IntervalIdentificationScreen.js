@@ -21,6 +21,7 @@ import getIntervalFromDisplayName from "../../util/intervalUtils/getIntervalFrom
 import goToDailyLesson from "../../util/lessons/goToDailyLesson";
 import "./IntervalIdentificationScreen.scss";
 import { INTERVAL_IDENTIFICATION_SUBCATEGORY } from "../../common/consts/lessonSubcategoryIds";
+import { logExerciseReplayPressed } from "../../common/consts/analytics";
 
 const NOTE_BUTTON_SIZE = 150;
 
@@ -34,8 +35,9 @@ class IntervalIdentificationScreen extends Component {
   onReplayButtonClick = () => {
     // playable sounds is the order that the sounds will play in
     const { isQuestionStandby, loopThroughQuestionSounds, playableSounds } = this.props;
-    
+
     if (isQuestionStandby) {
+      logExerciseReplayPressed("interval_identification");
       loopThroughQuestionSounds(playableSounds);
     }
   }

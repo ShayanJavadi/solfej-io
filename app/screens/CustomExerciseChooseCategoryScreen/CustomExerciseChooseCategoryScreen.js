@@ -14,6 +14,7 @@ import { customExerciseSetCategoryId } from "../../store/customExercises/actions
 
 import "./CustomExerciseChooseCategoryScreen.scss";
 import { CUSTOM_EXERCISES_CHOOSE_SUB_CATEGORY_SCREEN } from "../../common/consts/routes";
+import { logCustomExerciseCategorySelected } from "../../common/consts/analytics";
 import {
   EAR_TRAINING_CATEGORY_ID, MUSIC_THEORY_EXERCISES_CATEGORY_ID, RHYTHM_CATEGORY_ID, MUSIC_THEORY_CATEGORY_ID 
 } from "../../common/consts/lessonCategoryIds";
@@ -21,6 +22,7 @@ import {
 export default function CustomExerciseChooseCategoryScreen(props) {
   const dispatch = useDispatch();
   const onCategorySelected = (selectedCategoryId) => {
+    logCustomExerciseCategorySelected(selectedCategoryId);
     dispatch(customExerciseSetCategoryId(selectedCategoryId));
     props.history.push(CUSTOM_EXERCISES_CHOOSE_SUB_CATEGORY_SCREEN);
   };

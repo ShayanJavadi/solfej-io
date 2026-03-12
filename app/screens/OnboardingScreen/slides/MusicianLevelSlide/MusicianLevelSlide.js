@@ -13,6 +13,7 @@ import Button from "../../../../common/components/Button/Button";
 import { useFirebase } from "react-redux-firebase";
 import setUserMusicianLevel from "../../../../store/firebase/setUserMusicianLevel";
 import setOnboardingSlidesDone from "../../../../store/firebase/setOnboardingSlidesDone";
+import { logOnboardingStepCompleted } from "../../../../common/consts/analytics";
 
 export const MUSICIAN_LEVELS = [
   "novice",
@@ -86,6 +87,7 @@ export default function MusicianLevelSlide(props) {
         <Button
           onClick={() => {
             if (selected !== undefined) {
+              logOnboardingStepCompleted("musician_level", 1);
               setUserMusicianLevel(firebase, uid, selected);
               setOnboardingSlidesDone(firebase, uid, { [index]: true });
               onNextSlideClick(index + 1);

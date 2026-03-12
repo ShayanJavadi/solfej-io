@@ -5,6 +5,7 @@ import googleLogo from "../../assets/images/google-logo.png";
 import appleLogo from "../../assets/images/apple-logo.svg";
 import Button from "../../common/components/Button/Button";
 import Screen from "../../common/components/Screen/Screen";
+import { logSignInStarted } from "../../common/consts/analytics";
 import { SIGN_UP_SCREEN } from "../../common/consts/routes";
 import "./SignInScreen.scss";
 import isIOS from "../../util/platform/isIOS";
@@ -41,14 +42,14 @@ export default function SignInScreen(props) {
         <Button
           text="Sign in with Google"
           icon={<img width="22px" height="auto" src={googleLogo} alt="" />}
-          onClick={() => signInWithGoogle(firebase)}
+          onClick={() => { logSignInStarted("google"); signInWithGoogle(firebase); }}
         />
         {
           isIOS() &&
           <Button
             text="Sign in with Apple"
             icon={<img width="19px" height="auto" src={appleLogo} alt="" />}
-            onClick={() => signInWithApple(firebase)}
+            onClick={() => { logSignInStarted("apple"); signInWithApple(firebase); }}
           />
         }
         {/* <Button

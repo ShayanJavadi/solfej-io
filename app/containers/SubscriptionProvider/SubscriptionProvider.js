@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useFirebase, useFirebaseConnect } from "react-redux-firebase";
 import { USERS } from "../../common/consts/api";
 import { setAccountIsSubscribed } from "../../store/account/actions";
+import { setUserProperties } from "../../common/consts/analytics";
 
 const getIsFriend = firebase => {
   const { uid } = firebase.auth || {};
@@ -40,8 +41,10 @@ export default props => {
   useEffect(() => {
     if (stripeSubscriptionActive) {
       dispatch(setAccountIsSubscribed(true));
+      setUserProperties({ subscription_status: "active" });
     } else if (stripeSubscriptionActive === false) {
       dispatch(setAccountIsSubscribed(false));
+      setUserProperties({ subscription_status: "inactive" });
     }
   }, [stripeSubscriptionActive]);
 

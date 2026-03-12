@@ -11,6 +11,7 @@ import setOnboardingSlidesDone from "../../../../store/firebase/setOnboardingSli
 import setUserIsOnboarded from "../../../../store/firebase/setUserIsOnboarded";
 import "./ReminderSlide.scss";
 import { HOME_SCREEN, SUBSCRIPTION_CAROUSEL_SCREEN } from "../../../../common/consts/routes";
+import { logOnboardingStepCompleted, logOnboardingCompleted } from "../../../../common/consts/analytics";
 
 export default function ReminderSlide(props) {
   const [selected, setSelected] = useState(undefined);
@@ -24,6 +25,8 @@ export default function ReminderSlide(props) {
 
   const dispatch = useDispatch();
   const goToNextPage = () => {
+    logOnboardingStepCompleted("reminder", 4);
+    logOnboardingCompleted();
     dispatch(setAccountIsOnboarded(true));
     setOnboardingSlidesDone(firebase, uid, { [index]: true });
     setUserIsOnboarded(firebase, uid, true);

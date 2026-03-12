@@ -7,6 +7,7 @@ import googleLogo from "../../assets/images/google-logo.png";
 import Button from "../../common/components/Button/Button";
 import Screen from "../../common/components/Screen/Screen";
 import { primary } from "../../common/consts/colors";
+import { logSignUpStarted } from "../../common/consts/analytics";
 import { SIGN_IN_SCREEN } from "../../common/consts/routes";
 import useSetNotchColor from "../../common/hooks/useSetNotchColor";
 import isIOS from "../../util/platform/isIOS";
@@ -46,14 +47,14 @@ export default function SignInScreen(props) {
         <Button
           text="Sign up with Google"
           icon={<img width="22px" height="auto" src={googleLogo} alt="" />}
-          onClick={() => signInWithGoogle(firebase)}
+          onClick={() => { logSignUpStarted("google"); signInWithGoogle(firebase); }}
         />
         {
           isIOS() &&
           <Button
             text="Sign up with Apple"
             icon={<img width="19px" height="auto" src={appleLogo} alt="" />}
-            onClick={() => signInWithApple(firebase)}
+            onClick={() => { logSignUpStarted("apple"); signInWithApple(firebase); }}
           />
         }
       </div>

@@ -25,6 +25,7 @@ import { HOME_SCREEN } from "../../common/consts/routes";
 import LessonFinishButtons from "../../common/components/LessonFinishButtons/LessonFinishButtons";
 import LessonQuestionCopy from "../../common/components/LessonQuestionCopy/LessonQuestionCopy";
 import LessonScore from "../../common/components/LessonScore";
+import { logExerciseReplayPressed, logExerciseSubmitPressed, logExerciseUndoPressed } from "../../common/consts/analytics";
 
 export default class RhythmTranscriptionScreen extends Component {
   state = {
@@ -41,6 +42,7 @@ export default class RhythmTranscriptionScreen extends Component {
     const { isQuestionStandby } = this.props;
 
     if (isQuestionStandby) {
+      logExerciseReplayPressed("rhythm");
       this.playRhythm();
     }
   }
@@ -90,6 +92,7 @@ export default class RhythmTranscriptionScreen extends Component {
       onNotePlay
     } = this.props;
 
+    logExerciseSubmitPressed("rhythm");
     if (correctChoice === this.state.choice.join("")) {
       this.props.onCorrectGuess();
       return;
@@ -99,6 +102,7 @@ export default class RhythmTranscriptionScreen extends Component {
   }
 
   onUndoButtonClick = () => {
+    logExerciseUndoPressed("rhythm");
     const newChoice = [...this.state.choice];
     newChoice.pop();
 

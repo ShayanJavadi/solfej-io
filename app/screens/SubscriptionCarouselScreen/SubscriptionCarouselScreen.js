@@ -14,6 +14,7 @@ import useEmbla from "../../common/hooks/useEmbla";
 import config from "../../config";
 import "./SubscriptionCarouselScreen.scss";
 import { MONTHLY_SUB_ID } from "../../common/consts/subscriptions";
+import { logCheckoutAbandoned } from "../../common/consts/analytics";
 
 const { subscriptions } = config;
 
@@ -99,7 +100,7 @@ const renderButtons = props => {
         className="restore-purchases-button"
         isTextCentered
         isGhost
-        onClick={() => props.isModal ? props.history.goBack() : props.history.push(HOME_SCREEN)}
+        onClick={() => { logCheckoutAbandoned("carousel_dismissed"); props.isModal ? props.history.goBack() : props.history.push(HOME_SCREEN); }}
       />
     </div>
   );

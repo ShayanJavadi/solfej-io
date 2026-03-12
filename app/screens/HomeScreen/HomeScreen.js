@@ -10,7 +10,7 @@ import Paragraph from "../../common/components/Paragraph";
 import Screen from "../../common/components/Screen/Screen";
 import ScreenHeader from "../../common/components/ScreenHeader/ScreenHeader";
 import SectionHeader from "../../common/components/SectionHeader/SectionHeader";
-import { SCREEN_VIEW, logOnStreakDropdownPressed } from "../../common/consts/analytics";
+import { SCREEN_VIEW, logOnStreakDropdownPressed, logCheckoutCompleted, logCategorySelected, logSharePressed } from "../../common/consts/analytics";
 import { blueGray } from "../../common/consts/colors";
 import { HOME_SCREEN, SUBSCRIPTION_CAROUSEL_SCREEN_MODAL } from "../../common/consts/routes";
 import useRememberScrollYPosition from "../../common/hooks/useRememberScrollYPosition";
@@ -109,6 +109,7 @@ const RenderLessonCategoryTiles = props => {
               backgroundColor={backgroundColor}
               boxShadow={boxShadow}
               onClick={() => {
+                logCategorySelected(categoryId, title);
                 setUserLastOpenedCategory(firebase, uid, categoryId)
                 props.history.push(route)
               }}
@@ -304,6 +305,7 @@ export default function HomeScreen(props) {
 
     const params = queryString.parse(window.location.search);
     if (params.checkout === "success") {
+      logCheckoutCompleted();
       setCheckoutSuccess(true);
       // Clean up the query param from URL
       const url = new URL(window.location);
@@ -355,6 +357,7 @@ export default function HomeScreen(props) {
           <ShareIcon
             size={20}
             onClick={async () => {
+              logSharePressed();
               try {
                 const shareData = await Share.share({
                   title: "Check this out!",

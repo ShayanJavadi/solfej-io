@@ -5,6 +5,7 @@ import firebase from "firebase/app";
 import "firebase/analytics";
 import { setAccountIsLoading, setAccountIsSetupComplete } from "../../store/account/actions";
 import { setupNewAccount } from "../../store/firebase/accountSetup";
+import { setUserProperties } from "../../common/consts/analytics";
 
 // Makes sure account setup is done before the user accesses the app
 export default props => {
@@ -30,6 +31,9 @@ export default props => {
 
         try {
           firebase.analytics().setUserId(auth.uid);
+          setUserProperties({
+            subscription_status: "free",
+          });
         } catch (e) {
           // analytics may not be initialized
         }

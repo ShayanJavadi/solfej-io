@@ -8,6 +8,7 @@ import Paragraph from "../../../../common/components/Paragraph";
 import Button from "../../../../common/components/Button/Button";
 import { useFirebase } from "react-redux-firebase";
 import setOnboardingSlidesDone from "../../../../store/firebase/setOnboardingSlidesDone";
+import { logOnboardingStarted, logOnboardingStepCompleted } from "../../../../common/consts/analytics";
 
 export default function WelcomeSlide(props) {
   const { index, onNextSlideClick } = props;
@@ -39,6 +40,8 @@ export default function WelcomeSlide(props) {
       <div className="buttons-container">
         <Button
           onClick={() => {
+            logOnboardingStarted();
+            logOnboardingStepCompleted("welcome", 0);
             onNextSlideClick(index + 1);
             setOnboardingSlidesDone(firebase, uid, { [index]: true });
           }}
